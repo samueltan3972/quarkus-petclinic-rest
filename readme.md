@@ -1,3 +1,15 @@
+# Quarkus REST Petclinic
+```
+git clone https://github.com/samueltan3972/quarkus-petclinic-rest.git
+cd quarkus-petclinic-rest
+./mvnw package
+docker build -t your-preference-name .
+docker run -p 9966:9966 your-preference-name
+```
+
+View it in Localhost:9966
+
+
 # REST version of Spring PetClinic Sample Application (spring-framework-petclinic extend ) 
 
 [![Build Status](https://github.com/spring-petclinic/spring-petclinic-rest/actions/workflows/maven-build.yml/badge.svg)](https://github.com/spring-petclinic/spring-petclinic-rest/actions/workflows/maven-build.yml)
