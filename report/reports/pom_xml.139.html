@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for pom.xml</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/mta-icon.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="8192152">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_spring_petclinic_rest.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_spring_petclinic_rest.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_spring_petclinic_rest.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_spring_petclinic_rest.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Migration Toolkit for Applications by Red Hat found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="8192152">
+                            spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/byte-buddy-1.10.19.jar/META-INF/maven/net.bytebuddy/byte-buddy/pom.xml
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Maven XML</span>
+                                </div>
+
+                                <ul class="classifications">
+                                            <li>
+                                                <div class="title">
+                                                    <em>Maven POM (pom.xml)</em>
+<a title='View Rule: DiscoverMavenProjectsRuleProvider_1' href='windup_ruleproviders.html#DiscoverMavenProjectsRuleProvider_1'><span class='glyphicon glyphicon-link rule-link'></span></a>                                                </div>
+                                                <div class="desc">Maven Project Object Model (POM) File</div>
+                                            </li>
+                                </ul>
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+    &lt;parent&gt;
+        &lt;groupId&gt;net.bytebuddy&lt;/groupId&gt;
+        &lt;artifactId&gt;byte-buddy-parent&lt;/artifactId&gt;
+        &lt;version&gt;1.10.19&lt;/version&gt;
+    &lt;/parent&gt;
+
+    &lt;artifactId&gt;byte-buddy&lt;/artifactId&gt;
+    &lt;packaging&gt;jar&lt;/packaging&gt;
+
+    &lt;name&gt;Byte Buddy (without dependencies)&lt;/name&gt;
+    &lt;description&gt;
+        Byte Buddy is a Java library for creating Java classes at run time.
+        This artifact is a build of Byte Buddy with all ASM dependencies repackaged into its own name space.
+    &lt;/description&gt;
+
+    &lt;!--
+      Because of the Shade plugin, the variables of this POM are resolved with the current work station&#39;s values the
+      dependency reduced POM. The POM that is presented to the Shade plugin is already resolved which is why it is
+      not possible to prevent this behavior as the profiles are not removed form the POM. This does not effect the
+      usability of the POM for a dependency but might confuse users that read the POM. The Shade plugin also removes
+      this comment from deployment such that there is no easy way to explain this in the deployed POM.
+    --&gt;
+
+    &lt;properties&gt;
+        &lt;shade.source&gt;org.objectweb.asm&lt;/shade.source&gt;
+        &lt;shade.target&gt;net.bytebuddy.jar.asm&lt;/shade.target&gt;
+        &lt;packages.list&gt;
+            net.bytebuddy,
+            net.bytebuddy.agent.builder,
+            net.bytebuddy.asm,
+            net.bytebuddy.build,
+            net.bytebuddy.description,
+            net.bytebuddy.description.annotation,
+            net.bytebuddy.description.enumeration,
+            net.bytebuddy.description.field,
+            net.bytebuddy.description.method,
+            net.bytebuddy.description.modifier,
+            net.bytebuddy.description.type,
+            net.bytebuddy.dynamic,
+            net.bytebuddy.dynamic.loading,
+            net.bytebuddy.dynamic.scaffold,
+            net.bytebuddy.dynamic.scaffold.inline,
+            net.bytebuddy.dynamic.scaffold.subclass,
+            net.bytebuddy.implementation,
+            net.bytebuddy.implementation.attribute,
+            net.bytebuddy.implementation.auxiliary,
+            net.bytebuddy.implementation.bind,
+            net.bytebuddy.implementation.bind.annotation,
+            net.bytebuddy.implementation.bytecode,
+            net.bytebuddy.implementation.bytecode.assign,
+            net.bytebuddy.implementation.bytecode.assign.primitive,
+            net.bytebuddy.implementation.bytecode.assign.reference,
+            net.bytebuddy.implementation.bytecode.collection,
+            net.bytebuddy.implementation.bytecode.constant,
+            net.bytebuddy.implementation.bytecode.member,
+            net.bytebuddy.matcher,
+            net.bytebuddy.pool,
+            net.bytebuddy.utility,
+            net.bytebuddy.utility.privilege,
+            net.bytebuddy.utility.visitor,
+            ${shade.target},
+            ${shade.target}.signature,
+            ${shade.target}.commons
+        &lt;/packages.list&gt;
+    &lt;/properties&gt;
+
+    &lt;!--
+      IDEs might complain about the following dependency not being OSGI compatible. While this is true, it does not
+      matter as the dependency is repackaged by the Shade plugin and becomes part of this module&#39;s jar artifact.
+    --&gt;
+
+    &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;${project.groupId}&lt;/groupId&gt;
+            &lt;artifactId&gt;byte-buddy-dep&lt;/artifactId&gt;
+            &lt;version&gt;${project.version}&lt;/version&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+
+    &lt;build&gt;
+        &lt;resources&gt;
+            &lt;resource&gt;
+                &lt;directory&gt;src/main/resources&lt;/directory&gt;
+                &lt;filtering&gt;true&lt;/filtering&gt;
+            &lt;/resource&gt;
+        &lt;/resources&gt;
+        &lt;plugins&gt;
+            &lt;!-- Shade the ASM dependency. --&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-shade-plugin&lt;/artifactId&gt;
+                &lt;version&gt;${version.plugin.shade}&lt;/version&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;phase&gt;package&lt;/phase&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;shade&lt;/goal&gt;
+                        &lt;/goals&gt;
+                        &lt;configuration&gt;
+                            &lt;shadedArtifactAttached&gt;false&lt;/shadedArtifactAttached&gt;
+                            &lt;createDependencyReducedPom&gt;true&lt;/createDependencyReducedPom&gt;
+                            &lt;createSourcesJar&gt;${bytebuddy.extras}&lt;/createSourcesJar&gt;
+                            &lt;shadeSourcesContent&gt;true&lt;/shadeSourcesContent&gt;
+                            &lt;relocations&gt;
+                                &lt;relocation&gt;
+                                    &lt;pattern&gt;${shade.source}&lt;/pattern&gt;
+                                    &lt;shadedPattern&gt;${shade.target}&lt;/shadedPattern&gt;
+                                &lt;/relocation&gt;
+                            &lt;/relocations&gt;
+                            &lt;filters&gt;
+                                &lt;filter&gt;
+                                    &lt;artifact&gt;net.bytebuddy:byte-buddy-dep:*&lt;/artifact&gt;
+                                    &lt;excludes&gt;
+                                        &lt;exclude&gt;META-INF/MANIFEST.MF&lt;/exclude&gt;
+                                    &lt;/excludes&gt;
+                                &lt;/filter&gt;
+                                &lt;filter&gt;
+                                    &lt;artifact&gt;org.ow2.asm:*&lt;/artifact&gt;
+                                    &lt;excludes&gt;
+                                        &lt;exclude&gt;META-INF/MANIFEST.MF&lt;/exclude&gt;
+                                        &lt;exclude&gt;**/module-info.class&lt;/exclude&gt;
+                                        &lt;exclude&gt;**/LICENSE&lt;/exclude&gt;
+                                        &lt;exclude&gt;**/NOTICE&lt;/exclude&gt;
+                                    &lt;/excludes&gt;
+                                &lt;/filter&gt;
+                                &lt;filter&gt;
+                                    &lt;artifact&gt;org.ow2.asm:asm-commons&lt;/artifact&gt;
+                                    &lt;includes&gt;
+                                        &lt;include&gt;org/objectweb/asm/commons/AnnotationRemapper.**&lt;/include&gt;
+                                        &lt;include&gt;org/objectweb/asm/commons/ClassRemapper.**&lt;/include&gt;
+                                        &lt;include&gt;org/objectweb/asm/commons/FieldRemapper.**&lt;/include&gt;
+                                        &lt;include&gt;org/objectweb/asm/commons/MethodRemapper.**&lt;/include&gt;
+                                        &lt;include&gt;org/objectweb/asm/commons/ModuleHashesAttribute.**&lt;/include&gt;
+                                        &lt;include&gt;org/objectweb/asm/commons/ModuleRemapper.**&lt;/include&gt;
+                                        &lt;include&gt;org/objectweb/asm/commons/RecordComponentRemapper.**&lt;/include&gt;
+                                        &lt;include&gt;org/objectweb/asm/commons/Remapper.**&lt;/include&gt;
+                                        &lt;include&gt;org/objectweb/asm/commons/SignatureRemapper.**&lt;/include&gt;
+                                        &lt;include&gt;org/objectweb/asm/commons/SimpleRemapper.**&lt;/include&gt;
+                                    &lt;/includes&gt;
+                                &lt;/filter&gt;
+                            &lt;/filters&gt;
+                            &lt;transformers&gt;
+                                &lt;transformer implementation=&quot;org.apache.maven.plugins.shade.resource.ManifestResourceTransformer&quot;&gt;
+                                    &lt;mainClass&gt;net.bytebuddy.build.Plugin$Engine$Default&lt;/mainClass&gt;
+                                &lt;/transformer&gt;
+                                &lt;transformer implementation=&quot;org.apache.maven.plugins.shade.resource.AppendingTransformer&quot;&gt;
+                                    &lt;resource&gt;META-INF/LICENSE&lt;/resource&gt;
+                                &lt;/transformer&gt;
+                            &lt;/transformers&gt;
+                        &lt;/configuration&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+                &lt;dependencies&gt;
+                    &lt;dependency&gt;
+                        &lt;groupId&gt;org.ow2.asm&lt;/groupId&gt;
+                        &lt;artifactId&gt;asm&lt;/artifactId&gt;
+                        &lt;version&gt;${version.asm}&lt;/version&gt;
+                    &lt;/dependency&gt;
+                    &lt;dependency&gt;
+                        &lt;groupId&gt;org.ow2.asm&lt;/groupId&gt;
+                        &lt;artifactId&gt;asm-commons&lt;/artifactId&gt;
+                        &lt;version&gt;${version.asm}&lt;/version&gt;
+                    &lt;/dependency&gt;
+                &lt;/dependencies&gt;
+            &lt;/plugin&gt;
+            &lt;!-- Disable pitest as it fails for empty modules --&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.pitest&lt;/groupId&gt;
+                &lt;artifactId&gt;pitest-maven&lt;/artifactId&gt;
+                &lt;version&gt;${version.plugin.pitest}&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;skip&gt;true&lt;/skip&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+            &lt;!-- Skip spotbugs as it fails for empty modules. --&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;com.github.spotbugs&lt;/groupId&gt;
+                &lt;artifactId&gt;spotbugs-maven-plugin&lt;/artifactId&gt;
+                &lt;version&gt;${version.plugin.spotbugs}&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;skip&gt;true&lt;/skip&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+            &lt;!-- Create manifest file which is required for creating an OSGi bundle. --&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-jar-plugin&lt;/artifactId&gt;
+                &lt;version&gt;${version.plugin.jar}&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;archive&gt;
+                        &lt;manifestFile&gt;${project.build.outputDirectory}/META-INF/MANIFEST.MF&lt;/manifestFile&gt;
+                    &lt;/archive&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+            &lt;!-- Configure OSGi bundle. Due to interaction with the shade plugin, IDEs might identify the following configuration as illegal. --&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;org.apache.felix&lt;/groupId&gt;
+                &lt;artifactId&gt;maven-bundle-plugin&lt;/artifactId&gt;
+                &lt;version&gt;${version.plugin.bundle}&lt;/version&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;phase&gt;process-classes&lt;/phase&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;manifest&lt;/goal&gt;
+                        &lt;/goals&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+                &lt;configuration&gt;
+                    &lt;instructions&gt;
+                        &lt;Multi-Release&gt;true&lt;/Multi-Release&gt;
+                        &lt;!-- Cannot use wildcards because of use of the shade plugin which imports from &#39;byte-buddy-dep&#39;. --&gt;
+                        &lt;Export-Package&gt;${packages.list}&lt;/Export-Package&gt;
+                    &lt;/instructions&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+            &lt;!-- Inject a module-info.class file into the shaded jar. --&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;codes.rafael.modulemaker&lt;/groupId&gt;
+                &lt;artifactId&gt;modulemaker-maven-plugin&lt;/artifactId&gt;
+                &lt;version&gt;${version.plugin.modulemaker}&lt;/version&gt;
+                &lt;dependencies&gt;
+                    &lt;dependency&gt;
+                        &lt;groupId&gt;org.ow2.asm&lt;/groupId&gt;
+                        &lt;artifactId&gt;asm&lt;/artifactId&gt;
+                        &lt;version&gt;${version.asm}&lt;/version&gt;
+                    &lt;/dependency&gt;
+                &lt;/dependencies&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;phase&gt;package&lt;/phase&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;inject-module&lt;/goal&gt;
+                        &lt;/goals&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+                &lt;configuration&gt;
+                    &lt;name&gt;net.bytebuddy&lt;/name&gt;
+                    &lt;multirelease&gt;true&lt;/multirelease&gt;
+                    &lt;packages&gt;${packages.list}&lt;/packages&gt;
+                    &lt;exports&gt;${packages.list}&lt;/exports&gt;
+                    &lt;static-requires&gt;
+                        java.instrument,
+                        jdk.unsupported,
+                        net.bytebuddy.agent
+                    &lt;/static-requires&gt;
+                &lt;/configuration&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+
+    &lt;profiles&gt;
+        &lt;profile&gt;
+            &lt;id&gt;extras&lt;/id&gt;
+            &lt;activation&gt;
+                &lt;activeByDefault&gt;false&lt;/activeByDefault&gt;
+            &lt;/activation&gt;
+            &lt;build&gt;
+                &lt;plugins&gt;
+                    &lt;!-- The source jar is generated by the shade plugin and we do not want to override the shaded source jar. --&gt;
+                    &lt;plugin&gt;
+                        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                        &lt;artifactId&gt;maven-source-plugin&lt;/artifactId&gt;
+                        &lt;version&gt;${version.plugin.source}&lt;/version&gt;
+                        &lt;configuration&gt;
+                            &lt;skipSource&gt;true&lt;/skipSource&gt;
+                        &lt;/configuration&gt;
+                    &lt;/plugin&gt;
+                    &lt;!-- The shadowed source files of this module need to be included explicitly to create a javadoc artifact.--&gt;
+                    &lt;plugin&gt;
+                        &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                        &lt;artifactId&gt;maven-javadoc-plugin&lt;/artifactId&gt;
+                        &lt;version&gt;${version.plugin.javadoc}&lt;/version&gt;
+                        &lt;configuration&gt;
+                            &lt;includeDependencySources&gt;true&lt;/includeDependencySources&gt;
+                            &lt;dependencySourceIncludes&gt;
+                                &lt;dependencySourceInclude&gt;${project.groupId}:byte-buddy-dep&lt;/dependencySourceInclude&gt;
+                            &lt;/dependencySourceIncludes&gt;
+                        &lt;/configuration&gt;
+                    &lt;/plugin&gt;
+                &lt;/plugins&gt;
+            &lt;/build&gt;
+        &lt;/profile&gt;
+    &lt;/profiles&gt;
+&lt;/project&gt;
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Nov 17, 2021, 12:44:01 PM</div>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("xml",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            // Deprecated
+            // $(window).load(function () {
+            //     $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            // });
+            $(window).on('load', function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 8192152;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

@@ -17,13 +17,26 @@
 package org.springframework.samples.petclinic.rest;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.net.http.HttpClient.Redirect;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.Consumes;
+//import javax.servlet.http.HttpServletResponse;
+import javax.ws.rs.core.Context;
+import javax.ws.rs.core.Response;
+import javax.ws.rs.core.UriBuilder;
 
+import org.eclipse.microprofile.config.inject.ConfigProperty;
+import org.jboss.resteasy.spi.HttpResponse;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.CrossOrigin;
+//import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+
+import io.vertx.core.http.HttpClientResponse;
 
 /**
  * @author Vitaliy Fedoriv
@@ -31,17 +44,17 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@CrossOrigin(exposedHeaders = "errors, content-type")
+//@CrossOrigin(exposedHeaders = "errors, content-type")
 @RequestMapping("/")
 public class RootRestController {
 
-    @Value("#{servletContext.contextPath}")
+	@ConfigProperty(name = "server.servlet.context-path")
     private String servletContextPath;
-
+	
 	@RequestMapping(value = "/")
-	public void redirectToSwagger(HttpServletResponse response) throws IOException {
-		response.sendRedirect(this.servletContextPath + "/swagger-ui.html");
+	public void redirectToSwagger(HttpServletResponse response) throws IOException, URISyntaxException {
+//		URI externalUri = new URI(this.servletContextPath + "/swagger-ui.html");
+//		Response.seeOther(externalUri).build();
 	}
-
 }
 

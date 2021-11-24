@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for Search.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/mta-icon.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="8192152">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_spring_petclinic_rest.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_spring_petclinic_rest.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_spring_petclinic_rest.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_spring_petclinic_rest.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Migration Toolkit for Applications by Red Hat found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="8192152">
+                            spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/micrometer-core-1.6.3.jar/io/micrometer/core/instrument/search/Search.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">75</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package io.micrometer.core.instrument.search;
+
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.DistributionSummary;
+import io.micrometer.core.instrument.FunctionCounter;
+import io.micrometer.core.instrument.FunctionTimer;
+import io.micrometer.core.instrument.Gauge;
+import io.micrometer.core.instrument.LongTaskTimer;
+import io.micrometer.core.instrument.Meter;
+import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.Tag;
+import io.micrometer.core.instrument.Tags;
+import io.micrometer.core.instrument.TimeGauge;
+import io.micrometer.core.instrument.Timer;
+import io.micrometer.core.instrument.Meter.Id;
+import io.micrometer.core.instrument.config.MeterFilter;
+import io.micrometer.core.instrument.config.MeterFilterReply;
+import io.micrometer.core.lang.Nullable;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
+import java.util.Set;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public final class Search {
+   private final MeterRegistry registry;
+   private final List&lt;Tag&gt; tags = new ArrayList();
+   private Predicate&lt;String&gt; nameMatches = (n) -&gt; {
+      return true;
+   };
+   private final Set&lt;String&gt; requiredTagKeys = new HashSet();
+   private final Map&lt;String, Collection&lt;Predicate&lt;String&gt;&gt;&gt; tagMatches = new HashMap();
+
+   private Search(MeterRegistry registry) {
+      this.registry = registry;
+   }
+
+   public Search name(String exactName) {
+      return this.name((n) -&gt; {
+         return n.equals(exactName);
+      });
+   }
+
+   public Search name(@Nullable Predicate&lt;String&gt; nameMatches) {
+      if (nameMatches != null) {
+         this.nameMatches = nameMatches;
+      }
+
+      return this;
+   }
+
+   public Search tags(Iterable&lt;Tag&gt; tags) {
+      List var10001 = this.tags;
+      Objects.requireNonNull(this.tags);
+      tags.forEach(var10001::add);
+      return this;
+   }
+
+   public Search tags(String... tags) {
+      return this.tags((Iterable)Tags.of(tags));
+   }
+
+   public Search tag(String tagKey, String tagValue) {
+      return this.tags((Iterable)Tags.of(tagKey, tagValue));
+   }
+
+   public Search tagKeys(String... tagKeys) {
+      this.requiredTagKeys.addAll(Arrays.asList(tagKeys));
+      return this;
+   }
+
+   public Search tag(String tagKey, Predicate&lt;String&gt; tagValueMatches) {
+      ((Collection)this.tagMatches.computeIfAbsent(tagKey, (k) -&gt; {
+         return new ArrayList();
+      })).add(tagValueMatches);
+      return this;
+   }
+
+   @Nullable
+   public Timer timer() {
+      return (Timer)this.findOne(Timer.class);
+   }
+
+   @Nullable
+   public Counter counter() {
+      return (Counter)this.findOne(Counter.class);
+   }
+
+   @Nullable
+   public Gauge gauge() {
+      return (Gauge)this.findOne(Gauge.class);
+   }
+
+   @Nullable
+   public FunctionCounter functionCounter() {
+      return (FunctionCounter)this.findOne(FunctionCounter.class);
+   }
+
+   @Nullable
+   public TimeGauge timeGauge() {
+      return (TimeGauge)this.findOne(TimeGauge.class);
+   }
+
+   @Nullable
+   public FunctionTimer functionTimer() {
+      return (FunctionTimer)this.findOne(FunctionTimer.class);
+   }
+
+   @Nullable
+   public DistributionSummary summary() {
+      return (DistributionSummary)this.findOne(DistributionSummary.class);
+   }
+
+   @Nullable
+   public LongTaskTimer longTaskTimer() {
+      return (LongTaskTimer)this.findOne(LongTaskTimer.class);
+   }
+
+   @Nullable
+   public Meter meter() {
+      return this.findOne(Meter.class);
+   }
+
+   @Nullable
+   private &lt;M extends Meter&gt; M findOne(Class&lt;M&gt; clazz) {
+      Stream var10000 = this.meterStream();
+      Objects.requireNonNull(clazz);
+      Optional var2 = var10000.filter(clazz::isInstance).findAny();
+      Objects.requireNonNull(clazz);
+      return (Meter)var2.map(clazz::cast).orElse((Object)null);
+   }
+
+   public Collection&lt;Meter&gt; meters() {
+      return (Collection)this.meterStream().collect(Collectors.toList());
+   }
+
+   public MeterFilter acceptFilter() {
+      return new MeterFilter() {
+         public MeterFilterReply accept(Id id) {
+            if (!Search.this.nameMatches.test(id.getName())) {
+               return MeterFilterReply.NEUTRAL;
+            } else {
+               boolean requiredKeysPresent = true;
+               if (!Search.this.requiredTagKeys.isEmpty()) {
+                  List&lt;String&gt; tagKeys = new ArrayList();
+                  id.getTags().forEach((t) -&gt; {
+                     tagKeys.add(t.getKey());
+                  });
+                  requiredKeysPresent = tagKeys.containsAll(Search.this.requiredTagKeys);
+               }
+
+               boolean tagPredicatesMatched = true;
+               if (!Search.this.tagMatches.isEmpty()) {
+                  Set&lt;String&gt; matchingTagKeys = new HashSet();
+                  id.getTags().forEach((t) -&gt; {
+                     Collection&lt;Predicate&lt;String&gt;&gt; tagValueMatchers = (Collection)Search.this.tagMatches.get(t.getKey());
+                     if (tagValueMatchers != null &amp;&amp; tagValueMatchers.stream().allMatch((matcher) -&gt; {
+                        return matcher.test(t.getValue());
+                     })) {
+                        matchingTagKeys.add(t.getKey());
+                     }
+
+                  });
+                  tagPredicatesMatched = Search.this.tagMatches.keySet().size() == matchingTagKeys.size();
+               }
+
+               return requiredKeysPresent &amp;&amp; tagPredicatesMatched &amp;&amp; id.getTags().containsAll(Search.this.tags) ? MeterFilterReply.ACCEPT : MeterFilterReply.NEUTRAL;
+            }
+         }
+      };
+   }
+
+   private Stream&lt;Meter&gt; meterStream() {
+      Stream&lt;Meter&gt; meterStream = this.registry.getMeters().stream().filter((m) -&gt; {
+         return this.nameMatches.test(m.getId().getName());
+      });
+      if (!this.tags.isEmpty() || !this.requiredTagKeys.isEmpty() || !this.tagMatches.isEmpty()) {
+         meterStream = meterStream.filter((m) -&gt; {
+            boolean requiredKeysPresent = true;
+            if (!this.requiredTagKeys.isEmpty()) {
+               List&lt;String&gt; tagKeys = new ArrayList();
+               m.getId().getTags().forEach((t) -&gt; {
+                  tagKeys.add(t.getKey());
+               });
+               requiredKeysPresent = tagKeys.containsAll(this.requiredTagKeys);
+            }
+
+            boolean tagPredicatesMatched = true;
+            if (!this.tagMatches.isEmpty()) {
+               Set&lt;String&gt; matchingTagKeys = new HashSet();
+               m.getId().getTags().forEach((t) -&gt; {
+                  Collection&lt;Predicate&lt;String&gt;&gt; tagValueMatchers = (Collection)this.tagMatches.get(t.getKey());
+                  if (tagValueMatchers != null &amp;&amp; tagValueMatchers.stream().allMatch((matcher) -&gt; {
+                     return matcher.test(t.getValue());
+                  })) {
+                     matchingTagKeys.add(t.getKey());
+                  }
+
+               });
+               tagPredicatesMatched = this.tagMatches.keySet().size() == matchingTagKeys.size();
+            }
+
+            return requiredKeysPresent &amp;&amp; tagPredicatesMatched &amp;&amp; m.getId().getTags().containsAll(this.tags);
+         });
+      }
+
+      return meterStream;
+   }
+
+   public Collection&lt;Counter&gt; counters() {
+      return this.findAll(Counter.class);
+   }
+
+   public Collection&lt;Gauge&gt; gauges() {
+      return this.findAll(Gauge.class);
+   }
+
+   public Collection&lt;Timer&gt; timers() {
+      return this.findAll(Timer.class);
+   }
+
+   public Collection&lt;DistributionSummary&gt; summaries() {
+      return this.findAll(DistributionSummary.class);
+   }
+
+   public Collection&lt;LongTaskTimer&gt; longTaskTimers() {
+      return this.findAll(LongTaskTimer.class);
+   }
+
+   public Collection&lt;FunctionCounter&gt; functionCounters() {
+      return this.findAll(FunctionCounter.class);
+   }
+
+   public Collection&lt;FunctionTimer&gt; functionTimers() {
+      return this.findAll(FunctionTimer.class);
+   }
+
+   public Collection&lt;TimeGauge&gt; timeGauges() {
+      return this.findAll(TimeGauge.class);
+   }
+
+   private &lt;M extends Meter&gt; Collection&lt;M&gt; findAll(Class&lt;M&gt; clazz) {
+      Stream var10000 = this.meterStream();
+      Objects.requireNonNull(clazz);
+      var10000 = var10000.filter(clazz::isInstance);
+      Objects.requireNonNull(clazz);
+      return (Collection)var10000.map(clazz::cast).collect(Collectors.toList());
+   }
+
+   public static Search in(MeterRegistry registry) {
+      return new Search(registry);
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Nov 17, 2021, 12:44:04 PM</div>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "17,16,5,11,3,6,7,9,10,12,14,8,15,4,13" });
+
+            $("<div id='17-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(17)');
+            $("<div id='16-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(16)');
+            $("<div id='5-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(5)');
+            $("<div id='11-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(11)');
+            $("<div id='3-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(3)');
+            $("<div id='6-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(6)');
+            $("<div id='7-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(7)');
+            $("<div id='9-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(9)');
+            $("<div id='10-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(10)');
+            $("<div id='12-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(12)');
+            $("<div id='14-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(14)');
+            $("<div id='8-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(8)');
+            $("<div id='15-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(15)');
+            $("<div id='4-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(4)');
+            $("<div id='13-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(13)');
+
+
+$("<a name='10133608' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#17-inlines');
+
+$("<a name='10293408' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#16-inlines');
+
+$("<a name='10387672' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#5-inlines');
+
+$("<a name='10440920' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#11-inlines');
+
+$("<a name='10506464' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#3-inlines');
+
+$("<a name='10584200' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#6-inlines');
+
+$("<a name='10973376' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#7-inlines');
+
+$("<a name='19947672' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#9-inlines');
+
+$("<a name='20299928' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#10-inlines');
+
+$("<a name='20537496' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#12-inlines');
+
+$("<a name='20664472' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#14-inlines');
+
+$("<a name='20668568' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#8-inlines');
+
+$("<a name='20676760' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#15-inlines');
+
+$("<a name='20877488' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#4-inlines');
+
+$("<a name='21012656' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#13-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            // Deprecated
+            // $(window).load(function () {
+            //     $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            // });
+            $(window).on('load', function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 8192152;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

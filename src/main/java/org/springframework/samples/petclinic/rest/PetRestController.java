@@ -25,9 +25,11 @@ import org.springframework.samples.petclinic.mapper.PetMapper;
 import org.springframework.samples.petclinic.model.Pet;
 import org.springframework.samples.petclinic.service.ClinicService;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.validation.BindingResult;
+//import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.UriComponentsBuilder;
+//import org.springframework.web.util.UriComponentsBuilder;
+
+import javax.ws.rs.core.UriBuilder;
 
 import javax.transaction.Transactional;
 import javax.validation.Valid;
@@ -38,7 +40,7 @@ import java.util.Collection;
  */
 
 @RestController
-@CrossOrigin(exposedHeaders = "errors, content-type")
+//@CrossOrigin(exposedHeaders = "errors, content-type")
 @RequestMapping("api/pets")
 public class PetRestController {
 
@@ -79,30 +81,36 @@ public class PetRestController {
 
     @PreAuthorize("hasRole(@roles.OWNER_ADMIN)")
     @RequestMapping(value = "", method = RequestMethod.POST, produces = "application/json")
-    public ResponseEntity<PetDto> addPet(@RequestBody @Valid PetDto petDto, BindingResult bindingResult, UriComponentsBuilder ucBuilder) {
-        BindingErrorsResponse errors = new BindingErrorsResponse();
+    public ResponseEntity<PetDto> addPet(@RequestBody @Valid PetDto petDto, /*BindingResult bindingResult,*/ UriBuilder ucBuilder) {
+        //BindingErrorsResponse errors = new BindingErrorsResponse();
         HttpHeaders headers = new HttpHeaders();
-        if (bindingResult.hasErrors() || (petDto == null)) {
-            errors.addAllErrors(bindingResult);
-            headers.add("errors", errors.toJSON());
-            return new ResponseEntity<>(headers, HttpStatus.BAD_REQUEST);
+//        if (bindingResult.hasErrors() || (petDto == null)) {
+//            errors.addAllErrors(bindingResult);
+//            headers.add("errors", errors.toJSON());
+//            return new ResponseEntity<>(headers, HttpStatus.BAD_REQUEST);
+//        }
+        if ((petDto == null)) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         Pet pet = petMapper.toPet(petDto);
         this.clinicService.savePet(pet);
         petDto.setId(pet.getId());
-        headers.setLocation(ucBuilder.path("/api/pets/{id}").buildAndExpand(pet.getId()).toUri());
+        //headers.setLocation(ucBuilder.path("/api/pets/{id}").build(pet.getId()));
         return new ResponseEntity<>(petDto, headers, HttpStatus.CREATED);
     }
 
     @PreAuthorize("hasRole(@roles.OWNER_ADMIN)")
     @RequestMapping(value = "/{petId}", method = RequestMethod.PUT, produces = "application/json")
-    public ResponseEntity<PetDto> updatePet(@PathVariable("petId") int petId, @RequestBody @Valid PetDto pet, BindingResult bindingResult) {
+    public ResponseEntity<PetDto> updatePet(@PathVariable("petId") int petId, @RequestBody @Valid PetDto pet /*BindingResult bindingResult*/) {
         BindingErrorsResponse errors = new BindingErrorsResponse();
-        HttpHeaders headers = new HttpHeaders();
-        if (bindingResult.hasErrors() || (pet == null)) {
-            errors.addAllErrors(bindingResult);
-            headers.add("errors", errors.toJSON());
-            return new ResponseEntity<>(headers, HttpStatus.BAD_REQUEST);
+        //HttpHeaders headers = new HttpHeaders();
+//        if (bindingResult.hasErrors() || (pet == null)) {
+//            errors.addAllErrors(bindingResult);
+//            headers.add("errors", errors.toJSON());
+//            return new ResponseEntity<>(headers, HttpStatus.BAD_REQUEST);
+//        }
+        if (pet == null) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
         Pet currentPet = this.clinicService.findPetById(petId);
         if (currentPet == null) {

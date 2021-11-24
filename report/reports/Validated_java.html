@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for Validated.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/mta-icon.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="8192152">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_spring_petclinic_rest.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_spring_petclinic_rest.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_spring_petclinic_rest.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_spring_petclinic_rest.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Migration Toolkit for Applications by Red Hat found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="8192152">
+                            spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/micrometer-core-1.6.3.jar/io/micrometer/core/instrument/config/validate/Validated.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">10</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package io.micrometer.core.instrument.config.validate;
+
+import io.micrometer.core.annotation.Incubating;
+import io.micrometer.core.instrument.util.StringUtils;
+import io.micrometer.core.lang.NonNull;
+import io.micrometer.core.lang.Nullable;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Objects;
+import java.util.function.BiFunction;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
+
+@Incubating(
+   since = &quot;1.5.0&quot;
+)
+public interface Validated&lt;T&gt; extends Iterable&lt;Validated&lt;T&gt;&gt; {
+   boolean isValid();
+
+   default boolean isInvalid() {
+      return !this.isValid();
+   }
+
+   default List&lt;Validated.Invalid&lt;?&gt;&gt; failures() {
+      return (List)StreamSupport.stream(this.spliterator(), false).filter(Validated::isInvalid).map((v) -&gt; {
+         return (Validated.Invalid)v;
+      }).collect(Collectors.toList());
+   }
+
+   static Validated.Secret validSecret(String property, String value) {
+      return new Validated.Secret(property, value);
+   }
+
+   static &lt;T&gt; Validated.None&lt;T&gt; none() {
+      return new Validated.None();
+   }
+
+   static &lt;T&gt; Validated.Valid&lt;T&gt; valid(String property, @Nullable T value) {
+      return new Validated.Valid(property, value);
+   }
+
+   static &lt;T&gt; Validated.Invalid&lt;T&gt; invalid(String property, @Nullable Object value, String message, InvalidReason reason) {
+      return invalid(property, value, message, reason, (Throwable)null);
+   }
+
+   static &lt;T&gt; Validated.Invalid&lt;T&gt; invalid(String property, @Nullable Object value, String message, InvalidReason reason, @Nullable Throwable exception) {
+      return new Validated.Invalid(property, value, message, reason, exception);
+   }
+
+   default Validated&lt;?&gt; and(Validated&lt;?&gt; validated) {
+      return (Validated)(this instanceof Validated.None ? validated : new Validated.Either(this, validated));
+   }
+
+   &lt;U&gt; Validated&lt;U&gt; map(Function&lt;T, U&gt; var1);
+
+   &lt;U&gt; Validated&lt;U&gt; flatMap(BiFunction&lt;T, Validated.Valid&lt;T&gt;, Validated&lt;U&gt;&gt; var1);
+
+   default &lt;U&gt; Validated&lt;U&gt; flatMap(Function&lt;T, Validated&lt;U&gt;&gt; mapping) {
+      return this.flatMap((value, original) -&gt; {
+         return (Validated)mapping.apply(value);
+      });
+   }
+
+   default Validated&lt;T&gt; invalidateWhen(Predicate&lt;T&gt; condition, String message, InvalidReason reason) {
+      return this.flatMap((value, valid) -&gt; {
+         return (Validated)(condition.test(value) ? invalid(valid.property, value, message, reason) : valid);
+      });
+   }
+
+   default Validated&lt;T&gt; required() {
+      return this.invalidateWhen(Objects::isNull, &quot;is required&quot;, InvalidReason.MISSING);
+   }
+
+   default Validated&lt;T&gt; nonBlank() {
+      return this.invalidateWhen((t) -&gt; {
+         return StringUtils.isBlank(t.toString());
+      }, &quot;cannot be blank&quot;, InvalidReason.MISSING);
+   }
+
+   T get() throws ValidationException;
+
+   default T orElse(@Nullable T t) throws ValidationException {
+      return this.orElseGet(() -&gt; {
+         return t;
+      });
+   }
+
+   T orElseGet(Supplier&lt;T&gt; var1) throws ValidationException;
+
+   void orThrow() throws ValidationException;
+
+   public static class Secret extends Validated.Valid&lt;String&gt; {
+      public Secret(String property, String value) {
+         super(property, value);
+      }
+
+      public String toString() {
+         return &quot;Secret{property=&#39;&quot; + this.property + &#39;\&#39;&#39; + &#39;}&#39;;
+      }
+   }
+
+   public static class None&lt;T&gt; implements Validated&lt;T&gt; {
+      public boolean isValid() {
+         return true;
+      }
+
+      public &lt;U&gt; Validated&lt;U&gt; map(Function&lt;T, U&gt; mapping) {
+         return this;
+      }
+
+      public &lt;U&gt; Validated&lt;U&gt; flatMap(BiFunction&lt;T, Validated.Valid&lt;T&gt;, Validated&lt;U&gt;&gt; mapping) {
+         return this;
+      }
+
+      public T get() {
+         return null;
+      }
+
+      public T orElseGet(Supplier&lt;T&gt; t) {
+         return null;
+      }
+
+      public void orThrow() {
+      }
+
+      @NonNull
+      public Iterator&lt;Validated&lt;T&gt;&gt; iterator() {
+         return Collections.emptyIterator();
+      }
+   }
+
+   public static class Valid&lt;T&gt; implements Validated&lt;T&gt; {
+      protected final String property;
+      private final T value;
+
+      public Valid(String property, T value) {
+         this.property = property;
+         this.value = value;
+      }
+
+      public boolean isValid() {
+         return true;
+      }
+
+      @NonNull
+      public Iterator&lt;Validated&lt;T&gt;&gt; iterator() {
+         return Stream.of(this).iterator();
+      }
+
+      public T get() {
+         return this.value;
+      }
+
+      public void orThrow() {
+      }
+
+      public T orElseGet(Supplier&lt;T&gt; t) {
+         return this.value == null ? t.get() : this.value;
+      }
+
+      public &lt;U&gt; Validated&lt;U&gt; map(Function&lt;T, U&gt; mapping) {
+         return new Validated.Valid(this.property, mapping.apply(this.value));
+      }
+
+      public &lt;U&gt; Validated&lt;U&gt; flatMap(BiFunction&lt;T, Validated.Valid&lt;T&gt;, Validated&lt;U&gt;&gt; mapping) {
+         return (Validated)mapping.apply(this.value, this);
+      }
+
+      public String getProperty() {
+         return this.property;
+      }
+
+      public String toString() {
+         return &quot;Valid{property=&#39;&quot; + this.property + &#39;\&#39;&#39; + &quot;, value=&#39;&quot; + this.value + &#39;\&#39;&#39; + &#39;}&#39;;
+      }
+   }
+
+   public static class Invalid&lt;T&gt; implements Validated&lt;T&gt; {
+      private final String property;
+      @Nullable
+      private final Object value;
+      private final String message;
+      private final InvalidReason reason;
+      @Nullable
+      private final Throwable exception;
+
+      public Invalid(String property, @Nullable Object value, String message, InvalidReason reason, @Nullable Throwable exception) {
+         this.property = property;
+         this.value = value;
+         this.message = message;
+         this.reason = reason;
+         this.exception = exception;
+      }
+
+      public boolean isValid() {
+         return false;
+      }
+
+      @NonNull
+      public Iterator&lt;Validated&lt;T&gt;&gt; iterator() {
+         return Stream.of(this).iterator();
+      }
+
+      public String getMessage() {
+         return this.message;
+      }
+
+      public InvalidReason getReason() {
+         return this.reason;
+      }
+
+      @Nullable
+      public Throwable getException() {
+         return this.exception;
+      }
+
+      public T get() throws ValidationException {
+         throw new ValidationException(this);
+      }
+
+      public T orElseGet(Supplier&lt;T&gt; t) throws ValidationException {
+         throw new ValidationException(this);
+      }
+
+      public void orThrow() throws ValidationException {
+         throw new ValidationException(this);
+      }
+
+      public &lt;U&gt; Validated&lt;U&gt; map(Function&lt;T, U&gt; mapping) {
+         return this;
+      }
+
+      public &lt;U&gt; Validated&lt;U&gt; flatMap(BiFunction&lt;T, Validated.Valid&lt;T&gt;, Validated&lt;U&gt;&gt; mapping) {
+         return this;
+      }
+
+      public String getProperty() {
+         return this.property;
+      }
+
+      @Nullable
+      public Object getValue() {
+         return this.value;
+      }
+
+      public String toString() {
+         return &quot;Invalid{property=&#39;&quot; + this.property + &#39;\&#39;&#39; + &quot;, value=&#39;&quot; + this.value + &#39;\&#39;&#39; + &quot;, message=&#39;&quot; + this.message + &#39;\&#39;&#39; + &#39;}&#39;;
+      }
+   }
+
+   public static class Either implements Validated&lt;Object&gt; {
+      private final Validated&lt;?&gt; left;
+      private final Validated&lt;?&gt; right;
+
+      public Either(Validated&lt;?&gt; left, Validated&lt;?&gt; right) {
+         this.left = left;
+         this.right = right;
+      }
+
+      public boolean isValid() {
+         return this.left.isValid() &amp;&amp; this.right.isValid();
+      }
+
+      public Object get() {
+         throw new UnsupportedOperationException(&quot;get not supported on more than one Validated object&quot;);
+      }
+
+      public Object orElseGet(Supplier&lt;Object&gt; o) throws ValidationException {
+         throw new UnsupportedOperationException(&quot;orElse not supported on more than one Validated object&quot;);
+      }
+
+      public void orThrow() throws ValidationException {
+         List&lt;Validated.Invalid&lt;?&gt;&gt; failures = this.failures();
+         if (!failures.isEmpty()) {
+            throw new ValidationException(this);
+         }
+      }
+
+      public &lt;U&gt; Validated&lt;U&gt; map(Function&lt;Object, U&gt; mapping) {
+         throw new UnsupportedOperationException(&quot;cannot invoke map on more than one Validated object&quot;);
+      }
+
+      public &lt;U&gt; Validated&lt;U&gt; flatMap(BiFunction&lt;Object, Validated.Valid&lt;Object&gt;, Validated&lt;U&gt;&gt; mapping) {
+         throw new UnsupportedOperationException(&quot;cannot invoke flatMap on more than one Validated object&quot;);
+      }
+
+      @NonNull
+      public Iterator&lt;Validated&lt;Object&gt;&gt; iterator() {
+         return Stream.concat(StreamSupport.stream(this.left.spliterator(), false).map((v) -&gt; {
+            return v.map((o) -&gt; {
+               return o;
+            });
+         }), StreamSupport.stream(this.right.spliterator(), false).map((v) -&gt; {
+            return v.map((o) -&gt; {
+               return o;
+            });
+         })).iterator();
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Nov 17, 2021, 12:43:58 PM</div>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "3,4" });
+
+            $("<div id='3-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(3)');
+            $("<div id='4-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(4)');
+
+
+$("<a name='10809480' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer metric annotation with Microprofile metric annotation</strong><a title='View Rule: springboot-metrics-to-quarkus-0310' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0310'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer metric annotation with Microprofile metric annotation<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#3-inlines');
+
+$("<a name='20160688' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#4-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            // Deprecated
+            // $(window).load(function () {
+            //     $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            // });
+            $(window).on('load', function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 8192152;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

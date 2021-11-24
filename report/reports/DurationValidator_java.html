@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for DurationValidator.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/mta-icon.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="8192152">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_spring_petclinic_rest.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_spring_petclinic_rest.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_spring_petclinic_rest.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_spring_petclinic_rest.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Migration Toolkit for Applications by Red Hat found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="8192152">
+                            spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/micrometer-core-1.6.3.jar/io/micrometer/core/instrument/config/validate/DurationValidator.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">10</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package io.micrometer.core.instrument.config.validate;
+
+import io.micrometer.core.annotation.Incubating;
+import io.micrometer.core.instrument.util.StringUtils;
+import io.micrometer.core.lang.Nullable;
+import java.time.Duration;
+import java.time.temporal.ChronoUnit;
+import java.util.Arrays;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.Collectors;
+
+@Incubating(
+   since = &quot;1.5.0&quot;
+)
+public enum DurationValidator {
+   SIMPLE(new String[]{&quot;^\\s*(([\\+]?\\d+)(\\.\\d*)?)\\s*([a-zA-Z]{0,2})\\s*&quot;, &quot;^\\s*([\\+]?\\d{0,3}([_,]?\\d{3})*(\\.\\d*)?)\\s*([a-zA-Z]{0,2})\\s*&quot;}) {
+      protected Validated&lt;Duration&gt; doParse(String property, String value) {
+         Matcher matcher = ((Pattern)this.patterns.get(0)).matcher(value.toLowerCase().replaceAll(&quot;[,_\\s]&quot;, &quot;&quot;));
+         if (!matcher.matches()) {
+            return Validated.invalid(property, value, &quot;must be a valid duration&quot;, InvalidReason.MALFORMED);
+         } else {
+            String unit = matcher.group(4);
+            if (StringUtils.isBlank(unit)) {
+               return Validated.invalid(property, value, &quot;must have a valid duration unit&quot;, InvalidReason.MALFORMED);
+            } else {
+               int e = 0;
+
+               Double amount;
+               for(amount = Double.valueOf(matcher.group(1)); e &lt; 18 &amp;&amp; Math.abs(amount.doubleValue() - (double)amount.longValue()) &gt; 1.0E-10D; ++e) {
+                  amount = amount.doubleValue() * 10.0D;
+               }
+
+               long multipliedResult = amount.longValue();
+               long multipliedFactor = (long)Math.pow(10.0D, (double)e);
+               return validateChronoUnit(property, value, unit).map((cu) -&gt; {
+                  return Duration.of(multipliedResult, cu).dividedBy(multipliedFactor);
+               });
+            }
+         }
+      }
+   },
+   ISO8601(new String[]{&quot;^[\\+\\-]?P.*$&quot;}) {
+      protected Validated&lt;Duration&gt; doParse(String property, String value) {
+         try {
+            return Validated.valid(property, Duration.parse(value));
+         } catch (Exception var4) {
+            return Validated.invalid(property, value, &quot;must be a valid ISO-8601 duration like &#39;PT10S&#39;&quot;, InvalidReason.MALFORMED, var4);
+         }
+      }
+   };
+
+   protected final List&lt;Pattern&gt; patterns;
+
+   private DurationValidator(String[] patterns) {
+      this.patterns = (List)Arrays.stream(patterns).map(Pattern::compile).collect(Collectors.toList());
+   }
+
+   public static Validated&lt;Duration&gt; validate(String property, @Nullable String value) {
+      return (Validated)(value == null ? Validated.valid(property, (Object)null) : detect(property, value).flatMap((validator) -&gt; {
+         return validator.doParse(property, value);
+      }));
+   }
+
+   protected abstract Validated&lt;Duration&gt; doParse(String var1, String var2);
+
+   private static Validated&lt;DurationValidator&gt; detect(String property, @Nullable String value) {
+      if (value != null &amp;&amp; !StringUtils.isBlank(value)) {
+         DurationValidator[] var2 = values();
+         int var3 = var2.length;
+
+         for(int var4 = 0; var4 &lt; var3; ++var4) {
+            DurationValidator candidate = var2[var4];
+            if (candidate.patterns.stream().anyMatch((p) -&gt; {
+               return p.matcher(value).matches();
+            })) {
+               return Validated.valid(property, candidate);
+            }
+         }
+
+         return Validated.invalid(property, value, &quot;must be a valid duration value&quot;, InvalidReason.MALFORMED);
+      } else {
+         return Validated.invalid(property, value, &quot;must be a valid duration value&quot;, value == null ? InvalidReason.MISSING : InvalidReason.MALFORMED);
+      }
+   }
+
+   public static Validated&lt;TimeUnit&gt; validateTimeUnit(String property, @Nullable String unit) {
+      return validateChronoUnit(property, unit, unit).flatMap((cu) -&gt; {
+         return toTimeUnit(property, cu);
+      });
+   }
+
+   public static Validated&lt;ChronoUnit&gt; validateChronoUnit(String property, @Nullable String value, @Nullable String unit) {
+      if (unit == null) {
+         return Validated.valid(property, (Object)null);
+      } else {
+         String var3 = unit.toLowerCase();
+         byte var4 = -1;
+         switch(var3.hashCode()) {
+         case -2113083352:
+            if (var3.equals(&quot;nanosecond&quot;)) {
+               var4 = 2;
+            }
+            break;
+         case -1081074357:
+            if (var3.equals(&quot;nanoseconds&quot;)) {
+               var4 = 1;
+            }
+            break;
+         case -1074357713:
+            if (var3.equals(&quot;micros&quot;)) {
+               var4 = 7;
+            }
+            break;
+         case -1074095546:
+            if (var3.equals(&quot;millis&quot;)) {
+               var4 = 11;
+            }
+            break;
+         case -1074026988:
+            if (var3.equals(&quot;minute&quot;)) {
+               var4 = 19;
+            }
+            break;
+         case -906279820:
+            if (var3.equals(&quot;second&quot;)) {
+               var4 = 14;
+            }
+            break;
+         case -368353224:
+            if (var3.equals(&quot;microsecond&quot;)) {
+               var4 = 6;
+            }
+            break;
+         case 100:
+            if (var3.equals(&quot;d&quot;)) {
+               var4 = 25;
+            }
+            break;
+         case 104:
+            if (var3.equals(&quot;h&quot;)) {
+               var4 = 22;
+            }
+            break;
+         case 109:
+            if (var3.equals(&quot;m&quot;)) {
+               var4 = 17;
+            }
+            break;
+         case 115:
+            if (var3.equals(&quot;s&quot;)) {
+               var4 = 12;
+            }
+            break;
+         case 3494:
+            if (var3.equals(&quot;ms&quot;)) {
+               var4 = 8;
+            }
+            break;
+         case 3525:
+            if (var3.equals(&quot;ns&quot;)) {
+               var4 = 0;
+            }
+            break;
+         case 3742:
+            if (var3.equals(&quot;us&quot;)) {
+               var4 = 4;
+            }
+            break;
+         case 99228:
+            if (var3.equals(&quot;day&quot;)) {
+               var4 = 27;
+            }
+            break;
+         case 108114:
+            if (var3.equals(&quot;min&quot;)) {
+               var4 = 21;
+            }
+            break;
+         case 113745:
+            if (var3.equals(&quot;sec&quot;)) {
+               var4 = 16;
+            }
+            break;
+         case 3076183:
+            if (var3.equals(&quot;days&quot;)) {
+               var4 = 26;
+            }
+            break;
+         case 3208676:
+            if (var3.equals(&quot;hour&quot;)) {
+               var4 = 24;
+            }
+            break;
+         case 3351649:
+            if (var3.equals(&quot;mins&quot;)) {
+               var4 = 20;
+            }
+            break;
+         case 3526210:
+            if (var3.equals(&quot;secs&quot;)) {
+               var4 = 15;
+            }
+            break;
+         case 85195282:
+            if (var3.equals(&quot;milliseconds&quot;)) {
+               var4 = 9;
+            }
+            break;
+         case 99469071:
+            if (var3.equals(&quot;hours&quot;)) {
+               var4 = 23;
+            }
+            break;
+         case 104586303:
+            if (var3.equals(&quot;nanos&quot;)) {
+               var4 = 3;
+            }
+            break;
+         case 1064901855:
+            if (var3.equals(&quot;minutes&quot;)) {
+               var4 = 18;
+            }
+            break;
+         case 1465952059:
+            if (var3.equals(&quot;microseconds&quot;)) {
+               var4 = 5;
+            }
+            break;
+         case 1942410881:
+            if (var3.equals(&quot;millisecond&quot;)) {
+               var4 = 10;
+            }
+            break;
+         case 1970096767:
+            if (var3.equals(&quot;seconds&quot;)) {
+               var4 = 13;
+            }
+         }
+
+         switch(var4) {
+         case 0:
+         case 1:
+         case 2:
+         case 3:
+            return Validated.valid(property, ChronoUnit.NANOS);
+         case 4:
+         case 5:
+         case 6:
+         case 7:
+            return Validated.valid(property, ChronoUnit.MICROS);
+         case 8:
+         case 9:
+         case 10:
+         case 11:
+            return Validated.valid(property, ChronoUnit.MILLIS);
+         case 12:
+         case 13:
+         case 14:
+         case 15:
+         case 16:
+            return Validated.valid(property, ChronoUnit.SECONDS);
+         case 17:
+         case 18:
+         case 19:
+         case 20:
+         case 21:
+            return Validated.valid(property, ChronoUnit.MINUTES);
+         case 22:
+         case 23:
+         case 24:
+            return Validated.valid(property, ChronoUnit.HOURS);
+         case 25:
+         case 26:
+         case 27:
+            return Validated.valid(property, ChronoUnit.DAYS);
+         default:
+            return Validated.invalid(property, value, &quot;must contain a valid time unit&quot;, InvalidReason.MALFORMED);
+         }
+      }
+   }
+
+   private static Validated&lt;TimeUnit&gt; toTimeUnit(String property, @Nullable ChronoUnit chronoUnit) {
+      if (chronoUnit == null) {
+         return Validated.valid(property, (Object)null);
+      } else {
+         switch(chronoUnit) {
+         case NANOS:
+            return Validated.valid(property, TimeUnit.NANOSECONDS);
+         case MICROS:
+            return Validated.valid(property, TimeUnit.MICROSECONDS);
+         case MILLIS:
+            return Validated.valid(property, TimeUnit.MILLISECONDS);
+         case SECONDS:
+            return Validated.valid(property, TimeUnit.SECONDS);
+         case MINUTES:
+            return Validated.valid(property, TimeUnit.MINUTES);
+         case HOURS:
+            return Validated.valid(property, TimeUnit.HOURS);
+         case DAYS:
+            return Validated.valid(property, TimeUnit.DAYS);
+         default:
+            return Validated.invalid(property, chronoUnit.toString(), &quot;must be a valid time unit&quot;, InvalidReason.MALFORMED);
+         }
+      }
+   }
+
+   // $FF: synthetic method
+   private static DurationValidator[] $values() {
+      return new DurationValidator[]{SIMPLE, ISO8601};
+   }
+
+   // $FF: synthetic method
+   DurationValidator(String[] x2, Object x3) {
+      this(x2);
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Nov 17, 2021, 12:44:00 PM</div>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "3,4" });
+
+            $("<div id='3-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(3)');
+            $("<div id='4-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(4)');
+
+
+$("<a name='10899672' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer metric annotation with Microprofile metric annotation</strong><a title='View Rule: springboot-metrics-to-quarkus-0310' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0310'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer metric annotation with Microprofile metric annotation<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#3-inlines');
+
+$("<a name='20140208' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#4-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            // Deprecated
+            // $(window).load(function () {
+            //     $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            // });
+            $(window).on('load', function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 8192152;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

@@ -18,8 +18,11 @@ package org.springframework.samples.petclinic.repository.jpa;
 
 import java.util.Collection;
 
+import javax.inject.Named;
+import javax.inject.Singleton;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.dao.DataAccessException;
@@ -32,8 +35,9 @@ import org.springframework.stereotype.Repository;
  *
  */
 
-@Repository
+@Singleton
 @Profile("jpa")
+@Named("jpaSpecialtyRepositoryImpl")
 public class JpaSpecialtyRepositoryImpl implements SpecialtyRepository {
 	
     @PersistenceContext
@@ -51,6 +55,7 @@ public class JpaSpecialtyRepositoryImpl implements SpecialtyRepository {
 	}
 
 	@Override
+	@Transactional
 	public void save(Specialty specialty) throws DataAccessException {
 		if (specialty.getId() == null) {
             this.em.persist(specialty);
@@ -60,6 +65,7 @@ public class JpaSpecialtyRepositoryImpl implements SpecialtyRepository {
 	}
 
 	@Override
+	@Transactional
 	public void delete(Specialty specialty) throws DataAccessException {
 		this.em.remove(this.em.contains(specialty) ? specialty : this.em.merge(specialty));
 		Integer specId = specialty.getId();

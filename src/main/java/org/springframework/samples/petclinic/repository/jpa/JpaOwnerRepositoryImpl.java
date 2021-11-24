@@ -20,6 +20,7 @@ import java.util.Collection;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.dao.DataAccessException;
@@ -72,6 +73,7 @@ public class JpaOwnerRepositoryImpl implements OwnerRepository {
 
 
     @Override
+    @Transactional
     public void save(Owner owner) {
         if (owner.getId() == null) {
             this.em.persist(owner);
@@ -89,6 +91,7 @@ public class JpaOwnerRepositoryImpl implements OwnerRepository {
 	}
 
 	@Override
+	@Transactional
 	public void delete(Owner owner) throws DataAccessException {
 		this.em.remove(this.em.contains(owner) ? owner : this.em.merge(owner));
 	}

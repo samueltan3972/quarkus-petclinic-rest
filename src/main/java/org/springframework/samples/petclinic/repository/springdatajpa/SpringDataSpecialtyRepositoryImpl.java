@@ -16,8 +16,10 @@
 
 package org.springframework.samples.petclinic.repository.springdatajpa;
 
+import javax.enterprise.context.ApplicationScoped;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.samples.petclinic.model.Specialty;
@@ -28,12 +30,14 @@ import org.springframework.samples.petclinic.model.Specialty;
  */
 
 @Profile("spring-data-jpa")
+@ApplicationScoped
 public class SpringDataSpecialtyRepositoryImpl implements SpecialtyRepositoryOverride {
 	
 	@PersistenceContext
     private EntityManager em;
 
 	@Override
+	@Transactional
 	public void delete(Specialty specialty) {
         this.em.remove(this.em.contains(specialty) ? specialty : this.em.merge(specialty));
 		Integer specId = specialty.getId();

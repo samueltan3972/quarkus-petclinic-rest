@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for KafkaConsumerMetrics.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/mta-icon.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="8192152">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_spring_petclinic_rest.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_spring_petclinic_rest.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_spring_petclinic_rest.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_spring_petclinic_rest.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Migration Toolkit for Applications by Red Hat found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="8192152">
+                            spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/micrometer-core-1.6.3.jar/io/micrometer/core/instrument/binder/kafka/KafkaConsumerMetrics.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">45</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package io.micrometer.core.instrument.binder.kafka;
+
+import io.micrometer.core.annotation.Incubating;
+import io.micrometer.core.instrument.FunctionCounter;
+import io.micrometer.core.instrument.Gauge;
+import io.micrometer.core.instrument.Meter;
+import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.Tag;
+import io.micrometer.core.instrument.Tags;
+import io.micrometer.core.instrument.TimeGauge;
+import io.micrometer.core.instrument.binder.MeterBinder;
+import io.micrometer.core.lang.NonNullApi;
+import io.micrometer.core.lang.NonNullFields;
+import io.micrometer.core.lang.Nullable;
+import java.lang.invoke.SerializedLambda;
+import java.lang.management.ManagementFactory;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Objects;
+import java.util.Set;
+import java.util.concurrent.Callable;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicReference;
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.function.ToDoubleFunction;
+import java.util.stream.Stream;
+import javax.management.InstanceNotFoundException;
+import javax.management.ListenerNotFoundException;
+import javax.management.MBeanServer;
+import javax.management.MBeanServerDelegate;
+import javax.management.MBeanServerFactory;
+import javax.management.MBeanServerNotification;
+import javax.management.MalformedObjectNameException;
+import javax.management.Notification;
+import javax.management.NotificationFilter;
+import javax.management.NotificationListener;
+import javax.management.ObjectName;
+import javax.management.QueryExp;
+
+/** @deprecated */
+@NonNullApi
+@NonNullFields
+@Deprecated
+@Incubating(
+   since = &quot;1.1.0&quot;
+)
+public class KafkaConsumerMetrics implements MeterBinder, AutoCloseable {
+   private static final String JMX_DOMAIN = &quot;kafka.consumer&quot;;
+   private static final String METRIC_NAME_PREFIX = &quot;kafka.consumer.&quot;;
+   private final MBeanServer mBeanServer;
+   private final Iterable&lt;Tag&gt; tags;
+   @Nullable
+   private Integer kafkaMajorVersion;
+   private final List&lt;Runnable&gt; notificationListenerCleanUpRunnables;
+
+   public KafkaConsumerMetrics() {
+      this(Collections.emptyList());
+   }
+
+   public KafkaConsumerMetrics(Iterable&lt;Tag&gt; tags) {
+      this(getMBeanServer(), tags);
+   }
+
+   public KafkaConsumerMetrics(MBeanServer mBeanServer, Iterable&lt;Tag&gt; tags) {
+      this.notificationListenerCleanUpRunnables = new CopyOnWriteArrayList();
+      this.mBeanServer = mBeanServer;
+      this.tags = tags;
+   }
+
+   private static MBeanServer getMBeanServer() {
+      List&lt;MBeanServer&gt; mBeanServers = MBeanServerFactory.findMBeanServer((String)null);
+      return !mBeanServers.isEmpty() ? (MBeanServer)mBeanServers.get(0) : ManagementFactory.getPlatformMBeanServer();
+   }
+
+   public void bindTo(MeterRegistry registry) {
+      this.registerMetricsEventually(registry, &quot;consumer-fetch-manager-metrics&quot;, (o, tags) -&gt; {
+         List&lt;Meter&gt; meters = new ArrayList();
+         if (tags.stream().anyMatch((t) -&gt; {
+            return t.getKey().equals(&quot;topic&quot;);
+         }) &amp;&amp; tags.stream().anyMatch((t) -&gt; {
+            return t.getKey().equals(&quot;partition&quot;);
+         })) {
+            meters.add(this.registerGaugeForObject(registry, o, &quot;records-lag&quot;, tags, &quot;The latest lag of the partition&quot;, &quot;records&quot;));
+            meters.add(this.registerGaugeForObject(registry, o, &quot;records-lag-avg&quot;, tags, &quot;The average lag of the partition&quot;, &quot;records&quot;));
+            meters.add(this.registerGaugeForObject(registry, o, &quot;records-lag-max&quot;, tags, &quot;The maximum lag in terms of number of records for any partition in this window. An increasing value over time is your best indication that the consumer group is not keeping up with the producers.&quot;, &quot;records&quot;));
+            if (this.kafkaMajorVersion(tags) &gt;= 2) {
+               meters.add(this.registerGaugeForObject(registry, o, &quot;records-lead&quot;, tags, &quot;The latest lead of the partition.&quot;, &quot;records&quot;));
+               meters.add(this.registerGaugeForObject(registry, o, &quot;records-lead-min&quot;, tags, &quot;The min lead of the partition. The lag between the consumer offset and the start offset of the log. If this gets close to zero, it&#39;s an indication that the consumer may lose data soon.&quot;, &quot;records&quot;));
+               meters.add(this.registerGaugeForObject(registry, o, &quot;records-lead-avg&quot;, tags, &quot;The average lead of the partition.&quot;, &quot;records&quot;));
+            }
+         } else if (tags.stream().anyMatch((t) -&gt; {
+            return t.getKey().equals(&quot;topic&quot;);
+         })) {
+            meters.add(this.registerGaugeForObject(registry, o, &quot;fetch-size-avg&quot;, tags, &quot;The average number of bytes fetched per request.&quot;, &quot;bytes&quot;));
+            meters.add(this.registerGaugeForObject(registry, o, &quot;fetch-size-max&quot;, tags, &quot;The maximum number of bytes fetched per request.&quot;, &quot;bytes&quot;));
+            meters.add(this.registerGaugeForObject(registry, o, &quot;records-per-request-avg&quot;, tags, &quot;The average number of records in each request.&quot;, &quot;records&quot;));
+            meters.add(this.registerFunctionCounterForObject(registry, o, &quot;bytes-consumed-total&quot;, tags, &quot;The total number of bytes consumed.&quot;, &quot;bytes&quot;));
+            meters.add(this.registerFunctionCounterForObject(registry, o, &quot;records-consumed-total&quot;, tags, &quot;The total number of records consumed.&quot;, &quot;records&quot;));
+         } else {
+            meters.add(this.registerFunctionCounterForObject(registry, o, &quot;fetch-total&quot;, tags, &quot;The number of fetch requests.&quot;, &quot;requests&quot;));
+            meters.add(this.registerTimeGaugeForObject(registry, o, &quot;fetch-latency-avg&quot;, tags, &quot;The average time taken for a fetch request.&quot;));
+            meters.add(this.registerTimeGaugeForObject(registry, o, &quot;fetch-latency-max&quot;, tags, &quot;The max time taken for a fetch request.&quot;));
+            meters.add(this.registerTimeGaugeForObject(registry, o, &quot;fetch-throttle-time-avg&quot;, tags, &quot;The average throttle time. When quotas are enabled, the broker may delay fetch requests in order to throttle a consumer which has exceeded its limit. This metric indicates how throttling time has been added to fetch requests on average.&quot;));
+            meters.add(this.registerTimeGaugeForObject(registry, o, &quot;fetch-throttle-time-max&quot;, tags, &quot;The maximum throttle time.&quot;));
+         }
+
+         return meters;
+      });
+      this.registerMetricsEventually(registry, &quot;consumer-coordinator-metrics&quot;, (o, tags) -&gt; {
+         List&lt;Meter&gt; meters = new ArrayList();
+         meters.add(this.registerGaugeForObject(registry, o, &quot;assigned-partitions&quot;, tags, &quot;The number of partitions currently assigned to this consumer.&quot;, &quot;partitions&quot;));
+         meters.add(this.registerGaugeForObject(registry, o, &quot;commit-rate&quot;, tags, &quot;The number of commit calls per second.&quot;, &quot;commits&quot;));
+         meters.add(this.registerGaugeForObject(registry, o, &quot;join-rate&quot;, tags, &quot;The number of group joins per second. Group joining is the first phase of the rebalance protocol. A large value indicates that the consumer group is unstable and will likely be coupled with increased lag.&quot;, &quot;joins&quot;));
+         meters.add(this.registerGaugeForObject(registry, o, &quot;sync-rate&quot;, tags, &quot;The number of group syncs per second. Group synchronization is the second and last phase of the rebalance protocol. A large value indicates group instability.&quot;, &quot;syncs&quot;));
+         meters.add(this.registerGaugeForObject(registry, o, &quot;heartbeat-rate&quot;, tags, &quot;The average number of heartbeats per second. After a rebalance, the consumer sends heartbeats to the coordinator to keep itself active in the group. You may see a lower rate than configured if the processing loop is taking more time to handle message batches. Usually this is OK as long as you see no increase in the join rate.&quot;, &quot;heartbeats&quot;));
+         meters.add(this.registerTimeGaugeForObject(registry, o, &quot;commit-latency-avg&quot;, tags, &quot;The average time taken for a commit request.&quot;));
+         meters.add(this.registerTimeGaugeForObject(registry, o, &quot;commit-latency-max&quot;, tags, &quot;The max time taken for a commit request.&quot;));
+         meters.add(this.registerTimeGaugeForObject(registry, o, &quot;join-time-avg&quot;, tags, &quot;The average time taken for a group rejoin. This value can get as high as the configured session timeout for the consumer, but should usually be lower.&quot;));
+         meters.add(this.registerTimeGaugeForObject(registry, o, &quot;join-time-max&quot;, tags, &quot;The max time taken for a group rejoin. This value should not get much higher than the configured session timeout for the consumer.&quot;));
+         meters.add(this.registerTimeGaugeForObject(registry, o, &quot;sync-time-avg&quot;, tags, &quot;The average time taken for a group sync.&quot;));
+         meters.add(this.registerTimeGaugeForObject(registry, o, &quot;sync-time-max&quot;, tags, &quot;The max time taken for a group sync.&quot;));
+         meters.add(this.registerTimeGaugeForObject(registry, o, &quot;heartbeat-response-time-max&quot;, tags, &quot;The max time taken to receive a response to a heartbeat request.&quot;));
+         meters.add(this.registerTimeGaugeForObject(registry, o, &quot;last-heartbeat-seconds-ago&quot;, &quot;last-heartbeat&quot;, tags, &quot;The time since the last controller heartbeat.&quot;, TimeUnit.SECONDS));
+         return meters;
+      });
+      this.registerMetricsEventually(registry, &quot;consumer-metrics&quot;, (o, tags) -&gt; {
+         List&lt;Meter&gt; meters = new ArrayList();
+         meters.add(this.registerGaugeForObject(registry, o, &quot;connection-count&quot;, tags, &quot;The current number of active connections.&quot;, &quot;connections&quot;));
+         meters.add(this.registerGaugeForObject(registry, o, &quot;connection-creation-total&quot;, tags, &quot;New connections established.&quot;, &quot;connections&quot;));
+         meters.add(this.registerGaugeForObject(registry, o, &quot;connection-close-total&quot;, tags, &quot;Connections closed.&quot;, &quot;connections&quot;));
+         meters.add(this.registerGaugeForObject(registry, o, &quot;io-ratio&quot;, tags, &quot;The fraction of time the I/O thread spent doing I/O.&quot;, (String)null));
+         meters.add(this.registerGaugeForObject(registry, o, &quot;io-wait-ratio&quot;, tags, &quot;The fraction of time the I/O thread spent waiting.&quot;, (String)null));
+         meters.add(this.registerGaugeForObject(registry, o, &quot;select-total&quot;, tags, &quot;Number of times the I/O layer checked for new I/O to perform.&quot;, (String)null));
+         meters.add(this.registerTimeGaugeForObject(registry, o, &quot;io-time-ns-avg&quot;, &quot;io-time-avg&quot;, tags, &quot;The average length of time for I/O per select call.&quot;, TimeUnit.NANOSECONDS));
+         meters.add(this.registerTimeGaugeForObject(registry, o, &quot;io-wait-time-ns-avg&quot;, &quot;io-wait-time-avg&quot;, tags, &quot;The average length of time the I/O thread spent waiting for a socket to be ready for reads or writes.&quot;, TimeUnit.NANOSECONDS));
+         if (this.kafkaMajorVersion(tags) &gt;= 2) {
+            meters.add(this.registerGaugeForObject(registry, o, &quot;successful-authentication-total&quot;, &quot;authentication-attempts&quot;, Tags.concat(tags, new String[]{&quot;result&quot;, &quot;successful&quot;}), &quot;The number of successful authentication attempts.&quot;, (String)null));
+            meters.add(this.registerGaugeForObject(registry, o, &quot;failed-authentication-total&quot;, &quot;authentication-attempts&quot;, Tags.concat(tags, new String[]{&quot;result&quot;, &quot;failed&quot;}), &quot;The number of failed authentication attempts.&quot;, (String)null));
+            meters.add(this.registerGaugeForObject(registry, o, &quot;network-io-total&quot;, tags, &quot;&quot;, &quot;bytes&quot;));
+            meters.add(this.registerGaugeForObject(registry, o, &quot;outgoing-byte-total&quot;, tags, &quot;&quot;, &quot;bytes&quot;));
+            meters.add(this.registerGaugeForObject(registry, o, &quot;request-total&quot;, tags, &quot;&quot;, &quot;requests&quot;));
+            meters.add(this.registerGaugeForObject(registry, o, &quot;response-total&quot;, tags, &quot;&quot;, &quot;responses&quot;));
+            meters.add(this.registerTimeGaugeForObject(registry, o, &quot;io-waittime-total&quot;, &quot;io-wait-time-total&quot;, tags, &quot;Time spent on the I/O thread waiting for a socket to be ready for reads or writes.&quot;, TimeUnit.NANOSECONDS));
+            meters.add(this.registerTimeGaugeForObject(registry, o, &quot;iotime-total&quot;, &quot;io-time-total&quot;, tags, &quot;Time spent in I/O during select calls.&quot;, TimeUnit.NANOSECONDS));
+         }
+
+         return meters;
+      });
+   }
+
+   private Gauge registerGaugeForObject(MeterRegistry registry, ObjectName o, String jmxMetricName, String meterName, Tags allTags, String description, @Nullable String baseUnit) {
+      AtomicReference&lt;Gauge&gt; gaugeReference = new AtomicReference();
+      Gauge gauge = Gauge.builder(&quot;kafka.consumer.&quot; + meterName, this.mBeanServer, this.getJmxAttribute(registry, gaugeReference, o, jmxMetricName)).description(description).baseUnit(baseUnit).tags(allTags).register(registry);
+      gaugeReference.set(gauge);
+      return gauge;
+   }
+
+   private Gauge registerGaugeForObject(MeterRegistry registry, ObjectName o, String jmxMetricName, Tags allTags, String description, @Nullable String baseUnit) {
+      return this.registerGaugeForObject(registry, o, jmxMetricName, sanitize(jmxMetricName), allTags, description, baseUnit);
+   }
+
+   private FunctionCounter registerFunctionCounterForObject(MeterRegistry registry, ObjectName o, String jmxMetricName, Tags allTags, String description, @Nullable String baseUnit) {
+      AtomicReference&lt;FunctionCounter&gt; counterReference = new AtomicReference();
+      FunctionCounter counter = FunctionCounter.builder(&quot;kafka.consumer.&quot; + sanitize(jmxMetricName), this.mBeanServer, this.getJmxAttribute(registry, counterReference, o, jmxMetricName)).description(description).baseUnit(baseUnit).tags(allTags).register(registry);
+      counterReference.set(counter);
+      return counter;
+   }
+
+   private TimeGauge registerTimeGaugeForObject(MeterRegistry registry, ObjectName o, String jmxMetricName, String meterName, Tags allTags, String description, TimeUnit timeUnit) {
+      AtomicReference&lt;TimeGauge&gt; timeGaugeReference = new AtomicReference();
+      TimeGauge timeGauge = TimeGauge.builder(&quot;kafka.consumer.&quot; + meterName, this.mBeanServer, timeUnit, this.getJmxAttribute(registry, timeGaugeReference, o, jmxMetricName)).description(description).tags(allTags).register(registry);
+      timeGaugeReference.set(timeGauge);
+      return timeGauge;
+   }
+
+   private TimeGauge registerTimeGaugeForObject(MeterRegistry registry, ObjectName o, String jmxMetricName, String meterName, Tags allTags, String description) {
+      return this.registerTimeGaugeForObject(registry, o, jmxMetricName, meterName, allTags, description, TimeUnit.MILLISECONDS);
+   }
+
+   private ToDoubleFunction&lt;MBeanServer&gt; getJmxAttribute(MeterRegistry registry, AtomicReference&lt;? extends Meter&gt; meter, ObjectName o, String jmxMetricName) {
+      return (s) -&gt; {
+         return this.safeDouble(() -&gt; {
+            if (!s.isRegistered(o)) {
+               registry.remove((Meter)meter.get());
+            }
+
+            return s.getAttribute(o, jmxMetricName);
+         });
+      };
+   }
+
+   private TimeGauge registerTimeGaugeForObject(MeterRegistry registry, ObjectName o, String jmxMetricName, Tags allTags, String description) {
+      return this.registerTimeGaugeForObject(registry, o, jmxMetricName, sanitize(jmxMetricName), allTags, description);
+   }
+
+   int kafkaMajorVersion(Tags tags) {
+      if (this.kafkaMajorVersion == null || this.kafkaMajorVersion.intValue() == -1) {
+         this.kafkaMajorVersion = (Integer)tags.stream().filter((t) -&gt; {
+            return &quot;client.id&quot;.equals(t.getKey());
+         }).findAny().map((clientId) -&gt; {
+            try {
+               String version = (String)this.mBeanServer.getAttribute(new ObjectName(&quot;kafka.consumer:type=app-info,client-id=&quot; + clientId.getValue()), &quot;version&quot;);
+               return Integer.parseInt(version.substring(0, version.indexOf(46)));
+            } catch (Throwable var3) {
+               return Integer.valueOf(-1);
+            }
+         }).orElse(Integer.valueOf(-1));
+      }
+
+      return this.kafkaMajorVersion.intValue();
+   }
+
+   private void registerMetricsEventually(MeterRegistry registry, String type, BiFunction&lt;ObjectName, Tags, List&lt;Meter&gt;&gt; perObject) {
+      try {
+         Set&lt;ObjectName&gt; objs = this.mBeanServer.queryNames(new ObjectName(&quot;kafka.consumer:type=&quot; + type + &quot;,*&quot;), (QueryExp)null);
+         if (!objs.isEmpty()) {
+            Iterator var5 = objs.iterator();
+
+            while(var5.hasNext()) {
+               ObjectName o = (ObjectName)var5.next();
+               List&lt;Meter&gt; meters = (List)perObject.apply(o, Tags.concat(this.tags, this.nameTag(o)));
+               this.addUnregistrationListener(registry, type, o, meters);
+            }
+
+            return;
+         }
+      } catch (MalformedObjectNameException var8) {
+         throw new RuntimeException(&quot;Error registering Kafka JMX based metrics&quot;, var8);
+      }
+
+      this.registerNotificationListener(registry, type, perObject);
+   }
+
+   private void registerNotificationListener(MeterRegistry registry, String type, BiFunction&lt;ObjectName, Tags, List&lt;Meter&gt;&gt; perObject) {
+      NotificationListener registrationListener = (notification, handback) -&gt; {
+         MBeanServerNotification mbs = (MBeanServerNotification)notification;
+         ObjectName o = mbs.getMBeanName();
+         List&lt;Meter&gt; meters = (List)perObject.apply(o, Tags.concat(this.tags, this.nameTag(o)));
+         this.addUnregistrationListener(registry, type, o, meters);
+      };
+      NotificationFilter registrationFilter = this.createNotificationFilter(type, &quot;JMX.mbean.registered&quot;);
+      this.addNotificationListener(registrationListener, registrationFilter);
+      this.notificationListenerCleanUpRunnables.add(() -&gt; {
+         this.removeNotificationListener(registrationListener);
+      });
+   }
+
+   private void removeNotificationListener(NotificationListener notificationListener) {
+      try {
+         this.mBeanServer.removeNotificationListener(MBeanServerDelegate.DELEGATE_NAME, notificationListener);
+      } catch (ListenerNotFoundException | InstanceNotFoundException var3) {
+         ;
+      }
+
+   }
+
+   private void addUnregistrationListener(final MeterRegistry registry, String type, final ObjectName o, final List&lt;Meter&gt; meters) {
+      NotificationListener unregistrationListener = new NotificationListener() {
+         public void handleNotification(Notification notification2, Object handback2) {
+            MBeanServerNotification mbs2 = (MBeanServerNotification)notification2;
+            ObjectName o2 = mbs2.getMBeanName();
+            if (o2.equals(o)) {
+               Stream var10000 = meters.stream();
+               MeterRegistry var10001 = registry;
+               Objects.requireNonNull(registry);
+               var10000.forEach(var10001::remove);
+            }
+
+            KafkaConsumerMetrics.this.removeNotificationListener(this);
+         }
+      };
+      NotificationFilter unregistrationFilter = this.createNotificationFilter(type, &quot;JMX.mbean.unregistered&quot;);
+      this.addNotificationListener(unregistrationListener, unregistrationFilter);
+   }
+
+   private NotificationFilter createNotificationFilter(String type, String notificationType) {
+      return (notification) -&gt; {
+         if (!notificationType.equals(notification.getType())) {
+            return false;
+         } else {
+            ObjectName obj = ((MBeanServerNotification)notification).getMBeanName();
+            return obj.getDomain().equals(&quot;kafka.consumer&quot;) &amp;&amp; obj.getKeyProperty(&quot;type&quot;).equals(type);
+         }
+      };
+   }
+
+   private void addNotificationListener(NotificationListener listener, NotificationFilter filter) {
+      try {
+         this.mBeanServer.addNotificationListener(MBeanServerDelegate.DELEGATE_NAME, listener, filter, (Object)null);
+      } catch (InstanceNotFoundException var4) {
+         throw new RuntimeException(&quot;Error registering Kafka MBean listener&quot;, var4);
+      }
+   }
+
+   private double safeDouble(Callable&lt;Object&gt; callable) {
+      try {
+         return Double.parseDouble(callable.call().toString());
+      } catch (Exception var3) {
+         return Double.NaN;
+      }
+   }
+
+   private Iterable&lt;Tag&gt; nameTag(ObjectName name) {
+      Tags tags = Tags.empty();
+      String clientId = name.getKeyProperty(&quot;client-id&quot;);
+      if (clientId != null) {
+         tags = Tags.concat(tags, new String[]{&quot;client.id&quot;, clientId});
+      }
+
+      String topic = name.getKeyProperty(&quot;topic&quot;);
+      if (topic != null) {
+         tags = Tags.concat(tags, new String[]{&quot;topic&quot;, topic});
+      }
+
+      String partition = name.getKeyProperty(&quot;partition&quot;);
+      if (partition != null) {
+         tags = Tags.concat(tags, new String[]{&quot;partition&quot;, partition});
+      }
+
+      return tags;
+   }
+
+   private static String sanitize(String value) {
+      return value.replaceAll(&quot;-&quot;, &quot;.&quot;);
+   }
+
+   public void close() {
+      this.notificationListenerCleanUpRunnables.forEach(Runnable::run);
+   }
+
+   // $FF: synthetic method
+   private static Object $deserializeLambda$(SerializedLambda lambda) {
+      String var1 = lambda.getImplMethodName();
+      byte var2 = -1;
+      switch(var1.hashCode()) {
+      case 169756855:
+         if (var1.equals(&quot;lambda$createNotificationFilter$49faa78d$1&quot;)) {
+            var2 = 0;
+         }
+      default:
+         switch(var2) {
+         case 0:
+            if (lambda.getImplMethodKind() == 6 &amp;&amp; lambda.getFunctionalInterfaceClass().equals(&quot;javax/management/NotificationFilter&quot;) &amp;&amp; lambda.getFunctionalInterfaceMethodName().equals(&quot;isNotificationEnabled&quot;) &amp;&amp; lambda.getFunctionalInterfaceMethodSignature().equals(&quot;(Ljavax/management/Notification;)Z&quot;) &amp;&amp; lambda.getImplClass().equals(&quot;io/micrometer/core/instrument/binder/kafka/KafkaConsumerMetrics&quot;) &amp;&amp; lambda.getImplMethodSignature().equals(&quot;(Ljava/lang/String;Ljava/lang/String;Ljavax/management/Notification;)Z&quot;)) {
+               return (notification) -&gt; {
+                  if (!notificationType.equals(notification.getType())) {
+                     return false;
+                  } else {
+                     ObjectName obj = ((MBeanServerNotification)notification).getMBeanName();
+                     return obj.getDomain().equals(&quot;kafka.consumer&quot;) &amp;&amp; obj.getKeyProperty(&quot;type&quot;).equals(type);
+                  }
+               };
+            }
+         default:
+            throw new IllegalArgumentException(&quot;Invalid lambda deserialization&quot;);
+         }
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Nov 17, 2021, 12:44:00 PM</div>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "11,6,7,8,9,3,10,5,4" });
+
+            $("<div id='11-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(11)');
+            $("<div id='6-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(6)');
+            $("<div id='7-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(7)');
+            $("<div id='8-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(8)');
+            $("<div id='9-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(9)');
+            $("<div id='3-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(3)');
+            $("<div id='10-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(10)');
+            $("<div id='5-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(5)');
+            $("<div id='4-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(4)');
+
+
+$("<a name='10080360' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#11-inlines');
+
+$("<a name='10457248' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#6-inlines');
+
+$("<a name='10522760' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#7-inlines');
+
+$("<a name='10547360' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#8-inlines');
+
+$("<a name='10633352' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#9-inlines');
+
+$("<a name='10805384' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer metric annotation with Microprofile metric annotation</strong><a title='View Rule: springboot-metrics-to-quarkus-0310' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0310'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer metric annotation with Microprofile metric annotation<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#3-inlines');
+
+$("<a name='20250800' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#10-inlines');
+
+$("<a name='20644016' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#5-inlines');
+
+$("<a name='21299376' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#4-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            // Deprecated
+            // $(window).load(function () {
+            //     $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            // });
+            $(window).on('load', function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 8192152;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

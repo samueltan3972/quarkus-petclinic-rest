@@ -20,6 +20,7 @@ import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.dao.DataAccessException;
@@ -56,6 +57,7 @@ public class JpaPetRepositoryImpl implements PetRepository {
     }
 
     @Override
+    @Transactional
     public void save(Pet pet) {
         if (pet.getId() == null) {
             this.em.persist(pet);
@@ -71,6 +73,7 @@ public class JpaPetRepositoryImpl implements PetRepository {
 	}
 
 	@Override
+	@Transactional
 	public void delete(Pet pet) throws DataAccessException {
 		//this.em.remove(this.em.contains(pet) ? pet : this.em.merge(pet));
 		String petId = pet.getId().toString();

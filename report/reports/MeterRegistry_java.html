@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for MeterRegistry.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/mta-icon.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="8192152">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_spring_petclinic_rest.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_spring_petclinic_rest.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_spring_petclinic_rest.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_spring_petclinic_rest.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Migration Toolkit for Applications by Red Hat found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="8192152">
+                            spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/micrometer-core-1.6.3.jar/io/micrometer/core/instrument/MeterRegistry.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">105</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package io.micrometer.core.instrument;
+
+import io.micrometer.core.annotation.Incubating;
+import io.micrometer.core.instrument.Meter.Id;
+import io.micrometer.core.instrument.Meter.Type;
+import io.micrometer.core.instrument.config.MeterFilter;
+import io.micrometer.core.instrument.config.MeterFilterReply;
+import io.micrometer.core.instrument.config.NamingConvention;
+import io.micrometer.core.instrument.distribution.DistributionStatisticConfig;
+import io.micrometer.core.instrument.distribution.pause.NoPauseDetector;
+import io.micrometer.core.instrument.distribution.pause.PauseDetector;
+import io.micrometer.core.instrument.noop.NoopCounter;
+import io.micrometer.core.instrument.noop.NoopDistributionSummary;
+import io.micrometer.core.instrument.noop.NoopFunctionCounter;
+import io.micrometer.core.instrument.noop.NoopFunctionTimer;
+import io.micrometer.core.instrument.noop.NoopGauge;
+import io.micrometer.core.instrument.noop.NoopLongTaskTimer;
+import io.micrometer.core.instrument.noop.NoopMeter;
+import io.micrometer.core.instrument.noop.NoopTimeGauge;
+import io.micrometer.core.instrument.noop.NoopTimer;
+import io.micrometer.core.instrument.search.RequiredSearch;
+import io.micrometer.core.instrument.search.Search;
+import io.micrometer.core.instrument.util.TimeUtils;
+import io.micrometer.core.lang.Nullable;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Set;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.TimeUnit;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.function.BiConsumer;
+import java.util.function.BiFunction;
+import java.util.function.Consumer;
+import java.util.function.Function;
+import java.util.function.ToDoubleFunction;
+import java.util.function.ToLongFunction;
+
+public abstract class MeterRegistry {
+   protected final Clock clock;
+   private final Object meterMapLock = new Object();
+   private volatile MeterFilter[] filters = new MeterFilter[0];
+   private final List&lt;Consumer&lt;Meter&gt;&gt; meterAddedListeners = new CopyOnWriteArrayList();
+   private final List&lt;Consumer&lt;Meter&gt;&gt; meterRemovedListeners = new CopyOnWriteArrayList();
+   private final List&lt;BiConsumer&lt;Id, String&gt;&gt; meterRegistrationFailedListeners = new CopyOnWriteArrayList();
+   private final MeterRegistry.Config config = new MeterRegistry.Config();
+   private final MeterRegistry.More more = new MeterRegistry.More();
+   private final Map&lt;Id, Meter&gt; meterMap = new ConcurrentHashMap();
+   private final Map&lt;Id, Set&lt;Id&gt;&gt; syntheticAssociations = new HashMap();
+   private final AtomicBoolean closed = new AtomicBoolean();
+   private PauseDetector pauseDetector = new NoPauseDetector();
+   private NamingConvention namingConvention;
+
+   protected MeterRegistry(Clock clock) {
+      this.namingConvention = NamingConvention.snakeCase;
+      Objects.requireNonNull(clock);
+      this.clock = clock;
+   }
+
+   protected abstract &lt;T&gt; Gauge newGauge(Id var1, @Nullable T var2, ToDoubleFunction&lt;T&gt; var3);
+
+   protected abstract Counter newCounter(Id var1);
+
+   /** @deprecated */
+   @Deprecated
+   protected LongTaskTimer newLongTaskTimer(Id id) {
+      throw new UnsupportedOperationException(&quot;MeterRegistry implementations may still override this, but it is only invoked by the overloaded form of newLongTaskTimer for backwards compatibility.&quot;);
+   }
+
+   protected LongTaskTimer newLongTaskTimer(Id id, DistributionStatisticConfig distributionStatisticConfig) {
+      return this.newLongTaskTimer(id);
+   }
+
+   protected abstract Timer newTimer(Id var1, DistributionStatisticConfig var2, PauseDetector var3);
+
+   protected abstract DistributionSummary newDistributionSummary(Id var1, DistributionStatisticConfig var2, double var3);
+
+   protected abstract Meter newMeter(Id var1, Type var2, Iterable&lt;Measurement&gt; var3);
+
+   protected &lt;T&gt; TimeGauge newTimeGauge(Id id, @Nullable T obj, TimeUnit valueFunctionUnit, ToDoubleFunction&lt;T&gt; valueFunction) {
+      final Id withUnit = id.withBaseUnit(this.getBaseTimeUnitStr());
+      final Gauge gauge = this.newGauge(withUnit, obj, (obj2) -&gt; {
+         return TimeUtils.convert(valueFunction.applyAsDouble(obj2), valueFunctionUnit, this.getBaseTimeUnit());
+      });
+      return new TimeGauge() {
+         public Id getId() {
+            return withUnit;
+         }
+
+         public double value() {
+            return gauge.value();
+         }
+
+         public TimeUnit baseTimeUnit() {
+            return MeterRegistry.this.getBaseTimeUnit();
+         }
+      };
+   }
+
+   protected abstract &lt;T&gt; FunctionTimer newFunctionTimer(Id var1, T var2, ToLongFunction&lt;T&gt; var3, ToDoubleFunction&lt;T&gt; var4, TimeUnit var5);
+
+   protected abstract &lt;T&gt; FunctionCounter newFunctionCounter(Id var1, T var2, ToDoubleFunction&lt;T&gt; var3);
+
+   protected List&lt;Tag&gt; getConventionTags(Id id) {
+      return id.getConventionTags(this.config().namingConvention());
+   }
+
+   protected String getConventionName(Id id) {
+      return id.getConventionName(this.config().namingConvention());
+   }
+
+   protected abstract TimeUnit getBaseTimeUnit();
+
+   protected abstract DistributionStatisticConfig defaultHistogramConfig();
+
+   private String getBaseTimeUnitStr() {
+      return this.getBaseTimeUnit().toString().toLowerCase();
+   }
+
+   Counter counter(Id id) {
+      return (Counter)this.registerMeterIfNecessary(Counter.class, id, this::newCounter, NoopCounter::new);
+   }
+
+   &lt;T&gt; Gauge gauge(Id id, @Nullable T obj, ToDoubleFunction&lt;T&gt; valueFunction) {
+      return (Gauge)this.registerMeterIfNecessary(Gauge.class, id, (id2) -&gt; {
+         return this.newGauge(id2, obj, valueFunction);
+      }, NoopGauge::new);
+   }
+
+   Timer timer(Id id, DistributionStatisticConfig distributionStatisticConfig, PauseDetector pauseDetectorOverride) {
+      return (Timer)this.registerMeterIfNecessary(Timer.class, id, distributionStatisticConfig, (id2, filteredConfig) -&gt; {
+         Id withUnit = id2.withBaseUnit(this.getBaseTimeUnitStr());
+         return this.newTimer(withUnit, filteredConfig.merge(this.defaultHistogramConfig()), pauseDetectorOverride);
+      }, NoopTimer::new);
+   }
+
+   DistributionSummary summary(Id id, DistributionStatisticConfig distributionStatisticConfig, double scale) {
+      return (DistributionSummary)this.registerMeterIfNecessary(DistributionSummary.class, id, distributionStatisticConfig, (id2, filteredConfig) -&gt; {
+         return this.newDistributionSummary(id2, filteredConfig.merge(this.defaultHistogramConfig()), scale);
+      }, NoopDistributionSummary::new);
+   }
+
+   Meter register(Id id, Type type, Iterable&lt;Measurement&gt; measurements) {
+      return this.registerMeterIfNecessary(Meter.class, id, (id2) -&gt; {
+         return this.newMeter(id2, type, measurements);
+      }, NoopMeter::new);
+   }
+
+   public List&lt;Meter&gt; getMeters() {
+      return Collections.unmodifiableList(new ArrayList(this.meterMap.values()));
+   }
+
+   public void forEachMeter(Consumer&lt;? super Meter&gt; consumer) {
+      this.meterMap.values().forEach(consumer);
+   }
+
+   public MeterRegistry.Config config() {
+      return this.config;
+   }
+
+   public Search find(String name) {
+      return Search.in(this).name(name);
+   }
+
+   public RequiredSearch get(String name) {
+      return RequiredSearch.in(this).name(name);
+   }
+
+   public Counter counter(String name, Iterable&lt;Tag&gt; tags) {
+      return Counter.builder(name).tags(tags).register(this);
+   }
+
+   public Counter counter(String name, String... tags) {
+      return this.counter(name, (Iterable)Tags.of(tags));
+   }
+
+   public DistributionSummary summary(String name, Iterable&lt;Tag&gt; tags) {
+      return DistributionSummary.builder(name).tags(tags).register(this);
+   }
+
+   public DistributionSummary summary(String name, String... tags) {
+      return this.summary(name, (Iterable)Tags.of(tags));
+   }
+
+   public Timer timer(String name, Iterable&lt;Tag&gt; tags) {
+      return Timer.builder(name).tags(tags).register(this);
+   }
+
+   public Timer timer(String name, String... tags) {
+      return this.timer(name, (Iterable)Tags.of(tags));
+   }
+
+   public MeterRegistry.More more() {
+      return this.more;
+   }
+
+   @Nullable
+   public &lt;T&gt; T gauge(String name, Iterable&lt;Tag&gt; tags, @Nullable T stateObject, ToDoubleFunction&lt;T&gt; valueFunction) {
+      Gauge.builder(name, stateObject, valueFunction).tags(tags).register(this);
+      return stateObject;
+   }
+
+   @Nullable
+   public &lt;T extends Number&gt; T gauge(String name, Iterable&lt;Tag&gt; tags, T number) {
+      return (Number)this.gauge(name, tags, number, Number::doubleValue);
+   }
+
+   @Nullable
+   public &lt;T extends Number&gt; T gauge(String name, T number) {
+      return this.gauge((String)name, (Iterable)Collections.emptyList(), (Number)number);
+   }
+
+   @Nullable
+   public &lt;T&gt; T gauge(String name, T stateObject, ToDoubleFunction&lt;T&gt; valueFunction) {
+      return this.gauge(name, Collections.emptyList(), stateObject, valueFunction);
+   }
+
+   @Nullable
+   public &lt;T extends Collection&lt;?&gt;&gt; T gaugeCollectionSize(String name, Iterable&lt;Tag&gt; tags, T collection) {
+      return (Collection)this.gauge(name, tags, collection, Collection::size);
+   }
+
+   @Nullable
+   public &lt;T extends Map&lt;?, ?&gt;&gt; T gaugeMapSize(String name, Iterable&lt;Tag&gt; tags, T map) {
+      return (Map)this.gauge(name, tags, map, Map::size);
+   }
+
+   private &lt;M extends Meter&gt; M registerMeterIfNecessary(Class&lt;M&gt; meterClass, Id id, Function&lt;Id, M&gt; builder, Function&lt;Id, M&gt; noopBuilder) {
+      return this.registerMeterIfNecessary(meterClass, id, (DistributionStatisticConfig)null, (id2, conf) -&gt; {
+         return (Meter)builder.apply(id2);
+      }, noopBuilder);
+   }
+
+   private &lt;M extends Meter&gt; M registerMeterIfNecessary(Class&lt;M&gt; meterClass, Id id, @Nullable DistributionStatisticConfig config, BiFunction&lt;Id, DistributionStatisticConfig, M&gt; builder, Function&lt;Id, M&gt; noopBuilder) {
+      Id mappedId = this.getMappedId(id);
+      Meter m = this.getOrCreateMeter(config, builder, id, mappedId, noopBuilder);
+      if (!meterClass.isInstance(m)) {
+         throw new IllegalArgumentException(&quot;There is already a registered meter of a different type with the same name&quot;);
+      } else {
+         return (Meter)meterClass.cast(m);
+      }
+   }
+
+   private Id getMappedId(Id id) {
+      if (id.syntheticAssociation() != null) {
+         return id;
+      } else {
+         Id mappedId = id;
+         MeterFilter[] var3 = this.filters;
+         int var4 = var3.length;
+
+         for(int var5 = 0; var5 &lt; var4; ++var5) {
+            MeterFilter filter = var3[var5];
+            mappedId = filter.map(mappedId);
+         }
+
+         return mappedId;
+      }
+   }
+
+   private Meter getOrCreateMeter(@Nullable DistributionStatisticConfig config, BiFunction&lt;Id, DistributionStatisticConfig, ? extends Meter&gt; builder, Id originalId, Id mappedId, Function&lt;Id, ? extends Meter&gt; noopBuilder) {
+      Meter m = (Meter)this.meterMap.get(mappedId);
+      if (m == null) {
+         if (this.isClosed()) {
+            return (Meter)noopBuilder.apply(mappedId);
+         }
+
+         Object var7 = this.meterMapLock;
+         synchronized(this.meterMapLock) {
+            m = (Meter)this.meterMap.get(mappedId);
+            if (m == null) {
+               if (!this.accept(mappedId)) {
+                  return (Meter)noopBuilder.apply(mappedId);
+               }
+
+               if (config != null) {
+                  MeterFilter[] var8 = this.filters;
+                  int var9 = var8.length;
+
+                  for(int var10 = 0; var10 &lt; var9; ++var10) {
+                     MeterFilter filter = var8[var10];
+                     DistributionStatisticConfig filteredConfig = filter.configure(mappedId, config);
+                     if (filteredConfig != null) {
+                        config = filteredConfig;
+                     }
+                  }
+               }
+
+               m = (Meter)builder.apply(mappedId, config);
+               Id synAssoc = mappedId.syntheticAssociation();
+               if (synAssoc != null) {
+                  Set&lt;Id&gt; associations = (Set)this.syntheticAssociations.computeIfAbsent(synAssoc, (k) -&gt; {
+                     return new HashSet();
+                  });
+                  associations.add(mappedId);
+               }
+
+               Iterator var18 = this.meterAddedListeners.iterator();
+
+               while(var18.hasNext()) {
+                  Consumer&lt;Meter&gt; onAdd = (Consumer)var18.next();
+                  onAdd.accept(m);
+               }
+
+               this.meterMap.put(mappedId, m);
+            }
+         }
+      }
+
+      return m;
+   }
+
+   private boolean accept(Id id) {
+      MeterFilter[] var2 = this.filters;
+      int var3 = var2.length;
+
+      for(int var4 = 0; var4 &lt; var3; ++var4) {
+         MeterFilter filter = var2[var4];
+         MeterFilterReply reply = filter.accept(id);
+         if (reply == MeterFilterReply.DENY) {
+            return false;
+         }
+
+         if (reply == MeterFilterReply.ACCEPT) {
+            return true;
+         }
+      }
+
+      return true;
+   }
+
+   @Nullable
+   @Incubating(
+      since = &quot;1.1.0&quot;
+   )
+   public Meter remove(Meter meter) {
+      return this.remove(meter.getId());
+   }
+
+   @Nullable
+   @Incubating(
+      since = &quot;1.3.16&quot;
+   )
+   public Meter removeByPreFilterId(Id preFilterId) {
+      return this.remove(this.getMappedId(preFilterId));
+   }
+
+   @Nullable
+   @Incubating(
+      since = &quot;1.1.0&quot;
+   )
+   public Meter remove(Id mappedId) {
+      Meter m = (Meter)this.meterMap.get(mappedId);
+      if (m != null) {
+         Object var3 = this.meterMapLock;
+         synchronized(this.meterMapLock) {
+            m = (Meter)this.meterMap.remove(mappedId);
+            if (m != null) {
+               Set&lt;Id&gt; synthetics = (Set)this.syntheticAssociations.remove(mappedId);
+               Iterator var5;
+               if (synthetics != null) {
+                  var5 = synthetics.iterator();
+
+                  while(var5.hasNext()) {
+                     Id synthetic = (Id)var5.next();
+                     this.remove(synthetic);
+                  }
+               }
+
+               var5 = this.meterRemovedListeners.iterator();
+
+               while(var5.hasNext()) {
+                  Consumer&lt;Meter&gt; onRemove = (Consumer)var5.next();
+                  onRemove.accept(m);
+               }
+
+               return m;
+            }
+         }
+      }
+
+      return null;
+   }
+
+   @Incubating(
+      since = &quot;1.2.0&quot;
+   )
+   public void clear() {
+      this.meterMap.keySet().forEach(this::remove);
+   }
+
+   public void close() {
+      if (this.closed.compareAndSet(false, true)) {
+         Object var1 = this.meterMapLock;
+         synchronized(this.meterMapLock) {
+            Iterator var2 = this.meterMap.values().iterator();
+
+            while(var2.hasNext()) {
+               Meter meter = (Meter)var2.next();
+               meter.close();
+            }
+         }
+      }
+
+   }
+
+   public boolean isClosed() {
+      return this.closed.get();
+   }
+
+   protected void meterRegistrationFailed(Id id, @Nullable String reason) {
+      Iterator var3 = this.meterRegistrationFailedListeners.iterator();
+
+      while(var3.hasNext()) {
+         BiConsumer&lt;Id, String&gt; listener = (BiConsumer)var3.next();
+         listener.accept(id, reason);
+      }
+
+   }
+
+   public class Config {
+      public MeterRegistry.Config commonTags(Iterable&lt;Tag&gt; tags) {
+         return this.meterFilter(MeterFilter.commonTags(tags));
+      }
+
+      public MeterRegistry.Config commonTags(String... tags) {
+         return this.commonTags((Iterable)Tags.of(tags));
+      }
+
+      public synchronized MeterRegistry.Config meterFilter(MeterFilter filter) {
+         MeterFilter[] newFilters = new MeterFilter[MeterRegistry.this.filters.length + 1];
+         System.arraycopy(MeterRegistry.this.filters, 0, newFilters, 0, MeterRegistry.this.filters.length);
+         newFilters[MeterRegistry.this.filters.length] = filter;
+         MeterRegistry.this.filters = newFilters;
+         return this;
+      }
+
+      public MeterRegistry.Config onMeterAdded(Consumer&lt;Meter&gt; meterAddedListener) {
+         MeterRegistry.this.meterAddedListeners.add(meterAddedListener);
+         return this;
+      }
+
+      @Incubating(
+         since = &quot;1.1.0&quot;
+      )
+      public MeterRegistry.Config onMeterRemoved(Consumer&lt;Meter&gt; meterRemovedListener) {
+         MeterRegistry.this.meterRemovedListeners.add(meterRemovedListener);
+         return this;
+      }
+
+      @Incubating(
+         since = &quot;1.6.0&quot;
+      )
+      public MeterRegistry.Config onMeterRegistrationFailed(BiConsumer&lt;Id, String&gt; meterRegistrationFailedListener) {
+         MeterRegistry.this.meterRegistrationFailedListeners.add(meterRegistrationFailedListener);
+         return this;
+      }
+
+      public MeterRegistry.Config namingConvention(NamingConvention convention) {
+         MeterRegistry.this.namingConvention = convention;
+         return this;
+      }
+
+      public NamingConvention namingConvention() {
+         return MeterRegistry.this.namingConvention;
+      }
+
+      public Clock clock() {
+         return MeterRegistry.this.clock;
+      }
+
+      public MeterRegistry.Config pauseDetector(PauseDetector detector) {
+         MeterRegistry.this.pauseDetector = detector;
+         return this;
+      }
+
+      public PauseDetector pauseDetector() {
+         return MeterRegistry.this.pauseDetector;
+      }
+   }
+
+   public class More {
+      public LongTaskTimer longTaskTimer(String name, String... tags) {
+         return this.longTaskTimer((String)name, (Iterable)Tags.of(tags));
+      }
+
+      public LongTaskTimer longTaskTimer(String name, Iterable&lt;Tag&gt; tags) {
+         return LongTaskTimer.builder(name).tags(tags).register(MeterRegistry.this);
+      }
+
+      LongTaskTimer longTaskTimer(Id id, DistributionStatisticConfig distributionStatisticConfig) {
+         return (LongTaskTimer)MeterRegistry.this.registerMeterIfNecessary(LongTaskTimer.class, id, distributionStatisticConfig, (id2, filteredConfig) -&gt; {
+            Id withUnit = id2.withBaseUnit(MeterRegistry.this.getBaseTimeUnitStr());
+            return MeterRegistry.this.newLongTaskTimer(withUnit, filteredConfig.merge(MeterRegistry.this.defaultHistogramConfig()));
+         }, NoopLongTaskTimer::new);
+      }
+
+      public &lt;T&gt; FunctionCounter counter(String name, Iterable&lt;Tag&gt; tags, T obj, ToDoubleFunction&lt;T&gt; countFunction) {
+         return FunctionCounter.builder(name, obj, countFunction).tags(tags).register(MeterRegistry.this);
+      }
+
+      public &lt;T extends Number&gt; FunctionCounter counter(String name, Iterable&lt;Tag&gt; tags, T number) {
+         return FunctionCounter.builder(name, number, Number::doubleValue).tags(tags).register(MeterRegistry.this);
+      }
+
+      &lt;T&gt; FunctionCounter counter(Id id, T obj, ToDoubleFunction&lt;T&gt; countFunction) {
+         return (FunctionCounter)MeterRegistry.this.registerMeterIfNecessary(FunctionCounter.class, id, (id2) -&gt; {
+            return MeterRegistry.this.newFunctionCounter(id2, obj, countFunction);
+         }, NoopFunctionCounter::new);
+      }
+
+      public &lt;T&gt; FunctionTimer timer(String name, Iterable&lt;Tag&gt; tags, T obj, ToLongFunction&lt;T&gt; countFunction, ToDoubleFunction&lt;T&gt; totalTimeFunction, TimeUnit totalTimeFunctionUnit) {
+         return FunctionTimer.builder(name, obj, countFunction, totalTimeFunction, totalTimeFunctionUnit).tags(tags).register(MeterRegistry.this);
+      }
+
+      &lt;T&gt; FunctionTimer timer(Id id, T obj, ToLongFunction&lt;T&gt; countFunction, ToDoubleFunction&lt;T&gt; totalTimeFunction, TimeUnit totalTimeFunctionUnit) {
+         return (FunctionTimer)MeterRegistry.this.registerMeterIfNecessary(FunctionTimer.class, id, (id2) -&gt; {
+            Id withUnit = id2.withBaseUnit(MeterRegistry.this.getBaseTimeUnitStr());
+            return MeterRegistry.this.newFunctionTimer(withUnit, obj, countFunction, totalTimeFunction, totalTimeFunctionUnit);
+         }, NoopFunctionTimer::new);
+      }
+
+      public &lt;T&gt; TimeGauge timeGauge(String name, Iterable&lt;Tag&gt; tags, T obj, TimeUnit timeFunctionUnit, ToDoubleFunction&lt;T&gt; timeFunction) {
+         return TimeGauge.builder(name, obj, timeFunctionUnit, timeFunction).tags(tags).register(MeterRegistry.this);
+      }
+
+      &lt;T&gt; TimeGauge timeGauge(Id id, @Nullable T obj, TimeUnit timeFunctionUnit, ToDoubleFunction&lt;T&gt; timeFunction) {
+         return (TimeGauge)MeterRegistry.this.registerMeterIfNecessary(TimeGauge.class, id, (id2) -&gt; {
+            return MeterRegistry.this.newTimeGauge(id2, obj, timeFunctionUnit, timeFunction);
+         }, NoopTimeGauge::new);
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Nov 17, 2021, 12:44:07 PM</div>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "22,16,20,7,17,21,12,18,6,4,13,19,3,5,9,8,15,11,23,10,14" });
+
+            $("<div id='22-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(22)');
+            $("<div id='16-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(16)');
+            $("<div id='20-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(20)');
+            $("<div id='7-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(7)');
+            $("<div id='17-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(17)');
+            $("<div id='21-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(21)');
+            $("<div id='12-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(12)');
+            $("<div id='18-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(18)');
+            $("<div id='6-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(6)');
+            $("<div id='4-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(4)');
+            $("<div id='13-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(13)');
+            $("<div id='19-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(19)');
+            $("<div id='3-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(3)');
+            $("<div id='5-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(5)');
+            $("<div id='9-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(9)');
+            $("<div id='8-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(8)');
+            $("<div id='15-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(15)');
+            $("<div id='11-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(11)');
+            $("<div id='23-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(23)');
+            $("<div id='10-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(10)');
+            $("<div id='14-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(14)');
+
+
+$("<a name='10039400' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#22-inlines');
+
+$("<a name='10104992' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#16-inlines');
+
+$("<a name='10289256' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#20-inlines');
+
+$("<a name='10293352' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#7-inlines');
+
+$("<a name='10342504' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#17-inlines');
+
+$("<a name='10408072' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#21-inlines');
+
+$("<a name='10412192' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#12-inlines');
+
+$("<a name='10563808' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#18-inlines');
+
+$("<a name='10662024' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#6-inlines');
+
+$("<a name='10674400' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#4-inlines');
+
+$("<a name='10744024' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#13-inlines');
+
+$("<a name='10748120' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#19-inlines');
+
+$("<a name='10789000' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer metric annotation with Microprofile metric annotation</strong><a title='View Rule: springboot-metrics-to-quarkus-0310' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0310'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer metric annotation with Microprofile metric annotation<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#3-inlines');
+
+$("<a name='10887360' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#5-inlines');
+
+$("<a name='20013208' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#9-inlines');
+
+$("<a name='20312240' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#8-inlines');
+
+$("<a name='20316336' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#15-inlines');
+
+$("<a name='20422832' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#11-inlines');
+
+$("<a name='20643992' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#23-inlines');
+
+$("<a name='20955312' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#10-inlines');
+
+$("<a name='21131440' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#14-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            // Deprecated
+            // $(window).load(function () {
+            //     $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            // });
+            $(window).on('load', function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 8192152;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

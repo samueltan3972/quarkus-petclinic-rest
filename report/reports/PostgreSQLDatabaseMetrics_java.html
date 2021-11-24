@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for PostgreSQLDatabaseMetrics.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/mta-icon.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="8192152">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_spring_petclinic_rest.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_spring_petclinic_rest.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_spring_petclinic_rest.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_spring_petclinic_rest.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Migration Toolkit for Applications by Red Hat found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="8192152">
+                            spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/micrometer-core-1.6.3.jar/io/micrometer/core/instrument/binder/db/PostgreSQLDatabaseMetrics.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">30</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package io.micrometer.core.instrument.binder.db;
+
+import io.micrometer.core.instrument.FunctionCounter;
+import io.micrometer.core.instrument.Gauge;
+import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.Tag;
+import io.micrometer.core.instrument.Tags;
+import io.micrometer.core.instrument.binder.MeterBinder;
+import io.micrometer.core.lang.NonNullApi;
+import io.micrometer.core.lang.NonNullFields;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.DoubleSupplier;
+import java.util.function.ToDoubleFunction;
+import javax.sql.DataSource;
+
+@NonNullApi
+@NonNullFields
+public class PostgreSQLDatabaseMetrics implements MeterBinder {
+   private static final String SELECT = &quot;SELECT &quot;;
+   private static final String QUERY_DEAD_TUPLE_COUNT = getUserTableQuery(&quot;n_dead_tup&quot;);
+   private static final String QUERY_TIMED_CHECKPOINTS_COUNT = getBgWriterQuery(&quot;checkpoints_timed&quot;);
+   private static final String QUERY_REQUESTED_CHECKPOINTS_COUNT = getBgWriterQuery(&quot;checkpoints_req&quot;);
+   private static final String QUERY_BUFFERS_CLEAN = getBgWriterQuery(&quot;buffers_clean&quot;);
+   private static final String QUERY_BUFFERS_BACKEND = getBgWriterQuery(&quot;buffers_backend&quot;);
+   private static final String QUERY_BUFFERS_CHECKPOINT = getBgWriterQuery(&quot;buffers_checkpoint&quot;);
+   private final String database;
+   private final DataSource postgresDataSource;
+   private final Iterable&lt;Tag&gt; tags;
+   private final Map&lt;String, Double&gt; beforeResetValuesCacheMap;
+   private final Map&lt;String, Double&gt; previousValueCacheMap;
+   private final String queryConnectionCount;
+   private final String queryReadCount;
+   private final String queryInsertCount;
+   private final String queryTempBytes;
+   private final String queryUpdateCount;
+   private final String queryDeleteCount;
+   private final String queryBlockHits;
+   private final String queryBlockReads;
+   private final String queryTransactionCount;
+
+   public PostgreSQLDatabaseMetrics(DataSource postgresDataSource, String database) {
+      this(postgresDataSource, database, Tags.empty());
+   }
+
+   public PostgreSQLDatabaseMetrics(DataSource postgresDataSource, String database, Iterable&lt;Tag&gt; tags) {
+      this.postgresDataSource = postgresDataSource;
+      this.database = database;
+      this.tags = Tags.of(tags).and(new Tag[]{createDbTag(database)});
+      this.beforeResetValuesCacheMap = new ConcurrentHashMap();
+      this.previousValueCacheMap = new ConcurrentHashMap();
+      this.queryConnectionCount = getDBStatQuery(database, &quot;SUM(numbackends)&quot;);
+      this.queryReadCount = getDBStatQuery(database, &quot;tup_fetched&quot;);
+      this.queryInsertCount = getDBStatQuery(database, &quot;tup_inserted&quot;);
+      this.queryTempBytes = getDBStatQuery(database, &quot;temp_bytes&quot;);
+      this.queryUpdateCount = getDBStatQuery(database, &quot;tup_updated&quot;);
+      this.queryDeleteCount = getDBStatQuery(database, &quot;tup_deleted&quot;);
+      this.queryBlockHits = getDBStatQuery(database, &quot;blks_hit&quot;);
+      this.queryBlockReads = getDBStatQuery(database, &quot;blks_read&quot;);
+      this.queryTransactionCount = getDBStatQuery(database, &quot;xact_commit + xact_rollback&quot;);
+   }
+
+   private static Tag createDbTag(String database) {
+      return Tag.of(&quot;database&quot;, database);
+   }
+
+   public void bindTo(MeterRegistry registry) {
+      Gauge.builder(&quot;postgres.size&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return (double)this.getDatabaseSize().longValue();
+      }).tags(this.tags).description(&quot;The database size&quot;).register(registry);
+      Gauge.builder(&quot;postgres.connections&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return (double)this.getConnectionCount().longValue();
+      }).tags(this.tags).description(&quot;Number of active connections to the given db&quot;).register(registry);
+      FunctionCounter.builder(&quot;postgres.blocks.hits&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return this.resettableFunctionalCounter(&quot;postgres.blocks.hits&quot;, this::getBlockHits).doubleValue();
+      }).tags(this.tags).description(&quot;Number of times disk blocks were found already in the buffer cache, so that a read was not necessary&quot;).register(registry);
+      FunctionCounter.builder(&quot;postgres.blocks.reads&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return this.resettableFunctionalCounter(&quot;postgres.blocks.reads&quot;, this::getBlockReads).doubleValue();
+      }).tags(this.tags).description(&quot;Number of disk blocks read in this database&quot;).register(registry);
+      FunctionCounter.builder(&quot;postgres.transactions&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return this.resettableFunctionalCounter(&quot;postgres.transactions&quot;, this::getTransactionCount).doubleValue();
+      }).tags(this.tags).description(&quot;Total number of transactions executed (commits + rollbacks)&quot;).register(registry);
+      Gauge.builder(&quot;postgres.locks&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return (double)this.getLockCount().longValue();
+      }).tags(this.tags).description(&quot;Number of locks on the given db&quot;).register(registry);
+      FunctionCounter.builder(&quot;postgres.temp.writes&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return this.resettableFunctionalCounter(&quot;postgres.temp.writes&quot;, this::getTempBytes).doubleValue();
+      }).tags(this.tags).description(&quot;The total amount of temporary writes to disk to execute queries&quot;).baseUnit(&quot;bytes&quot;).register(registry);
+      this.registerRowCountMetrics(registry);
+      this.registerCheckpointMetrics(registry);
+   }
+
+   private void registerRowCountMetrics(MeterRegistry registry) {
+      FunctionCounter.builder(&quot;postgres.rows.fetched&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return this.resettableFunctionalCounter(&quot;postgres.rows.fetched&quot;, this::getReadCount).doubleValue();
+      }).tags(this.tags).description(&quot;Number of rows fetched from the db&quot;).register(registry);
+      FunctionCounter.builder(&quot;postgres.rows.inserted&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return this.resettableFunctionalCounter(&quot;postgres.rows.inserted&quot;, this::getInsertCount).doubleValue();
+      }).tags(this.tags).description(&quot;Number of rows inserted from the db&quot;).register(registry);
+      FunctionCounter.builder(&quot;postgres.rows.updated&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return this.resettableFunctionalCounter(&quot;postgres.rows.updated&quot;, this::getUpdateCount).doubleValue();
+      }).tags(this.tags).description(&quot;Number of rows updated from the db&quot;).register(registry);
+      FunctionCounter.builder(&quot;postgres.rows.deleted&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return this.resettableFunctionalCounter(&quot;postgres.rows.deleted&quot;, this::getDeleteCount).doubleValue();
+      }).tags(this.tags).description(&quot;Number of rows deleted from the db&quot;).register(registry);
+      Gauge.builder(&quot;postgres.rows.dead&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return (double)this.getDeadTupleCount().longValue();
+      }).tags(this.tags).description(&quot;Total number of dead rows in the current database&quot;).register(registry);
+   }
+
+   private void registerCheckpointMetrics(MeterRegistry registry) {
+      FunctionCounter.builder(&quot;postgres.checkpoints.timed&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return this.resettableFunctionalCounter(&quot;postgres.checkpoints.timed&quot;, this::getTimedCheckpointsCount).doubleValue();
+      }).tags(this.tags).description(&quot;Number of checkpoints timed&quot;).register(registry);
+      FunctionCounter.builder(&quot;postgres.checkpoints.requested&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return this.resettableFunctionalCounter(&quot;postgres.checkpoints.requested&quot;, this::getRequestedCheckpointsCount).doubleValue();
+      }).tags(this.tags).description(&quot;Number of checkpoints requested&quot;).register(registry);
+      FunctionCounter.builder(&quot;postgres.buffers.checkpoint&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return this.resettableFunctionalCounter(&quot;postgres.buffers.checkpoint&quot;, this::getBuffersCheckpoint).doubleValue();
+      }).tags(this.tags).description(&quot;Number of buffers written during checkpoints&quot;).register(registry);
+      FunctionCounter.builder(&quot;postgres.buffers.clean&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return this.resettableFunctionalCounter(&quot;postgres.buffers.clean&quot;, this::getBuffersClean).doubleValue();
+      }).tags(this.tags).description(&quot;Number of buffers written by the background writer&quot;).register(registry);
+      FunctionCounter.builder(&quot;postgres.buffers.backend&quot;, this.postgresDataSource, (dataSource) -&gt; {
+         return this.resettableFunctionalCounter(&quot;postgres.buffers.backend&quot;, this::getBuffersBackend).doubleValue();
+      }).tags(this.tags).description(&quot;Number of buffers written directly by a backend&quot;).register(registry);
+   }
+
+   private Long getDatabaseSize() {
+      return this.runQuery(&quot;SELECT pg_database_size(&#39;&quot; + this.database + &quot;&#39;)&quot;);
+   }
+
+   private Long getLockCount() {
+      return this.runQuery(&quot;SELECT count(*) FROM pg_locks l JOIN pg_database d ON l.DATABASE=d.oid WHERE d.datname=&#39;&quot; + this.database + &quot;&#39;&quot;);
+   }
+
+   private Long getConnectionCount() {
+      return this.runQuery(this.queryConnectionCount);
+   }
+
+   private Long getReadCount() {
+      return this.runQuery(this.queryReadCount);
+   }
+
+   private Long getInsertCount() {
+      return this.runQuery(this.queryInsertCount);
+   }
+
+   private Long getTempBytes() {
+      return this.runQuery(this.queryTempBytes);
+   }
+
+   private Long getUpdateCount() {
+      return this.runQuery(this.queryUpdateCount);
+   }
+
+   private Long getDeleteCount() {
+      return this.runQuery(this.queryDeleteCount);
+   }
+
+   private Long getBlockHits() {
+      return this.runQuery(this.queryBlockHits);
+   }
+
+   private Long getBlockReads() {
+      return this.runQuery(this.queryBlockReads);
+   }
+
+   private Long getTransactionCount() {
+      return this.runQuery(this.queryTransactionCount);
+   }
+
+   private Long getDeadTupleCount() {
+      return this.runQuery(QUERY_DEAD_TUPLE_COUNT);
+   }
+
+   private Long getTimedCheckpointsCount() {
+      return this.runQuery(QUERY_TIMED_CHECKPOINTS_COUNT);
+   }
+
+   private Long getRequestedCheckpointsCount() {
+      return this.runQuery(QUERY_REQUESTED_CHECKPOINTS_COUNT);
+   }
+
+   private Long getBuffersClean() {
+      return this.runQuery(QUERY_BUFFERS_CLEAN);
+   }
+
+   private Long getBuffersBackend() {
+      return this.runQuery(QUERY_BUFFERS_BACKEND);
+   }
+
+   private Long getBuffersCheckpoint() {
+      return this.runQuery(QUERY_BUFFERS_CHECKPOINT);
+   }
+
+   Double resettableFunctionalCounter(String functionalCounterKey, DoubleSupplier function) {
+      Double result = function.getAsDouble();
+      Double previousResult = (Double)this.previousValueCacheMap.getOrDefault(functionalCounterKey, 0.0D);
+      Double beforeResetValue = (Double)this.beforeResetValuesCacheMap.getOrDefault(functionalCounterKey, 0.0D);
+      Double correctedValue = result.doubleValue() + beforeResetValue.doubleValue();
+      if (correctedValue.doubleValue() &lt; previousResult.doubleValue()) {
+         this.beforeResetValuesCacheMap.put(functionalCounterKey, previousResult);
+         correctedValue = previousResult.doubleValue() + result.doubleValue();
+      }
+
+      this.previousValueCacheMap.put(functionalCounterKey, correctedValue);
+      return correctedValue;
+   }
+
+   private Long runQuery(String query) {
+      try {
+         Connection connection = this.postgresDataSource.getConnection();
+
+         Long var5;
+         label110: {
+            try {
+               Statement statement;
+               label102: {
+                  statement = connection.createStatement();
+
+                  try {
+                     ResultSet resultSet = statement.executeQuery(query);
+
+                     label87: {
+                        try {
+                           if (resultSet.next()) {
+                              var5 = (Long)resultSet.getObject(1, Long.class);
+                              break label87;
+                           }
+                        } catch (Throwable var10) {
+                           if (resultSet != null) {
+                              try {
+                                 resultSet.close();
+                              } catch (Throwable var9) {
+                                 var10.addSuppressed(var9);
+                              }
+                           }
+
+                           throw var10;
+                        }
+
+                        if (resultSet != null) {
+                           resultSet.close();
+                        }
+                        break label102;
+                     }
+
+                     if (resultSet != null) {
+                        resultSet.close();
+                     }
+                  } catch (Throwable var11) {
+                     if (statement != null) {
+                        try {
+                           statement.close();
+                        } catch (Throwable var8) {
+                           var11.addSuppressed(var8);
+                        }
+                     }
+
+                     throw var11;
+                  }
+
+                  if (statement != null) {
+                     statement.close();
+                  }
+                  break label110;
+               }
+
+               if (statement != null) {
+                  statement.close();
+               }
+            } catch (Throwable var12) {
+               if (connection != null) {
+                  try {
+                     connection.close();
+                  } catch (Throwable var7) {
+                     var12.addSuppressed(var7);
+                  }
+               }
+
+               throw var12;
+            }
+
+            if (connection != null) {
+               connection.close();
+            }
+
+            return 0L;
+         }
+
+         if (connection != null) {
+            connection.close();
+         }
+
+         return var5;
+      } catch (SQLException var13) {
+         return 0L;
+      }
+   }
+
+   private static String getDBStatQuery(String database, String statName) {
+      return &quot;SELECT &quot; + statName + &quot; FROM pg_stat_database WHERE datname = &#39;&quot; + database + &quot;&#39;&quot;;
+   }
+
+   private static String getUserTableQuery(String statName) {
+      return &quot;SELECT &quot; + statName + &quot; FROM pg_stat_user_tables&quot;;
+   }
+
+   private static String getBgWriterQuery(String statName) {
+      return &quot;SELECT &quot; + statName + &quot; FROM pg_stat_bgwriter&quot;;
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Nov 17, 2021, 12:44:05 PM</div>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "7,3,8,6,4,5" });
+
+            $("<div id='7-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(7)');
+            $("<div id='3-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(3)');
+            $("<div id='8-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(8)');
+            $("<div id='6-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(6)');
+            $("<div id='4-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(4)');
+            $("<div id='5-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(5)');
+
+
+$("<a name='10219656' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#7-inlines');
+
+$("<a name='10354824' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#3-inlines');
+
+$("<a name='10604680' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#8-inlines');
+
+$("<a name='20218008' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#6-inlines');
+
+$("<a name='20754584' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#4-inlines');
+
+$("<a name='21250224' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#5-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            // Deprecated
+            // $(window).load(function () {
+            //     $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            // });
+            $(window).on('load', function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 8192152;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

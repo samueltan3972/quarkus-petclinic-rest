@@ -1,0 +1,2289 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+            spring-petclinic-rest -
+        Dependencies
+    </title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet">
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen">
+    <link href="resources/img/mta-icon.png" rel="shortcut icon" type="image/x-icon"/>
+
+</head>
+<body role="document">
+
+    <!-- Navbar -->
+    <div id="main-navbar" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_spring_petclinic_rest.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="active">
+                    <a href="#">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_spring_petclinic_rest.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_spring_petclinic_rest.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_spring_petclinic_rest.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+        </div><!-- /.nav-collapse -->
+    </div>
+    <!-- / Navbar -->
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Dependencies
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report lists all found Java libraries embedded within the analyzed application."></i></div>
+                        <div class="path">spring-petclinic-rest-2.4.2.jar</div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+            <div class="dependencies">
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jakarta.transaction-api-1.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">jakarta.transaction-api-1.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jakarta.transaction-api-1.3.3.jar-maven">
+                                            <a id="jakarta.transaction-api-1.3.3.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;c4179d48720a1e87202115fbed6089bdc4195405&quot;" target="_blank">jakarta.transaction:jakarta.transaction-api:1.3.3</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jakarta.transaction-api-1.3.3.jar-hash">c4179d48720a1e87202115fbed6089bdc4195405</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jakarta.transaction-api-1.3.3.jar-version">1.3.3</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jakarta.transaction-api-1.3.3.jar-org">
+        EE4J Community
+        https://github.com/eclipse-ee4j
+    </dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jakarta.transaction-api-1.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jakarta.transaction-api-1.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="javax.annotation-api-1.3.2.jar" class="panel-heading">
+                            <h3 class="panel-title">javax.annotation-api-1.3.2.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="javax.annotation-api-1.3.2.jar-maven">
+                                            <a id="javax.annotation-api-1.3.2.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;934c04d3cfef185a8008e7bf34331b79730a9d43&quot;" target="_blank">javax.annotation:javax.annotation-api:1.3.2</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="javax.annotation-api-1.3.2.jar-hash">934c04d3cfef185a8008e7bf34331b79730a9d43</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="javax.annotation-api-1.3.2.jar-version">1.3.2</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="javax.annotation-api-1.3.2.jar-org">
+        GlassFish Community
+        https://javaee.github.io/glassfish
+    </dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="javax.annotation-api-1.3.2.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/javax.annotation-api-1.3.2.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="log4j-api-2.13.3.jar" class="panel-heading">
+                            <h3 class="panel-title">log4j-api-2.13.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="log4j-api-2.13.3.jar-maven">
+                                            <a id="log4j-api-2.13.3.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;ec1508160b93d274b1add34419b897bae84c6ca9&quot;" target="_blank">org.apache.logging.log4j:log4j-api:2.13.3</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="log4j-api-2.13.3.jar-hash">ec1508160b93d274b1add34419b897bae84c6ca9</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="log4j-api-2.13.3.jar-version">2.13.3</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="log4j-api-2.13.3.jar-org">Apache</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="log4j-api-2.13.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/log4j-api-2.13.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="log4j-to-slf4j-2.13.3.jar" class="panel-heading">
+                            <h3 class="panel-title">log4j-to-slf4j-2.13.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="log4j-to-slf4j-2.13.3.jar-maven">
+                                            <a id="log4j-to-slf4j-2.13.3.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;966f6fd1af4959d6b12bfa880121d4a2b164f857&quot;" target="_blank">org.apache.logging.log4j:log4j-to-slf4j:2.13.3</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="log4j-to-slf4j-2.13.3.jar-hash">966f6fd1af4959d6b12bfa880121d4a2b164f857</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="log4j-to-slf4j-2.13.3.jar-version">2.13.3</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="log4j-to-slf4j-2.13.3.jar-org">Apache</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="log4j-to-slf4j-2.13.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/log4j-to-slf4j-2.13.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="tomcat-embed-websocket-9.0.41.jar" class="panel-heading">
+                            <h3 class="panel-title">tomcat-embed-websocket-9.0.41.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="tomcat-embed-websocket-9.0.41.jar-hash">0b6e5fdc2a4088c340d0916468d7e2ecff71d83d</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="tomcat-embed-websocket-9.0.41.jar-version">9.0.41</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="tomcat-embed-websocket-9.0.41.jar-org">Apache Software Foundation</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="tomcat-embed-websocket-9.0.41.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/tomcat-embed-websocket-9.0.41.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="tomcat-embed-core-9.0.41.jar" class="panel-heading">
+                            <h3 class="panel-title">tomcat-embed-core-9.0.41.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="tomcat-embed-core-9.0.41.jar-hash">a43e9711e85073187d04b137882b4b7957180ef0</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="tomcat-embed-core-9.0.41.jar-version">9.0.41</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="tomcat-embed-core-9.0.41.jar-org">Apache Software Foundation</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="tomcat-embed-core-9.0.41.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/tomcat-embed-core-9.0.41.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="aspectjweaver-1.9.6.jar" class="panel-heading">
+                            <h3 class="panel-title">aspectjweaver-1.9.6.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="aspectjweaver-1.9.6.jar-hash">ee3b73aa16df35179255f17354d9dfd8e7822835</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="aspectjweaver-1.9.6.jar-version">1.9.6</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="aspectjweaver-1.9.6.jar-org">https://www.eclipse.org/aspectj/</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="aspectjweaver-1.9.6.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/aspectjweaver-1.9.6.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="byte-buddy-1.10.19.jar" class="panel-heading">
+                            <h3 class="panel-title">byte-buddy-1.10.19.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="byte-buddy-1.10.19.jar-maven">
+                                            <a id="byte-buddy-1.10.19.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;7a8cf46cd99db76f02b335d53aad222d42bc412d&quot;" target="_blank">net.bytebuddy:byte-buddy:1.10.19</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="byte-buddy-1.10.19.jar-hash">7a8cf46cd99db76f02b335d53aad222d42bc412d</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="byte-buddy-1.10.19.jar-version">1.10.19</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="byte-buddy-1.10.19.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/byte-buddy-1.10.19.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="classgraph-4.8.83.jar" class="panel-heading">
+                            <h3 class="panel-title">classgraph-4.8.83.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="classgraph-4.8.83.jar-maven">
+                                            <a id="classgraph-4.8.83.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;07be289f451cedf9e35ed97caba3953226b4e6d9&quot;" target="_blank">io.github.classgraph:classgraph:4.8.83</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="classgraph-4.8.83.jar-hash">07be289f451cedf9e35ed97caba3953226b4e6d9</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="classgraph-4.8.83.jar-version">4.8.83</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="classgraph-4.8.83.jar-org">Luke Hutchison</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="classgraph-4.8.83.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/classgraph-4.8.83.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="classmate-1.5.1.jar" class="panel-heading">
+                            <h3 class="panel-title">classmate-1.5.1.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="classmate-1.5.1.jar-maven">
+                                            <a id="classmate-1.5.1.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;3fe0bed568c62df5e89f4f174c101eab25345b6c&quot;" target="_blank">com.fasterxml:classmate:1.5.1</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="classmate-1.5.1.jar-hash">3fe0bed568c62df5e89f4f174c101eab25345b6c</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="classmate-1.5.1.jar-version">1.5.1</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="classmate-1.5.1.jar-org">
+        fasterxml.com
+        https://fasterxml.com
+    </dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="classmate-1.5.1.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/classmate-1.5.1.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="hsqldb-2.5.1.jar" class="panel-heading">
+                            <h3 class="panel-title">hsqldb-2.5.1.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="hsqldb-2.5.1.jar-hash">b1f720a63a8756867895cc22dd74b51fb70e90ac</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="hsqldb-2.5.1.jar-version">2.5.1</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="hsqldb-2.5.1.jar-org">The HSQL Development Group</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="hsqldb-2.5.1.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/hsqldb-2.5.1.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="HdrHistogram-2.1.12.jar" class="panel-heading">
+                            <h3 class="panel-title">HdrHistogram-2.1.12.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="HdrHistogram-2.1.12.jar-maven">
+                                            <a id="HdrHistogram-2.1.12.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;6eb7552156e0d517ae80cc2247be1427c8d90452&quot;" target="_blank">org.hdrhistogram:HdrHistogram:2.1.12</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="HdrHistogram-2.1.12.jar-hash">6eb7552156e0d517ae80cc2247be1427c8d90452</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="HdrHistogram-2.1.12.jar-version">2.1.12</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="HdrHistogram-2.1.12.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/HdrHistogram-2.1.12.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="hibernate-validator-6.1.7.Final.jar" class="panel-heading">
+                            <h3 class="panel-title">hibernate-validator-6.1.7.Final.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="hibernate-validator-6.1.7.Final.jar-maven">
+                                            <a id="hibernate-validator-6.1.7.Final.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;8d10290c5b23b7d061c79ad804dca107b335cb36&quot;" target="_blank">org.hibernate.validator:hibernate-validator:6.1.7.Final</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="hibernate-validator-6.1.7.Final.jar-hash">8d10290c5b23b7d061c79ad804dca107b335cb36</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="hibernate-validator-6.1.7.Final.jar-version">6.1.7.Final</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="hibernate-validator-6.1.7.Final.jar-org">JBoss</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="hibernate-validator-6.1.7.Final.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/hibernate-validator-6.1.7.Final.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="HikariCP-3.4.5.jar" class="panel-heading">
+                            <h3 class="panel-title">HikariCP-3.4.5.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="HikariCP-3.4.5.jar-maven">
+                                            <a id="HikariCP-3.4.5.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;aa1a2c00aae8e4ba8308e19940711bb9525b103d&quot;" target="_blank">com.zaxxer:HikariCP:3.4.5</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="HikariCP-3.4.5.jar-hash">aa1a2c00aae8e4ba8308e19940711bb9525b103d</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="HikariCP-3.4.5.jar-version">3.4.5</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="HikariCP-3.4.5.jar-org">
+      Zaxxer.com
+      https://github.com/brettwooldridge
+   </dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="HikariCP-3.4.5.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/HikariCP-3.4.5.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jaxb-runtime-2.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">jaxb-runtime-2.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jaxb-runtime-2.3.3.jar-maven">
+                                            <a id="jaxb-runtime-2.3.3.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;c46b68a6e3a2d84ba4eb14c6a8a1a9a7be4048bc&quot;" target="_blank">org.glassfish.jaxb:jaxb-runtime:2.3.3</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jaxb-runtime-2.3.3.jar-hash">c46b68a6e3a2d84ba4eb14c6a8a1a9a7be4048bc</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jaxb-runtime-2.3.3.jar-version">2.3.3</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jaxb-runtime-2.3.3.jar-org">Eclipse Foundation</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jaxb-runtime-2.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jaxb-runtime-2.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jboss-logging-3.4.1.Final.jar" class="panel-heading">
+                            <h3 class="panel-title">jboss-logging-3.4.1.Final.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jboss-logging-3.4.1.Final.jar-maven">
+                                            <a id="jboss-logging-3.4.1.Final.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;40fd4d696c55793e996d1ff3c475833f836c2498&quot;" target="_blank">org.jboss.logging:jboss-logging:3.4.1.Final</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jboss-logging-3.4.1.Final.jar-hash">40fd4d696c55793e996d1ff3c475833f836c2498</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jboss-logging-3.4.1.Final.jar-version">3.4.1.Final</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jboss-logging-3.4.1.Final.jar-org">JBoss</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jboss-logging-3.4.1.Final.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jboss-logging-3.4.1.Final.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="mysql-connector-java-8.0.22.jar" class="panel-heading">
+                            <h3 class="panel-title">mysql-connector-java-8.0.22.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="mysql-connector-java-8.0.22.jar-hash">0ec8bfce16c8bd18d6cb598b1147aa145be1408f</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="mysql-connector-java-8.0.22.jar-version">8.0.22</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="mysql-connector-java-8.0.22.jar-org">Oracle Corporation</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="mysql-connector-java-8.0.22.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/mysql-connector-java-8.0.22.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="postgresql-42.2.18.jar" class="panel-heading">
+                            <h3 class="panel-title">postgresql-42.2.18.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="postgresql-42.2.18.jar-hash">a0a9c1d43c7727eeaf1b729477891185d3c71751</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="postgresql-42.2.18.jar-version">42.2.18</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="postgresql-42.2.18.jar-org">Oracle Corporation</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="postgresql-42.2.18.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/postgresql-42.2.18.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jul-to-slf4j-1.7.30.jar" class="panel-heading">
+                            <h3 class="panel-title">jul-to-slf4j-1.7.30.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jul-to-slf4j-1.7.30.jar-maven">
+                                            <a id="jul-to-slf4j-1.7.30.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;d58bebff8cbf70ff52b59208586095f467656c30&quot;" target="_blank">org.slf4j:jul-to-slf4j:1.7.30</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jul-to-slf4j-1.7.30.jar-hash">d58bebff8cbf70ff52b59208586095f467656c30</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jul-to-slf4j-1.7.30.jar-version">1.7.30</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jul-to-slf4j-1.7.30.jar-org">SLF4J</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jul-to-slf4j-1.7.30.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jul-to-slf4j-1.7.30.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jackson-datatype-jsr310-2.11.4.jar" class="panel-heading">
+                            <h3 class="panel-title">jackson-datatype-jsr310-2.11.4.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jackson-datatype-jsr310-2.11.4.jar-maven">
+                                            <a id="jackson-datatype-jsr310-2.11.4.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;ce6fc76bba06623720e5a9308386b6ae74753f4d&quot;" target="_blank">com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.11.4</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jackson-datatype-jsr310-2.11.4.jar-hash">ce6fc76bba06623720e5a9308386b6ae74753f4d</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jackson-datatype-jsr310-2.11.4.jar-version">2.11.4</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jackson-datatype-jsr310-2.11.4.jar-org">FasterXML</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jackson-datatype-jsr310-2.11.4.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jackson-datatype-jsr310-2.11.4.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jackson-datatype-jdk8-2.11.4.jar" class="panel-heading">
+                            <h3 class="panel-title">jackson-datatype-jdk8-2.11.4.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jackson-datatype-jdk8-2.11.4.jar-maven">
+                                            <a id="jackson-datatype-jdk8-2.11.4.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;e1540dea3c6c681ea4e335a960f730861ee3bedb&quot;" target="_blank">com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.11.4</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jackson-datatype-jdk8-2.11.4.jar-hash">e1540dea3c6c681ea4e335a960f730861ee3bedb</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jackson-datatype-jdk8-2.11.4.jar-version">2.11.4</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jackson-datatype-jdk8-2.11.4.jar-org">FasterXML</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jackson-datatype-jdk8-2.11.4.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jackson-datatype-jdk8-2.11.4.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jackson-annotations-2.11.4.jar" class="panel-heading">
+                            <h3 class="panel-title">jackson-annotations-2.11.4.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jackson-annotations-2.11.4.jar-maven">
+                                            <a id="jackson-annotations-2.11.4.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;2c3f5c079330f3a01726686a078979420f547ae4&quot;" target="_blank">com.fasterxml.jackson.core:jackson-annotations:2.11.4</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jackson-annotations-2.11.4.jar-hash">2c3f5c079330f3a01726686a078979420f547ae4</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jackson-annotations-2.11.4.jar-version">2.11.4</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jackson-annotations-2.11.4.jar-org">FasterXML</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jackson-annotations-2.11.4.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jackson-annotations-2.11.4.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jackson-core-2.11.4.jar" class="panel-heading">
+                            <h3 class="panel-title">jackson-core-2.11.4.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jackson-core-2.11.4.jar-maven">
+                                            <a id="jackson-core-2.11.4.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;593f7b18bab07a76767f181e2a2336135ce82cc4&quot;" target="_blank">com.fasterxml.jackson.core:jackson-core:2.11.4</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jackson-core-2.11.4.jar-hash">593f7b18bab07a76767f181e2a2336135ce82cc4</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jackson-core-2.11.4.jar-version">2.11.4</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jackson-core-2.11.4.jar-org">FasterXML</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jackson-core-2.11.4.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jackson-core-2.11.4.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jackson-module-parameter-names-2.11.4.jar" class="panel-heading">
+                            <h3 class="panel-title">jackson-module-parameter-names-2.11.4.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jackson-module-parameter-names-2.11.4.jar-maven">
+                                            <a id="jackson-module-parameter-names-2.11.4.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;432e050d79f2282a66c320375d628f1b0842cb12&quot;" target="_blank">com.fasterxml.jackson.module:jackson-module-parameter-names:2.11.4</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jackson-module-parameter-names-2.11.4.jar-hash">432e050d79f2282a66c320375d628f1b0842cb12</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jackson-module-parameter-names-2.11.4.jar-version">2.11.4</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jackson-module-parameter-names-2.11.4.jar-org">FasterXML</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jackson-module-parameter-names-2.11.4.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jackson-module-parameter-names-2.11.4.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jakarta.activation-1.2.2.jar" class="panel-heading">
+                            <h3 class="panel-title">jakarta.activation-1.2.2.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jakarta.activation-1.2.2.jar-maven">
+                                            <a id="jakarta.activation-1.2.2.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;74548703f9851017ce2f556066659438019e7eb5&quot;" target="_blank">com.sun.activation:jakarta.activation:1.2.2</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jakarta.activation-1.2.2.jar-hash">74548703f9851017ce2f556066659438019e7eb5</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jakarta.activation-1.2.2.jar-version">1.2.2</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jakarta.activation-1.2.2.jar-org">Sun</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jakarta.activation-1.2.2.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jakarta.activation-1.2.2.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jakarta.activation-api-1.2.2.jar" class="panel-heading">
+                            <h3 class="panel-title">jakarta.activation-api-1.2.2.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jakarta.activation-api-1.2.2.jar-maven">
+                                            <a id="jakarta.activation-api-1.2.2.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;99f53adba383cb1bf7c3862844488574b559621f&quot;" target="_blank">jakarta.activation:jakarta.activation-api:1.2.2</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jakarta.activation-api-1.2.2.jar-hash">99f53adba383cb1bf7c3862844488574b559621f</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jakarta.activation-api-1.2.2.jar-version">1.2.2</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jakarta.activation-api-1.2.2.jar-org">Eclipse Foundation</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jakarta.activation-api-1.2.2.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jakarta.activation-api-1.2.2.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jakarta.annotation-api-1.3.5.jar" class="panel-heading">
+                            <h3 class="panel-title">jakarta.annotation-api-1.3.5.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jakarta.annotation-api-1.3.5.jar-maven">
+                                            <a id="jakarta.annotation-api-1.3.5.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;59eb84ee0d616332ff44aba065f3888cf002cd2d&quot;" target="_blank">jakarta.annotation:jakarta.annotation-api:1.3.5</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jakarta.annotation-api-1.3.5.jar-hash">59eb84ee0d616332ff44aba065f3888cf002cd2d</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jakarta.annotation-api-1.3.5.jar-version">1.3.5</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jakarta.annotation-api-1.3.5.jar-org">Eclipse Foundation</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jakarta.annotation-api-1.3.5.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jakarta.annotation-api-1.3.5.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jakarta.validation-api-2.0.2.jar" class="panel-heading">
+                            <h3 class="panel-title">jakarta.validation-api-2.0.2.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jakarta.validation-api-2.0.2.jar-maven">
+                                            <a id="jakarta.validation-api-2.0.2.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;5eacc6522521f7eacb081f95cee1e231648461e7&quot;" target="_blank">jakarta.validation:jakarta.validation-api:2.0.2</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jakarta.validation-api-2.0.2.jar-hash">5eacc6522521f7eacb081f95cee1e231648461e7</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jakarta.validation-api-2.0.2.jar-version">2.0.2</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jakarta.validation-api-2.0.2.jar-org">Eclipse Foundation</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jakarta.validation-api-2.0.2.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jakarta.validation-api-2.0.2.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jakarta.el-3.0.3.jar" class="panel-heading">
+                            <h3 class="panel-title">jakarta.el-3.0.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jakarta.el-3.0.3.jar-maven">
+                                            <a id="jakarta.el-3.0.3.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;dab46ee1ee23f7197c13d7c40fce14817c9017df&quot;" target="_blank">org.glassfish:jakarta.el:3.0.3</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jakarta.el-3.0.3.jar-hash">dab46ee1ee23f7197c13d7c40fce14817c9017df</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jakarta.el-3.0.3.jar-version">3.0.3</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jakarta.el-3.0.3.jar-org">Oracle Corporation</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jakarta.el-3.0.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jakarta.el-3.0.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jakarta.persistence-api-2.2.3.jar" class="panel-heading">
+                            <h3 class="panel-title">jakarta.persistence-api-2.2.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jakarta.persistence-api-2.2.3.jar-maven">
+                                            <a id="jakarta.persistence-api-2.2.3.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;8f6ea5daedc614f07a3654a455660145286f024e&quot;" target="_blank">jakarta.persistence:jakarta.persistence-api:2.2.3</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jakarta.persistence-api-2.2.3.jar-hash">8f6ea5daedc614f07a3654a455660145286f024e</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jakarta.persistence-api-2.2.3.jar-version">2.2.3</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jakarta.persistence-api-2.2.3.jar-org">Eclipse Foundation</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jakarta.persistence-api-2.2.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jakarta.persistence-api-2.2.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jakarta.xml.bind-api-2.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">jakarta.xml.bind-api-2.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jakarta.xml.bind-api-2.3.3.jar-maven">
+                                            <a id="jakarta.xml.bind-api-2.3.3.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;48e3b9cfc10752fba3521d6511f4165bea951801&quot;" target="_blank">jakarta.xml.bind:jakarta.xml.bind-api:2.3.3</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jakarta.xml.bind-api-2.3.3.jar-hash">48e3b9cfc10752fba3521d6511f4165bea951801</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jakarta.xml.bind-api-2.3.3.jar-version">2.3.3</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jakarta.xml.bind-api-2.3.3.jar-org">Eclipse Foundation</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jakarta.xml.bind-api-2.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jakarta.xml.bind-api-2.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jandex-2.1.3.Final.jar" class="panel-heading">
+                            <h3 class="panel-title">jandex-2.1.3.Final.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jandex-2.1.3.Final.jar-maven">
+                                            <a id="jandex-2.1.3.Final.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;cd56603e39eb1421560b71daa584348ecfd9e0b8&quot;" target="_blank">org.jboss:jandex:2.1.3.Final</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jandex-2.1.3.Final.jar-hash">cd56603e39eb1421560b71daa584348ecfd9e0b8</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jandex-2.1.3.Final.jar-version">2.1.3.Final</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jandex-2.1.3.Final.jar-org">JBoss</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jandex-2.1.3.Final.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jandex-2.1.3.Final.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="javassist-3.27.0-GA.jar" class="panel-heading">
+                            <h3 class="panel-title">javassist-3.27.0-GA.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="javassist-3.27.0-GA.jar-maven">
+                                            <a id="javassist-3.27.0-GA.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;f63e6aa899e15eca8fdaa402a79af4c417252213&quot;" target="_blank">org.javassist:javassist:3.27.0-GA</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="javassist-3.27.0-GA.jar-hash">f63e6aa899e15eca8fdaa402a79af4c417252213</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="javassist-3.27.0-GA.jar-version">3.27.0-GA</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="javassist-3.27.0-GA.jar-org">
+    Shigeru Chiba, www.javassist.org
+  </dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="javassist-3.27.0-GA.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/javassist-3.27.0-GA.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jackson-databind-nullable-0.2.1.jar" class="panel-heading">
+                            <h3 class="panel-title">jackson-databind-nullable-0.2.1.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jackson-databind-nullable-0.2.1.jar-maven">
+                                            <a id="jackson-databind-nullable-0.2.1.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;d069cce2528dae0475d5e4bd04f01017afe1e7cd&quot;" target="_blank">org.openapitools:jackson-databind-nullable:0.2.1</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jackson-databind-nullable-0.2.1.jar-hash">d069cce2528dae0475d5e4bd04f01017afe1e7cd</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jackson-databind-nullable-0.2.1.jar-version">0.2.1</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jackson-databind-nullable-0.2.1.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jackson-databind-nullable-0.2.1.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="LatencyUtils-2.0.3.jar" class="panel-heading">
+                            <h3 class="panel-title">LatencyUtils-2.0.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="LatencyUtils-2.0.3.jar-maven">
+                                            <a id="LatencyUtils-2.0.3.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;769c0b82cb2421c8256300e907298a9410a2a3d3&quot;" target="_blank">org.latencyutils:LatencyUtils:2.0.3</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="LatencyUtils-2.0.3.jar-hash">769c0b82cb2421c8256300e907298a9410a2a3d3</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="LatencyUtils-2.0.3.jar-version">2.0.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="LatencyUtils-2.0.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/LatencyUtils-2.0.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="logback-classic-1.2.3.jar" class="panel-heading">
+                            <h3 class="panel-title">logback-classic-1.2.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="logback-classic-1.2.3.jar-maven">
+                                            <a id="logback-classic-1.2.3.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;7c4f3c474fb2c041d8028740440937705ebb473a&quot;" target="_blank">ch.qos.logback:logback-classic:1.2.3</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="logback-classic-1.2.3.jar-hash">7c4f3c474fb2c041d8028740440937705ebb473a</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="logback-classic-1.2.3.jar-version">1.2.3</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="logback-classic-1.2.3.jar-org">QOS.ch</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="logback-classic-1.2.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/logback-classic-1.2.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="logback-core-1.2.3.jar" class="panel-heading">
+                            <h3 class="panel-title">logback-core-1.2.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="logback-core-1.2.3.jar-maven">
+                                            <a id="logback-core-1.2.3.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;864344400c3d4d92dfeb0a305dc87d953677c03c&quot;" target="_blank">ch.qos.logback:logback-core:1.2.3</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="logback-core-1.2.3.jar-hash">864344400c3d4d92dfeb0a305dc87d953677c03c</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="logback-core-1.2.3.jar-version">1.2.3</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="logback-core-1.2.3.jar-org">QOS.ch</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="logback-core-1.2.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/logback-core-1.2.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="mapstruct-1.4.1.Final.jar" class="panel-heading">
+                            <h3 class="panel-title">mapstruct-1.4.1.Final.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="mapstruct-1.4.1.Final.jar-maven">
+                                            <a id="mapstruct-1.4.1.Final.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;9f87c0a8e5ee39ced552f6a257a425a4798600ca&quot;" target="_blank">org.mapstruct:mapstruct:1.4.1.Final</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="mapstruct-1.4.1.Final.jar-hash">9f87c0a8e5ee39ced552f6a257a425a4798600ca</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="mapstruct-1.4.1.Final.jar-version">1.4.1.Final</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="mapstruct-1.4.1.Final.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/mapstruct-1.4.1.Final.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="mapstruct-processor-1.4.1.Final.jar" class="panel-heading">
+                            <h3 class="panel-title">mapstruct-processor-1.4.1.Final.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="mapstruct-processor-1.4.1.Final.jar-maven">
+                                            <a id="mapstruct-processor-1.4.1.Final.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;a177f0daf39b807f19906fc3a7c6af8985bd8c4a&quot;" target="_blank">org.mapstruct:mapstruct-processor:1.4.1.Final</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="mapstruct-processor-1.4.1.Final.jar-hash">a177f0daf39b807f19906fc3a7c6af8985bd8c4a</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="mapstruct-processor-1.4.1.Final.jar-version">1.4.1.Final</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="mapstruct-processor-1.4.1.Final.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/mapstruct-processor-1.4.1.Final.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="slf4j-api-1.7.30.jar" class="panel-heading">
+                            <h3 class="panel-title">slf4j-api-1.7.30.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="slf4j-api-1.7.30.jar-maven">
+                                            <a id="slf4j-api-1.7.30.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;b5a4b6d16ab13e34a88fae84c35cd5d68cac922c&quot;" target="_blank">org.slf4j:slf4j-api:1.7.30</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="slf4j-api-1.7.30.jar-hash">b5a4b6d16ab13e34a88fae84c35cd5d68cac922c</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="slf4j-api-1.7.30.jar-version">1.7.30</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="slf4j-api-1.7.30.jar-org">SLF4J</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="slf4j-api-1.7.30.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/slf4j-api-1.7.30.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="snakeyaml-1.27.jar" class="panel-heading">
+                            <h3 class="panel-title">snakeyaml-1.27.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="snakeyaml-1.27.jar-maven">
+                                            <a id="snakeyaml-1.27.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;359d62567480b07a679dc643f82fc926b100eed5&quot;" target="_blank">org.yaml:snakeyaml:1.27</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="snakeyaml-1.27.jar-hash">359d62567480b07a679dc643f82fc926b100eed5</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="snakeyaml-1.27.jar-version">1.27</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="snakeyaml-1.27.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/snakeyaml-1.27.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-boot-2.4.2.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-boot-2.4.2.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-boot-2.4.2.jar-hash">cefca979ab386988d4505b8346306d95fc3bddb8</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-boot-2.4.2.jar-version">2.4.2</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-boot-2.4.2.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-boot-2.4.2.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-boot-actuator-2.4.2.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-boot-actuator-2.4.2.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-boot-actuator-2.4.2.jar-hash">c2f8c330622072f62f89eeb22bb35b02abe8d6b4</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-boot-actuator-2.4.2.jar-version">2.4.2</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-boot-actuator-2.4.2.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-boot-actuator-2.4.2.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-boot-actuator-autoconfigure-2.4.2.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-boot-actuator-autoconfigure-2.4.2.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-boot-actuator-autoconfigure-2.4.2.jar-hash">78d35cd58bf5080dbb79ddcf62e1f6a35363ab5c</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-boot-actuator-autoconfigure-2.4.2.jar-version">2.4.2</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-boot-actuator-autoconfigure-2.4.2.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-boot-actuator-autoconfigure-2.4.2.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-boot-autoconfigure-2.4.2.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-boot-autoconfigure-2.4.2.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-boot-autoconfigure-2.4.2.jar-hash">65e86c83ddfb08d8a8de9bd4a53e10578721b98f</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-boot-autoconfigure-2.4.2.jar-version">2.4.2</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-boot-autoconfigure-2.4.2.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-boot-autoconfigure-2.4.2.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-boot-jarmode-layertools-2.4.2.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-boot-jarmode-layertools-2.4.2.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-boot-jarmode-layertools-2.4.2.jar-hash">a227b16e6262e3073282bb4ea696622b8b2018d2</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-boot-jarmode-layertools-2.4.2.jar-version">2.4.2</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-boot-jarmode-layertools-2.4.2.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-boot-jarmode-layertools-2.4.2.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-data-commons-2.4.3.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-data-commons-2.4.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="spring-data-commons-2.4.3.jar-maven">
+                                            <a id="spring-data-commons-2.4.3.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;3fdfe6ea486b5ca836563209b26032f424581cd9&quot;" target="_blank">org.springframework.data:spring-data-commons:2.4.3</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-data-commons-2.4.3.jar-hash">3fdfe6ea486b5ca836563209b26032f424581cd9</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-data-commons-2.4.3.jar-version">2.4.3</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="spring-data-commons-2.4.3.jar-org">Spring</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-data-commons-2.4.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-data-commons-2.4.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-data-jpa-2.4.3.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-data-jpa-2.4.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="spring-data-jpa-2.4.3.jar-maven">
+                                            <a id="spring-data-jpa-2.4.3.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;c796f4a5fa9cc5aa5fcf931a900cd2c686d06cda&quot;" target="_blank">org.springframework.data:spring-data-jpa:2.4.3</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-data-jpa-2.4.3.jar-hash">c796f4a5fa9cc5aa5fcf931a900cd2c686d06cda</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-data-jpa-2.4.3.jar-version">2.4.3</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="spring-data-jpa-2.4.3.jar-org">Spring</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-data-jpa-2.4.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-data-jpa-2.4.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-plugin-core-2.0.0.RELEASE.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-plugin-core-2.0.0.RELEASE.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="spring-plugin-core-2.0.0.RELEASE.jar-maven">
+                                            <a id="spring-plugin-core-2.0.0.RELEASE.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;95fc8c13037630f4aba9c51141f535becec00fe6&quot;" target="_blank">org.springframework.plugin:spring-plugin-core:2.0.0.RELEASE</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-plugin-core-2.0.0.RELEASE.jar-hash">95fc8c13037630f4aba9c51141f535becec00fe6</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-plugin-core-2.0.0.RELEASE.jar-version">2.0.0.RELEASE</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="spring-plugin-core-2.0.0.RELEASE.jar-org">Spring</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-plugin-core-2.0.0.RELEASE.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-plugin-core-2.0.0.RELEASE.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-plugin-metadata-2.0.0.RELEASE.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-plugin-metadata-2.0.0.RELEASE.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="spring-plugin-metadata-2.0.0.RELEASE.jar-maven">
+                                            <a id="spring-plugin-metadata-2.0.0.RELEASE.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;6fb3a1fc0f05dc826687b7686ad8a5960ecdd57c&quot;" target="_blank">org.springframework.plugin:spring-plugin-metadata:2.0.0.RELEASE</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-plugin-metadata-2.0.0.RELEASE.jar-hash">6fb3a1fc0f05dc826687b7686ad8a5960ecdd57c</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-plugin-metadata-2.0.0.RELEASE.jar-version">2.0.0.RELEASE</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="spring-plugin-metadata-2.0.0.RELEASE.jar-org">Spring</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-plugin-metadata-2.0.0.RELEASE.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-plugin-metadata-2.0.0.RELEASE.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-retry-1.3.1.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-retry-1.3.1.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="spring-retry-1.3.1.jar-maven">
+                                            <a id="spring-retry-1.3.1.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;f8644c86f2be54623c3b336a56b54216841a3f22&quot;" target="_blank">org.springframework.retry:spring-retry:1.3.1</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-retry-1.3.1.jar-hash">f8644c86f2be54623c3b336a56b54216841a3f22</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-retry-1.3.1.jar-version">1.3.1</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="spring-retry-1.3.1.jar-org">
+		SpringSource
+		https://www.springsource.com
+	</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-retry-1.3.1.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-retry-1.3.1.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="txw2-2.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">txw2-2.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="txw2-2.3.3.jar-maven">
+                                            <a id="txw2-2.3.3.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;12f70b0ea4fc1ad45315e842f63f7c9a46f46530&quot;" target="_blank">org.glassfish.jaxb:txw2:2.3.3</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="txw2-2.3.3.jar-hash">12f70b0ea4fc1ad45315e842f63f7c9a46f46530</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="txw2-2.3.3.jar-version">2.3.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="txw2-2.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/txw2-2.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="antlr-2.7.7.jar" class="panel-heading">
+                            <h3 class="panel-title">antlr-2.7.7.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="antlr-2.7.7.jar-hash">83cd2cd674a217ade95a4bb83a8a14f351f48bd0</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="antlr-2.7.7.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/antlr-2.7.7.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="checker-qual-3.5.0.jar" class="panel-heading">
+                            <h3 class="panel-title">checker-qual-3.5.0.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="checker-qual-3.5.0.jar-hash">2f50520c8abea66fbd8d26e481d3aef5c673b510</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="checker-qual-3.5.0.jar-version">3.5.0</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="checker-qual-3.5.0.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/checker-qual-3.5.0.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="dom4j-2.1.3.jar" class="panel-heading">
+                            <h3 class="panel-title">dom4j-2.1.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="dom4j-2.1.3.jar-hash">a75914155a9f5808963170ec20653668a2ffd2fd</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="dom4j-2.1.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/dom4j-2.1.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="hibernate-commons-annotations-5.1.2.Final.jar" class="panel-heading">
+                            <h3 class="panel-title">hibernate-commons-annotations-5.1.2.Final.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="hibernate-commons-annotations-5.1.2.Final.jar-hash">e59ffdbc6ad09eeb33507b39ffcf287679a498c8</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="hibernate-commons-annotations-5.1.2.Final.jar-version">5.1.2.Final</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="hibernate-commons-annotations-5.1.2.Final.jar-org">Hibernate.org</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="hibernate-commons-annotations-5.1.2.Final.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/hibernate-commons-annotations-5.1.2.Final.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="hibernate-core-5.4.27.Final.jar" class="panel-heading">
+                            <h3 class="panel-title">hibernate-core-5.4.27.Final.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="hibernate-core-5.4.27.Final.jar-hash">d711d8d2ad02622e4575ecf1fbb069a256f4fa91</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="hibernate-core-5.4.27.Final.jar-version">5.4.27.Final</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="hibernate-core-5.4.27.Final.jar-org">Hibernate.org</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="hibernate-core-5.4.27.Final.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/hibernate-core-5.4.27.Final.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="micrometer-core-1.6.3.jar" class="panel-heading">
+                            <h3 class="panel-title">micrometer-core-1.6.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="micrometer-core-1.6.3.jar-hash">893b0c813a89bee6af8f8a9cc3e62cade78569ed</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="micrometer-core-1.6.3.jar-version">1.6.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="micrometer-core-1.6.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/micrometer-core-1.6.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="istack-commons-runtime-3.0.11.jar" class="panel-heading">
+                            <h3 class="panel-title">istack-commons-runtime-3.0.11.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="istack-commons-runtime-3.0.11.jar-maven">
+                                            <a id="istack-commons-runtime-3.0.11.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;4293b5f4e4e89d598f62bb2ba73b32132e7c3a27&quot;" target="_blank">com.sun.istack:istack-commons-runtime:3.0.11</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="istack-commons-runtime-3.0.11.jar-hash">4293b5f4e4e89d598f62bb2ba73b32132e7c3a27</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="istack-commons-runtime-3.0.11.jar-version">3.0.11</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="istack-commons-runtime-3.0.11.jar-org">Sun</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="istack-commons-runtime-3.0.11.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/istack-commons-runtime-3.0.11.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jackson-databind-2.11.4.jar" class="panel-heading">
+                            <h3 class="panel-title">jackson-databind-2.11.4.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jackson-databind-2.11.4.jar-maven">
+                                            <a id="jackson-databind-2.11.4.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;5d9f3d441f99d721b957e3497f0a6465c764fad4&quot;" target="_blank">com.fasterxml.jackson.core:jackson-databind:2.11.4</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jackson-databind-2.11.4.jar-hash">5d9f3d441f99d721b957e3497f0a6465c764fad4</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jackson-databind-2.11.4.jar-version">2.11.4</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jackson-databind-2.11.4.jar-org">FasterXML</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jackson-databind-2.11.4.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jackson-databind-2.11.4.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="jaxb-api-2.3.0.jar" class="panel-heading">
+                            <h3 class="panel-title">jaxb-api-2.3.0.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="jaxb-api-2.3.0.jar-maven">
+                                            <a id="jaxb-api-2.3.0.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;99f802e0cb3e953ba3d6e698795c4aeb98d37c48&quot;" target="_blank">javax.xml.bind:jaxb-api:2.3.0</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="jaxb-api-2.3.0.jar-hash">99f802e0cb3e953ba3d6e698795c4aeb98d37c48</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="jaxb-api-2.3.0.jar-version">2.3.0</dd>
+                                    <dt class="trait">Organization:</dt>
+                                    <dd id="jaxb-api-2.3.0.jar-org">Sun</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="jaxb-api-2.3.0.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/jaxb-api-2.3.0.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-aop-5.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-aop-5.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-aop-5.3.3.jar-hash">d7b9366fd446a135fa0833249d6468dd2dda5b1a</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-aop-5.3.3.jar-version">5.3.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-aop-5.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-aop-5.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-aspects-5.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-aspects-5.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-aspects-5.3.3.jar-hash">5e289da5e52cb840066e3fa10254782c5c2bb5a8</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-aspects-5.3.3.jar-version">5.3.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-aspects-5.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-aspects-5.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-beans-5.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-beans-5.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-beans-5.3.3.jar-hash">855f38fc8b85901681495ac6c6379051ee688cd5</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-beans-5.3.3.jar-version">5.3.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-beans-5.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-beans-5.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-context-5.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-context-5.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-context-5.3.3.jar-hash">991cb0e9ef7a641d78d12ea18e213124fed6e787</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-context-5.3.3.jar-version">5.3.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-context-5.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-context-5.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-context-support-5.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-context-support-5.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-context-support-5.3.3.jar-hash">4ddb383e484d490b5152eea541bfcfd51836b2fe</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-context-support-5.3.3.jar-version">5.3.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-context-support-5.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-context-support-5.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-core-5.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-core-5.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-core-5.3.3.jar-hash">ea35bf756a880c699768ae0750e1244017d6ae84</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-core-5.3.3.jar-version">5.3.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-core-5.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-core-5.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-data-jdbc-core-1.2.1.RELEASE.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-data-jdbc-core-1.2.1.RELEASE.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-data-jdbc-core-1.2.1.RELEASE.jar-hash">21ec04d691126d66eb16161a745f3e0f4b273451</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-data-jdbc-core-1.2.1.RELEASE.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-data-jdbc-core-1.2.1.RELEASE.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-expression-5.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-expression-5.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-expression-5.3.3.jar-hash">c98f680074d15abee6130a22683f5f5d8acdfa15</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-expression-5.3.3.jar-version">5.3.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-expression-5.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-expression-5.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-jcl-5.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-jcl-5.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-jcl-5.3.3.jar-hash">29b29ac8940bfa8b07f7678e24018cee12f66706</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-jcl-5.3.3.jar-version">5.3.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-jcl-5.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-jcl-5.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-jdbc-5.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-jdbc-5.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-jdbc-5.3.3.jar-hash">b457d582d4a5d86eedc28a7ac774a3d9ddf209aa</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-jdbc-5.3.3.jar-version">5.3.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-jdbc-5.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-jdbc-5.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-orm-5.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-orm-5.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-orm-5.3.3.jar-hash">2d8034e7982bd43ff7eaaa8a0ba30f31abf72410</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-orm-5.3.3.jar-version">5.3.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-orm-5.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-orm-5.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-security-config-5.4.2.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-security-config-5.4.2.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-security-config-5.4.2.jar-hash">b3e9919e915aa4f7751b3aba56e4361c909a0ed3</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-security-config-5.4.2.jar-version">5.4.2</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-security-config-5.4.2.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-security-config-5.4.2.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-security-core-5.4.2.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-security-core-5.4.2.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-security-core-5.4.2.jar-hash">cae0310c1de450a6e4a7fbc7d01702bf81d7390d</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-security-core-5.4.2.jar-version">5.4.2</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-security-core-5.4.2.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-security-core-5.4.2.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-security-web-5.4.2.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-security-web-5.4.2.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-security-web-5.4.2.jar-hash">397b4d52b0bd9e7219789630ac3836cce7557c44</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-security-web-5.4.2.jar-version">5.4.2</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-security-web-5.4.2.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-security-web-5.4.2.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-tx-5.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-tx-5.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-tx-5.3.3.jar-hash">db244edbb790ec24719e8eec635bd82b8ea24f62</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-tx-5.3.3.jar-version">5.3.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-tx-5.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-tx-5.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-web-5.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-web-5.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-web-5.3.3.jar-hash">9112880371d9ff888ee1248563df80eacbec7e14</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-web-5.3.3.jar-version">5.3.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-web-5.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-web-5.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="spring-webmvc-5.3.3.jar" class="panel-heading">
+                            <h3 class="panel-title">spring-webmvc-5.3.3.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="spring-webmvc-5.3.3.jar-hash">a88088cbd798d681d1e219e56896eaa067c925e1</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="spring-webmvc-5.3.3.jar-version">5.3.3</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="spring-webmvc-5.3.3.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/spring-webmvc-5.3.3.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="springfox-bean-validators-3.0.0.jar" class="panel-heading">
+                            <h3 class="panel-title">springfox-bean-validators-3.0.0.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="springfox-bean-validators-3.0.0.jar-hash">80c646fdebe5f2b2b337a5a686e540fee0b7304f</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="springfox-bean-validators-3.0.0.jar-version">3.0.0</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="springfox-bean-validators-3.0.0.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/springfox-bean-validators-3.0.0.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="springfox-boot-starter-3.0.0.jar" class="panel-heading">
+                            <h3 class="panel-title">springfox-boot-starter-3.0.0.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="springfox-boot-starter-3.0.0.jar-hash">5486365e263f8acca014b97efa50c3419d58e8f6</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="springfox-boot-starter-3.0.0.jar-version">3.0.0</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="springfox-boot-starter-3.0.0.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/springfox-boot-starter-3.0.0.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="springfox-core-3.0.0.jar" class="panel-heading">
+                            <h3 class="panel-title">springfox-core-3.0.0.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="springfox-core-3.0.0.jar-hash">7c3367ce577c8acd9bf64c74488c9269253516c9</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="springfox-core-3.0.0.jar-version">3.0.0</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="springfox-core-3.0.0.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/springfox-core-3.0.0.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="springfox-data-rest-3.0.0.jar" class="panel-heading">
+                            <h3 class="panel-title">springfox-data-rest-3.0.0.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="springfox-data-rest-3.0.0.jar-hash">40f5e834d6696ae1d3212fa5a2d5e1ec406bedc0</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="springfox-data-rest-3.0.0.jar-version">3.0.0</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="springfox-data-rest-3.0.0.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/springfox-data-rest-3.0.0.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="springfox-oas-3.0.0.jar" class="panel-heading">
+                            <h3 class="panel-title">springfox-oas-3.0.0.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="springfox-oas-3.0.0.jar-hash">e7bc9c1319cf1b64ae714a249c3db3b8fe01e42b</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="springfox-oas-3.0.0.jar-version">3.0.0</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="springfox-oas-3.0.0.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/springfox-oas-3.0.0.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="springfox-schema-3.0.0.jar" class="panel-heading">
+                            <h3 class="panel-title">springfox-schema-3.0.0.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="springfox-schema-3.0.0.jar-hash">32c5d6965617830ef6480fadb9030008945bcd9c</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="springfox-schema-3.0.0.jar-version">3.0.0</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="springfox-schema-3.0.0.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/springfox-schema-3.0.0.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="springfox-spi-3.0.0.jar" class="panel-heading">
+                            <h3 class="panel-title">springfox-spi-3.0.0.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="springfox-spi-3.0.0.jar-hash">bae0b820d4b5a922063d34a42aaf4f763308b828</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="springfox-spi-3.0.0.jar-version">3.0.0</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="springfox-spi-3.0.0.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/springfox-spi-3.0.0.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="springfox-spring-web-3.0.0.jar" class="panel-heading">
+                            <h3 class="panel-title">springfox-spring-web-3.0.0.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="springfox-spring-web-3.0.0.jar-hash">a76f2fbe805bfd2798e20dc8f2cfbfad554d52da</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="springfox-spring-web-3.0.0.jar-version">3.0.0</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="springfox-spring-web-3.0.0.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/springfox-spring-web-3.0.0.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="springfox-spring-webflux-3.0.0.jar" class="panel-heading">
+                            <h3 class="panel-title">springfox-spring-webflux-3.0.0.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="springfox-spring-webflux-3.0.0.jar-hash">efccbcfe1d23f2ba520bd87cc156bf2b81f3568e</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="springfox-spring-webflux-3.0.0.jar-version">3.0.0</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="springfox-spring-webflux-3.0.0.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/springfox-spring-webflux-3.0.0.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="springfox-spring-webmvc-3.0.0.jar" class="panel-heading">
+                            <h3 class="panel-title">springfox-spring-webmvc-3.0.0.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="springfox-spring-webmvc-3.0.0.jar-hash">7ed22363fdfd651cd811c0b2391f16bddb91db8b</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="springfox-spring-webmvc-3.0.0.jar-version">3.0.0</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="springfox-spring-webmvc-3.0.0.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/springfox-spring-webmvc-3.0.0.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="springfox-swagger-common-3.0.0.jar" class="panel-heading">
+                            <h3 class="panel-title">springfox-swagger-common-3.0.0.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="springfox-swagger-common-3.0.0.jar-hash">2e2fae840984cfcabfd50e1b4b1c23422135ba12</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="springfox-swagger-common-3.0.0.jar-version">3.0.0</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="springfox-swagger-common-3.0.0.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/springfox-swagger-common-3.0.0.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="springfox-swagger-ui-3.0.0.jar" class="panel-heading">
+                            <h3 class="panel-title">springfox-swagger-ui-3.0.0.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="springfox-swagger-ui-3.0.0.jar-hash">1e665fbe22148f7c36fa8a08e515a0047cd4390b</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="springfox-swagger-ui-3.0.0.jar-version">3.0.0</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="springfox-swagger-ui-3.0.0.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/springfox-swagger-ui-3.0.0.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="springfox-swagger2-3.0.0.jar" class="panel-heading">
+                            <h3 class="panel-title">springfox-swagger2-3.0.0.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="springfox-swagger2-3.0.0.jar-hash">7bcb18d496576eff76ef7bb72684e149cbb75c1d</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="springfox-swagger2-3.0.0.jar-version">3.0.0</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="springfox-swagger2-3.0.0.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/springfox-swagger2-3.0.0.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="swagger-annotations-2.1.2.jar" class="panel-heading">
+                            <h3 class="panel-title">swagger-annotations-2.1.2.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="swagger-annotations-2.1.2.jar-maven">
+                                            <a id="swagger-annotations-2.1.2.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;d407a33aa71444802c640080eb4d5f499b027f96&quot;" target="_blank">io.swagger.core.v3:swagger-annotations:2.1.2</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="swagger-annotations-2.1.2.jar-hash">d407a33aa71444802c640080eb4d5f499b027f96</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="swagger-annotations-2.1.2.jar-version">2.1.2</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="swagger-annotations-2.1.2.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/swagger-annotations-2.1.2.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="swagger-annotations-1.5.20.jar" class="panel-heading">
+                            <h3 class="panel-title">swagger-annotations-1.5.20.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="swagger-annotations-1.5.20.jar-maven">
+                                            <a id="swagger-annotations-1.5.20.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;16051f93ce11ca489a5313775d825f82fcc2cd6c&quot;" target="_blank">io.swagger:swagger-annotations:1.5.20</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="swagger-annotations-1.5.20.jar-hash">16051f93ce11ca489a5313775d825f82fcc2cd6c</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="swagger-annotations-1.5.20.jar-version">1.5.20</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="swagger-annotations-1.5.20.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/swagger-annotations-1.5.20.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="swagger-models-2.1.2.jar" class="panel-heading">
+                            <h3 class="panel-title">swagger-models-2.1.2.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="swagger-models-2.1.2.jar-maven">
+                                            <a id="swagger-models-2.1.2.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;e7edeed6456a16d707542c003af03a594ecafe3a&quot;" target="_blank">io.swagger.core.v3:swagger-models:2.1.2</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="swagger-models-2.1.2.jar-hash">e7edeed6456a16d707542c003af03a594ecafe3a</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="swagger-models-2.1.2.jar-version">2.1.2</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="swagger-models-2.1.2.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/swagger-models-2.1.2.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+                    <div class="panel panel-default panel-primary dependency">
+                        <div id="swagger-models-1.5.20.jar" class="panel-heading">
+                            <h3 class="panel-title">swagger-models-1.5.20.jar</h3>
+                        </div>
+                        <div class="panel-body">
+                            <dl class="traits dl-horizontal">
+                                    <dt class="trait">Maven coordinates:</dt>
+                                    <dd id="swagger-models-1.5.20.jar-maven">
+                                            <a id="swagger-models-1.5.20.jar-gav" href="http://search.maven.org/#search|ga|1|1:&quot;fb3a23bad80c5ed84db9dd150db2cba699531458&quot;" target="_blank">io.swagger:swagger-models:1.5.20</a>
+                                    </dd>
+                                    <dt class="trait">SHA1 hash:</dt>
+                                    <dd id="swagger-models-1.5.20.jar-hash">fb3a23bad80c5ed84db9dd150db2cba699531458</dd>
+                                    <dt class="trait">Version:</dt>
+                                    <dd id="swagger-models-1.5.20.jar-version">1.5.20</dd>
+                                <dt class="trait">Found at path:</dt>
+                                <dd>
+                                    <ul id="swagger-models-1.5.20.jar-paths" class="list-unstyled">
+                                            <li>spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/swagger-models-1.5.20.jar</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </div>
+            </div>
+
+        </div> <!-- /container -->
+    </div><!--/row-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Nov 17, 2021, 12:44:06 PM</div>    </div><!-- /container main-->
+
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

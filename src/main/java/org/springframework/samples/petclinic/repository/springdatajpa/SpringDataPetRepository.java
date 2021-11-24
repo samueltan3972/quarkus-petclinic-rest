@@ -33,7 +33,7 @@ import org.springframework.samples.petclinic.repository.PetRepository;
  */
 
 @Profile("spring-data-jpa")
-public interface SpringDataPetRepository extends PetRepository, Repository<Pet, Integer>, PetRepositoryOverride {
+public interface SpringDataPetRepository extends PetRepository, Repository<PetType, Integer>, PetRepositoryOverride {
 
     @Override
     @Query("SELECT ptype FROM PetType ptype ORDER BY ptype.name")

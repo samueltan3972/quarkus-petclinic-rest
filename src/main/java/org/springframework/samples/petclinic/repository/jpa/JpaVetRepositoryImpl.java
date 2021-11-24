@@ -21,8 +21,12 @@ import org.springframework.samples.petclinic.model.Vet;
 import org.springframework.samples.petclinic.repository.VetRepository;
 import org.springframework.stereotype.Repository;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Named;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import javax.transaction.Transactional;
+
 import java.util.Collection;
 
 /**
@@ -36,6 +40,7 @@ import java.util.Collection;
  */
 @Repository
 @Profile("jpa")
+@Named("jpaVetRepositoryImpl")
 public class JpaVetRepositoryImpl implements VetRepository {
 
     @PersistenceContext
@@ -54,6 +59,7 @@ public class JpaVetRepositoryImpl implements VetRepository {
 	}
 
 	@Override
+	@Transactional
 	public void save(Vet vet) throws DataAccessException {
         if (vet.getId() == null) {
             this.em.persist(vet);
@@ -63,6 +69,7 @@ public class JpaVetRepositoryImpl implements VetRepository {
 	}
 
 	@Override
+	@Transactional
 	public void delete(Vet vet) throws DataAccessException {
 		this.em.remove(this.em.contains(vet) ? vet : this.em.merge(vet));
 	}

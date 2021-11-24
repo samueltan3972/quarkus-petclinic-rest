@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for Timer.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/mta-icon.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="8192152">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_spring_petclinic_rest.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_spring_petclinic_rest.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_spring_petclinic_rest.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_spring_petclinic_rest.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Migration Toolkit for Applications by Red Hat found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="8192152">
+                            spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/micrometer-core-1.6.3.jar/io/micrometer/core/instrument/Timer.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">40</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package io.micrometer.core.instrument;
+
+import io.micrometer.core.annotation.Incubating;
+import io.micrometer.core.annotation.Timed;
+import io.micrometer.core.instrument.Meter.Id;
+import io.micrometer.core.instrument.Meter.Type;
+import io.micrometer.core.instrument.distribution.CountAtBucket;
+import io.micrometer.core.instrument.distribution.HistogramSupport;
+import io.micrometer.core.instrument.distribution.ValueAtPercentile;
+import io.micrometer.core.instrument.distribution.pause.PauseDetector;
+import java.time.Duration;
+import java.util.Arrays;
+import java.util.concurrent.Callable;
+import java.util.concurrent.TimeUnit;
+import java.util.function.Supplier;
+
+public interface Timer extends Meter, HistogramSupport {
+   static Timer.Sample start() {
+      return start(Clock.SYSTEM);
+   }
+
+   static Timer.Sample start(MeterRegistry registry) {
+      return start(registry.config().clock());
+   }
+
+   static Timer.Sample start(Clock clock) {
+      return new Timer.Sample(clock);
+   }
+
+   static Timer.Builder builder(String name) {
+      return new Timer.Builder(name);
+   }
+
+   @Incubating(
+      since = &quot;1.6.0&quot;
+   )
+   static Timer.ResourceSample resource(MeterRegistry registry, String name) {
+      return new Timer.ResourceSample(registry, name);
+   }
+
+   static Timer.Builder builder(Timed timed, String defaultName) {
+      if (timed.longTask() &amp;&amp; timed.value().isEmpty()) {
+         throw new IllegalArgumentException(&quot;Long tasks instrumented with @Timed require the value attribute to be non-empty&quot;);
+      } else {
+         return (new Timer.Builder(timed.value().isEmpty() ? defaultName : timed.value())).tags(timed.extraTags()).description(timed.description().isEmpty() ? null : timed.description()).publishPercentileHistogram(timed.histogram()).publishPercentiles(timed.percentiles().length &gt; 0 ? timed.percentiles() : null);
+      }
+   }
+
+   void record(long var1, TimeUnit var3);
+
+   default void record(Duration duration) {
+      this.record(duration.toNanos(), TimeUnit.NANOSECONDS);
+   }
+
+   &lt;T&gt; T record(Supplier&lt;T&gt; var1);
+
+   &lt;T&gt; T recordCallable(Callable&lt;T&gt; var1) throws Exception;
+
+   void record(Runnable var1);
+
+   default Runnable wrap(Runnable f) {
+      return () -&gt; {
+         this.record(f);
+      };
+   }
+
+   default &lt;T&gt; Callable&lt;T&gt; wrap(Callable&lt;T&gt; f) {
+      return () -&gt; {
+         return this.recordCallable(f);
+      };
+   }
+
+   default &lt;T&gt; Supplier&lt;T&gt; wrap(Supplier&lt;T&gt; f) {
+      return () -&gt; {
+         return this.record(f);
+      };
+   }
+
+   long count();
+
+   double totalTime(TimeUnit var1);
+
+   default double mean(TimeUnit unit) {
+      long count = this.count();
+      return count == 0L ? 0.0D : this.totalTime(unit) / (double)count;
+   }
+
+   double max(TimeUnit var1);
+
+   default Iterable&lt;Measurement&gt; measure() {
+      return Arrays.asList(new Measurement(() -&gt; {
+         return (double)this.count();
+      }, Statistic.COUNT), new Measurement(() -&gt; {
+         return this.totalTime(this.baseTimeUnit());
+      }, Statistic.TOTAL_TIME), new Measurement(() -&gt; {
+         return this.max(this.baseTimeUnit());
+      }, Statistic.MAX));
+   }
+
+   /** @deprecated */
+   @Deprecated
+   default double histogramCountAtValue(long valueNanos) {
+      CountAtBucket[] var3 = this.takeSnapshot().histogramCounts();
+      int var4 = var3.length;
+
+      for(int var5 = 0; var5 &lt; var4; ++var5) {
+         CountAtBucket countAtBucket = var3[var5];
+         if ((long)countAtBucket.bucket(TimeUnit.NANOSECONDS) == valueNanos) {
+            return countAtBucket.count();
+         }
+      }
+
+      return Double.NaN;
+   }
+
+   /** @deprecated */
+   @Deprecated
+   default double percentile(double percentile, TimeUnit unit) {
+      ValueAtPercentile[] var4 = this.takeSnapshot().percentileValues();
+      int var5 = var4.length;
+
+      for(int var6 = 0; var6 &lt; var5; ++var6) {
+         ValueAtPercentile valueAtPercentile = var4[var6];
+         if (valueAtPercentile.percentile() == percentile) {
+            return valueAtPercentile.value(unit);
+         }
+      }
+
+      return Double.NaN;
+   }
+
+   TimeUnit baseTimeUnit();
+
+   public static class Sample {
+      private final long startTime;
+      private final Clock clock;
+
+      Sample(Clock clock) {
+         this.clock = clock;
+         this.startTime = clock.monotonicTime();
+      }
+
+      public long stop(Timer timer) {
+         long durationNs = this.clock.monotonicTime() - this.startTime;
+         timer.record(durationNs, TimeUnit.NANOSECONDS);
+         return durationNs;
+      }
+   }
+
+   public static class Builder extends AbstractTimerBuilder&lt;Timer.Builder&gt; {
+      Builder(String name) {
+         super(name);
+      }
+
+      public Timer.Builder tags(String... tags) {
+         return (Timer.Builder)super.tags(tags);
+      }
+
+      public Timer.Builder tags(Iterable&lt;Tag&gt; tags) {
+         return (Timer.Builder)super.tags(tags);
+      }
+
+      public Timer.Builder tag(String key, String value) {
+         return (Timer.Builder)super.tag(key, value);
+      }
+
+      public Timer.Builder publishPercentiles(double... percentiles) {
+         return (Timer.Builder)super.publishPercentiles(percentiles);
+      }
+
+      public Timer.Builder percentilePrecision(Integer digitsOfPrecision) {
+         return (Timer.Builder)super.percentilePrecision(digitsOfPrecision);
+      }
+
+      public Timer.Builder publishPercentileHistogram() {
+         return (Timer.Builder)super.publishPercentileHistogram();
+      }
+
+      public Timer.Builder publishPercentileHistogram(Boolean enabled) {
+         return (Timer.Builder)super.publishPercentileHistogram(enabled);
+      }
+
+      public Timer.Builder sla(Duration... sla) {
+         return (Timer.Builder)super.sla(sla);
+      }
+
+      public Timer.Builder serviceLevelObjectives(Duration... slos) {
+         return (Timer.Builder)super.serviceLevelObjectives(slos);
+      }
+
+      public Timer.Builder minimumExpectedValue(Duration min) {
+         return (Timer.Builder)super.minimumExpectedValue(min);
+      }
+
+      public Timer.Builder maximumExpectedValue(Duration max) {
+         return (Timer.Builder)super.maximumExpectedValue(max);
+      }
+
+      public Timer.Builder distributionStatisticExpiry(Duration expiry) {
+         return (Timer.Builder)super.distributionStatisticExpiry(expiry);
+      }
+
+      public Timer.Builder distributionStatisticBufferLength(Integer bufferLength) {
+         return (Timer.Builder)super.distributionStatisticBufferLength(bufferLength);
+      }
+
+      public Timer.Builder pauseDetector(PauseDetector pauseDetector) {
+         return (Timer.Builder)super.pauseDetector(pauseDetector);
+      }
+
+      public Timer.Builder description(String description) {
+         return (Timer.Builder)super.description(description);
+      }
+
+      public Timer register(MeterRegistry registry) {
+         return registry.timer(new Id(this.name, this.tags, (String)null, this.description, Type.TIMER), this.distributionConfigBuilder.build(), this.pauseDetector == null ? registry.config().pauseDetector() : this.pauseDetector);
+      }
+   }
+
+   public static class ResourceSample extends AbstractTimerBuilder&lt;Timer.ResourceSample&gt; implements AutoCloseable {
+      private final MeterRegistry registry;
+      private final long startTime;
+
+      ResourceSample(MeterRegistry registry, String name) {
+         super(name);
+         this.registry = registry;
+         this.startTime = registry.config().clock().monotonicTime();
+      }
+
+      public void close() {
+         long durationNs = this.registry.config().clock().monotonicTime() - this.startTime;
+         this.registry.timer(new Id(this.name, this.tags, (String)null, this.description, Type.TIMER), this.distributionConfigBuilder.build(), this.pauseDetector == null ? this.registry.config().pauseDetector() : this.pauseDetector).record(durationNs, TimeUnit.NANOSECONDS);
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Nov 17, 2021, 12:44:05 PM</div>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "4,3,6,9,5,10,8,7" });
+
+            $("<div id='4-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(4)');
+            $("<div id='3-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(3)');
+            $("<div id='6-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(6)');
+            $("<div id='9-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(9)');
+            $("<div id='5-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(5)');
+            $("<div id='10-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(10)');
+            $("<div id='8-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(8)');
+            $("<div id='7-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(7)');
+
+
+$("<a name='10789088' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer Timed annotation with Microprofile Timed annotation</strong><a title='View Rule: springboot-metrics-to-quarkus-0300' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0300'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer Timed annotation with Microprofile Timed annotation<\/p><ul><li><a href='https://www.javadoc.io/doc/io.micrometer/micrometer-core/latest/io/micrometer/core/annotation/Timed.html' target='_blank'>Micrometer Timed JavaDoc</a></li><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li><li><a href='https://www.javadoc.io/doc/org.eclipse.microprofile/microprofile/latest/org/eclipse/microprofile/metrics/annotation/Timed.html' target='_blank'>Microprofile Timed JavaDoc</a></li></ul></div></div></div>").appendTo('#4-inlines');
+
+$("<a name='10797280' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer metric annotation with Microprofile metric annotation</strong><a title='View Rule: springboot-metrics-to-quarkus-0310' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0310'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer metric annotation with Microprofile metric annotation<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#3-inlines');
+
+$("<a name='11239616' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#6-inlines');
+
+$("<a name='19792024' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#9-inlines');
+
+$("<a name='20721816' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#5-inlines');
+
+$("<a name='20885680' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#10-inlines');
+
+$("<a name='20910232' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#8-inlines');
+
+$("<a name='21426352' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#7-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            // Deprecated
+            // $(window).load(function () {
+            //     $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            // });
+            $(window).on('load', function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 8192152;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

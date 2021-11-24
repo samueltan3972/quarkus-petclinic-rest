@@ -1,5 +1,9 @@
 package org.springframework.samples.petclinic.service;
 
+import javax.inject.Inject;
+import javax.inject.Named;
+import javax.inject.Singleton;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.samples.petclinic.model.User;
 import org.springframework.samples.petclinic.model.Role;
@@ -7,10 +11,12 @@ import org.springframework.samples.petclinic.repository.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-@Service
+@Singleton
+@Named("userServiceImpl")
 public class UserServiceImpl implements UserService {
 
-    @Autowired
+    @Inject
+    @Named("jpaUserServiceImpl")
     private UserRepository userRepository;
 
     @Override

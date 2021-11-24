@@ -1,0 +1,1573 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for MANIFEST.MF</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/mta-icon.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="8192152">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_spring_petclinic_rest.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_spring_petclinic_rest.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_spring_petclinic_rest.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_spring_petclinic_rest.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Migration Toolkit for Applications by Red Hat found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="8192152">
+                            spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/hibernate-core-5.4.27.Final.jar/META-INF/MANIFEST.MF
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Manifest</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+Manifest-Version: 1.0
+Automatic-Module-Name: org.hibernate.orm.core
+Bnd-LastModified: 1608667438221
+Bundle-DocURL: http://www.hibernate.org/orm/5.4
+Bundle-ManifestVersion: 2
+Bundle-Name: hibernate-core
+Bundle-SymbolicName: org.hibernate.orm.core
+Bundle-Vendor: Hibernate.org
+Bundle-Version: 5.4.27.Final
+Created-By: 1.8.0_242 (AdoptOpenJDK)
+Export-Package: org.hibernate;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.nami
+ ng,javax.persistence,javax.persistence.criteria,javax.persistence.met
+ amodel,javax.transaction,org.hibernate.boot.jaxb,org.hibernate.boot.s
+ pi,org.hibernate.criterion,org.hibernate.dialect.lock,org.hibernate.e
+ ngine.jdbc,org.hibernate.engine.query.spi.sql,org.hibernate.engine.sp
+ i,org.hibernate.graph,org.hibernate.jdbc,org.hibernate.jpa,org.hibern
+ ate.metadata,org.hibernate.persister.entity,org.hibernate.procedure,o
+ rg.hibernate.query,org.hibernate.resource.jdbc.spi,org.hibernate.reso
+ urce.transaction.spi,org.hibernate.sql,org.hibernate.stat,org.hiberna
+ te.transform,org.hibernate.type&quot;,org.hibernate.action.internal;versio
+ n=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.action.spi,org.hi
+ bernate.cache,org.hibernate.cache.spi.access,org.hibernate.collection
+ .spi,org.hibernate.engine.internal,org.hibernate.engine.spi,org.hiber
+ nate.event.service.spi,org.hibernate.event.spi,org.hibernate.persiste
+ r.collection,org.hibernate.persister.entity&quot;,org.hibernate.action.spi
+ ;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.engine.spi
+ &quot;,org.hibernate.annotations;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persi
+ stence,org.hibernate,org.hibernate.cache.spi.access,org.hibernate.tup
+ le&quot;,org.hibernate.boot;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistenc
+ e,org.hibernate,org.hibernate.boot.archive.scan.spi,org.hibernate.boo
+ t.archive.spi,org.hibernate.boot.jaxb,org.hibernate.boot.jaxb.spi,org
+ .hibernate.boot.model,org.hibernate.boot.model.convert.spi,org.hibern
+ ate.boot.model.naming,org.hibernate.boot.model.relational,org.hiberna
+ te.boot.registry,org.hibernate.boot.spi,org.hibernate.cache.spi,org.h
+ ibernate.cache.spi.access,org.hibernate.cfg,org.hibernate.cfg.annotat
+ ions,org.hibernate.context.spi,org.hibernate.dialect.function,org.hib
+ ernate.engine,org.hibernate.engine.spi,org.hibernate.hql.spi.id,org.h
+ ibernate.loader,org.hibernate.mapping,org.hibernate.proxy,org.hiberna
+ te.resource.jdbc.spi,org.hibernate.service,org.hibernate.tuple.entity
+ ,org.hibernate.type,org.hibernate.usertype,org.jboss.jandex,org.w3c.d
+ om&quot;,org.hibernate.boot.archive.internal;version=&quot;5.4.27.Final&quot;;uses:=
+ &quot;org.hibernate.boot.archive.spi&quot;,org.hibernate.boot.archive.scan.inte
+ rnal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot.archive.scan.sp
+ i,org.hibernate.boot.archive.spi&quot;,org.hibernate.boot.archive.scan.spi
+ ;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot.archive.scan.intern
+ al,org.hibernate.boot.archive.spi&quot;,org.hibernate.boot.archive.spi;ver
+ sion=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate&quot;,org.hibernate.boot.cfgxml.i
+ nternal;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.xml.stream,javax.xml.stre
+ am.events,javax.xml.stream.util,org.hibernate.boot.cfgxml.spi,org.hib
+ ernate.boot.jaxb,org.hibernate.boot.jaxb.cfg.spi,org.hibernate.boot.r
+ egistry,org.hibernate.boot.registry.classloading.spi,org.hibernate.se
+ rvice,org.hibernate.service.spi&quot;,org.hibernate.boot.cfgxml.spi;versio
+ n=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot,org.hibernate.boot.jaxb.cf
+ g.spi,org.hibernate.event.spi,org.hibernate.secure.spi,org.hibernate.
+ service&quot;,org.hibernate.boot.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;co
+ m.fasterxml.classmate,javax.persistence,org.hibernate,org.hibernate.a
+ nnotations,org.hibernate.annotations.common.reflection,org.hibernate.
+ boot,org.hibernate.boot.archive.scan.spi,org.hibernate.boot.archive.s
+ pi,org.hibernate.boot.model,org.hibernate.boot.model.convert.spi,org.
+ hibernate.boot.model.naming,org.hibernate.boot.model.relational,org.h
+ ibernate.boot.registry,org.hibernate.boot.registry.classloading.spi,o
+ rg.hibernate.boot.spi,org.hibernate.cache.spi,org.hibernate.cache.spi
+ .access,org.hibernate.cfg,org.hibernate.cfg.annotations,org.hibernate
+ .context.spi,org.hibernate.dialect.function,org.hibernate.engine,org.
+ hibernate.engine.spi,org.hibernate.hql.spi.id,org.hibernate.id.factor
+ y,org.hibernate.id.factory.spi,org.hibernate.internal,org.hibernate.j
+ pa.spi,org.hibernate.loader,org.hibernate.mapping,org.hibernate.persi
+ ster.entity,org.hibernate.proxy,org.hibernate.query,org.hibernate.que
+ ry.criteria,org.hibernate.query.spi,org.hibernate.resource.jdbc.spi,o
+ rg.hibernate.service,org.hibernate.service.spi,org.hibernate.tuple.en
+ tity,org.hibernate.type,org.hibernate.type.descriptor.java,org.hibern
+ ate.type.descriptor.sql,org.hibernate.type.spi,org.hibernate.usertype
+ ,org.jboss.jandex&quot;,org.hibernate.boot.jaxb;version=&quot;5.4.27.Final&quot;,org
+ .hibernate.boot.jaxb.cfg.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.xml.
+ bind.annotation,javax.xml.bind.annotation.adapters&quot;,org.hibernate.boo
+ t.jaxb.hbm.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.h
+ ibernate.boot.jaxb.hbm.spi,org.hibernate.cache.spi.access,org.hiberna
+ te.engine,org.hibernate.engine.spi,org.hibernate.tuple&quot;,org.hibernate
+ .boot.jaxb.hbm.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.xml.bind,javax
+ .xml.bind.annotation,javax.xml.bind.annotation.adapters,org.hibernate
+ ,org.hibernate.cache.spi.access,org.hibernate.engine,org.hibernate.en
+ gine.spi,org.hibernate.tuple&quot;,org.hibernate.boot.jaxb.internal;versio
+ n=&quot;5.4.27.Final&quot;;uses:=&quot;javax.xml.bind,javax.xml.stream,javax.xml.str
+ eam.events,javax.xml.transform,javax.xml.validation,org.hibernate.boo
+ t.jaxb,org.hibernate.boot.jaxb.spi,org.hibernate.boot.registry.classl
+ oading.spi&quot;,org.hibernate.boot.jaxb.internal.stax;version=&quot;5.4.27.Fin
+ al&quot;;uses:=&quot;javax.xml.stream,javax.xml.stream.events,javax.xml.stream.
+ util,javax.xml.validation,org.hibernate,org.hibernate.boot.registry.c
+ lassloading.spi&quot;,org.hibernate.boot.jaxb.spi;version=&quot;5.4.27.Final&quot;;u
+ ses:=&quot;javax.xml.transform,org.hibernate.boot.jaxb&quot;,org.hibernate.boot
+ .model;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistence,org.hibernate.
+ boot,org.hibernate.cache.spi.access,org.hibernate.engine.spi,org.hibe
+ rnate.service,org.hibernate.type,org.hibernate.type.descriptor.java,o
+ rg.hibernate.type.descriptor.sql,org.hibernate.type.spi,org.hibernate
+ .usertype&quot;,org.hibernate.boot.model.convert.internal;version=&quot;5.4.27.
+ Final&quot;;uses:=&quot;com.fasterxml.classmate,javax.persistence,org.hibernate
+ .annotations.common.reflection,org.hibernate.boot.internal,org.hibern
+ ate.boot.model.convert.spi,org.hibernate.boot.spi,org.hibernate.metam
+ odel.model.convert.spi,org.hibernate.resource.beans.spi&quot;,org.hibernat
+ e.boot.model.convert.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;com.fasterxml.
+ classmate,javax.persistence,org.hibernate.annotations.common.reflecti
+ on,org.hibernate.boot.spi,org.hibernate.metamodel.model.convert.spi,o
+ rg.hibernate.resource.beans.spi,org.hibernate.type.descriptor.java.sp
+ i&quot;,org.hibernate.boot.model.naming;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.
+ hibernate,org.hibernate.boot.model.relational,org.hibernate.boot.mode
+ l.source.spi,org.hibernate.boot.spi,org.hibernate.dialect,org.hiberna
+ te.engine.jdbc.env.spi&quot;,org.hibernate.boot.model.process.internal;ver
+ sion=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot,org.hibernate.boot.arch
+ ive.scan.spi,org.hibernate.boot.jaxb.spi,org.hibernate.boot.model.pro
+ cess.spi,org.hibernate.boot.spi&quot;,org.hibernate.boot.model.process.spi
+ ;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot,org.hibernate.boot.
+ jaxb.spi,org.hibernate.boot.spi&quot;,org.hibernate.boot.model.relational;
+ version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot.model.naming,org.hib
+ ernate.boot.spi,org.hibernate.dialect,org.hibernate.engine.jdbc.env.s
+ pi,org.hibernate.mapping,org.hibernate.service&quot;,org.hibernate.boot.mo
+ del.source.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot.
+ spi,org.hibernate.cache.spi.access,org.hibernate.cfg&quot;,org.hibernate.b
+ oot.model.source.internal.annotations;version=&quot;5.4.27.Final&quot;;uses:=&quot;o
+ rg.hibernate.boot.internal,org.hibernate.boot.model.process.spi,org.h
+ ibernate.boot.model.source.spi,org.jboss.jandex&quot;,org.hibernate.boot.m
+ odel.source.internal.hbm;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,
+ org.hibernate.boot.jaxb,org.hibernate.boot.jaxb.hbm.spi,org.hibernate
+ .boot.jaxb.spi,org.hibernate.boot.model,org.hibernate.boot.model.nami
+ ng,org.hibernate.boot.model.process.spi,org.hibernate.boot.model.sour
+ ce.spi,org.hibernate.boot.spi,org.hibernate.engine,org.hibernate.engi
+ ne.query.spi.sql,org.hibernate.mapping,org.hibernate.tuple,org.hibern
+ ate.type&quot;,org.hibernate.boot.model.source.spi;version=&quot;5.4.27.Final&quot;;
+ uses:=&quot;org.hibernate,org.hibernate.boot.jaxb,org.hibernate.boot.jaxb.
+ hbm.spi,org.hibernate.boot.model,org.hibernate.boot.model.naming,org.
+ hibernate.boot.model.source.internal.hbm,org.hibernate.boot.spi,org.h
+ ibernate.engine,org.hibernate.id,org.hibernate.mapping,org.hibernate.
+ tuple,org.hibernate.type&quot;,org.hibernate.boot.registry;version=&quot;5.4.27
+ .Final&quot;;uses:=&quot;org.hibernate.boot.cfgxml.internal,org.hibernate.boot.
+ cfgxml.spi,org.hibernate.boot.registry.classloading.internal,org.hibe
+ rnate.boot.registry.classloading.spi,org.hibernate.boot.registry.sele
+ ctor,org.hibernate.integrator.spi,org.hibernate.service,org.hibernate
+ .service.spi&quot;,org.hibernate.boot.registry.classloading.internal;versi
+ on=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot.registry.classloading.spi
+ &quot;,org.hibernate.boot.registry.classloading.spi;version=&quot;5.4.27.Final&quot;
+ ;uses:=&quot;org.hibernate,org.hibernate.service,org.hibernate.service.spi
+ &quot;,org.hibernate.boot.registry.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;
+ org.hibernate.boot.registry,org.hibernate.boot.registry.classloading.
+ spi,org.hibernate.boot.registry.selector.spi,org.hibernate.integrator
+ .spi,org.hibernate.service,org.hibernate.service.internal,org.hiberna
+ te.service.spi&quot;,org.hibernate.boot.registry.selector;version=&quot;5.4.27.
+ Final&quot;,org.hibernate.boot.registry.selector.internal;version=&quot;5.4.27.
+ Final&quot;;uses:=&quot;org.hibernate.boot.registry.classloading.spi,org.hibern
+ ate.boot.registry.selector,org.hibernate.boot.registry.selector.spi,o
+ rg.hibernate.dialect,org.hibernate.engine.transaction.jta.platform.sp
+ i&quot;,org.hibernate.boot.registry.selector.spi;version=&quot;5.4.27.Final&quot;;us
+ es:=&quot;org.hibernate,org.hibernate.service&quot;,org.hibernate.boot.spi;vers
+ ion=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistence,org.hibernate,org.hiberna
+ te.annotations,org.hibernate.annotations.common.reflection,org.hibern
+ ate.boot,org.hibernate.boot.archive.scan.spi,org.hibernate.boot.archi
+ ve.spi,org.hibernate.boot.internal,org.hibernate.boot.jaxb.internal,o
+ rg.hibernate.boot.jaxb.spi,org.hibernate.boot.model,org.hibernate.boo
+ t.model.convert.spi,org.hibernate.boot.model.naming,org.hibernate.boo
+ t.model.relational,org.hibernate.boot.model.source.internal.hbm,org.h
+ ibernate.boot.model.source.spi,org.hibernate.boot.registry,org.hibern
+ ate.cache.spi,org.hibernate.cache.spi.access,org.hibernate.cfg,org.hi
+ bernate.cfg.annotations,org.hibernate.context.spi,org.hibernate.diale
+ ct.function,org.hibernate.engine,org.hibernate.engine.spi,org.hiberna
+ te.hql.spi.id,org.hibernate.id.factory,org.hibernate.internal,org.hib
+ ernate.jpa.spi,org.hibernate.loader,org.hibernate.mapping,org.hiberna
+ te.proxy,org.hibernate.query,org.hibernate.query.criteria,org.hiberna
+ te.query.spi,org.hibernate.resource.jdbc.spi,org.hibernate.service,or
+ g.hibernate.tuple.entity,org.hibernate.type,org.hibernate.type.spi,or
+ g.hibernate.usertype,org.jboss.jandex&quot;,org.hibernate.boot.xsd;version
+ =&quot;5.4.27.Final&quot;;uses:=&quot;javax.xml.validation&quot;,org.hibernate.bytecode;v
+ ersion=&quot;5.4.27.Final&quot;;uses:=&quot;org.jboss.logging&quot;,org.hibernate.bytecod
+ e.enhance.internal.bytebuddy;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibern
+ ate.bytecode.enhance.spi,org.hibernate.bytecode.internal.bytebuddy&quot;,o
+ rg.hibernate.bytecode.enhance.internal.javassist;version=&quot;5.4.27.Fina
+ l&quot;;uses:=&quot;javassist,javassist.bytecode,org.hibernate.bytecode.enhance
+ .spi&quot;,org.hibernate.bytecode.enhance.internal.tracker;version=&quot;5.4.27
+ .Final&quot;;uses:=&quot;org.hibernate.bytecode.enhance.spi,org.hibernate.engin
+ e.spi&quot;,org.hibernate.bytecode.enhance.spi;version=&quot;5.4.27.Final&quot;;uses
+ :=&quot;org.hibernate,org.hibernate.engine.spi&quot;,org.hibernate.bytecode.enh
+ ance.spi.interceptor;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.engi
+ ne.spi,org.hibernate.mapping,org.hibernate.type&quot;,org.hibernate.byteco
+ de.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate
+ .boot.registry,org.hibernate.bytecode.spi,org.hibernate.service,org.h
+ ibernate.service.spi&quot;,org.hibernate.bytecode.internal.bytebuddy;versi
+ on=&quot;5.4.27.Final&quot;;uses:=&quot;net.bytebuddy,net.bytebuddy.description.meth
+ od,net.bytebuddy.dynamic,net.bytebuddy.implementation,net.bytebuddy.m
+ atcher,net.bytebuddy.pool,org.hibernate,org.hibernate.bytecode.enhanc
+ e.spi,org.hibernate.bytecode.spi,org.hibernate.engine.spi,org.hiberna
+ te.proxy,org.hibernate.proxy.pojo.bytebuddy&quot;,org.hibernate.bytecode.i
+ nternal.javassist;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hib
+ ernate.bytecode.enhance.spi,org.hibernate.bytecode.spi,org.hibernate.
+ engine.spi,org.hibernate.proxy&quot;,org.hibernate.bytecode.internal.none;
+ version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.bytecode.enhance.spi,org.
+ hibernate.bytecode.spi&quot;,org.hibernate.bytecode.spi;version=&quot;5.4.27.Fi
+ nal&quot;;uses:=&quot;javax.persistence.spi,net.bytebuddy.dynamic.loading,org.h
+ ibernate,org.hibernate.bytecode.enhance.spi,org.hibernate.bytecode.en
+ hance.spi.interceptor,org.hibernate.engine.spi,org.hibernate.proxy,or
+ g.hibernate.service&quot;,org.hibernate.cache;version=&quot;5.4.27.Final&quot;;uses:
+ =&quot;org.hibernate,org.hibernate.cache.spi&quot;,org.hibernate.cache.cfg.inte
+ rnal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.cache.cfg.spi,org.hi
+ bernate.cache.spi.access,org.hibernate.mapping,org.hibernate.metamode
+ l.model.domain&quot;,org.hibernate.cache.cfg.spi;version=&quot;5.4.27.Final&quot;;us
+ es:=&quot;org.hibernate.cache.spi,org.hibernate.cache.spi.access,org.hiber
+ nate.engine.spi,org.hibernate.metamodel.model.domain&quot;,org.hibernate.c
+ ache.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hiberna
+ te.boot,org.hibernate.boot.registry,org.hibernate.boot.registry.selec
+ tor.spi,org.hibernate.boot.spi,org.hibernate.cache,org.hibernate.cach
+ e.cfg.spi,org.hibernate.cache.spi,org.hibernate.cache.spi.access,org.
+ hibernate.engine.spi,org.hibernate.event.spi,org.hibernate.integrator
+ .spi,org.hibernate.metamodel.model.domain,org.hibernate.persister.col
+ lection,org.hibernate.persister.entity,org.hibernate.service,org.hibe
+ rnate.service.spi,org.hibernate.type&quot;,org.hibernate.cache.spi;version
+ =&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.boot.spi,org.hiber
+ nate.cache,org.hibernate.cache.cfg.spi,org.hibernate.cache.spi.access
+ ,org.hibernate.engine.spi,org.hibernate.metamodel.model.domain,org.hi
+ bernate.persister.collection,org.hibernate.persister.entity,org.hiber
+ nate.service,org.hibernate.service.spi,org.hibernate.transform,org.hi
+ bernate.type,org.jboss.logging&quot;,org.hibernate.cache.spi.access;versio
+ n=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.cache.spi,org.hib
+ ernate.engine.spi,org.hibernate.persister.collection,org.hibernate.pe
+ rsister.entity&quot;,org.hibernate.cache.spi.entry;version=&quot;5.4.27.Final&quot;;
+ uses:=&quot;org.hibernate,org.hibernate.collection.spi,org.hibernate.engin
+ e.spi,org.hibernate.event.spi,org.hibernate.persister.collection,org.
+ hibernate.persister.entity&quot;,org.hibernate.cache.spi.support;version=&quot;
+ 5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot.spi,org.hibernate.cache,org.h
+ ibernate.cache.cfg.spi,org.hibernate.cache.spi,org.hibernate.cache.sp
+ i.access,org.hibernate.engine.spi,org.hibernate.metamodel.model.domai
+ n,org.hibernate.persister.collection,org.hibernate.persister.entity&quot;,
+ org.hibernate.cfg;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistence,org
+ .hibernate,org.hibernate.annotations,org.hibernate.annotations.common
+ .reflection,org.hibernate.boot,org.hibernate.boot.model,org.hibernate
+ .boot.model.convert.spi,org.hibernate.boot.model.naming,org.hibernate
+ .boot.model.relational,org.hibernate.boot.registry,org.hibernate.boot
+ .registry.classloading.spi,org.hibernate.boot.spi,org.hibernate.bytec
+ ode.spi,org.hibernate.cache.spi,org.hibernate.cfg.annotations,org.hib
+ ernate.context.spi,org.hibernate.dialect.function,org.hibernate.engin
+ e.spi,org.hibernate.engine.transaction.jta.platform.spi,org.hibernate
+ .hql.spi,org.hibernate.hql.spi.id,org.hibernate.internal.util.xml,org
+ .hibernate.jpa,org.hibernate.loader,org.hibernate.mapping,org.hiberna
+ te.proxy,org.hibernate.service,org.hibernate.tuple.entity,org.hiberna
+ te.type,org.hibernate.usertype,org.w3c.dom,org.xml.sax&quot;,org.hibernate
+ .cfg.annotations;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistence,org.
+ hibernate,org.hibernate.annotations,org.hibernate.annotations.common.
+ reflection,org.hibernate.boot.model,org.hibernate.boot.model.convert.
+ spi,org.hibernate.boot.model.naming,org.hibernate.boot.spi,org.hibern
+ ate.cfg,org.hibernate.engine,org.hibernate.internal,org.hibernate.map
+ ping,org.hibernate.procedure&quot;,org.hibernate.cfg.annotations.reflectio
+ n;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistence,org.dom4j,org.hiber
+ nate.annotations.common.reflection,org.hibernate.boot,org.hibernate.b
+ oot.model.convert.spi,org.hibernate.boot.spi&quot;,org.hibernate.cfg.beanv
+ alidation;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.validation,org.hibernat
+ e,org.hibernate.boot,org.hibernate.boot.registry.classloading.spi,org
+ .hibernate.boot.spi,org.hibernate.engine.spi,org.hibernate.event.serv
+ ice.spi,org.hibernate.event.spi,org.hibernate.integrator.spi,org.hibe
+ rnate.persister.entity,org.hibernate.service.spi&quot;,org.hibernate.class
+ ic;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate&quot;,org.hibernate.collect
+ ion.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernat
+ e.collection.spi,org.hibernate.engine.spi,org.hibernate.loader,org.hi
+ bernate.persister.collection,org.hibernate.type&quot;,org.hibernate.collec
+ tion.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.en
+ gine.spi,org.hibernate.loader,org.hibernate.persister.collection,org.
+ hibernate.type&quot;,org.hibernate.context;version=&quot;5.4.27.Final&quot;;uses:=&quot;o
+ rg.hibernate&quot;,org.hibernate.context.internal;version=&quot;5.4.27.Final&quot;;u
+ ses:=&quot;javax.transaction,org.hibernate,org.hibernate.context.spi,org.h
+ ibernate.engine.spi&quot;,org.hibernate.context.spi;version=&quot;5.4.27.Final&quot;
+ ;uses:=&quot;org.hibernate,org.hibernate.engine.spi&quot;,org.hibernate.criteri
+ on;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.dialect.
+ function,org.hibernate.engine.spi,org.hibernate.internal,org.hibernat
+ e.persister.collection,org.hibernate.sql,org.hibernate.transform,org.
+ hibernate.type&quot;,org.hibernate.dialect;version=&quot;5.4.27.Final&quot;;uses:=&quot;o
+ rg.hibernate,org.hibernate.boot.model,org.hibernate.boot.model.relati
+ onal,org.hibernate.dialect.function,org.hibernate.dialect.identity,or
+ g.hibernate.dialect.lock,org.hibernate.dialect.pagination,org.hiberna
+ te.dialect.unique,org.hibernate.engine.jdbc.dialect.spi,org.hibernate
+ .engine.jdbc.env.spi,org.hibernate.engine.spi,org.hibernate.exception
+ .spi,org.hibernate.hql.spi.id,org.hibernate.loader,org.hibernate.mapp
+ ing,org.hibernate.persister.entity,org.hibernate.procedure.spi,org.hi
+ bernate.service,org.hibernate.sql,org.hibernate.tool.schema.extract.s
+ pi,org.hibernate.tool.schema.spi,org.hibernate.type.descriptor,org.hi
+ bernate.type.descriptor.java,org.hibernate.type.descriptor.sql&quot;,org.h
+ ibernate.dialect.function;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate
+ ,org.hibernate.dialect,org.hibernate.engine.spi,org.hibernate.type&quot;,o
+ rg.hibernate.dialect.hint;version=&quot;5.4.27.Final&quot;,org.hibernate.dialec
+ t.identity;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.
+ dialect,org.hibernate.engine.spi,org.hibernate.id,org.hibernate.id.in
+ sert&quot;,org.hibernate.dialect.lock;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hi
+ bernate,org.hibernate.engine.spi,org.hibernate.persister.entity&quot;,org.
+ hibernate.dialect.pagination;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibern
+ ate.dialect,org.hibernate.engine.spi&quot;,org.hibernate.dialect.unique;ve
+ rsion=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot,org.hibernate.dialect,
+ org.hibernate.mapping&quot;,org.hibernate.ejb;version=&quot;5.4.27.Final&quot;;uses:
+ =&quot;org.hibernate.jpa&quot;,org.hibernate.engine;version=&quot;5.4.27.Final&quot;;uses
+ :=&quot;org.hibernate,org.hibernate.engine.query.spi.sql&quot;,org.hibernate.en
+ gine.config.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot
+ .registry,org.hibernate.engine.config.spi,org.hibernate.service,org.h
+ ibernate.service.spi&quot;,org.hibernate.engine.config.spi;version=&quot;5.4.27
+ .Final&quot;;uses:=&quot;org.hibernate.service&quot;,org.hibernate.engine.internal;v
+ ersion=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.cache.spi.ac
+ cess,org.hibernate.collection.spi,org.hibernate.engine.loading.intern
+ al,org.hibernate.engine.spi,org.hibernate.event.spi,org.hibernate.hql
+ .internal.ast.tree,org.hibernate.persister.collection,org.hibernate.p
+ ersister.entity,org.hibernate.property.access.spi,org.hibernate.sql,o
+ rg.hibernate.type&quot;,org.hibernate.engine.jdbc;version=&quot;5.4.27.Final&quot;;u
+ ses:=&quot;org.hibernate.service&quot;,org.hibernate.engine.jdbc.batch.internal
+ ;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot.registry,org.hibern
+ ate.engine.jdbc.batch.spi,org.hibernate.engine.jdbc.spi,org.hibernate
+ .jdbc,org.hibernate.service,org.hibernate.service.spi&quot;,org.hibernate.
+ engine.jdbc.batch.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.eng
+ ine.jdbc.spi,org.hibernate.jdbc,org.hibernate.service&quot;,org.hibernate.
+ engine.jdbc.connections.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.
+ sql,org.hibernate,org.hibernate.boot.registry,org.hibernate.engine.jd
+ bc.connections.spi,org.hibernate.engine.jndi.spi,org.hibernate.servic
+ e,org.hibernate.service.spi&quot;,org.hibernate.engine.jdbc.connections.sp
+ i;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.sql,org.hibernate.service,org.h
+ ibernate.service.spi&quot;,org.hibernate.engine.jdbc.cursor.internal;versi
+ on=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot.registry,org.hibernate.en
+ gine.jdbc.cursor.spi,org.hibernate.engine.jdbc.spi,org.hibernate.serv
+ ice,org.hibernate.service.spi&quot;,org.hibernate.engine.jdbc.cursor.spi;v
+ ersion=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.service&quot;,org.hibernate.eng
+ ine.jdbc.dialect.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate
+ ,org.hibernate.boot.registry,org.hibernate.dialect,org.hibernate.engi
+ ne.jdbc.dialect.spi,org.hibernate.service,org.hibernate.service.spi&quot;,
+ org.hibernate.engine.jdbc.dialect.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;o
+ rg.hibernate,org.hibernate.dialect,org.hibernate.service&quot;,org.hiberna
+ te.engine.jdbc.env.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hiberna
+ te,org.hibernate.boot.model.naming,org.hibernate.boot.model.relationa
+ l,org.hibernate.boot.registry,org.hibernate.dialect,org.hibernate.eng
+ ine.jdbc,org.hibernate.engine.jdbc.connections.spi,org.hibernate.engi
+ ne.jdbc.env.spi,org.hibernate.engine.jdbc.spi,org.hibernate.service,o
+ rg.hibernate.service.spi,org.hibernate.tool.schema.extract.spi&quot;,org.h
+ ibernate.engine.jdbc.env.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibern
+ ate.boot.model.naming,org.hibernate.boot.model.relational,org.hiberna
+ te.dialect,org.hibernate.engine.jdbc,org.hibernate.engine.jdbc.spi,or
+ g.hibernate.service,org.hibernate.tool.schema.extract.spi&quot;,org.hibern
+ ate.engine.jdbc.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.
+ boot.registry,org.hibernate.dialect,org.hibernate.engine.jdbc,org.hib
+ ernate.engine.jdbc.batch.spi,org.hibernate.engine.jdbc.connections.sp
+ i,org.hibernate.engine.jdbc.env.spi,org.hibernate.engine.jdbc.spi,org
+ .hibernate.engine.spi,org.hibernate.jdbc,org.hibernate.resource.jdbc.
+ spi,org.hibernate.resource.transaction.backend.jdbc.spi,org.hibernate
+ .service,org.hibernate.service.spi&quot;,org.hibernate.engine.jdbc.spi;ver
+ sion=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.dialect,org.hi
+ bernate.engine.jdbc,org.hibernate.engine.jdbc.batch.spi,org.hibernate
+ .engine.jdbc.connections.spi,org.hibernate.engine.jdbc.env.spi,org.hi
+ bernate.engine.jdbc.internal,org.hibernate.exception.spi,org.hibernat
+ e.jdbc,org.hibernate.resource.jdbc,org.hibernate.resource.jdbc.spi,or
+ g.hibernate.resource.transaction.backend.jdbc.spi,org.hibernate.resou
+ rce.transaction.spi,org.hibernate.service&quot;,org.hibernate.engine.jndi;
+ version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate&quot;,org.hibernate.engine.jnd
+ i.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.naming.event,org.hiber
+ nate.boot.registry,org.hibernate.engine.jndi.spi,org.hibernate.servic
+ e,org.hibernate.service.spi&quot;,org.hibernate.engine.jndi.spi;version=&quot;5
+ .4.27.Final&quot;;uses:=&quot;javax.naming.event,org.hibernate.service&quot;,org.hib
+ ernate.engine.loading.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibe
+ rnate.collection.spi,org.hibernate.engine.spi,org.hibernate.persister
+ .collection&quot;,org.hibernate.engine.profile;version=&quot;5.4.27.Final&quot;;uses
+ :=&quot;org.hibernate.persister.entity&quot;,org.hibernate.engine.query;version
+ =&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate&quot;,org.hibernate.engine.query.inte
+ rnal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.engine.query.spi,org
+ .hibernate.engine.query.spi.sql,org.hibernate.engine.spi,org.hibernat
+ e.query.internal&quot;,org.hibernate.engine.query.spi;version=&quot;5.4.27.Fina
+ l&quot;;uses:=&quot;javax.persistence,org.hibernate,org.hibernate.boot.spi,org.
+ hibernate.engine.query.spi.sql,org.hibernate.engine.spi,org.hibernate
+ .event.spi,org.hibernate.graph,org.hibernate.graph.spi,org.hibernate.
+ hql.internal.ast,org.hibernate.hql.internal.ast.tree,org.hibernate.hq
+ l.spi,org.hibernate.loader.custom,org.hibernate.query,org.hibernate.q
+ uery.internal,org.hibernate.query.spi,org.hibernate.service,org.hiber
+ nate.service.spi,org.hibernate.type&quot;,org.hibernate.engine.query.spi.s
+ ql;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.type&quot;,or
+ g.hibernate.engine.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.naming,jav
+ ax.persistence,javax.persistence.criteria,javax.persistence.metamodel
+ ,org.hibernate,org.hibernate.action.internal,org.hibernate.action.spi
+ ,org.hibernate.boot.spi,org.hibernate.bytecode.enhance.internal.track
+ er,org.hibernate.bytecode.enhance.spi,org.hibernate.bytecode.enhance.
+ spi.interceptor,org.hibernate.cache.cfg.spi,org.hibernate.cache.spi,o
+ rg.hibernate.cache.spi.access,org.hibernate.cfg,org.hibernate.collect
+ ion.spi,org.hibernate.context.spi,org.hibernate.dialect,org.hibernate
+ .dialect.function,org.hibernate.engine,org.hibernate.engine.jdbc,org.
+ hibernate.engine.jdbc.connections.spi,org.hibernate.engine.jdbc.spi,o
+ rg.hibernate.engine.loading.internal,org.hibernate.engine.profile,org
+ .hibernate.engine.query.spi,org.hibernate.engine.query.spi.sql,org.hi
+ bernate.event.spi,org.hibernate.exception.spi,org.hibernate.graph,org
+ .hibernate.graph.spi,org.hibernate.id,org.hibernate.id.factory,org.hi
+ bernate.internal,org.hibernate.jdbc,org.hibernate.jpa,org.hibernate.j
+ pa.spi,org.hibernate.loader.custom,org.hibernate.metadata,org.hiberna
+ te.metamodel.model.domain,org.hibernate.metamodel.spi,org.hibernate.p
+ ersister.collection,org.hibernate.persister.entity,org.hibernate.proc
+ edure,org.hibernate.proxy,org.hibernate.query,org.hibernate.query.spi
+ ,org.hibernate.resource.jdbc.spi,org.hibernate.resource.transaction.b
+ ackend.jta.internal.synchronization,org.hibernate.resource.transactio
+ n.spi,org.hibernate.service,org.hibernate.service.spi,org.hibernate.s
+ tat,org.hibernate.stat.spi,org.hibernate.transform,org.hibernate.type
+ ,org.hibernate.type.descriptor,org.hibernate.type.descriptor.sql&quot;,org
+ .hibernate.engine.transaction.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;
+ javax.transaction,org.hibernate,org.hibernate.engine.transaction.spi,
+ org.hibernate.internal,org.hibernate.resource.transaction.spi&quot;,org.hi
+ bernate.engine.transaction.internal.jta;version=&quot;5.4.27.Final&quot;;uses:=
+ &quot;javax.transaction&quot;,org.hibernate.engine.transaction.jta.platform.int
+ ernal;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.transaction,javax.transacti
+ on.xa,org.hibernate.boot.registry,org.hibernate.engine.jndi.spi,org.h
+ ibernate.engine.transaction.jta.platform.spi,org.hibernate.service,or
+ g.hibernate.service.spi&quot;,org.hibernate.engine.transaction.jta.platfor
+ m.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.transaction,org.hibernate,o
+ rg.hibernate.service,org.hibernate.service.spi&quot;,org.hibernate.engine.
+ transaction.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.transaction,org.h
+ ibernate,org.hibernate.jdbc&quot;,org.hibernate.event.internal;version=&quot;5.
+ 4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.boot.registry,org.hibe
+ rnate.collection.spi,org.hibernate.engine.spi,org.hibernate.event.ser
+ vice.spi,org.hibernate.event.spi,org.hibernate.jpa.event.spi,org.hibe
+ rnate.persister.collection,org.hibernate.persister.entity,org.hiberna
+ te.service,org.hibernate.service.spi,org.hibernate.type&quot;,org.hibernat
+ e.event.service.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.
+ boot.spi,org.hibernate.engine.spi,org.hibernate.event.service.spi,org
+ .hibernate.event.spi,org.hibernate.service,org.hibernate.service.spi&quot;
+ ,org.hibernate.event.service.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hi
+ bernate,org.hibernate.boot.spi,org.hibernate.event.spi,org.hibernate.
+ service&quot;,org.hibernate.event.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hi
+ bernate,org.hibernate.collection.spi,org.hibernate.engine.spi,org.hib
+ ernate.persister.collection,org.hibernate.persister.entity,org.hibern
+ ate.secure.spi,org.hibernate.service&quot;,org.hibernate.exception;version
+ =&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate&quot;,org.hibernate.exception.interna
+ l;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.exception
+ .spi&quot;,org.hibernate.exception.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.h
+ ibernate,org.hibernate.dialect&quot;,org.hibernate.graph;version=&quot;5.4.27.F
+ inal&quot;;uses:=&quot;javax.persistence,javax.persistence.metamodel,org.hibern
+ ate,org.hibernate.engine.spi,org.hibernate.graph.spi&quot;,org.hibernate.g
+ raph.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistence,javax.p
+ ersistence.metamodel,org.hibernate.engine.spi,org.hibernate.graph,org
+ .hibernate.graph.spi,org.hibernate.metamodel.model.domain.spi&quot;,org.hi
+ bernate.graph.internal.parse;version=&quot;5.4.27.Final&quot;;uses:=&quot;antlr,antl
+ r.collections.impl,org.hibernate.engine.spi,org.hibernate.graph.spi,o
+ rg.jboss.logging&quot;,org.hibernate.graph.spi;version=&quot;5.4.27.Final&quot;;uses
+ :=&quot;javax.persistence,javax.persistence.metamodel,org.hibernate.engine
+ .spi,org.hibernate.graph,org.hibernate.metamodel.model.domain.spi&quot;,or
+ g.hibernate.hql.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,
+ org.hibernate.boot.registry,org.hibernate.engine.internal,org.hiberna
+ te.engine.spi,org.hibernate.hql.spi,org.hibernate.service,org.hiberna
+ te.service.spi,org.hibernate.transform,org.hibernate.type&quot;,org.hibern
+ ate.hql.internal.antlr;version=&quot;5.4.27.Final&quot;;uses:=&quot;antlr,antlr.coll
+ ections,antlr.collections.impl&quot;,org.hibernate.hql.internal.ast;versio
+ n=&quot;5.4.27.Final&quot;;uses:=&quot;antlr,antlr.collections,org.hibernate,org.hib
+ ernate.dialect,org.hibernate.engine.internal,org.hibernate.engine.que
+ ry.spi,org.hibernate.engine.spi,org.hibernate.event.spi,org.hibernate
+ .hql.internal.antlr,org.hibernate.hql.internal.ast.exec,org.hibernate
+ .hql.internal.ast.tree,org.hibernate.hql.internal.ast.util,org.hibern
+ ate.hql.spi,org.hibernate.loader.hql,org.hibernate.param,org.hibernat
+ e.query.spi,org.hibernate.sql,org.hibernate.type&quot;,org.hibernate.hql.i
+ nternal.ast.exec;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibe
+ rnate.engine.spi,org.hibernate.hql.internal.ast,org.hibernate.hql.spi
+ .id,org.hibernate.param,org.hibernate.persister.entity&quot;,org.hibernate
+ .hql.internal.ast.tree;version=&quot;5.4.27.Final&quot;;uses:=&quot;antlr,antlr.coll
+ ections,org.hibernate,org.hibernate.dialect.function,org.hibernate.en
+ gine.internal,org.hibernate.engine.spi,org.hibernate.hql.internal.ant
+ lr,org.hibernate.hql.internal.ast,org.hibernate.hql.internal.ast.util
+ ,org.hibernate.internal,org.hibernate.param,org.hibernate.persister.c
+ ollection,org.hibernate.persister.entity,org.hibernate.sql,org.hibern
+ ate.transform,org.hibernate.type,org.hibernate.type.descriptor.conver
+ ter&quot;,org.hibernate.hql.internal.ast.util;version=&quot;5.4.27.Final&quot;;uses:
+ =&quot;antlr,antlr.collections,org.hibernate,org.hibernate.dialect.functio
+ n,org.hibernate.engine.internal,org.hibernate.engine.spi,org.hibernat
+ e.hql.internal.antlr,org.hibernate.hql.internal.ast,org.hibernate.hql
+ .internal.ast.tree,org.hibernate.persister.collection,org.hibernate.p
+ ersister.entity,org.hibernate.sql,org.hibernate.type&quot;,org.hibernate.h
+ ql.internal.classic;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.h
+ ibernate.dialect,org.hibernate.engine.internal,org.hibernate.engine.q
+ uery.spi,org.hibernate.engine.spi,org.hibernate.event.spi,org.hiberna
+ te.hql.spi,org.hibernate.loader,org.hibernate.loader.spi,org.hibernat
+ e.param,org.hibernate.persister.collection,org.hibernate.persister.en
+ tity,org.hibernate.query.spi,org.hibernate.transform,org.hibernate.ty
+ pe&quot;,org.hibernate.hql.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate
+ ,org.hibernate.engine.query.spi,org.hibernate.engine.spi,org.hibernat
+ e.event.spi,org.hibernate.query.spi,org.hibernate.service,org.hiberna
+ te.type&quot;,org.hibernate.hql.spi.id;version=&quot;5.4.27.Final&quot;;uses:=&quot;antlr
+ .collections,org.hibernate,org.hibernate.boot.model.relational,org.hi
+ bernate.boot.spi,org.hibernate.dialect,org.hibernate.engine.jdbc.conn
+ ections.spi,org.hibernate.engine.jdbc.env.spi,org.hibernate.engine.jd
+ bc.spi,org.hibernate.engine.spi,org.hibernate.hql.internal.ast,org.hi
+ bernate.mapping,org.hibernate.param,org.hibernate.persister.collectio
+ n,org.hibernate.persister.entity,org.hibernate.sql&quot;,org.hibernate.hql
+ .spi.id.cte;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot.spi,org.
+ hibernate.engine.jdbc.connections.spi,org.hibernate.engine.jdbc.spi,o
+ rg.hibernate.engine.spi,org.hibernate.hql.internal.ast,org.hibernate.
+ hql.spi.id,org.hibernate.persister.collection,org.hibernate.persister
+ .entity&quot;,org.hibernate.hql.spi.id.global;version=&quot;5.4.27.Final&quot;;uses:
+ =&quot;org.hibernate.boot.spi,org.hibernate.engine.jdbc.connections.spi,or
+ g.hibernate.engine.jdbc.spi,org.hibernate.engine.spi,org.hibernate.hq
+ l.internal.ast,org.hibernate.hql.spi.id,org.hibernate.hql.spi.id.loca
+ l,org.hibernate.mapping&quot;,org.hibernate.hql.spi.id.inline;version=&quot;5.4
+ .27.Final&quot;;uses:=&quot;org.hibernate.boot.spi,org.hibernate.dialect,org.hi
+ bernate.engine.jdbc.connections.spi,org.hibernate.engine.jdbc.spi,org
+ .hibernate.engine.spi,org.hibernate.hql.internal.ast,org.hibernate.hq
+ l.spi.id,org.hibernate.persister.collection,org.hibernate.persister.e
+ ntity,org.hibernate.sql,org.hibernate.type,org.hibernate.type.spi&quot;,or
+ g.hibernate.hql.spi.id.local;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibern
+ ate.boot,org.hibernate.boot.spi,org.hibernate.engine.jdbc.connections
+ .spi,org.hibernate.engine.jdbc.spi,org.hibernate.engine.spi,org.hiber
+ nate.hql.internal.ast,org.hibernate.hql.spi.id,org.hibernate.mapping&quot;
+ ,org.hibernate.hql.spi.id.persistent;version=&quot;5.4.27.Final&quot;;uses:=&quot;or
+ g.hibernate.boot.model.relational,org.hibernate.boot.spi,org.hibernat
+ e.engine.jdbc.connections.spi,org.hibernate.engine.jdbc.env.spi,org.h
+ ibernate.engine.jdbc.spi,org.hibernate.engine.spi,org.hibernate.hql.i
+ nternal.ast,org.hibernate.hql.spi.id,org.hibernate.mapping,org.hibern
+ ate.persister.collection,org.hibernate.persister.entity,org.hibernate
+ .sql&quot;,org.hibernate.id;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,or
+ g.hibernate.boot.model.relational,org.hibernate.dialect,org.hibernate
+ .engine.jdbc.env.spi,org.hibernate.engine.spi,org.hibernate.id.insert
+ ,org.hibernate.mapping,org.hibernate.persister.entity,org.hibernate.s
+ ervice,org.hibernate.sql,org.hibernate.type&quot;,org.hibernate.id.enhance
+ d;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.boot.mode
+ l.naming,org.hibernate.boot.model.relational,org.hibernate.dialect,or
+ g.hibernate.engine.jdbc.env.spi,org.hibernate.engine.spi,org.hibernat
+ e.id,org.hibernate.service,org.hibernate.type&quot;,org.hibernate.id.facto
+ ry;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.dialect,org.hibernate.
+ id,org.hibernate.type&quot;,org.hibernate.id.factory.internal;version=&quot;5.4
+ .27.Final&quot;;uses:=&quot;org.hibernate.boot.registry,org.hibernate.dialect,o
+ rg.hibernate.id,org.hibernate.id.factory.spi,org.hibernate.service,or
+ g.hibernate.service.spi,org.hibernate.type&quot;,org.hibernate.id.factory.
+ spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.id.factory,org.hibern
+ ate.service&quot;,org.hibernate.id.insert;version=&quot;5.4.27.Final&quot;;uses:=&quot;or
+ g.hibernate.dialect,org.hibernate.engine.spi,org.hibernate.id,org.hib
+ ernate.sql&quot;,org.hibernate.id.uuid;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.h
+ ibernate.engine.spi,org.hibernate.id&quot;,org.hibernate.integrator.intern
+ al;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot.registry.classloa
+ ding.spi,org.hibernate.integrator.spi&quot;,org.hibernate.integrator.spi;v
+ ersion=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot,org.hibernate.boot.re
+ gistry,org.hibernate.engine.spi,org.hibernate.service,org.hibernate.s
+ ervice.spi&quot;,org.hibernate.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;java
+ x.naming,javax.naming.spi,javax.persistence,javax.persistence.criteri
+ a,javax.persistence.metamodel,javax.transaction,org.hibernate,org.hib
+ ernate.boot.spi,org.hibernate.cache,org.hibernate.cache.spi,org.hiber
+ nate.cfg,org.hibernate.collection.spi,org.hibernate.context.spi,org.h
+ ibernate.criterion,org.hibernate.dialect,org.hibernate.dialect.functi
+ on,org.hibernate.engine,org.hibernate.engine.internal,org.hibernate.e
+ ngine.jdbc,org.hibernate.engine.jdbc.connections.spi,org.hibernate.en
+ gine.jdbc.dialect.spi,org.hibernate.engine.jdbc.spi,org.hibernate.eng
+ ine.jndi,org.hibernate.engine.jndi.spi,org.hibernate.engine.loading.i
+ nternal,org.hibernate.engine.profile,org.hibernate.engine.query.spi,o
+ rg.hibernate.engine.query.spi.sql,org.hibernate.engine.spi,org.hibern
+ ate.engine.transaction.spi,org.hibernate.event.spi,org.hibernate.grap
+ h,org.hibernate.graph.spi,org.hibernate.hql.internal,org.hibernate.id
+ ,org.hibernate.id.factory,org.hibernate.jdbc,org.hibernate.jpa,org.hi
+ bernate.jpa.spi,org.hibernate.loader,org.hibernate.loader.custom,org.
+ hibernate.mapping,org.hibernate.metadata,org.hibernate.metamodel.spi,
+ org.hibernate.persister.entity,org.hibernate.procedure,org.hibernate.
+ proxy,org.hibernate.query,org.hibernate.query.criteria.internal.compi
+ le,org.hibernate.query.spi,org.hibernate.resource.jdbc.spi,org.hibern
+ ate.resource.transaction.backend.jta.internal.synchronization,org.hib
+ ernate.resource.transaction.spi,org.hibernate.service,org.hibernate.s
+ ervice.spi,org.hibernate.sql,org.hibernate.stat,org.hibernate.stat.sp
+ i,org.hibernate.transform,org.hibernate.type,org.hibernate.type.descr
+ iptor,org.hibernate.type.descriptor.sql,org.jboss.logging&quot;,org.hibern
+ ate.internal.build;version=&quot;5.4.27.Final&quot;,org.hibernate.internal.log;
+ version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.engine.jdbc.connections.s
+ pi,org.jboss.logging&quot;,org.hibernate.internal.util;version=&quot;5.4.27.Fin
+ al&quot;;uses:=&quot;javax.persistence,org.hibernate,org.hibernate.boot.registr
+ y.classloading.spi,org.hibernate.dialect,org.hibernate.engine.spi,org
+ .hibernate.type&quot;,org.hibernate.internal.util.beans;version=&quot;5.4.27.Fi
+ nal&quot;;uses:=&quot;org.hibernate&quot;,org.hibernate.internal.util.collections;ve
+ rsion=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.type&quot;,org.hib
+ ernate.internal.util.compare;version=&quot;5.4.27.Final&quot;,org.hibernate.int
+ ernal.util.config;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate&quot;,org.hi
+ bernate.internal.util.io;version=&quot;5.4.27.Final&quot;,org.hibernate.interna
+ l.util.jndi;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.naming&quot;,org.hibernate
+ .internal.util.type;version=&quot;5.4.27.Final&quot;,org.hibernate.internal.uti
+ l.xml;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.xml.stream,javax.xml.stream
+ .events,javax.xml.stream.util,org.hibernate,org.xml.sax&quot;,org.hibernat
+ e.jdbc;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.engi
+ ne.spi&quot;,org.hibernate.jmx.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;java
+ x.management,org.hibernate.boot.registry,org.hibernate.jmx.spi,org.hi
+ bernate.service,org.hibernate.service.spi&quot;,org.hibernate.jmx.spi;vers
+ ion=&quot;5.4.27.Final&quot;;uses:=&quot;javax.management,org.hibernate.service,org.
+ hibernate.service.spi&quot;,org.hibernate.jpa;version=&quot;5.4.27.Final&quot;;uses:
+ =&quot;javax.persistence,javax.persistence.metamodel,javax.persistence.spi
+ ,org.hibernate,org.hibernate.boot.registry.classloading.spi,org.hiber
+ nate.engine.spi,org.hibernate.jpa.boot.spi,org.hibernate.query,org.hi
+ bernate.type&quot;,org.hibernate.jpa.boot.internal;version=&quot;5.4.27.Final&quot;;
+ uses:=&quot;javax.persistence,javax.persistence.spi,javax.sql,org.hibernat
+ e.boot,org.hibernate.boot.archive.scan.spi,org.hibernate.boot.registr
+ y,org.hibernate.boot.registry.classloading.spi,org.hibernate.boot.spi
+ ,org.hibernate.bytecode.enhance.spi,org.hibernate.jpa.boot.spi,org.xm
+ l.sax&quot;,org.hibernate.jpa.boot.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax
+ .persistence,javax.persistence.spi,javax.sql,org.hibernate.boot.model
+ ,org.hibernate.boot.registry.classloading.spi,org.hibernate.boot.regi
+ stry.selector,org.hibernate.bytecode.enhance.spi,org.hibernate.integr
+ ator.spi&quot;,org.hibernate.jpa.event.internal;version=&quot;5.4.27.Final&quot;;use
+ s:=&quot;org.hibernate.annotations.common.reflection,org.hibernate.engine.
+ spi,org.hibernate.jpa.event.spi&quot;,org.hibernate.jpa.event.spi;version=
+ &quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.mapping&quot;,org.hibernate.jpa.event.
+ spi.jpa;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.resource.beans.co
+ ntainer.spi&quot;,org.hibernate.jpa.internal;version=&quot;5.4.27.Final&quot;;uses:=
+ &quot;javax.persistence,javax.transaction,org.hibernate.engine.spi,org.hib
+ ernate.jpa.spi,org.hibernate.resource.transaction.backend.jta.interna
+ l.synchronization&quot;,org.hibernate.jpa.internal.enhance;version=&quot;5.4.27
+ .Final&quot;;uses:=&quot;org.hibernate.bytecode.enhance.spi,org.hibernate.bytec
+ ode.spi&quot;,org.hibernate.jpa.internal.util;version=&quot;5.4.27.Final&quot;;uses:
+ =&quot;javax.persistence,javax.persistence.spi,org.hibernate,org.hibernate
+ .jpa.boot.spi,org.w3c.dom&quot;,org.hibernate.jpa.spi;version=&quot;5.4.27.Fina
+ l&quot;;uses:=&quot;javax.persistence,javax.persistence.criteria,org.hibernate,
+ org.hibernate.ejb,org.hibernate.engine.spi,org.hibernate.jpa,org.hibe
+ rnate.query,org.hibernate.query.criteria.internal,org.hibernate.trans
+ form,org.hibernate.type&quot;,org.hibernate.loader;version=&quot;5.4.27.Final&quot;;
+ uses:=&quot;org.hibernate,org.hibernate.cache.spi,org.hibernate.dialect,or
+ g.hibernate.dialect.pagination,org.hibernate.engine.spi,org.hibernate
+ .hql.internal,org.hibernate.internal,org.hibernate.loader.spi,org.hib
+ ernate.persister.collection,org.hibernate.persister.entity,org.hibern
+ ate.query.spi,org.hibernate.sql,org.hibernate.transform,org.hibernate
+ .type&quot;,org.hibernate.loader.collection;version=&quot;5.4.27.Final&quot;;uses:=&quot;
+ org.hibernate,org.hibernate.engine.spi,org.hibernate.loader,org.hiber
+ nate.persister.collection,org.hibernate.persister.entity,org.hibernat
+ e.sql,org.hibernate.type&quot;,org.hibernate.loader.collection.plan;versio
+ n=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.engine.spi,org.hi
+ bernate.loader,org.hibernate.loader.collection,org.hibernate.loader.p
+ lan.exec.internal,org.hibernate.loader.plan.exec.query.spi,org.hibern
+ ate.loader.plan.exec.spi,org.hibernate.persister.collection,org.hiber
+ nate.type&quot;,org.hibernate.loader.criteria;version=&quot;5.4.27.Final&quot;;uses:
+ =&quot;org.hibernate,org.hibernate.criterion,org.hibernate.dialect,org.hib
+ ernate.engine.spi,org.hibernate.internal,org.hibernate.loader,org.hib
+ ernate.loader.spi,org.hibernate.persister.entity,org.hibernate.query.
+ spi,org.hibernate.sql,org.hibernate.transform,org.hibernate.type&quot;,org
+ .hibernate.loader.custom;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,
+ org.hibernate.cache.spi,org.hibernate.dialect,org.hibernate.engine.sp
+ i,org.hibernate.loader,org.hibernate.loader.spi,org.hibernate.param,o
+ rg.hibernate.persister.collection,org.hibernate.persister.entity,org.
+ hibernate.query.spi,org.hibernate.transform,org.hibernate.type&quot;,org.h
+ ibernate.loader.custom.sql;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernat
+ e,org.hibernate.engine.query.spi,org.hibernate.engine.query.spi.sql,o
+ rg.hibernate.engine.spi,org.hibernate.loader.custom,org.hibernate.par
+ am,org.hibernate.persister.collection,org.hibernate.persister.entity&quot;
+ ,org.hibernate.loader.entity;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibern
+ ate,org.hibernate.engine.spi,org.hibernate.event.internal,org.hiberna
+ te.event.spi,org.hibernate.loader,org.hibernate.persister.collection,
+ org.hibernate.persister.entity,org.hibernate.sql,org.hibernate.transf
+ orm,org.hibernate.type&quot;,org.hibernate.loader.entity.plan;version=&quot;5.4
+ .27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.engine.spi,org.hibernat
+ e.loader,org.hibernate.loader.entity,org.hibernate.loader.plan.exec.i
+ nternal,org.hibernate.loader.plan.exec.process.spi,org.hibernate.load
+ er.plan.exec.query.spi,org.hibernate.loader.plan.exec.spi,org.hiberna
+ te.persister.entity,org.hibernate.type&quot;,org.hibernate.loader.hql;vers
+ ion=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.dialect,org.hib
+ ernate.engine.spi,org.hibernate.event.spi,org.hibernate.hql.internal,
+ org.hibernate.hql.internal.ast,org.hibernate.hql.internal.ast.tree,or
+ g.hibernate.loader,org.hibernate.loader.spi,org.hibernate.persister.c
+ ollection,org.hibernate.persister.entity,org.hibernate.query.spi,org.
+ hibernate.transform,org.hibernate.type&quot;,org.hibernate.loader.internal
+ ;version=&quot;5.4.27.Final&quot;,org.hibernate.loader.plan.build.internal;vers
+ ion=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.engine,org.hibe
+ rnate.engine.spi,org.hibernate.graph.spi,org.hibernate.loader,org.hib
+ ernate.loader.plan.build.spi,org.hibernate.loader.plan.spi,org.hibern
+ ate.persister.walking.spi&quot;,org.hibernate.loader.plan.build.internal.r
+ eturns;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.engine,org.hiberna
+ te.loader,org.hibernate.loader.plan.build.spi,org.hibernate.loader.pl
+ an.spi,org.hibernate.persister.collection,org.hibernate.persister.ent
+ ity,org.hibernate.persister.walking.spi,org.hibernate.type&quot;,org.hiber
+ nate.loader.plan.build.internal.spaces;version=&quot;5.4.27.Final&quot;;uses:=&quot;
+ org.hibernate,org.hibernate.engine,org.hibernate.engine.spi,org.hiber
+ nate.loader.plan.build.spi,org.hibernate.loader.plan.spi,org.hibernat
+ e.persister.collection,org.hibernate.persister.entity,org.hibernate.p
+ ersister.walking.spi,org.hibernate.type&quot;,org.hibernate.loader.plan.bu
+ ild.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.engine,org.hibern
+ ate.engine.spi,org.hibernate.loader.plan.build.internal.spaces,org.hi
+ bernate.loader.plan.exec.spi,org.hibernate.loader.plan.spi,org.hibern
+ ate.persister.collection,org.hibernate.persister.entity,org.hibernate
+ .persister.walking.spi&quot;,org.hibernate.loader.plan.exec.internal;versi
+ on=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.dialect.paginati
+ on,org.hibernate.engine.spi,org.hibernate.loader,org.hibernate.loader
+ .plan.exec.process.spi,org.hibernate.loader.plan.exec.query.internal,
+ org.hibernate.loader.plan.exec.query.spi,org.hibernate.loader.plan.ex
+ ec.spi,org.hibernate.loader.plan.spi,org.hibernate.persister.collecti
+ on,org.hibernate.persister.entity,org.hibernate.transform&quot;,org.hibern
+ ate.loader.plan.exec.process.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;o
+ rg.hibernate,org.hibernate.engine.spi,org.hibernate.event.spi,org.hib
+ ernate.loader.plan.exec.process.spi,org.hibernate.loader.plan.exec.qu
+ ery.spi,org.hibernate.loader.plan.exec.spi,org.hibernate.loader.plan.
+ spi,org.hibernate.loader.spi,org.hibernate.transform&quot;,org.hibernate.l
+ oader.plan.exec.process.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hiberna
+ te,org.hibernate.engine.spi,org.hibernate.loader.plan.exec.process.in
+ ternal,org.hibernate.loader.plan.exec.query.spi,org.hibernate.loader.
+ plan.exec.spi,org.hibernate.loader.plan.spi,org.hibernate.loader.spi,
+ org.hibernate.persister.entity,org.hibernate.transform&quot;,org.hibernate
+ .loader.plan.exec.query.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hi
+ bernate,org.hibernate.dialect,org.hibernate.engine.spi,org.hibernate.
+ loader.plan.exec.query.spi&quot;,org.hibernate.loader.plan.exec.query.spi;
+ version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.engine.spi&quot;
+ ,org.hibernate.loader.plan.exec.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org
+ .hibernate,org.hibernate.loader,org.hibernate.loader.plan.exec.proces
+ s.spi,org.hibernate.loader.plan.spi&quot;,org.hibernate.loader.plan.spi;ve
+ rsion=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.engine,org.hi
+ bernate.loader,org.hibernate.persister.collection,org.hibernate.persi
+ ster.entity,org.hibernate.persister.walking.spi,org.hibernate.type&quot;,o
+ rg.hibernate.loader.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.e
+ ngine.spi,org.hibernate.persister.entity&quot;,org.hibernate.lob;version=&quot;
+ 5.4.27.Final&quot;;uses:=&quot;org.hibernate.engine.jdbc&quot;,org.hibernate.mapping
+ ;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.boot,org.h
+ ibernate.boot.model.convert.spi,org.hibernate.boot.model.naming,org.h
+ ibernate.boot.model.relational,org.hibernate.boot.spi,org.hibernate.d
+ ialect,org.hibernate.dialect.function,org.hibernate.engine,org.hibern
+ ate.engine.spi,org.hibernate.id,org.hibernate.id.factory,org.hibernat
+ e.property.access.spi,org.hibernate.service,org.hibernate.tool.hbm2dd
+ l,org.hibernate.tool.schema.extract.spi,org.hibernate.tuple,org.hiber
+ nate.type&quot;,org.hibernate.metadata;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.h
+ ibernate,org.hibernate.engine.spi,org.hibernate.type&quot;,org.hibernate.m
+ etamodel;version=&quot;5.4.27.Final&quot;,org.hibernate.metamodel.internal;vers
+ ion=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistence,javax.persistence.metamod
+ el,org.hibernate,org.hibernate.boot.spi,org.hibernate.engine.spi,org.
+ hibernate.graph.spi,org.hibernate.mapping,org.hibernate.metamodel.mod
+ el.domain.internal,org.hibernate.metamodel.model.domain.spi,org.hiber
+ nate.metamodel.spi,org.hibernate.persister.collection,org.hibernate.p
+ ersister.entity,org.hibernate.type.spi&quot;,org.hibernate.metamodel.model
+ .convert.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistence,org
+ .hibernate.engine.spi,org.hibernate.metamodel.model.convert.spi,org.h
+ ibernate.resource.beans.spi,org.hibernate.type.descriptor.java&quot;,org.h
+ ibernate.metamodel.model.convert.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;ja
+ vax.persistence,org.hibernate.engine.spi,org.hibernate.resource.beans
+ .spi,org.hibernate.type.descriptor.java&quot;,org.hibernate.metamodel.mode
+ l.domain;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistence.metamodel,or
+ g.hibernate&quot;,org.hibernate.metamodel.model.domain.internal;version=&quot;5
+ .4.27.Final&quot;;uses:=&quot;javax.persistence.metamodel,org.hibernate.engine.
+ spi,org.hibernate.graph.spi,org.hibernate.mapping,org.hibernate.metam
+ odel.model.domain,org.hibernate.metamodel.model.domain.spi,org.hibern
+ ate.type&quot;,org.hibernate.metamodel.model.domain.spi;version=&quot;5.4.27.Fi
+ nal&quot;;uses:=&quot;javax.persistence.metamodel,org.hibernate.engine.spi,org.
+ hibernate.graph.spi,org.hibernate.metamodel.model.domain,org.hibernat
+ e.persister.entity,org.hibernate.type&quot;,org.hibernate.metamodel.spi;ve
+ rsion=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistence,javax.persistence.metam
+ odel,org.hibernate,org.hibernate.engine.spi,org.hibernate.graph.spi,o
+ rg.hibernate.metamodel.model.domain.spi,org.hibernate.persister.colle
+ ction,org.hibernate.persister.entity,org.hibernate.type.spi&quot;,org.hibe
+ rnate.param;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.engine.spi,or
+ g.hibernate.type&quot;,org.hibernate.persister.collection;version=&quot;5.4.27.
+ Final&quot;;uses:=&quot;org.hibernate,org.hibernate.cache,org.hibernate.cache.s
+ pi.access,org.hibernate.cache.spi.entry,org.hibernate.collection.spi,
+ org.hibernate.dialect,org.hibernate.engine.jdbc.batch.internal,org.hi
+ bernate.engine.jdbc.env.spi,org.hibernate.engine.jdbc.spi,org.hiberna
+ te.engine.spi,org.hibernate.exception.spi,org.hibernate.id,org.hibern
+ ate.internal,org.hibernate.loader.collection,org.hibernate.mapping,or
+ g.hibernate.metadata,org.hibernate.metamodel.model.domain,org.hiberna
+ te.persister.entity,org.hibernate.persister.spi,org.hibernate.persist
+ er.walking.spi,org.hibernate.sql,org.hibernate.type&quot;,org.hibernate.pe
+ rsister.entity;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibern
+ ate.bytecode.enhance.spi,org.hibernate.bytecode.spi,org.hibernate.cac
+ he.spi.access,org.hibernate.cache.spi.entry,org.hibernate.dialect.loc
+ k,org.hibernate.engine,org.hibernate.engine.jdbc,org.hibernate.engine
+ .jdbc.env.spi,org.hibernate.engine.spi,org.hibernate.id,org.hibernate
+ .internal,org.hibernate.jdbc,org.hibernate.loader.entity,org.hibernat
+ e.mapping,org.hibernate.metadata,org.hibernate.metamodel.model.domain
+ ,org.hibernate.persister.collection,org.hibernate.persister.spi,org.h
+ ibernate.persister.walking.spi,org.hibernate.sql,org.hibernate.tuple.
+ entity,org.hibernate.type&quot;,org.hibernate.persister.internal;version=&quot;
+ 5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.boot.registry,org.hi
+ bernate.cache.spi.access,org.hibernate.mapping,org.hibernate.persiste
+ r.collection,org.hibernate.persister.entity,org.hibernate.persister.s
+ pi,org.hibernate.service,org.hibernate.service.spi&quot;,org.hibernate.per
+ sister.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.
+ boot.spi,org.hibernate.cache.spi.access,org.hibernate.engine.spi,org.
+ hibernate.mapping,org.hibernate.persister.collection,org.hibernate.pe
+ rsister.entity,org.hibernate.service&quot;,org.hibernate.persister.walking
+ .internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.e
+ ngine,org.hibernate.engine.spi,org.hibernate.loader,org.hibernate.per
+ sister.entity,org.hibernate.persister.walking.spi,org.hibernate.type&quot;
+ ,org.hibernate.persister.walking.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;or
+ g.hibernate,org.hibernate.engine,org.hibernate.engine.spi,org.hiberna
+ te.loader,org.hibernate.loader.plan.spi,org.hibernate.persister.colle
+ ction,org.hibernate.persister.entity,org.hibernate.persister.spi,org.
+ hibernate.type&quot;,org.hibernate.pretty;version=&quot;5.4.27.Final&quot;;uses:=&quot;or
+ g.hibernate.collection.spi,org.hibernate.engine.spi,org.hibernate.per
+ sister.collection,org.hibernate.persister.entity,org.hibernate.type&quot;,
+ org.hibernate.procedure;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persisten
+ ce,org.hibernate,org.hibernate.engine.spi,org.hibernate.query,org.hib
+ ernate.query.procedure,org.hibernate.query.spi,org.hibernate.result,o
+ rg.hibernate.type&quot;,org.hibernate.procedure.internal;version=&quot;5.4.27.F
+ inal&quot;;uses:=&quot;javax.persistence,org.hibernate,org.hibernate.engine,org
+ .hibernate.engine.query.spi.sql,org.hibernate.engine.spi,org.hibernat
+ e.persister.entity,org.hibernate.procedure,org.hibernate.procedure.sp
+ i,org.hibernate.query,org.hibernate.query.internal,org.hibernate.quer
+ y.procedure.internal,org.hibernate.query.procedure.spi,org.hibernate.
+ query.spi,org.hibernate.result,org.hibernate.result.internal,org.hibe
+ rnate.result.spi,org.hibernate.type&quot;,org.hibernate.procedure.spi;vers
+ ion=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistence,org.hibernate,org.hiberna
+ te.engine.spi,org.hibernate.procedure,org.hibernate.query,org.hiberna
+ te.query.procedure.internal,org.hibernate.query.spi,org.hibernate.typ
+ e&quot;,org.hibernate.property.access.internal;version=&quot;5.4.27.Final&quot;;uses
+ :=&quot;javax.persistence,org.hibernate,org.hibernate.boot.registry,org.hi
+ bernate.boot.registry.selector.spi,org.hibernate.engine.spi,org.hiber
+ nate.property.access.spi,org.hibernate.service,org.hibernate.service.
+ spi&quot;,org.hibernate.property.access.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;
+ org.hibernate,org.hibernate.engine.spi,org.hibernate.service&quot;,org.hib
+ ernate.proxy;version=&quot;5.4.27.Final&quot;;uses:=&quot;net.bytebuddy.implementati
+ on.bind.annotation,org.hibernate,org.hibernate.engine.spi,org.hiberna
+ te.type&quot;,org.hibernate.proxy.map;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hi
+ bernate,org.hibernate.engine.spi,org.hibernate.proxy,org.hibernate.ty
+ pe&quot;,org.hibernate.proxy.pojo;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibern
+ ate.engine.spi,org.hibernate.mapping,org.hibernate.property.access.sp
+ i,org.hibernate.proxy,org.hibernate.type&quot;,org.hibernate.proxy.pojo.by
+ tebuddy;version=&quot;5.4.27.Final&quot;;uses:=&quot;net.bytebuddy.dynamic,org.hiber
+ nate,org.hibernate.bytecode.internal.bytebuddy,org.hibernate.engine.s
+ pi,org.hibernate.proxy,org.hibernate.proxy.pojo,org.hibernate.type&quot;,o
+ rg.hibernate.proxy.pojo.javassist;version=&quot;5.4.27.Final&quot;;uses:=&quot;javas
+ sist.util.proxy,org.hibernate,org.hibernate.engine.spi,org.hibernate.
+ proxy,org.hibernate.proxy.pojo,org.hibernate.type&quot;,org.hibernate.quer
+ y;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistence,javax.persistence.c
+ riteria,org.hibernate,org.hibernate.graph,org.hibernate.transform,org
+ .hibernate.type&quot;,org.hibernate.query.criteria;version=&quot;5.4.27.Final&quot;;
+ uses:=&quot;javax.persistence.criteria&quot;,org.hibernate.query.criteria.inter
+ nal;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistence,javax.persistence
+ .criteria,javax.persistence.metamodel,org.hibernate.internal,org.hibe
+ rnate.query.criteria,org.hibernate.query.criteria.internal.compile,or
+ g.hibernate.query.criteria.internal.expression&quot;,org.hibernate.query.c
+ riteria.internal.compile;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persiste
+ nce,javax.persistence.criteria,org.hibernate,org.hibernate.dialect,or
+ g.hibernate.engine.spi,org.hibernate.graph,org.hibernate.internal.uti
+ l.collections,org.hibernate.query,org.hibernate.query.criteria,org.hi
+ bernate.query.criteria.internal.expression.function,org.hibernate.que
+ ry.spi,org.hibernate.sql.ast,org.hibernate.transform,org.hibernate.ty
+ pe&quot;,org.hibernate.query.criteria.internal.expression;version=&quot;5.4.27.
+ Final&quot;;uses:=&quot;javax.persistence.criteria,javax.persistence.metamodel,
+ org.hibernate.query.criteria.internal,org.hibernate.query.criteria.in
+ ternal.compile,org.hibernate.query.criteria.internal.path&quot;,org.hibern
+ ate.query.criteria.internal.expression.function;version=&quot;5.4.27.Final
+ &quot;;uses:=&quot;javax.persistence.criteria,org.hibernate.query.criteria.inte
+ rnal,org.hibernate.query.criteria.internal.compile,org.hibernate.quer
+ y.criteria.internal.expression&quot;,org.hibernate.query.criteria.internal
+ .path;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistence.criteria,javax.
+ persistence.metamodel,org.hibernate.persister.collection,org.hibernat
+ e.query.criteria.internal,org.hibernate.query.criteria.internal.compi
+ le,org.hibernate.query.criteria.internal.expression&quot;,org.hibernate.qu
+ ery.criteria.internal.predicate;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.p
+ ersistence.criteria,org.hibernate.query.criteria.internal,org.hiberna
+ te.query.criteria.internal.compile,org.hibernate.query.criteria.inter
+ nal.expression,org.hibernate.query.criteria.internal.path&quot;,org.hibern
+ ate.query.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persistence,or
+ g.hibernate,org.hibernate.engine.query.spi,org.hibernate.engine.query
+ .spi.sql,org.hibernate.engine.spi,org.hibernate.graph,org.hibernate.q
+ uery,org.hibernate.query.spi,org.hibernate.transform,org.hibernate.ty
+ pe&quot;,org.hibernate.query.procedure;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax
+ .persistence,org.hibernate.query,org.hibernate.query.spi&quot;,org.hiberna
+ te.query.procedure.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.persi
+ stence,org.hibernate.engine.spi,org.hibernate.procedure,org.hibernate
+ .procedure.internal,org.hibernate.procedure.spi,org.hibernate.query,o
+ rg.hibernate.query.internal,org.hibernate.query.procedure.spi,org.hib
+ ernate.query.spi,org.hibernate.type&quot;,org.hibernate.query.procedure.sp
+ i;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.procedure.spi,org.hiber
+ nate.query.procedure&quot;,org.hibernate.query.spi;version=&quot;5.4.27.Final&quot;;
+ uses:=&quot;javax.persistence,org.hibernate,org.hibernate.engine,org.hiber
+ nate.engine.query.spi,org.hibernate.engine.spi,org.hibernate.procedur
+ e,org.hibernate.query,org.hibernate.type&quot;,org.hibernate.resource.bean
+ s.container.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.enterprise.i
+ nject.spi,javax.inject,org.hibernate,org.hibernate.resource.beans.con
+ tainer.spi,org.hibernate.resource.beans.spi,org.hibernate.service&quot;,or
+ g.hibernate.resource.beans.container.spi;version=&quot;5.4.27.Final&quot;;uses:
+ =&quot;javax.enterprise.inject.spi,org.hibernate.resource.beans.container.
+ internal,org.hibernate.resource.beans.spi,org.hibernate.service.spi&quot;,
+ org.hibernate.resource.beans.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;o
+ rg.hibernate.resource.beans.container.spi,org.hibernate.resource.bean
+ s.spi,org.hibernate.service.spi,org.jboss.logging&quot;,org.hibernate.reso
+ urce.beans.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot.regis
+ try,org.hibernate.boot.registry.classloading.spi,org.hibernate.resour
+ ce.beans.container.spi,org.hibernate.service,org.hibernate.service.sp
+ i&quot;,org.hibernate.resource.jdbc;version=&quot;5.4.27.Final&quot;,org.hibernate.r
+ esource.jdbc.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.eng
+ ine.jdbc.connections.spi,org.hibernate.engine.jdbc.spi,org.hibernate.
+ resource.jdbc,org.hibernate.resource.jdbc.spi,org.hibernate.resource.
+ transaction.spi&quot;,org.hibernate.resource.jdbc.spi;version=&quot;5.4.27.Fina
+ l&quot;;uses:=&quot;org.hibernate,org.hibernate.engine.jdbc.connections.spi,org
+ .hibernate.engine.spi,org.hibernate.resource.jdbc,org.hibernate.resou
+ rce.transaction.backend.jdbc.spi,org.hibernate.resource.transaction.s
+ pi,org.hibernate.service&quot;,org.hibernate.resource.transaction;version=
+ &quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate&quot;,org.hibernate.resource.transacti
+ on.backend.jdbc.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,
+ org.hibernate.engine.jdbc.connections.spi,org.hibernate.engine.jdbc.s
+ pi,org.hibernate.engine.transaction.spi,org.hibernate.jdbc,org.hibern
+ ate.jpa.spi,org.hibernate.resource.jdbc.spi,org.hibernate.resource.tr
+ ansaction.backend.jdbc.spi,org.hibernate.resource.transaction.spi,org
+ .hibernate.tool.schema.internal.exec&quot;,org.hibernate.resource.transact
+ ion.backend.jdbc.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.reso
+ urce.transaction.spi&quot;,org.hibernate.resource.transaction.backend.jta.
+ internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.transaction,org.hibernat
+ e,org.hibernate.engine.jdbc.connections.spi,org.hibernate.engine.jdbc
+ .spi,org.hibernate.engine.transaction.jta.platform.spi,org.hibernate.
+ engine.transaction.spi,org.hibernate.jdbc,org.hibernate.jpa.spi,org.h
+ ibernate.resource.jdbc.spi,org.hibernate.resource.transaction.backend
+ .jta.internal.synchronization,org.hibernate.resource.transaction.spi,
+ org.hibernate.tool.schema.internal.exec&quot;,org.hibernate.resource.trans
+ action.backend.jta.internal.synchronization;version=&quot;5.4.27.Final&quot;;us
+ es:=&quot;javax.transaction,org.hibernate.engine.spi&quot;,org.hibernate.resour
+ ce.transaction.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.transacti
+ on,org.hibernate.boot.registry,org.hibernate.resource.transaction.spi
+ ,org.hibernate.service,org.hibernate.service.spi&quot;,org.hibernate.resou
+ rce.transaction.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.transaction,o
+ rg.hibernate,org.hibernate.engine.transaction.spi,org.hibernate.jpa.s
+ pi,org.hibernate.resource.jdbc.spi,org.hibernate.service,org.hibernat
+ e.tool.schema.internal.exec&quot;,org.hibernate.result;version=&quot;5.4.27.Fin
+ al&quot;;uses:=&quot;org.hibernate&quot;,org.hibernate.result.internal;version=&quot;5.4.
+ 27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.result,org.hibernate.res
+ ult.spi&quot;,org.hibernate.result.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.h
+ ibernate.engine.query.spi.sql,org.hibernate.engine.spi&quot;,org.hibernate
+ .secure.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.security.auth,or
+ g.hibernate.engine.spi,org.hibernate.event.spi,org.hibernate.secure.s
+ pi,org.hibernate.service.spi&quot;,org.hibernate.secure.spi;version=&quot;5.4.2
+ 7.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.boot,org.hibernate.boot.r
+ egistry,org.hibernate.engine.spi,org.hibernate.integrator.spi,org.hib
+ ernate.service,org.hibernate.service.spi&quot;,org.hibernate.service;versi
+ on=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.boot.registry&quot;,o
+ rg.hibernate.service.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hiber
+ nate,org.hibernate.boot.registry,org.hibernate.boot.spi,org.hibernate
+ .engine.spi,org.hibernate.service,org.hibernate.service.spi&quot;,org.hibe
+ rnate.service.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hib
+ ernate.boot.registry,org.hibernate.boot.spi,org.hibernate.engine.spi,
+ org.hibernate.service&quot;,org.hibernate.sql;version=&quot;5.4.27.Final&quot;;uses:
+ =&quot;org.hibernate,org.hibernate.dialect,org.hibernate.dialect.function,
+ org.hibernate.engine.spi,org.hibernate.sql.ordering.antlr,org.hiberna
+ te.type&quot;,org.hibernate.sql.ast;version=&quot;5.4.27.Final&quot;,org.hibernate.s
+ ql.ordering.antlr;version=&quot;5.4.27.Final&quot;;uses:=&quot;antlr,antlr.collectio
+ ns,antlr.collections.impl,org.hibernate,org.hibernate.dialect,org.hib
+ ernate.dialect.function,org.hibernate.engine.spi&quot;,org.hibernate.stat;
+ version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.management&quot;,org.hibernate.stat.in
+ ternal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boot.spi,org.hiber
+ nate.cache.spi,org.hibernate.engine.spi,org.hibernate.metamodel.model
+ .domain,org.hibernate.persister.entity,org.hibernate.service,org.hibe
+ rnate.service.spi,org.hibernate.stat,org.hibernate.stat.spi&quot;,org.hibe
+ rnate.stat.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.engine.spi
+ ,org.hibernate.metamodel.model.domain,org.hibernate.service,org.hiber
+ nate.stat&quot;,org.hibernate.tool.enhance;version=&quot;5.4.27.Final&quot;;uses:=&quot;o
+ rg.apache.tools.ant&quot;,org.hibernate.tool.hbm2ddl;version=&quot;5.4.27.Final
+ &quot;;uses:=&quot;org.apache.tools.ant,org.apache.tools.ant.taskdefs,org.apach
+ e.tools.ant.types,org.hibernate,org.hibernate.boot,org.hibernate.boot
+ .registry,org.hibernate.boot.spi,org.hibernate.mapping,org.hibernate.
+ service,org.hibernate.service.spi,org.hibernate.tool.schema,org.hiber
+ nate.tool.schema.spi&quot;,org.hibernate.tool.instrument.javassist;version
+ =&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.tool.enhance&quot;,org.hibernate.tool
+ .schema;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.jboss.logging&quot;,org.hibernat
+ e.tool.schema.ast;version=&quot;5.4.27.Final&quot;;uses:=&quot;antlr,antlr.collectio
+ ns.impl,org.hibernate,org.jboss.logging&quot;,org.hibernate.tool.schema.ex
+ tract.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibern
+ ate.boot.model,org.hibernate.boot.model.naming,org.hibernate.boot.mod
+ el.relational,org.hibernate.engine.jdbc.connections.spi,org.hibernate
+ .engine.jdbc.env.spi,org.hibernate.resource.transaction.spi,org.hiber
+ nate.service,org.hibernate.tool.schema.extract.spi&quot;,org.hibernate.too
+ l.schema.extract.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.
+ hibernate.boot.model,org.hibernate.boot.model.naming,org.hibernate.bo
+ ot.model.relational,org.hibernate.engine.jdbc.env.spi,org.hibernate.m
+ apping,org.hibernate.service,org.hibernate.tool.schema.extract.intern
+ al&quot;,org.hibernate.tool.schema.internal;version=&quot;5.4.27.Final&quot;;uses:=&quot;
+ org.hibernate.boot,org.hibernate.boot.model.naming,org.hibernate.boot
+ .model.relational,org.hibernate.boot.registry,org.hibernate.boot.regi
+ stry.classloading.spi,org.hibernate.dialect,org.hibernate.engine.jdbc
+ .connections.spi,org.hibernate.engine.jdbc.internal,org.hibernate.eng
+ ine.jdbc.spi,org.hibernate.mapping,org.hibernate.resource.transaction
+ .spi,org.hibernate.service,org.hibernate.service.spi,org.hibernate.to
+ ol.hbm2ddl,org.hibernate.tool.schema.extract.spi,org.hibernate.tool.s
+ chema.internal.exec,org.hibernate.tool.schema.spi&quot;,org.hibernate.tool
+ .schema.internal.exec;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.boo
+ t.model.naming,org.hibernate.dialect,org.hibernate.engine.jdbc.connec
+ tions.spi,org.hibernate.engine.jdbc.env.spi,org.hibernate.engine.jdbc
+ .spi,org.hibernate.resource.transaction.spi,org.hibernate.service,org
+ .hibernate.tool.hbm2ddl,org.hibernate.tool.schema.extract.spi,org.hib
+ ernate.tool.schema.spi&quot;,org.hibernate.tool.schema.spi;version=&quot;5.4.27
+ .Final&quot;;uses:=&quot;org.hibernate,org.hibernate.boot,org.hibernate.boot.mo
+ del.relational,org.hibernate.mapping,org.hibernate.service,org.hibern
+ ate.tool.hbm2ddl,org.hibernate.tool.schema,org.hibernate.tool.schema.
+ internal.exec&quot;,org.hibernate.transform;version=&quot;5.4.27.Final&quot;;uses:=&quot;
+ org.hibernate.type&quot;,org.hibernate.tuple;version=&quot;5.4.27.Final&quot;;uses:=
+ &quot;org.hibernate,org.hibernate.annotations,org.hibernate.bytecode.spi,o
+ rg.hibernate.engine.spi,org.hibernate.id,org.hibernate.mapping,org.hi
+ bernate.persister.entity,org.hibernate.persister.walking.spi,org.hibe
+ rnate.property.access.spi,org.hibernate.tuple.entity,org.hibernate.ty
+ pe&quot;,org.hibernate.tuple.component;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.h
+ ibernate,org.hibernate.boot.spi,org.hibernate.engine,org.hibernate.en
+ gine.spi,org.hibernate.loader,org.hibernate.mapping,org.hibernate.per
+ sister.entity,org.hibernate.persister.spi,org.hibernate.persister.wal
+ king.spi,org.hibernate.property.access.spi,org.hibernate.tuple,org.hi
+ bernate.type&quot;,org.hibernate.tuple.entity;version=&quot;5.4.27.Final&quot;;uses:
+ =&quot;org.hibernate,org.hibernate.bytecode.enhance.spi.interceptor,org.hi
+ bernate.bytecode.spi,org.hibernate.engine,org.hibernate.engine.spi,or
+ g.hibernate.loader,org.hibernate.mapping,org.hibernate.persister.enti
+ ty,org.hibernate.persister.spi,org.hibernate.persister.walking.spi,or
+ g.hibernate.property.access.spi,org.hibernate.proxy,org.hibernate.tup
+ le,org.hibernate.tuple.component,org.hibernate.type&quot;,org.hibernate.ty
+ pe;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.collecti
+ on.spi,org.hibernate.dialect,org.hibernate.engine.internal,org.hibern
+ ate.engine.jdbc,org.hibernate.engine.spi,org.hibernate.persister.coll
+ ection,org.hibernate.persister.entity,org.hibernate.tuple,org.hiberna
+ te.tuple.component,org.hibernate.type.descriptor,org.hibernate.type.d
+ escriptor.java,org.hibernate.type.descriptor.sql,org.hibernate.type.s
+ pi,org.hibernate.usertype&quot;,org.hibernate.type.descriptor;version=&quot;5.4
+ .27.Final&quot;;uses:=&quot;org.hibernate.engine.jdbc,org.hibernate.type.descri
+ ptor.sql&quot;,org.hibernate.type.descriptor.converter;version=&quot;5.4.27.Fin
+ al&quot;;uses:=&quot;org.hibernate.metamodel.model.convert.spi,org.hibernate.ty
+ pe,org.hibernate.type.descriptor,org.hibernate.type.descriptor.java,o
+ rg.hibernate.type.descriptor.sql&quot;,org.hibernate.type.descriptor.java;
+ version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.type.descri
+ ptor,org.hibernate.type.descriptor.spi,org.hibernate.type.descriptor.
+ sql&quot;,org.hibernate.type.descriptor.java.spi;version=&quot;5.4.27.Final&quot;;us
+ es:=&quot;org.hibernate.type.descriptor.java,org.hibernate.type.spi&quot;,org.h
+ ibernate.type.descriptor.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;javax.pers
+ istence,org.hibernate.type.spi&quot;,org.hibernate.type.descriptor.sql;ver
+ sion=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.type.descriptor,org.hibernat
+ e.type.descriptor.java,org.hibernate.type.spi&quot;,org.hibernate.type.des
+ criptor.sql.spi;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.type.desc
+ riptor.sql,org.hibernate.type.spi&quot;,org.hibernate.type.internal;versio
+ n=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate.type.spi&quot;,org.hibernate.type.sp
+ i;version=&quot;5.4.27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.boot.spi,
+ org.hibernate.engine.spi,org.hibernate.metamodel.spi,org.hibernate.se
+ rvice,org.hibernate.type,org.hibernate.type.descriptor.java.spi,org.h
+ ibernate.type.descriptor.sql.spi&quot;,org.hibernate.usertype;version=&quot;5.4
+ .27.Final&quot;;uses:=&quot;org.hibernate,org.hibernate.collection.spi,org.hibe
+ rnate.engine.jdbc,org.hibernate.engine.spi,org.hibernate.persister.co
+ llection,org.hibernate.type&quot;
+Hibernate-JpaVersion: 2.2
+Hibernate-VersionFamily: 5.4
+Implementation-Title: hibernate-core
+Implementation-Url: http://hibernate.org/orm
+Implementation-Vendor: Hibernate.org
+Implementation-Vendor-Id: org.hibernate
+Implementation-Version: 5.4.27.Final
+Import-Package: javax.security.auth;resolution:=optional,javax.securit
+ y.jacc;resolution:=optional,javax.validation;resolution:=optional,jav
+ ax.validation.constraints;resolution:=optional,javax.validation.group
+ s;resolution:=optional,javax.validation.metadata;resolution:=optional
+ ,javax.persistence;version=&quot;2.2.0&quot;,javax.management;resolution:=optio
+ nal,javax.naming.event;resolution:=optional,javax.naming.spi;resoluti
+ on:=optional,org.apache.tools.ant;resolution:=optional,org.apache.too
+ ls.ant.taskdefs;resolution:=optional,org.apache.tools.ant.types;resol
+ ution:=optional,javax.inject;resolution:=optional,net.bytebuddy;resol
+ ution:=optional;version=&quot;[1.10,2)&quot;,net.bytebuddy.asm;resolution:=opti
+ onal;version=&quot;[1.10,2)&quot;,net.bytebuddy.description;resolution:=optiona
+ l;version=&quot;[1.10,2)&quot;,net.bytebuddy.description.annotation;resolution:
+ =optional;version=&quot;[1.10,2)&quot;,net.bytebuddy.description.field;resoluti
+ on:=optional;version=&quot;[1.10,2)&quot;,net.bytebuddy.description.method;reso
+ lution:=optional;version=&quot;[1.10,2)&quot;,net.bytebuddy.description.modifie
+ r;resolution:=optional;version=&quot;[1.10,2)&quot;,net.bytebuddy.description.t
+ ype;resolution:=optional;version=&quot;[1.10,2)&quot;,net.bytebuddy.dynamic;res
+ olution:=optional;version=&quot;[1.10,2)&quot;,net.bytebuddy.dynamic.loading;re
+ solution:=optional;version=&quot;[1.10,2)&quot;,net.bytebuddy.dynamic.scaffold;
+ resolution:=optional;version=&quot;[1.10,2)&quot;,net.bytebuddy.dynamic.scaffol
+ d.subclass;resolution:=optional;version=&quot;[1.10,2)&quot;,net.bytebuddy.impl
+ ementation;resolution:=optional;version=&quot;[1.10,2)&quot;,net.bytebuddy.impl
+ ementation.bind.annotation;resolution:=optional;version=&quot;[1.10,2)&quot;,ne
+ t.bytebuddy.implementation.bytecode;resolution:=optional;version=&quot;[1.
+ 10,2)&quot;,net.bytebuddy.implementation.bytecode.assign;resolution:=optio
+ nal;version=&quot;[1.10,2)&quot;,net.bytebuddy.implementation.bytecode.assign.p
+ rimitive;resolution:=optional;version=&quot;[1.10,2)&quot;,net.bytebuddy.implem
+ entation.bytecode.assign.reference;resolution:=optional;version=&quot;[1.1
+ 0,2)&quot;,net.bytebuddy.implementation.bytecode.member;resolution:=option
+ al;version=&quot;[1.10,2)&quot;,net.bytebuddy.jar.asm;resolution:=optional;vers
+ ion=&quot;[1.10,2)&quot;,net.bytebuddy.matcher;resolution:=optional;version=&quot;[1
+ .10,2)&quot;,net.bytebuddy.pool;resolution:=optional;version=&quot;[1.10,2)&quot;,ne
+ t.bytebuddy.utility;resolution:=optional;version=&quot;[1.10,2)&quot;,org.objec
+ tweb.jonas_tm;resolution:=optional,com.ibm.websphere.jtaextensions;re
+ solution:=optional,javax.xml.bind;version=&quot;[2.2,3)&quot;,javax.xml.bind.an
+ notation;version=&quot;[2.2,3)&quot;,javax.xml.bind.annotation.adapters;version
+ =&quot;[2.2,3)&quot;,javax.transaction;version=&quot;[1.1,2)&quot;,antlr,antlr.collection
+ s,antlr.collections.impl,com.fasterxml.classmate;version=&quot;[1.5,2)&quot;,co
+ m.fasterxml.classmate.members;version=&quot;[1.5,2)&quot;,javassist;version=&quot;[3
+ .27,4)&quot;,javassist.bytecode;version=&quot;[3.27,4)&quot;,javassist.bytecode.anno
+ tation;version=&quot;[3.27,4)&quot;,javassist.bytecode.stackmap;version=&quot;[3.27,
+ 4)&quot;,javassist.util.proxy;version=&quot;[3.27,4)&quot;,javax.naming,javax.persis
+ tence.criteria;version=&quot;[2.2,3)&quot;,javax.persistence.metamodel;version=
+ &quot;[2.2,3)&quot;,javax.persistence.spi;version=&quot;[2.2,3)&quot;,javax.sql,javax.tra
+ nsaction.xa,javax.xml.namespace,javax.xml.parsers,javax.xml.stream,ja
+ vax.xml.stream.events,javax.xml.stream.util,javax.xml.transform,javax
+ .xml.transform.dom,javax.xml.transform.stream,javax.xml.validation,or
+ g.dom4j,org.dom4j.io,org.hibernate;version=&quot;[5.4,6)&quot;,org.hibernate.ac
+ tion.internal;version=&quot;[5.4,6)&quot;,org.hibernate.action.spi;version=&quot;[5.
+ 4,6)&quot;,org.hibernate.annotations;version=&quot;[5.4,6)&quot;,org.hibernate.annot
+ ations.common.annotationfactory;version=&quot;[5.1,6)&quot;,org.hibernate.annot
+ ations.common.reflection;version=&quot;[5.1,6)&quot;,org.hibernate.annotations.
+ common.reflection.java;version=&quot;[5.1,6)&quot;,org.hibernate.boot;version=&quot;
+ [5.4,6)&quot;,org.hibernate.boot.archive.internal;version=&quot;[5.4,6)&quot;,org.hi
+ bernate.boot.archive.scan.internal;version=&quot;[5.4,6)&quot;,org.hibernate.bo
+ ot.archive.scan.spi;version=&quot;[5.4,6)&quot;,org.hibernate.boot.archive.spi;
+ version=&quot;[5.4,6)&quot;,org.hibernate.boot.cfgxml.internal;version=&quot;[5.4,6)
+ &quot;,org.hibernate.boot.cfgxml.spi;version=&quot;[5.4,6)&quot;,org.hibernate.boot.
+ internal;version=&quot;[5.4,6)&quot;,org.hibernate.boot.jaxb;version=&quot;[5.4,6)&quot;,
+ org.hibernate.boot.jaxb.cfg.spi;version=&quot;[5.4,6)&quot;,org.hibernate.boot.
+ jaxb.hbm.internal;version=&quot;[5.4,6)&quot;,org.hibernate.boot.jaxb.hbm.spi;v
+ ersion=&quot;[5.4,6)&quot;,org.hibernate.boot.jaxb.internal;version=&quot;[5.4,6)&quot;,o
+ rg.hibernate.boot.jaxb.internal.stax;version=&quot;[5.4,6)&quot;,org.hibernate.
+ boot.jaxb.spi;version=&quot;[5.4,6)&quot;,org.hibernate.boot.model;version=&quot;[5.
+ 4,6)&quot;,org.hibernate.boot.model.convert.internal;version=&quot;[5.4,6)&quot;,org
+ .hibernate.boot.model.convert.spi;version=&quot;[5.4,6)&quot;,org.hibernate.boo
+ t.model.naming;version=&quot;[5.4,6)&quot;,org.hibernate.boot.model.process.int
+ ernal;version=&quot;[5.4,6)&quot;,org.hibernate.boot.model.process.spi;version=
+ &quot;[5.4,6)&quot;,org.hibernate.boot.model.relational;version=&quot;[5.4,6)&quot;,org.h
+ ibernate.boot.model.source.internal;version=&quot;[5.4,6)&quot;,org.hibernate.b
+ oot.model.source.internal.annotations;version=&quot;[5.4,6)&quot;,org.hibernate
+ .boot.model.source.internal.hbm;version=&quot;[5.4,6)&quot;,org.hibernate.boot.
+ model.source.spi;version=&quot;[5.4,6)&quot;,org.hibernate.boot.registry;versio
+ n=&quot;[5.4,6)&quot;,org.hibernate.boot.registry.classloading.internal;version
+ =&quot;[5.4,6)&quot;,org.hibernate.boot.registry.classloading.spi;version=&quot;[5.4
+ ,6)&quot;,org.hibernate.boot.registry.internal;version=&quot;[5.4,6)&quot;,org.hiber
+ nate.boot.registry.selector;version=&quot;[5.4,6)&quot;,org.hibernate.boot.regi
+ stry.selector.internal;version=&quot;[5.4,6)&quot;,org.hibernate.boot.registry.
+ selector.spi;version=&quot;[5.4,6)&quot;,org.hibernate.boot.spi;version=&quot;[5.4,6
+ )&quot;,org.hibernate.boot.xsd;version=&quot;[5.4,6)&quot;,org.hibernate.bytecode;ve
+ rsion=&quot;[5.4,6)&quot;,org.hibernate.bytecode.enhance.internal.bytebuddy;ver
+ sion=&quot;[5.4,6)&quot;,org.hibernate.bytecode.enhance.internal.javassist;vers
+ ion=&quot;[5.4,6)&quot;,org.hibernate.bytecode.enhance.internal.tracker;version
+ =&quot;[5.4,6)&quot;,org.hibernate.bytecode.enhance.spi;version=&quot;[5.4,6)&quot;,org.h
+ ibernate.bytecode.enhance.spi.interceptor;version=&quot;[5.4,6)&quot;,org.hiber
+ nate.bytecode.internal;version=&quot;[5.4,6)&quot;,org.hibernate.bytecode.inter
+ nal.bytebuddy;version=&quot;[5.4,6)&quot;,org.hibernate.bytecode.internal.javas
+ sist;version=&quot;[5.4,6)&quot;,org.hibernate.bytecode.internal.none;version=&quot;
+ [5.4,6)&quot;,org.hibernate.bytecode.spi;version=&quot;[5.4,6)&quot;,org.hibernate.c
+ ache;version=&quot;[5.4,6)&quot;,org.hibernate.cache.cfg.internal;version=&quot;[5.4
+ ,6)&quot;,org.hibernate.cache.cfg.spi;version=&quot;[5.4,6)&quot;,org.hibernate.cach
+ e.internal;version=&quot;[5.4,6)&quot;,org.hibernate.cache.spi;version=&quot;[5.4,6)
+ &quot;,org.hibernate.cache.spi.access;version=&quot;[5.4,6)&quot;,org.hibernate.cach
+ e.spi.entry;version=&quot;[5.4,6)&quot;,org.hibernate.cache.spi.support;version
+ =&quot;[5.4,6)&quot;,org.hibernate.cfg;version=&quot;[5.4,6)&quot;,org.hibernate.cfg.anno
+ tations;version=&quot;[5.4,6)&quot;,org.hibernate.cfg.annotations.reflection;ve
+ rsion=&quot;[5.4,6)&quot;,org.hibernate.cfg.beanvalidation;version=&quot;[5.4,6)&quot;,or
+ g.hibernate.classic;version=&quot;[5.4,6)&quot;,org.hibernate.collection.intern
+ al;version=&quot;[5.4,6)&quot;,org.hibernate.collection.spi;version=&quot;[5.4,6)&quot;,o
+ rg.hibernate.context;version=&quot;[5.4,6)&quot;,org.hibernate.context.internal
+ ;version=&quot;[5.4,6)&quot;,org.hibernate.context.spi;version=&quot;[5.4,6)&quot;,org.hi
+ bernate.criterion;version=&quot;[5.4,6)&quot;,org.hibernate.dialect;version=&quot;[5
+ .4,6)&quot;,org.hibernate.dialect.function;version=&quot;[5.4,6)&quot;,org.hibernate
+ .dialect.hint;version=&quot;[5.4,6)&quot;,org.hibernate.dialect.identity;versio
+ n=&quot;[5.4,6)&quot;,org.hibernate.dialect.lock;version=&quot;[5.4,6)&quot;,org.hibernat
+ e.dialect.pagination;version=&quot;[5.4,6)&quot;,org.hibernate.dialect.unique;v
+ ersion=&quot;[5.4,6)&quot;,org.hibernate.ejb;version=&quot;[5.4,6)&quot;,org.hibernate.en
+ gine;version=&quot;[5.4,6)&quot;,org.hibernate.engine.config.internal;version=&quot;
+ [5.4,6)&quot;,org.hibernate.engine.config.spi;version=&quot;[5.4,6)&quot;,org.hibern
+ ate.engine.internal;version=&quot;[5.4,6)&quot;,org.hibernate.engine.jdbc;versi
+ on=&quot;[5.4,6)&quot;,org.hibernate.engine.jdbc.batch.internal;version=&quot;[5.4,6
+ )&quot;,org.hibernate.engine.jdbc.batch.spi;version=&quot;[5.4,6)&quot;,org.hibernat
+ e.engine.jdbc.connections.internal;version=&quot;[5.4,6)&quot;,org.hibernate.en
+ gine.jdbc.connections.spi;version=&quot;[5.4,6)&quot;,org.hibernate.engine.jdbc
+ .cursor.internal;version=&quot;[5.4,6)&quot;,org.hibernate.engine.jdbc.cursor.s
+ pi;version=&quot;[5.4,6)&quot;,org.hibernate.engine.jdbc.dialect.internal;versi
+ on=&quot;[5.4,6)&quot;,org.hibernate.engine.jdbc.dialect.spi;version=&quot;[5.4,6)&quot;,
+ org.hibernate.engine.jdbc.env.internal;version=&quot;[5.4,6)&quot;,org.hibernat
+ e.engine.jdbc.env.spi;version=&quot;[5.4,6)&quot;,org.hibernate.engine.jdbc.int
+ ernal;version=&quot;[5.4,6)&quot;,org.hibernate.engine.jdbc.spi;version=&quot;[5.4,6
+ )&quot;,org.hibernate.engine.jndi;version=&quot;[5.4,6)&quot;,org.hibernate.engine.j
+ ndi.internal;version=&quot;[5.4,6)&quot;,org.hibernate.engine.jndi.spi;version=
+ &quot;[5.4,6)&quot;,org.hibernate.engine.loading.internal;version=&quot;[5.4,6)&quot;,org
+ .hibernate.engine.profile;version=&quot;[5.4,6)&quot;,org.hibernate.engine.quer
+ y;version=&quot;[5.4,6)&quot;,org.hibernate.engine.query.internal;version=&quot;[5.4
+ ,6)&quot;,org.hibernate.engine.query.spi;version=&quot;[5.4,6)&quot;,org.hibernate.e
+ ngine.query.spi.sql;version=&quot;[5.4,6)&quot;,org.hibernate.engine.spi;versio
+ n=&quot;[5.4,6)&quot;,org.hibernate.engine.transaction.internal;version=&quot;[5.4,6
+ )&quot;,org.hibernate.engine.transaction.internal.jta;version=&quot;[5.4,6)&quot;,or
+ g.hibernate.engine.transaction.jta.platform.internal;version=&quot;[5.4,6)
+ &quot;,org.hibernate.engine.transaction.jta.platform.spi;version=&quot;[5.4,6)&quot;
+ ,org.hibernate.engine.transaction.spi;version=&quot;[5.4,6)&quot;,org.hibernate
+ .event.internal;version=&quot;[5.4,6)&quot;,org.hibernate.event.service.interna
+ l;version=&quot;[5.4,6)&quot;,org.hibernate.event.service.spi;version=&quot;[5.4,6)&quot;
+ ,org.hibernate.event.spi;version=&quot;[5.4,6)&quot;,org.hibernate.exception;ve
+ rsion=&quot;[5.4,6)&quot;,org.hibernate.exception.internal;version=&quot;[5.4,6)&quot;,or
+ g.hibernate.exception.spi;version=&quot;[5.4,6)&quot;,org.hibernate.graph;versi
+ on=&quot;[5.4,6)&quot;,org.hibernate.graph.internal;version=&quot;[5.4,6)&quot;,org.hiber
+ nate.graph.internal.parse;version=&quot;[5.4,6)&quot;,org.hibernate.graph.spi;v
+ ersion=&quot;[5.4,6)&quot;,org.hibernate.hql.internal;version=&quot;[5.4,6)&quot;,org.hib
+ ernate.hql.internal.antlr;version=&quot;[5.4,6)&quot;,org.hibernate.hql.interna
+ l.ast;version=&quot;[5.4,6)&quot;,org.hibernate.hql.internal.ast.exec;version=&quot;
+ [5.4,6)&quot;,org.hibernate.hql.internal.ast.tree;version=&quot;[5.4,6)&quot;,org.hi
+ bernate.hql.internal.ast.util;version=&quot;[5.4,6)&quot;,org.hibernate.hql.int
+ ernal.classic;version=&quot;[5.4,6)&quot;,org.hibernate.hql.spi;version=&quot;[5.4,6
+ )&quot;,org.hibernate.hql.spi.id;version=&quot;[5.4,6)&quot;,org.hibernate.hql.spi.i
+ d.global;version=&quot;[5.4,6)&quot;,org.hibernate.hql.spi.id.inline;version=&quot;[
+ 5.4,6)&quot;,org.hibernate.hql.spi.id.local;version=&quot;[5.4,6)&quot;,org.hibernat
+ e.hql.spi.id.persistent;version=&quot;[5.4,6)&quot;,org.hibernate.id;version=&quot;[
+ 5.4,6)&quot;,org.hibernate.id.enhanced;version=&quot;[5.4,6)&quot;,org.hibernate.id.
+ factory;version=&quot;[5.4,6)&quot;,org.hibernate.id.factory.internal;version=&quot;
+ [5.4,6)&quot;,org.hibernate.id.factory.spi;version=&quot;[5.4,6)&quot;,org.hibernate
+ .id.insert;version=&quot;[5.4,6)&quot;,org.hibernate.id.uuid;version=&quot;[5.4,6)&quot;,
+ org.hibernate.integrator.internal;version=&quot;[5.4,6)&quot;,org.hibernate.int
+ egrator.spi;version=&quot;[5.4,6)&quot;,org.hibernate.internal;version=&quot;[5.4,6)
+ &quot;,org.hibernate.internal.log;version=&quot;[5.4,6)&quot;,org.hibernate.internal
+ .util;version=&quot;[5.4,6)&quot;,org.hibernate.internal.util.beans;version=&quot;[5
+ .4,6)&quot;,org.hibernate.internal.util.collections;version=&quot;[5.4,6)&quot;,org.
+ hibernate.internal.util.compare;version=&quot;[5.4,6)&quot;,org.hibernate.inter
+ nal.util.config;version=&quot;[5.4,6)&quot;,org.hibernate.internal.util.io;vers
+ ion=&quot;[5.4,6)&quot;,org.hibernate.internal.util.type;version=&quot;[5.4,6)&quot;,org.
+ hibernate.internal.util.xml;version=&quot;[5.4,6)&quot;,org.hibernate.jdbc;vers
+ ion=&quot;[5.4,6)&quot;,org.hibernate.jmx.internal;version=&quot;[5.4,6)&quot;,org.hibern
+ ate.jmx.spi;version=&quot;[5.4,6)&quot;,org.hibernate.jpa;version=&quot;[5.4,6)&quot;,org
+ .hibernate.jpa.boot.internal;version=&quot;[5.4,6)&quot;,org.hibernate.jpa.boot
+ .spi;version=&quot;[5.4,6)&quot;,org.hibernate.jpa.event.internal;version=&quot;[5.4
+ ,6)&quot;,org.hibernate.jpa.event.spi;version=&quot;[5.4,6)&quot;,org.hibernate.jpa.
+ internal;version=&quot;[5.4,6)&quot;,org.hibernate.jpa.internal.enhance;version
+ =&quot;[5.4,6)&quot;,org.hibernate.jpa.internal.util;version=&quot;[5.4,6)&quot;,org.hibe
+ rnate.jpa.spi;version=&quot;[5.4,6)&quot;,org.hibernate.loader;version=&quot;[5.4,6)
+ &quot;,org.hibernate.loader.collection;version=&quot;[5.4,6)&quot;,org.hibernate.loa
+ der.collection.plan;version=&quot;[5.4,6)&quot;,org.hibernate.loader.criteria;v
+ ersion=&quot;[5.4,6)&quot;,org.hibernate.loader.custom;version=&quot;[5.4,6)&quot;,org.hi
+ bernate.loader.custom.sql;version=&quot;[5.4,6)&quot;,org.hibernate.loader.enti
+ ty;version=&quot;[5.4,6)&quot;,org.hibernate.loader.entity.plan;version=&quot;[5.4,6
+ )&quot;,org.hibernate.loader.hql;version=&quot;[5.4,6)&quot;,org.hibernate.loader.in
+ ternal;version=&quot;[5.4,6)&quot;,org.hibernate.loader.plan.build.internal;ver
+ sion=&quot;[5.4,6)&quot;,org.hibernate.loader.plan.build.internal.returns;versi
+ on=&quot;[5.4,6)&quot;,org.hibernate.loader.plan.build.internal.spaces;version=
+ &quot;[5.4,6)&quot;,org.hibernate.loader.plan.build.spi;version=&quot;[5.4,6)&quot;,org.h
+ ibernate.loader.plan.exec.internal;version=&quot;[5.4,6)&quot;,org.hibernate.lo
+ ader.plan.exec.process.internal;version=&quot;[5.4,6)&quot;,org.hibernate.loade
+ r.plan.exec.process.spi;version=&quot;[5.4,6)&quot;,org.hibernate.loader.plan.e
+ xec.query.internal;version=&quot;[5.4,6)&quot;,org.hibernate.loader.plan.exec.q
+ uery.spi;version=&quot;[5.4,6)&quot;,org.hibernate.loader.plan.exec.spi;version
+ =&quot;[5.4,6)&quot;,org.hibernate.loader.plan.spi;version=&quot;[5.4,6)&quot;,org.hibern
+ ate.loader.spi;version=&quot;[5.4,6)&quot;,org.hibernate.mapping;version=&quot;[5.4,
+ 6)&quot;,org.hibernate.metadata;version=&quot;[5.4,6)&quot;,org.hibernate.metamodel.
+ internal;version=&quot;[5.4,6)&quot;,org.hibernate.metamodel.model.convert.inte
+ rnal;version=&quot;[5.4,6)&quot;,org.hibernate.metamodel.model.convert.spi;vers
+ ion=&quot;[5.4,6)&quot;,org.hibernate.metamodel.model.domain;version=&quot;[5.4,6)&quot;,
+ org.hibernate.metamodel.model.domain.internal;version=&quot;[5.4,6)&quot;,org.h
+ ibernate.metamodel.model.domain.spi;version=&quot;[5.4,6)&quot;,org.hibernate.m
+ etamodel.spi;version=&quot;[5.4,6)&quot;,org.hibernate.param;version=&quot;[5.4,6)&quot;,
+ org.hibernate.persister.collection;version=&quot;[5.4,6)&quot;,org.hibernate.pe
+ rsister.entity;version=&quot;[5.4,6)&quot;,org.hibernate.persister.internal;ver
+ sion=&quot;[5.4,6)&quot;,org.hibernate.persister.spi;version=&quot;[5.4,6)&quot;,org.hibe
+ rnate.persister.walking.internal;version=&quot;[5.4,6)&quot;,org.hibernate.pers
+ ister.walking.spi;version=&quot;[5.4,6)&quot;,org.hibernate.pretty;version=&quot;[5.
+ 4,6)&quot;,org.hibernate.procedure;version=&quot;[5.4,6)&quot;,org.hibernate.procedu
+ re.internal;version=&quot;[5.4,6)&quot;,org.hibernate.procedure.spi;version=&quot;[5
+ .4,6)&quot;,org.hibernate.property.access.internal;version=&quot;[5.4,6)&quot;,org.h
+ ibernate.property.access.spi;version=&quot;[5.4,6)&quot;,org.hibernate.proxy;ve
+ rsion=&quot;[5.4,6)&quot;,org.hibernate.proxy.map;version=&quot;[5.4,6)&quot;,org.hiberna
+ te.proxy.pojo;version=&quot;[5.4,6)&quot;,org.hibernate.proxy.pojo.bytebuddy;ve
+ rsion=&quot;[5.4,6)&quot;,org.hibernate.proxy.pojo.javassist;version=&quot;[5.4,6)&quot;,
+ org.hibernate.query;version=&quot;[5.4,6)&quot;,org.hibernate.query.criteria;ve
+ rsion=&quot;[5.4,6)&quot;,org.hibernate.query.criteria.internal;version=&quot;[5.4,6
+ )&quot;,org.hibernate.query.criteria.internal.compile;version=&quot;[5.4,6)&quot;,or
+ g.hibernate.query.criteria.internal.expression;version=&quot;[5.4,6)&quot;,org.
+ hibernate.query.criteria.internal.expression.function;version=&quot;[5.4,6
+ )&quot;,org.hibernate.query.criteria.internal.path;version=&quot;[5.4,6)&quot;,org.h
+ ibernate.query.criteria.internal.predicate;version=&quot;[5.4,6)&quot;,org.hibe
+ rnate.query.internal;version=&quot;[5.4,6)&quot;,org.hibernate.query.procedure;
+ version=&quot;[5.4,6)&quot;,org.hibernate.query.procedure.internal;version=&quot;[5.
+ 4,6)&quot;,org.hibernate.query.procedure.spi;version=&quot;[5.4,6)&quot;,org.hiberna
+ te.query.spi;version=&quot;[5.4,6)&quot;,org.hibernate.resource.beans.container
+ .internal;version=&quot;[5.4,6)&quot;,org.hibernate.resource.beans.container.sp
+ i;version=&quot;[5.4,6)&quot;,org.hibernate.resource.beans.internal;version=&quot;[5
+ .4,6)&quot;,org.hibernate.resource.beans.spi;version=&quot;[5.4,6)&quot;,org.hiberna
+ te.resource.jdbc;version=&quot;[5.4,6)&quot;,org.hibernate.resource.jdbc.intern
+ al;version=&quot;[5.4,6)&quot;,org.hibernate.resource.jdbc.spi;version=&quot;[5.4,6)
+ &quot;,org.hibernate.resource.transaction;version=&quot;[5.4,6)&quot;,org.hibernate.
+ resource.transaction.backend.jdbc.internal;version=&quot;[5.4,6)&quot;,org.hibe
+ rnate.resource.transaction.backend.jdbc.spi;version=&quot;[5.4,6)&quot;,org.hib
+ ernate.resource.transaction.backend.jta.internal;version=&quot;[5.4,6)&quot;,or
+ g.hibernate.resource.transaction.backend.jta.internal.synchronization
+ ;version=&quot;[5.4,6)&quot;,org.hibernate.resource.transaction.internal;versio
+ n=&quot;[5.4,6)&quot;,org.hibernate.resource.transaction.spi;version=&quot;[5.4,6)&quot;,
+ org.hibernate.result;version=&quot;[5.4,6)&quot;,org.hibernate.result.internal;
+ version=&quot;[5.4,6)&quot;,org.hibernate.result.spi;version=&quot;[5.4,6)&quot;,org.hibe
+ rnate.secure.internal;version=&quot;[5.4,6)&quot;,org.hibernate.secure.spi;vers
+ ion=&quot;[5.4,6)&quot;,org.hibernate.service;version=&quot;[5.4,6)&quot;,org.hibernate.s
+ ervice.internal;version=&quot;[5.4,6)&quot;,org.hibernate.service.spi;version=&quot;
+ [5.4,6)&quot;,org.hibernate.sql;version=&quot;[5.4,6)&quot;,org.hibernate.sql.ast;ve
+ rsion=&quot;[5.4,6)&quot;,org.hibernate.sql.ordering.antlr;version=&quot;[5.4,6)&quot;,or
+ g.hibernate.stat;version=&quot;[5.4,6)&quot;,org.hibernate.stat.internal;versio
+ n=&quot;[5.4,6)&quot;,org.hibernate.stat.spi;version=&quot;[5.4,6)&quot;,org.hibernate.to
+ ol.enhance;version=&quot;[5.4,6)&quot;,org.hibernate.tool.hbm2ddl;version=&quot;[5.4
+ ,6)&quot;,org.hibernate.tool.schema;version=&quot;[5.4,6)&quot;,org.hibernate.tool.s
+ chema.ast;version=&quot;[5.4,6)&quot;,org.hibernate.tool.schema.extract.interna
+ l;version=&quot;[5.4,6)&quot;,org.hibernate.tool.schema.extract.spi;version=&quot;[5
+ .4,6)&quot;,org.hibernate.tool.schema.internal;version=&quot;[5.4,6)&quot;,org.hiber
+ nate.tool.schema.internal.exec;version=&quot;[5.4,6)&quot;,org.hibernate.tool.s
+ chema.spi;version=&quot;[5.4,6)&quot;,org.hibernate.transform;version=&quot;[5.4,6)&quot;
+ ,org.hibernate.tuple;version=&quot;[5.4,6)&quot;,org.hibernate.tuple.component;
+ version=&quot;[5.4,6)&quot;,org.hibernate.tuple.entity;version=&quot;[5.4,6)&quot;,org.hi
+ bernate.type;version=&quot;[5.4,6)&quot;,org.hibernate.type.descriptor;version=
+ &quot;[5.4,6)&quot;,org.hibernate.type.descriptor.converter;version=&quot;[5.4,6)&quot;,o
+ rg.hibernate.type.descriptor.java;version=&quot;[5.4,6)&quot;,org.hibernate.typ
+ e.descriptor.java.spi;version=&quot;[5.4,6)&quot;,org.hibernate.type.descriptor
+ .spi;version=&quot;[5.4,6)&quot;,org.hibernate.type.descriptor.sql;version=&quot;[5.
+ 4,6)&quot;,org.hibernate.type.descriptor.sql.spi;version=&quot;[5.4,6)&quot;,org.hib
+ ernate.type.internal;version=&quot;[5.4,6)&quot;,org.hibernate.type.spi;version
+ =&quot;[5.4,6)&quot;,org.hibernate.usertype;version=&quot;[5.4,6)&quot;,org.jboss.jandex;
+ version=&quot;[2.1,3)&quot;,org.jboss.logging;version=&quot;[3.4,4)&quot;,org.w3c.dom,org
+ .xml.sax,javax.enterprise.context.spi;resolution:=optional,javax.ente
+ rprise.inject.spi;resolution:=optional
+Main-Class: org.hibernate.Version
+Private-Package: org.hibernate.xsd.cfg,org.hibernate.xsd.mapping
+Require-Capability: osgi.ee;filter:=&quot;(&amp;(osgi.ee=JavaSE)(version=1.8))&quot;
+Specification-Title: hibernate-core
+Specification-Vendor: Hibernate.org
+Specification-Version: 5.4.27.Final
+Tool: Bnd-5.1.1.202006162103
+
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Nov 17, 2021, 12:44:09 PM</div>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("manifest",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            // Deprecated
+            // $(window).load(function () {
+            //     $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            // });
+            $(window).on('load', function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 8192152;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

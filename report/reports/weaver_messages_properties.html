@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for weaver-messages.properties</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/mta-icon.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="8192152">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_spring_petclinic_rest.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_spring_petclinic_rest.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_spring_petclinic_rest.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_spring_petclinic_rest.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Migration Toolkit for Applications by Red Hat found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="8192152">
+                            spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/aspectjweaver-1.9.6.jar/org/aspectj/weaver/weaver-messages.properties
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Properties</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+#####################################################################
+# Copyright (c) 2004 Contributors.
+# All rights reserved. 
+# This program and the accompanying materials are made available 
+# under the terms of the Eclipse Public License v1.0 
+# which accompanies this distribution and is available at 
+# http://www.eclipse.org/legal/epl-v10.html 
+#  
+# Contributors: 
+#     Adrian Colyer - Initial version
+#####################################################################
+
+# Messages output by the AspectJ Weaver
+
+# Pointcut related messages...
+argsInDeclare=args() pointcut designator cannot be used in declare statement
+cflowInDeclare=cflow{0}() pointcut designator cannot be used in declare statement
+ifInDeclare=if() pointcut designator cannot be used in declare statement
+thisOrTargetInDeclare={0}() pointcut designator cannot be used in declare statement
+abstractPointcut={0} is abstract
+abstractPointcutNotMadeConcrete=inherited abstract {0} is not made concrete in {1}
+conflictingInheritedPointcuts=conflicting inherited pointcuts in {0}
+circularPointcutDeclaration=circular pointcut declaration involving: {0}
+cantFindPointcut=can&#39;&#39;t find pointcut &#39;&#39;{0}&#39;&#39; on {1}
+exactTypePatternRequired=exact type pattern required
+pointcutNotVisible=pointcut &#39;&#39;{0}&#39;&#39; is not visible from type &#39;&#39;{1}&#39;&#39; - cannot override
+cantBindType=can&#39;&#39;t bind type name &#39;&#39;{0}&#39;&#39;
+wildcardTypePatternNotAllowed=wildcard type pattern not allowed, must use type name
+fieldCantBeVoid=fields cannot have a void type
+noNewArrayJoinpointsByDefault=There are no join points for array construction unless -Xjoinpoints:arrayconstruction is specified
+unsupportedPointcutPrimitive=Pointcut expression &#39;&#39;{0}&#39;&#39; contains unsupported pointcut primitive &#39;&#39;{1}&#39;&#39;
+missingTypePreventsMatch=&quot;Unable to determine match at this join point because the type &#39;&#39;{0}&#39;&#39; cannot be found&quot;
+
+# Declare parents messages...
+decpObject=can&#39;&#39;t change the parents of java.lang.Object
+cantExtendSelf=type &#39;&#39;{0}&#39;&#39;can not extend itself
+interfaceExtendClass=interface can not extend a class
+decpHierarchy=can only insert a class into hierarchy, but {0} is not a subtype of {1}
+
+# declare precedence messages...
+multipleMatchesInPrecedence=multiple matches for {0}, matches both {1} and {2}
+circularityInPrecedenceStar=circularity in declare precedence, &#39;&#39;*&#39;&#39; occurs more than once
+nonAspectTypesInPrecedence=Non-aspect types can only be specified in a declare precedence statement when subtypes are included.  Non-aspect type is : {0}
+circularityInPrecedenceTwo=circularity in declare precedence, &#39;&#39;{0}&#39;&#39; matches two patterns
+
+# declare soft messages...
+notThrowable={0} is not a subtype of Throwable
+
+# itd messages...
+itdConsOnAspect=can&#39;&#39;t declare constructor on an aspect
+returnTypeMismatch=can&#39;&#39;t override {0} with {1} return types don&#39;&#39;t match
+paramTypeMismatch=can&#39;&#39;t override {0} with {1} parameter types don&#39;&#39;t match
+visibilityReduction=can&#39;&#39;t override {0} with {1} visibility is reduced
+cantOverrideFinalMember=can&#39;&#39;t override final {0}
+doesntThrow=overriden method doesn&#39;t throw {0}
+overriddenStatic={0} cannot override {1}; overridden method is static
+overridingStatic={0} cannot override {1}; overriding method is static
+itdConflict=intertype declaration from {0} conflicts with intertype declaration: {1} from {2}
+itdMemberConflict=inter-type declaration from {0} conflicts with existing member: {1}
+itdNonExposedImplementor=type {0} must be accessible for weaving interface inter type declaration from aspect {1}
+itdAbstractMustBePublicOnInterface=abstract intertype method declaration &#39;&#39;{0}&#39;&#39; on interface {1} must be declared public (compiler limitation)
+
+# advice messages...
+nonVoidReturn=applying to join point that doesn&#39;&#39;t return void: {0}
+incompatibleReturnType=incompatible return type applying to {0}
+cantThrowChecked=can&#39;&#39;t throw checked exception &#39;&#39;{0}&#39;&#39; at this join point &#39;&#39;{1}&#39;&#39;
+circularDependency=circular advice precedence: can&#39;&#39;t determine precedence between two or more pieces of advice that apply to the same join point: {0}
+
+# aspect messages..
+missingPerClause=expected per clause on super aspect not found on {0}
+wrongPerClause=wrong kind of per clause on super, expected {0} but found {1}
+
+# Reweavable messages...
+alreadyWoven=class &#39;&#39;{0}&#39;&#39; is already woven and has not been built in reweavable mode
+reweavableMode=weaver operating in reweavable mode.  Need to verify any required types exist.
+processingReweavable=processing reweavable type {0}: {1}
+missingReweavableType=type {0} is needed by reweavable type {1}
+verifiedReweavableType=successfully verified type {0} exists.  Originates from {1}
+aspectNeeded=aspect {0} is needed when using type {1}
+reweavableAspectNotRegistered=aspect &#39;&#39;{0}&#39;&#39; woven into &#39;&#39;{1}&#39;&#39; must be defined to the weaver (placed on the aspectpath, or defined in an aop.xml file if using LTW).
+
+# The infamous and deserving a category all of its own...
+cantFindType=can&#39;&#39;t find type {0}
+cantFindCoreType=can&#39;&#39;t find critical required type {0}
+cantFindTypeWithinpcd=Unable to find type {0} whilst processing within() pointcut at this source location
+cftDuringAroundWeave=Can&#39;t find type {0} whilst applying around advice
+cftDuringAroundWeavePreinit=Can&#39;t find type {0} whilst applying around advice to preinitialization join point
+cftExceptionType=Can&#39;t find exception type {0} whilst processing advice
+cftArgType=Can&#39;t find type {0} whilst processing args() pcd
+cantFindParentType=can&#39;&#39;t find type {0} needed to evaluate methods inherited by subtype {1}
+cantFindParentTypeNoSub=can&#39;&#39;t find type {0} when attempting to find the set of methods it declares
+cantFindTypeFields=can&#39;&#39;t find fields of missing type {0}
+cantFindTypeSuperclass=can&#39;&#39;t determine superclass of missing type {0}
+cantFindTypeInterfaces=can&#39;&#39;t determine implemented interfaces of missing type {0}
+cantFindTypeMethods=can&#39;&#39;t determine methods of missing type {0}
+cantFindTypePointcuts=can&#39;&#39;t determine pointcuts declared in missing type {0}
+cantFindTypeModifiers=can&#39;&#39;t determine modifiers of missing type {0}
+cantFindTypeAnnotation=can&#39;&#39;t determine annotations of missing type {0}
+cantFindTypeAssignable=can&#39;&#39;t determine whether missing type {0} is an instance of {1}
+cantFindTypeCoerceable=can&#39;&#39;t determine whether missing type {0} can be coerced from {1}
+cantFindTypeJoinPoint=can&#39;&#39;t find type {0} whilst determining signatures of call or execution join point for {1}, this may cause a pointcut to fail to match at this join point 
+cantFindTypeInterfaceMethods=can&#39;&#39;t find type {0} whilst determining all methods of an implementing subtype, this may cause a pointcut to fail to match at a call or execution join point, or an illegal method override via an ITD to go undetected
+
+# Implementation limitations...
+decpBinaryLimitation=can&#39;&#39;t use declare parents to change superclass of binary form &#39;&#39;{0}&#39;&#39; (implementation limitation)
+overwriteJSR45=overwriting JSR45 information for {0} (compiler limitation)
+ifInPerClause=if() pointcut designator cannot be used directly in a per clause (compiler limitation).  Create a named pointcut containing the if() and refer to it
+ifLexicallyInCflow=if not supported lexically within cflow (compiler limitation)
+onlyBeforeOnHandler=Only before advice is supported on handler join points (compiler limitation)
+noAroundOnSynchronization=Around advice is not supported on the lock and unlock join points (compiler limitation)
+aroundOnPreInit=around on pre-initialization not supported (compiler limitation)
+aroundOnInit=around on initialization not supported (compiler limitation)
+aroundOnInterfaceStaticInit=around on staticinitialization of interface &#39;&#39;{0}&#39;&#39; not supported (compiler limitation)
+unsupportedAnnotationValueType=Compiler limitation: annotation value support not implemented for type {0}
+
+# Bytecode generation nasties...
+problemGeneratingMethod=problem generating method {0}.{1} : {2}
+classTooBig=The class {0} exceeds the maximum class size supported by the JVM (constant pool too big).
+
+# Classpath messages
+zipfileEntryMissing=zipfile classpath entry does not exist: {0}
+zipfileEntryInvalid=zipfile classpath entry is invalid: {0} &lt;{1}&gt;
+directoryEntryMissing=directory classpath entry does not exist: {0}
+outjarInInputPath=-outjar cannot be a member of -injars, -inpath or -aspectpath
+
+# Lint messages
+problemLoadingXLint=problem loading Xlint properties file: {0}, {1}
+unableToLoadXLintDefault=couldn&#39;&#39;t load XlintDefault.properties
+errorLoadingXLintDefault=problem loading XlintDefault.properties, {0}
+invalidXLintKey=invalid Xlint key: {0}
+invalidXLintMessageKind=invalid Xlint message kind (must be one of ignore, warning, error): {0}
+
+# Binding of formals
+unboundFormalInPC=the parameter {0} is not bound in [all branches of] pointcut
+ambiguousBindingInPC=the binding of parameter {0} is ambiguous in pointcut
+ambiguousBindingInOrPC=ambiguous binding of parameter(s) {0} across &#39;&#39;||&#39;&#39; in pointcut
+negationDoesntAllowBinding=cannot bind a parameter in a negated expression
+
+# Java5 
+
+# Enum
+itdcOnEnumNotAllowed=can&#39;&#39;t make inter-type constructor declarations on enum types
+itdmOnEnumNotAllowed=can&#39;&#39;t make inter-type method declarations on enum types
+itdfOnEnumNotAllowed=can&#39;&#39;t make inter-type field declarations on enum types
+cantDecpOnEnumToImplInterface=can&#39;&#39;t use declare parents to make enum type {0} implement an interface
+cantDecpOnEnumToExtendClass=can&#39;&#39;t use declare parents to alter supertype of enum type {0}
+cantDecpToMakeEnumSupertype=can&#39;&#39;t use declare parents to make &#39;&#39;java.lang.Enum&#39;&#39; the parent of type {0}
+
+# Annotation
+itdcOnAnnotationNotAllowed=can&#39;&#39;t make inter-type constructor declarations on annotation types
+itdmOnAnnotationNotAllowed=can&#39;&#39;t make inter-type method declarations on annotation types
+itdfOnAnnotationNotAllowed=can&#39;&#39;t make inter-type field declarations on annotation types
+cantDecpOnAnnotationToImplInterface=can&#39;&#39;t use declare parents to make annotation type {0} implement an interface
+cantDecpOnAnnotationToExtendClass=can&#39;&#39;t use declare parents to alter supertype of annotation type {0}
+cantDecpToMakeAnnotationSupertype=can&#39;&#39;t use declare parents to make &#39;&#39;java.lang.annotation.Annotation&#39;&#39; the parent of type {0}
+incorrectTargetForDeclareAnnotation={0} is not a valid target for annotation {1}, this annotation can only be applied to these element types {2}
+
+referenceToNonAnnotationType=Type referred to is not an annotation type: {0}
+bindingNonRuntimeRetentionAnnotation=Annotation type {0} does not have runtime retention
+noMatchBecauseSourceRetention=Failing match because annotation &#39;&#39;{0}&#39;&#39; on type &#39;&#39;{1}&#39;&#39; has SOURCE retention.  Matching allowed when RetentionPolicy is CLASS or RUNTIME
+
+# Annotation value
+invalidAnnotationValue=Invalid annotation value &#39;&#39;{0}&#39;&#39;, expected {1} value
+unknownAnnotationValue=The annotation &#39;&#39;{0}&#39;&#39; does not define a value named &#39;&#39;{1}&#39;&#39;
+
+# Generics
+cantDecpMultipleParameterizations=Cannot declare parent {0} onto type {1} since it already has {2} in its hierarchy
+noParameterizedTypePatternInHandler=a parameterized type pattern may not be used in a handler pointcut expression
+incorrectNumberOfTypeArguments=Type pattern does not match because the wrong number of type parameters are specified: Type {0} requires {1} parameter(s)
+violatesTypeVariableBounds=Type {0} does not meet the specification for type parameter {1} ({2}) in generic type {3}
+notAGenericType=Type pattern does not match because {0} is not a generic type
+noStaticInitJPsForParameterizedTypes=no static initialization join points for parameterized types, use raw type instead
+noParameterizedTypePatternInWithin=parameterized type pattern not supported by &#39;within&#39;, use a raw type pattern instead
+noParameterizedTypesInThisAndTarget=parameterized types not supported for this and target pointcuts (erasure limitation)
+noParameterizedTypesInGetAndSet=can&#39;t use parameterized type patterns for the declaring type of a get or set pointcut expression (use the raw type instead)
+noInitJPsForParameterizedTypes=no [pre]initialization join points for parameterized types, use raw type instead
+noGenericThrowables=invalid throws pattern: a generic class may not be a direct or indirect subclass of Throwable
+noParameterizedDeclaringTypesWithinCode=can&#39;t use parameterized type patterns for the declaring type of a withincode pointcut expression (use the raw type instead)
+noParameterizedDeclaringTypesInExecution=can&#39;t use parameterized type patterns for the declaring type of an execution pointcut expression (use the raw type instead)
+noParameterizedDeclaringTypesInCall=can&#39;t use parameterized type patterns for the declaring type of a call pointcut expression (use the raw type instead)
+noRawTypePointcutReferences=cannot use a raw type reference to refer to a pointcut in a generic type (use a parameterized reference instead)
+
+hasMemberNotEnabled=the type pattern {0} can only be used when the -XhasMember option is set
+mustKeepOverweavingOnceStart=the type {0} was previously subject to overweaving and after that can only be woven again in overweaving mode
+
+# Java5 features used in pre-Java 5 environment
+atannotationNeedsJava5=the @annotation pointcut expression is only supported at Java 5 compliance level or above
+atwithinNeedsJava5=the @within pointcut expression is only supported at Java 5 compliance level or above
+atwithincodeNeedsJava5=the @withincode pointcut expression is only supported at Java 5 compliance level or above
+atthisNeedsJava5=the @this pointcut expression is only supported at Java 5 compliance level or above
+attargetNeedsJava5=the @target pointcut expression is only supported at Java 5 compliance level or above
+atargsNeedsJava5=the @args pointcut expression is only supported at Java 5 compliance level or above
+declareAtTypeNeedsJava5=declare @type is only supported at Java 5 compliance level or above
+declareAtMethodNeedsJava5=declare @method is only supported at Java 5 compliance level or above
+declareAtFieldNeedsJava5=declare @field is only supported at Java 5 compliance level or above
+declareAtConsNeedsJava5=declare @constructor is only supported at Java 5 compliance level or above
+annotationsRequireJava5=annotation type patterns are only supported at Java 5 compliance level or above
+
+# @AspectJ
+returningFormalNotDeclaredInAdvice=the last parameter of this advice must be named &#39;&#39;{0}&#39;&#39; to bind the returning value
+thrownFormalNotDeclaredInAdvice=the last parameter of this advice must be named &#39;&#39;{0}&#39;&#39; and be of a subtype of Throwable</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Nov 17, 2021, 12:44:06 PM</div>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("properties",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            // Deprecated
+            // $(window).load(function () {
+            //     $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            // });
+            $(window).on('load', function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 8192152;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

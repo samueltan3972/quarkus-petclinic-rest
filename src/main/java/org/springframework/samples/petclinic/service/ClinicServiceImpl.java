@@ -17,6 +17,10 @@ package org.springframework.samples.petclinic.service;
 
 import java.util.Collection;
 
+import javax.enterprise.context.ApplicationScoped;
+import javax.inject.Inject;
+import javax.inject.Named;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.dao.DataAccessException;
@@ -45,31 +49,48 @@ import org.springframework.transaction.annotation.Transactional;
  * @author Vitaliy Fedoriv
  */
 @Service
-
+//@ApplicationScoped
+//@Named("ClinicServiceImpl")
 public class ClinicServiceImpl implements ClinicService {
 
-    private PetRepository petRepository;
+	@Inject
+	@Named(value = "jpaPetRepositoryImpl")
+	private PetRepository petRepository;
+	
+	@Inject
+	@Named("jpaVetRepositoryImpl")
     private VetRepository vetRepository;
+	
+	@Inject
+	@Named(value = "jpaOwnerRepositoryImpl")
     private OwnerRepository ownerRepository;
+	
+	@Inject
+	@Named(value = "jpaVisitRepositoryImpl")
     private VisitRepository visitRepository;
+	
+	@Inject
+	@Named("jpaSpecialtyRepositoryImpl")
     private SpecialtyRepository specialtyRepository;
+	
+	@Inject
+	@Named(value = "jpaPetTypeRepositoryImpl")
 	private PetTypeRepository petTypeRepository;
 
-    @Autowired
-     public ClinicServiceImpl(
-       		 PetRepository petRepository,
-    		 VetRepository vetRepository,
-    		 OwnerRepository ownerRepository,
-    		 VisitRepository visitRepository,
-    		 SpecialtyRepository specialtyRepository,
-			 PetTypeRepository petTypeRepository) {
-        this.petRepository = petRepository;
-        this.vetRepository = vetRepository;
-        this.ownerRepository = ownerRepository;
-        this.visitRepository = visitRepository;
-        this.specialtyRepository = specialtyRepository; 
-		this.petTypeRepository = petTypeRepository;
-    }
+//     public ClinicServiceImpl(
+//       		 PetRepository petRepository,
+//    		 VetRepository vetRepository,
+//    		 OwnerRepository ownerRepository,
+//    		 VisitRepository visitRepository,
+//    		 SpecialtyRepository specialtyRepository,
+//			 PetTypeRepository petTypeRepository) {
+//        this.petRepository = petRepository;
+//        this.vetRepository = vetRepository;
+//        this.ownerRepository = ownerRepository;
+//        this.visitRepository = visitRepository;
+//        this.specialtyRepository = specialtyRepository; 
+//		this.petTypeRepository = petTypeRepository;
+//    }
 
 	@Override
 	@Transactional(readOnly = true)

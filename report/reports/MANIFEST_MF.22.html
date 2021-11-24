@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for MANIFEST.MF</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/mta-icon.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="8192152">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_spring_petclinic_rest.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_spring_petclinic_rest.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_spring_petclinic_rest.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_spring_petclinic_rest.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Migration Toolkit for Applications by Red Hat found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="8192152">
+                            spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/hsqldb-2.5.1.jar/META-INF/MANIFEST.MF
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Manifest</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+Manifest-Version: 1.0
+Bundle-Description: HyperSQL Lightweight 100% Java SQL Database Engine
+Implementation-Title: Standard runtime
+Bundle-SymbolicName: org.hsqldb.hsqldb
+Implementation-Version: 2.5.1
+Bundle-ManifestVersion: 2
+Bnd-LastModified: 1593380763751
+Specification-Vendor: The HSQL Development Group
+Specification-Title: HSQLDB
+Import-Package: javax.crypto;resolution:=optional,javax.crypto.spec;re
+ solution:=optional,javax.naming;resolution:=optional,javax.naming.dir
+ ectory;resolution:=optional,javax.naming.ldap;resolution:=optional,ja
+ vax.naming.spi;resolution:=optional,javax.net;resolution:=optional,ja
+ vax.net.ssl;resolution:=optional,javax.security.auth;resolution:=opti
+ onal,javax.security.auth.callback;resolution:=optional,javax.security
+ .auth.login;resolution:=optional,javax.servlet;resolution:=optional,j
+ avax.servlet.http;resolution:=optional,javax.sql;resolution:=optional
+ ,javax.swing;resolution:=optional,javax.swing.border;resolution:=opti
+ onal,javax.swing.event;resolution:=optional,javax.swing.table;resolut
+ ion:=optional,javax.swing.tree;resolution:=optional,javax.transaction
+ .xa;resolution:=optional,javax.xml.parsers;resolution:=optional,javax
+ .xml.stream;resolution:=optional,javax.xml.transform;resolution:=opti
+ onal,javax.xml.transform.dom;resolution:=optional,javax.xml.transform
+ .sax;resolution:=optional,javax.xml.transform.stax;resolution:=option
+ al,javax.xml.transform.stream;resolution:=optional,org.hsqldb;resolut
+ ion:=optional,org.hsqldb.auth;resolution:=optional,org.hsqldb.dbinfo;
+ resolution:=optional,org.hsqldb.error;resolution:=optional,org.hsqldb
+ .index;resolution:=optional,org.hsqldb.jdbc;resolution:=optional,org.
+ hsqldb.jdbc.pool;resolution:=optional,org.hsqldb.lib;resolution:=opti
+ onal,org.hsqldb.lib.java;resolution:=optional,org.hsqldb.lib.tar;reso
+ lution:=optional,org.hsqldb.lib.tar.rb;resolution:=optional,org.hsqld
+ b.map;resolution:=optional,org.hsqldb.navigator;resolution:=optional,
+ org.hsqldb.persist;resolution:=optional,org.hsqldb.resources;resoluti
+ on:=optional,org.hsqldb.result;resolution:=optional,org.hsqldb.rights
+ ;resolution:=optional,org.hsqldb.rowio;resolution:=optional,org.hsqld
+ b.scriptio;resolution:=optional,org.hsqldb.server;resolution:=optiona
+ l,org.hsqldb.trigger;resolution:=optional,org.hsqldb.types;resolution
+ :=optional,org.hsqldb.util;resolution:=optional,org.w3c.dom;resolutio
+ n:=optional,org.w3c.dom.bootstrap;resolution:=optional,org.xml.sax;re
+ solution:=optional
+Tool: Bnd-0.0.384
+Main-Class: org.hsqldb.util.DatabaseManagerSwing
+Implementation-Vendor: The HSQL Development Group
+Ant-Version: Apache Ant 1.9.3
+Originally-Created-By: 1.8.0_252-b09 (Oracle Corporation)
+Export-Package: org.hsqldb;uses:=&quot;org.hsqldb.server,org.hsqldb.error,o
+ rg.hsqldb.types,org.hsqldb.lib,org.hsqldb.navigator,org.hsqldb.result
+ ,org.hsqldb.persist,org.hsqldb.map,org.hsqldb.jdbc,org.hsqldb.rowio,o
+ rg.hsqldb.rights,org.hsqldb.index,org.hsqldb.dbinfo,org.hsqldb.lib.ja
+ va,org.hsqldb.scriptio,org.hsqldb.trigger&quot;,org.hsqldb.auth;uses:=&quot;org
+ .hsqldb.jdbc,org.hsqldb.types,org.hsqldb.lib,javax.security.auth.call
+ back,javax.security.auth,javax.security.auth.login,javax.naming.direc
+ tory,javax.naming.ldap,javax.naming,javax.net.ssl&quot;,org.hsqldb.dbinfo;
+ uses:=&quot;org.hsqldb.map,org.hsqldb,org.hsqldb.rights,org.hsqldb.resourc
+ es,org.hsqldb.persist,org.hsqldb.lib,org.hsqldb.result,org.hsqldb.typ
+ es,org.hsqldb.index&quot;,org.hsqldb.error;uses:=&quot;org.hsqldb.result,org.hs
+ qldb,org.hsqldb.resources,org.hsqldb.lib&quot;,org.hsqldb.index;uses:=&quot;org
+ .hsqldb.persist,org.hsqldb.navigator,org.hsqldb,org.hsqldb.types,org.
+ hsqldb.error,org.hsqldb.rights,org.hsqldb.lib,org.hsqldb.map,org.hsql
+ db.rowio,org.hsqldb.result&quot;,org.hsqldb.jdbc;uses:=&quot;org.hsqldb.error,o
+ rg.hsqldb.result,org.hsqldb.navigator,org.hsqldb,org.hsqldb.types,org
+ .hsqldb.lib.java,org.hsqldb.lib,javax.sql,org.hsqldb.persist,javax.na
+ ming,javax.naming.spi,org.hsqldb.jdbc.pool,org.w3c.dom,org.xml.sax,ja
+ vax.xml.parsers,javax.xml.stream,javax.xml.transform.sax,javax.xml.tr
+ ansform.stax,javax.xml.transform.dom,javax.xml.transform,javax.xml.tr
+ ansform.stream,org.w3c.dom.bootstrap&quot;,org.hsqldb.jdbc.pool;uses:=&quot;org
+ .hsqldb.jdbc,javax.sql,org.hsqldb.lib,javax.naming,javax.transaction.
+ xa,org.hsqldb.error,org.hsqldb&quot;,org.hsqldb.lib;uses:=&quot;org.hsqldb.lib.
+ java,org.hsqldb.map,org.hsqldb&quot;,org.hsqldb.lib.java,org.hsqldb.lib.ta
+ r;uses:=&quot;org.hsqldb.lib&quot;,org.hsqldb.lib.tar.rb,org.hsqldb.map;uses:=&quot;
+ org.hsqldb.lib,org.hsqldb.types&quot;,org.hsqldb.navigator;uses:=&quot;org.hsql
+ db,org.hsqldb.error,org.hsqldb.result,org.hsqldb.rowio,org.hsqldb.typ
+ es,org.hsqldb.lib,org.hsqldb.index,org.hsqldb.persist&quot;,org.hsqldb.per
+ sist;uses:=&quot;org.hsqldb.map,org.hsqldb.lib,org.hsqldb.rowio,org.hsqldb
+ .error,org.hsqldb,javax.crypto,javax.crypto.spec,org.hsqldb.result,or
+ g.hsqldb.navigator,org.hsqldb.types,org.hsqldb.scriptio,org.hsqldb.in
+ dex,org.hsqldb.rights,org.hsqldb.lib.tar,org.hsqldb.dbinfo,org.hsqldb
+ .lib.java&quot;,org.hsqldb.resources;uses:=&quot;org.hsqldb.lib&quot;,org.hsqldb.res
+ ult;uses:=&quot;org.hsqldb.error,org.hsqldb.navigator,org.hsqldb.persist,o
+ rg.hsqldb.map,org.hsqldb,org.hsqldb.types,org.hsqldb.lib,org.hsqldb.r
+ owio&quot;,org.hsqldb.rights;uses:=&quot;org.hsqldb.error,org.hsqldb,org.hsqldb
+ .types,org.hsqldb.lib,org.hsqldb.lib.java,org.hsqldb.result&quot;,org.hsql
+ db.rowio;uses:=&quot;org.hsqldb.error,org.hsqldb.types,org.hsqldb.lib,org.
+ hsqldb.map,org.hsqldb,org.hsqldb.persist,org.hsqldb.scriptio,org.hsql
+ db.lib.java&quot;,org.hsqldb.scriptio;uses:=&quot;org.hsqldb.persist,org.hsqldb
+ ,org.hsqldb.lib.java,org.hsqldb.lib,org.hsqldb.rowio,org.hsqldb.error
+ ,org.hsqldb.types,org.hsqldb.result,org.hsqldb.map,org.hsqldb.navigat
+ or&quot;,org.hsqldb.server;uses:=&quot;org.hsqldb.error,org.hsqldb.persist,org.
+ hsqldb.jdbc,org.hsqldb,javax.net.ssl,org.hsqldb.lib,javax.net,org.hsq
+ ldb.types,org.hsqldb.result,org.hsqldb.resources,org.hsqldb.map,org.h
+ sqldb.navigator,org.hsqldb.rowio,javax.servlet,javax.servlet.http,org
+ .hsqldb.lib.java&quot;,org.hsqldb.trigger,org.hsqldb.types;uses:=&quot;org.hsql
+ db.error,org.hsqldb.jdbc,org.hsqldb,org.hsqldb.lib,org.hsqldb.map,org
+ .hsqldb.result,org.hsqldb.lib.java,org.hsqldb.persist,org.hsqldb.righ
+ ts&quot;,org.hsqldb.util;uses:=&quot;javax.swing,javax.swing.border,org.hsqldb.
+ lib,javax.swing.tree,javax.swing.table,javax.swing.event&quot;
+Bundle-Version: 2.5.1
+Bundle-Name: HSQLDB
+Build-Vendor: blaine
+Created-By: 1.8.0_252 (Oracle Corporation)
+Specification-Version: 2.5.1
+
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Nov 17, 2021, 12:43:59 PM</div>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("manifest",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            // Deprecated
+            // $(window).load(function () {
+            //     $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            // });
+            $(window).on('load', function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 8192152;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

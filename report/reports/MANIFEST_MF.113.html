@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for MANIFEST.MF</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/mta-icon.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="8192152">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_spring_petclinic_rest.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_spring_petclinic_rest.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_spring_petclinic_rest.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_spring_petclinic_rest.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Migration Toolkit for Applications by Red Hat found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="8192152">
+                            spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/tomcat-embed-core-9.0.41.jar/META-INF/MANIFEST.MF
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Manifest</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+Manifest-Version: 1.0
+Bnd-LastModified: 1606995905949
+Bundle-ManifestVersion: 2
+Bundle-Name: tomcat-embed-core
+Bundle-SymbolicName: org.apache.tomcat-embed-core
+Bundle-Version: 9.0.41
+Created-By: 1.8.0_275 (AdoptOpenJDK)
+DSTAMP: 20201203
+Export-Package: javax.security.auth.message;version=&quot;1.1&quot;;uses:=&quot;javax
+ .security.auth,javax.security.auth.login&quot;,javax.security.auth.message
+ .callback;version=&quot;1.1&quot;;uses:=&quot;javax.crypto,javax.security.auth,javax
+ .security.auth.callback,javax.security.auth.x500&quot;,javax.security.auth
+ .message.config;version=&quot;1.1&quot;;uses:=&quot;javax.security.auth,javax.securi
+ ty.auth.callback,javax.security.auth.message&quot;,javax.security.auth.mes
+ sage.module;version=&quot;1.1&quot;;uses:=&quot;javax.security.auth.callback,javax.s
+ ecurity.auth.message&quot;,javax.servlet;version=&quot;4.0&quot;;uses:=&quot;javax.servle
+ t.annotation,javax.servlet.descriptor&quot;,javax.servlet.annotation;versi
+ on=&quot;4.0&quot;;uses:=&quot;javax.servlet&quot;,javax.servlet.descriptor;version=&quot;4.0&quot;
+ ,javax.servlet.http;version=&quot;4.0&quot;;uses:=&quot;javax.servlet&quot;,javax.servlet
+ .resources;version=&quot;4.0&quot;,org.apache.catalina;uses:=&quot;javax.management,
+ javax.naming,javax.servlet,javax.servlet.descriptor,javax.servlet.htt
+ p,org.apache.catalina.connector,org.apache.catalina.deploy,org.apache
+ .catalina.mapper,org.apache.catalina.startup,org.apache.juli.logging,
+ org.apache.tomcat,org.apache.tomcat.util.descriptor.web,org.apache.to
+ mcat.util.http,org.ietf.jgss&quot;;version=&quot;9.0.41&quot;,org.apache.catalina.au
+ thenticator;uses:=&quot;javax.security.auth.message.config,javax.servlet,j
+ avax.servlet.http,org.apache.catalina,org.apache.catalina.connector,o
+ rg.apache.catalina.util,org.apache.catalina.valves,org.apache.tomcat.
+ util.buf,org.apache.tomcat.util.descriptor.web,org.apache.tomcat.util
+ .res,org.ietf.jgss&quot;;version=&quot;9.0.41&quot;,org.apache.catalina.authenticato
+ r.jaspic;uses:=&quot;javax.security.auth,javax.security.auth.callback,java
+ x.security.auth.message,javax.security.auth.message.config,javax.secu
+ rity.auth.message.module,javax.servlet.http,org.apache.catalina,org.a
+ pache.tomcat.util.res&quot;;version=&quot;9.0.41&quot;,org.apache.catalina.connector
+ ;uses:=&quot;javax.security.auth,javax.servlet,javax.servlet.http,org.apac
+ he.catalina,org.apache.catalina.core,org.apache.catalina.mapper,org.a
+ pache.catalina.util,org.apache.coyote,org.apache.tomcat.util.buf,org.
+ apache.tomcat.util.http,org.apache.tomcat.util.net,org.apache.tomcat.
+ util.res&quot;;version=&quot;9.0.41&quot;,org.apache.catalina.core;uses:=&quot;javax.mana
+ gement,javax.naming,javax.servlet,javax.servlet.descriptor,javax.serv
+ let.http,org.apache.catalina,org.apache.catalina.connector,org.apache
+ .catalina.deploy,org.apache.catalina.mapper,org.apache.catalina.start
+ up,org.apache.catalina.util,org.apache.coyote,org.apache.juli.logging
+ ,org.apache.naming,org.apache.tomcat,org.apache.tomcat.util.descripto
+ r.web,org.apache.tomcat.util.http,org.apache.tomcat.util.http.fileupl
+ oad,org.apache.tomcat.util.res,org.apache.tomcat.util.threads&quot;;versio
+ n=&quot;9.0.41&quot;,org.apache.catalina.deploy;uses:=&quot;org.apache.catalina,org.
+ apache.catalina.util,org.apache.tomcat.util.descriptor.web&quot;;version=&quot;
+ 9.0.41&quot;,org.apache.catalina.filters;uses:=&quot;javax.servlet,javax.servle
+ t.http,org.apache.juli.logging,org.apache.tomcat.util.res&quot;;version=&quot;9
+ .0.41&quot;,org.apache.catalina.loader;uses:=&quot;org.apache.catalina,org.apac
+ he.catalina.util,org.apache.juli,org.apache.tomcat,org.apache.tomcat.
+ util.res,org.apache.tomcat.util.security&quot;;version=&quot;9.0.41&quot;,org.apache
+ .catalina.manager;uses:=&quot;javax.management,javax.naming,javax.servlet,
+ javax.servlet.http,org.apache.catalina,org.apache.catalina.util,org.a
+ pache.tomcat.util.modeler,org.apache.tomcat.util.res&quot;;version=&quot;9.0.41
+ &quot;,org.apache.catalina.manager.host;uses:=&quot;javax.servlet,javax.servlet
+ .http,org.apache.catalina,org.apache.tomcat.util.res&quot;;version=&quot;9.0.41
+ &quot;,org.apache.catalina.manager.util;uses:=&quot;javax.servlet.http,org.apac
+ he.catalina&quot;;version=&quot;9.0.41&quot;,org.apache.catalina.mapper;uses:=&quot;javax
+ .servlet.http,org.apache.catalina,org.apache.catalina.util,org.apache
+ .tomcat.util.buf&quot;;version=&quot;9.0.41&quot;,org.apache.catalina.mbeans;uses:=&quot;
+ javax.management,javax.management.remote,javax.naming,javax.net.ssl,j
+ avax.rmi.ssl,org.apache.catalina,org.apache.catalina.connector,org.ap
+ ache.catalina.core,org.apache.tomcat.util.descriptor.web,org.apache.t
+ omcat.util.modeler,org.apache.tomcat.util.net,org.apache.tomcat.util.
+ res&quot;;version=&quot;9.0.41&quot;,org.apache.catalina.realm;uses:=&quot;javax.manageme
+ nt,javax.naming,javax.naming.directory,javax.net.ssl,javax.security.a
+ uth,javax.security.auth.callback,javax.security.auth.login,javax.secu
+ rity.auth.spi,org.apache.catalina,org.apache.catalina.connector,org.a
+ pache.catalina.util,org.apache.juli.logging,org.apache.tomcat.util.co
+ llections,org.apache.tomcat.util.descriptor.web,org.apache.tomcat.uti
+ l.digester,org.apache.tomcat.util.res,org.ietf.jgss&quot;;version=&quot;9.0.41&quot;
+ ,org.apache.catalina.security;uses:=&quot;javax.servlet,org.apache.catalin
+ a&quot;;version=&quot;9.0.41&quot;,org.apache.catalina.servlets;uses:=&quot;javax.servlet
+ ,javax.servlet.http,javax.xml.parsers,javax.xml.transform,org.apache.
+ catalina,org.apache.tomcat.util.http,org.apache.tomcat.util.res&quot;;vers
+ ion=&quot;9.0.41&quot;,org.apache.catalina.session;uses:=&quot;javax.servlet,javax.s
+ ervlet.http,javax.sql,org.apache.catalina,org.apache.catalina.util,or
+ g.apache.tomcat.util.res&quot;;version=&quot;9.0.41&quot;,org.apache.catalina.startu
+ p;uses:=&quot;javax.annotation,javax.management,javax.servlet,javax.servle
+ t.descriptor,org.apache.catalina,org.apache.catalina.connector,org.ap
+ ache.catalina.core,org.apache.catalina.deploy,org.apache.catalina.uti
+ l,org.apache.juli.logging,org.apache.tomcat,org.apache.tomcat.util.bc
+ el.classfile,org.apache.tomcat.util.descriptor.web,org.apache.tomcat.
+ util.digester,org.apache.tomcat.util.file,org.apache.tomcat.util.http
+ ,org.apache.tomcat.util.res,org.xml.sax&quot;;version=&quot;9.0.41&quot;,org.apache.
+ catalina.users;uses:=&quot;javax.naming,javax.naming.spi,org.apache.catali
+ na&quot;;version=&quot;9.0.41&quot;,org.apache.catalina.util;uses:=&quot;javax.management
+ ,javax.servlet.http,org.apache.catalina,org.apache.juli.logging,org.a
+ pache.tomcat.util.descriptor.web,org.w3c.dom&quot;;version=&quot;9.0.41&quot;,org.ap
+ ache.catalina.valves;uses:=&quot;javax.servlet,org.apache.catalina,org.apa
+ che.catalina.connector,org.apache.catalina.util,org.apache.juli.loggi
+ ng,org.apache.tomcat.util.res&quot;;version=&quot;9.0.41&quot;,org.apache.catalina.v
+ alves.rewrite;uses:=&quot;javax.servlet,org.apache.catalina,org.apache.cat
+ alina.connector,org.apache.catalina.valves,org.apache.tomcat.util.res
+ &quot;;version=&quot;9.0.41&quot;,org.apache.catalina.webresources;uses:=&quot;org.apache
+ .catalina,org.apache.catalina.util,org.apache.juli.logging,org.apache
+ .tomcat.util.res&quot;;version=&quot;9.0.41&quot;,org.apache.catalina.webresources.w
+ ar;version=&quot;9.0.41&quot;,org.apache.coyote;uses:=&quot;javax.management,javax.s
+ ervlet,javax.servlet.http,org.apache.coyote.http11,org.apache.coyote.
+ http11.upgrade,org.apache.juli.logging,org.apache.tomcat,org.apache.t
+ omcat.util.buf,org.apache.tomcat.util.collections,org.apache.tomcat.u
+ til.http,org.apache.tomcat.util.log,org.apache.tomcat.util.modeler,or
+ g.apache.tomcat.util.net&quot;;version=&quot;9.0.41&quot;,org.apache.coyote.ajp;uses
+ :=&quot;org.apache.coyote,org.apache.juli.logging,org.apache.tomcat.util.b
+ uf,org.apache.tomcat.util.net,org.apache.tomcat.util.res&quot;;version=&quot;9.
+ 0.41&quot;,org.apache.coyote.http11;uses:=&quot;javax.management,org.apache.coy
+ ote,org.apache.coyote.http11.upgrade,org.apache.juli.logging,org.apac
+ he.tomcat.util.buf,org.apache.tomcat.util.http.parser,org.apache.tomc
+ at.util.net,org.apache.tomcat.util.res&quot;;version=&quot;9.0.41&quot;,org.apache.c
+ oyote.http11.filters;uses:=&quot;org.apache.coyote,org.apache.coyote.http1
+ 1,org.apache.juli.logging,org.apache.tomcat.util.buf,org.apache.tomca
+ t.util.net&quot;;version=&quot;9.0.41&quot;,org.apache.coyote.http11.upgrade;uses:=&quot;
+ javax.servlet,javax.servlet.http,org.apache.coyote,org.apache.juli.lo
+ gging,org.apache.tomcat.util.modeler,org.apache.tomcat.util.net&quot;;vers
+ ion=&quot;9.0.41&quot;,org.apache.coyote.http2;uses:=&quot;javax.servlet.http,org.ap
+ ache.coyote,org.apache.coyote.http11,org.apache.coyote.http11.upgrade
+ ,org.apache.tomcat.util.net,org.apache.tomcat.util.res&quot;;version=&quot;9.0.
+ 41&quot;,org.apache.juli;version=&quot;9.0.41&quot;,org.apache.juli.logging;version=
+ &quot;9.0.41&quot;,org.apache.naming;uses:=&quot;javax.naming&quot;;version=&quot;9.0.41&quot;,org.
+ apache.naming.factory;uses:=&quot;javax.naming,javax.naming.spi,javax.sql,
+ org.apache.naming&quot;;version=&quot;9.0.41&quot;,org.apache.naming.java;uses:=&quot;jav
+ ax.naming,javax.naming.spi&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat;uses:=
+ &quot;javax.naming,javax.servlet&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.jni;v
+ ersion=&quot;9.0.41&quot;,org.apache.tomcat.util;uses:=&quot;org.apache.tomcat.util.
+ res&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.util.bcel.classfile;version=&quot;
+ 9.0.41&quot;,org.apache.tomcat.util.buf;uses:=&quot;org.apache.tomcat.util.res&quot;
+ ;version=&quot;9.0.41&quot;,org.apache.tomcat.util.codec.binary;uses:=&quot;org.apac
+ he.tomcat.util.res&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.util.collectio
+ ns;version=&quot;9.0.41&quot;,org.apache.tomcat.util.compat;uses:=&quot;javax.net.ss
+ l&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.util.descriptor;uses:=&quot;org.apac
+ he.juli.logging,org.apache.tomcat.util.digester,org.xml.sax,org.xml.s
+ ax.ext&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.util.descriptor.tagplugin;
+ uses:=&quot;javax.servlet,org.xml.sax&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.
+ util.descriptor.web;uses:=&quot;javax.servlet,javax.servlet.descriptor,org
+ .apache.juli.logging,org.apache.tomcat,org.apache.tomcat.util.digeste
+ r,org.apache.tomcat.util.res,org.xml.sax&quot;;version=&quot;9.0.41&quot;,org.apache
+ .tomcat.util.digester;uses:=&quot;javax.xml.parsers,org.apache.juli.loggin
+ g,org.apache.tomcat.util,org.apache.tomcat.util.res,org.xml.sax,org.x
+ ml.sax.ext&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.util.file;version=&quot;9.0
+ .41&quot;,org.apache.tomcat.util.http;uses:=&quot;javax.servlet.http,org.apache
+ .tomcat.util.buf&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.util.http.fileup
+ load;uses:=&quot;org.apache.tomcat.util.http.fileupload.impl,org.apache.to
+ mcat.util.http.fileupload.util&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.ut
+ il.http.fileupload.disk;uses:=&quot;org.apache.tomcat.util.http.fileupload
+ &quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.util.http.fileupload.impl;uses:=
+ &quot;org.apache.tomcat.util.http.fileupload&quot;;version=&quot;9.0.41&quot;,org.apache.
+ tomcat.util.http.fileupload.servlet;uses:=&quot;javax.servlet.http,org.apa
+ che.tomcat.util.http.fileupload&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.u
+ til.http.fileupload.util;uses:=&quot;org.apache.tomcat.util.http.fileuploa
+ d&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.util.http.parser;uses:=&quot;org.apa
+ che.tomcat.util.buf,org.apache.tomcat.util.http&quot;;version=&quot;9.0.41&quot;,org
+ .apache.tomcat.util.log;uses:=&quot;org.apache.juli.logging&quot;;version=&quot;9.0.
+ 41&quot;,org.apache.tomcat.util.modeler;uses:=&quot;javax.management,javax.mana
+ gement.modelmbean&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.util.modeler.mo
+ dules;uses:=&quot;javax.management,org.apache.tomcat.util.modeler,org.apac
+ he.tomcat.util.res&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.util.net;uses:
+ =&quot;javax.management,javax.net.ssl,org.apache.juli.logging,org.apache.t
+ omcat.jni,org.apache.tomcat.util.collections,org.apache.tomcat.util.n
+ et.openssl,org.apache.tomcat.util.net.openssl.ciphers,org.apache.tomc
+ at.util.res,org.apache.tomcat.util.threads&quot;;version=&quot;9.0.41&quot;,org.apac
+ he.tomcat.util.net.openssl;uses:=&quot;javax.net.ssl,org.apache.juli.loggi
+ ng,org.apache.tomcat.util.net&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.uti
+ l.net.openssl.ciphers;version=&quot;9.0.41&quot;,org.apache.tomcat.util.res;ver
+ sion=&quot;9.0.41&quot;,org.apache.tomcat.util.scan;uses:=&quot;javax.servlet,org.ap
+ ache.tomcat&quot;;version=&quot;9.0.41&quot;,org.apache.tomcat.util.security;version
+ =&quot;9.0.41&quot;,org.apache.tomcat.util.threads;uses:=&quot;org.apache.tomcat.uti
+ l.res&quot;;version=&quot;9.0.41&quot;,org.apache.catalina.ssi;version=&quot;9.0.41&quot;
+Implementation-Title: Apache Tomcat
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 9.0.41
+Import-Package: javax.annotation,javax.annotation.security,javax.crypt
+ o,javax.crypto.spec,javax.ejb,javax.imageio,javax.mail,javax.mail.int
+ ernet,javax.management,javax.management.loading,javax.management.mode
+ lmbean,javax.management.openmbean,javax.management.remote,javax.manag
+ ement.remote.rmi,javax.naming,javax.naming.directory,javax.naming.lda
+ p,javax.naming.spi,javax.net,javax.net.ssl,javax.persistence,javax.rm
+ i.ssl,javax.security.auth,javax.security.auth.callback,javax.security
+ .auth.login,javax.security.auth.message;version=&quot;[1.1,2)&quot;,javax.secur
+ ity.auth.message.callback;version=&quot;[1.1,2)&quot;,javax.security.auth.messa
+ ge.config;version=&quot;[1.1,2)&quot;,javax.security.auth.message.module;versio
+ n=&quot;[1.1,2)&quot;,javax.security.auth.spi,javax.security.auth.x500,javax.se
+ curity.cert,javax.servlet;version=&quot;[4.0,5)&quot;,javax.servlet.annotation;
+ version=&quot;[4.0,5)&quot;,javax.servlet.descriptor;version=&quot;[4.0,5)&quot;,javax.se
+ rvlet.http;version=&quot;[4.0,5)&quot;,javax.sql,javax.wsdl,javax.wsdl.extensio
+ ns,javax.wsdl.extensions.soap,javax.wsdl.factory,javax.wsdl.xml,javax
+ .xml.namespace,javax.xml.parsers,javax.xml.rpc,javax.xml.rpc.handler,
+ javax.xml.transform,javax.xml.transform.dom,javax.xml.transform.strea
+ m,javax.xml.ws,org.apache.catalina,org.apache.catalina.authenticator,
+ org.apache.catalina.authenticator.jaspic,org.apache.catalina.connecto
+ r,org.apache.catalina.core,org.apache.catalina.deploy,org.apache.cata
+ lina.filters,org.apache.catalina.loader,org.apache.catalina.manager,o
+ rg.apache.catalina.manager.util,org.apache.catalina.mapper,org.apache
+ .catalina.realm,org.apache.catalina.security,org.apache.catalina.sess
+ ion,org.apache.catalina.startup,org.apache.catalina.util,org.apache.c
+ atalina.valves,org.apache.catalina.webresources,org.apache.catalina.w
+ ebresources.war,org.apache.coyote,org.apache.coyote.ajp,org.apache.co
+ yote.http11,org.apache.coyote.http11.filters,org.apache.coyote.http11
+ .upgrade,org.apache.juli,org.apache.juli.logging,org.apache.naming,or
+ g.apache.naming.factory,org.apache.tomcat,org.apache.tomcat.jni,org.a
+ pache.tomcat.util,org.apache.tomcat.util.buf,org.apache.tomcat.util.c
+ odec.binary,org.apache.tomcat.util.collections,org.apache.tomcat.util
+ .compat,org.apache.tomcat.util.descriptor,org.apache.tomcat.util.desc
+ riptor.web,org.apache.tomcat.util.digester,org.apache.tomcat.util.fil
+ e,org.apache.tomcat.util.http,org.apache.tomcat.util.http.fileupload.
+ disk,org.apache.tomcat.util.http.fileupload.impl,org.apache.tomcat.ut
+ il.http.fileupload.servlet,org.apache.tomcat.util.http.fileupload.uti
+ l,org.apache.tomcat.util.http.parser,org.apache.tomcat.util.log,org.a
+ pache.tomcat.util.modeler,org.apache.tomcat.util.modeler.modules,org.
+ apache.tomcat.util.net.openssl.ciphers,org.apache.tomcat.util.res,org
+ .apache.tomcat.util.scan,org.apache.tomcat.util.security,org.apache.t
+ omcat.util.threads,org.ietf.jgss,org.w3c.dom,org.w3c.dom.ls,org.xml.s
+ ax,org.xml.sax.ext,org.xml.sax.helpers,sun.rmi.registry
+Private-Package: org.apache.naming.factory.webservices,org.apache.tomc
+ at.util.bcel,org.apache.tomcat.util.http.fileupload.util.mime,org.apa
+ che.tomcat.util.json,org.apache.tomcat.util.net.jsse,org.apache.tomca
+ t.util.threads.res
+Provide-Capability: osgi.contract;osgi.contract=JavaJASPIC;version:Lis
+ t&lt;Version&gt;=&quot;1.1,1&quot;;uses:=&quot;javax.security.auth.message,javax.security.
+ auth.message.callback,javax.security.auth.message.config,javax.securi
+ ty.auth.message.module&quot;,osgi.contract;osgi.contract=JavaServlet;versi
+ on:List&lt;Version&gt;=&quot;4.0,3.1,3,2.5&quot;;uses:=&quot;javax.servlet,javax.servlet.a
+ nnotation,javax.servlet.descriptor,javax.servlet.http,javax.servlet.r
+ esources&quot;
+Require-Capability: osgi.extender;filter:=&quot;(&amp;(osgi.extender=osgi.servi
+ celoader.processor)(version&gt;=1.0.0)(!(version&gt;=2.0.0)))&quot;,osgi.service
+ loader;filter:=&quot;(osgi.serviceloader=org.apache.juli.logging.Log)&quot;;osg
+ i.serviceloader=&quot;org.apache.juli.logging.Log&quot;,osgi.contract;osgi.cont
+ ract=JavaAnnotation;filter:=&quot;(&amp;(osgi.contract=JavaAnnotation)(version
+ =1.3.0))&quot;,osgi.ee;filter:=&quot;(&amp;(osgi.ee=JavaSE)(version=1.8))&quot;
+Specification-Title: Apache Tomcat
+Specification-Vendor: Apache Software Foundation
+Specification-Version: 9.0
+TODAY: December 3 2020
+Tool: Bnd-5.3.0.202011120120-SNAPSHOT
+TSTAMP: 1143
+X-Compile-Source-JDK: 8
+X-Compile-Target-JDK: 8
+
+Name: javax/security/auth/message/
+Implementation-Title: javax.security.auth.message
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 1.1.FR
+Specification-Title: Java Authentication SPI for Containers
+Specification-Vendor: Sun Microsystems, Inc.
+Specification-Version: 1.1
+
+Name: javax/security/auth/message/callback/
+Implementation-Title: javax.security.auth.message
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 1.1.FR
+Specification-Title: Java Authentication SPI for Containers
+Specification-Vendor: Sun Microsystems, Inc.
+Specification-Version: 1.1
+
+Name: javax/security/auth/message/config/
+Implementation-Title: javax.security.auth.message
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 1.1.FR
+Specification-Title: Java Authentication SPI for Containers
+Specification-Vendor: Sun Microsystems, Inc.
+Specification-Version: 1.1
+
+Name: javax/security/auth/message/module/
+Implementation-Title: javax.security.auth.message
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 1.1.FR
+Specification-Title: Java Authentication SPI for Containers
+Specification-Vendor: Sun Microsystems, Inc.
+Specification-Version: 1.1
+
+Name: javax/servlet/
+Implementation-Title: javax.servlet
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 4.0.FR
+Specification-Title: Java API for Servlets
+Specification-Vendor: Sun Microsystems, Inc.
+Specification-Version: 4.0
+
+Name: javax/servlet/annotation/
+Implementation-Title: javax.servlet
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 4.0.FR
+Specification-Title: Java API for Servlets
+Specification-Vendor: Sun Microsystems, Inc.
+Specification-Version: 4.0
+
+Name: javax/servlet/descriptor/
+Implementation-Title: javax.servlet
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 4.0.FR
+Specification-Title: Java API for Servlets
+Specification-Vendor: Sun Microsystems, Inc.
+Specification-Version: 4.0
+
+Name: javax/servlet/http/
+Implementation-Title: javax.servlet
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 4.0.FR
+Specification-Title: Java API for Servlets
+Specification-Vendor: Sun Microsystems, Inc.
+Specification-Version: 4.0
+
+Name: javax/servlet/resources/
+Implementation-Title: javax.servlet
+Implementation-Vendor: Apache Software Foundation
+Implementation-Version: 4.0.FR
+Specification-Title: Java API for Servlets
+Specification-Vendor: Sun Microsystems, Inc.
+Specification-Version: 4.0
+
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Nov 17, 2021, 12:44:07 PM</div>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("manifest",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            // Deprecated
+            // $(window).load(function () {
+            //     $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            // });
+            $(window).on('load', function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 8192152;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

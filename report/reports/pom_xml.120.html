@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for pom.xml</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/mta-icon.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="8192152">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_spring_petclinic_rest.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_spring_petclinic_rest.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_spring_petclinic_rest.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_spring_petclinic_rest.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Migration Toolkit for Applications by Red Hat found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="8192152">
+                            spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/HikariCP-3.4.5.jar/META-INF/maven/com.zaxxer/HikariCP/pom.xml
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">0</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Maven XML</span>
+                                </div>
+
+                                <ul class="classifications">
+                                            <li>
+                                                <div class="title">
+                                                    <em>Maven POM (pom.xml)</em>
+<a title='View Rule: DiscoverMavenProjectsRuleProvider_1' href='windup_ruleproviders.html#DiscoverMavenProjectsRuleProvider_1'><span class='glyphicon glyphicon-link rule-link'></span></a>                                                </div>
+                                                <div class="desc">Maven Project Object Model (POM) File</div>
+                                            </li>
+                                </ul>
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;
+   &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+
+   &lt;properties&gt;
+      &lt;project.build.sourceEncoding&gt;UTF-8&lt;/project.build.sourceEncoding&gt;
+      &lt;sureFireOptions11 /&gt;
+      &lt;sureFireForks11&gt;false&lt;/sureFireForks11&gt;
+      &lt;java11.sourceDirectory&gt;${project.basedir}/src/main/java11&lt;/java11.sourceDirectory&gt;
+      &lt;java11.build.outputDirectory&gt;${project.build.directory}/classes-java11&lt;/java11.build.outputDirectory&gt;
+      &lt;artifact.classifier /&gt;
+
+      &lt;docker.maven.plugin.fabric8.version&gt;0.33.0&lt;/docker.maven.plugin.fabric8.version&gt;
+      &lt;felix.bundle.plugin.version&gt;4.2.1&lt;/felix.bundle.plugin.version&gt;
+      &lt;felix.version&gt;6.0.1&lt;/felix.version&gt;
+      &lt;hibernate.version&gt;5.2.10.Final&lt;/hibernate.version&gt;
+      &lt;javassist.version&gt;3.24.1-GA&lt;/javassist.version&gt;
+      &lt;jndi.version&gt;0.11.4.1&lt;/jndi.version&gt;
+      &lt;maven.release.version&gt;2.5.3&lt;/maven.release.version&gt;
+      &lt;metrics.version&gt;3.2.4&lt;/metrics.version&gt;
+      &lt;micrometer.version&gt;1.3.2&lt;/micrometer.version&gt;
+      &lt;simpleclient.version&gt;0.0.26&lt;/simpleclient.version&gt;
+      &lt;mockito.version&gt;3.2.4&lt;/mockito.version&gt;
+      &lt;pax.exam.version&gt;4.13.1&lt;/pax.exam.version&gt;
+      &lt;pax.url.version&gt;2.5.4&lt;/pax.url.version&gt;
+      &lt;postgresql.version&gt;42.1.4&lt;/postgresql.version&gt;
+      &lt;slf4j.version&gt;1.7.25&lt;/slf4j.version&gt;
+      &lt;log4j.version&gt;2.11.1&lt;/log4j.version&gt;
+      &lt;commons.csv.version&gt;1.5&lt;/commons.csv.version&gt;
+      &lt;h2.version&gt;1.4.196&lt;/h2.version&gt;
+      &lt;junit.version&gt;4.12&lt;/junit.version&gt;
+   &lt;/properties&gt;
+
+   &lt;groupId&gt;com.zaxxer&lt;/groupId&gt;
+   &lt;artifactId&gt;HikariCP&lt;/artifactId&gt;
+   &lt;version&gt;3.4.5&lt;/version&gt;
+   &lt;packaging&gt;bundle&lt;/packaging&gt;
+
+   &lt;name&gt;HikariCP&lt;/name&gt;
+   &lt;description&gt;Ultimate JDBC Connection Pool&lt;/description&gt;
+   &lt;url&gt;https://github.com/brettwooldridge/HikariCP&lt;/url&gt;
+
+   &lt;organization&gt;
+      &lt;name&gt;Zaxxer.com&lt;/name&gt;
+      &lt;url&gt;https://github.com/brettwooldridge&lt;/url&gt;
+   &lt;/organization&gt;
+
+   &lt;scm&gt;
+      &lt;connection&gt;scm:git:git@github.com:brettwooldridge/HikariCP.git&lt;/connection&gt;
+      &lt;developerConnection&gt;scm:git:git@github.com:brettwooldridge/HikariCP.git&lt;/developerConnection&gt;
+      &lt;url&gt;git@github.com:brettwooldridge/HikariCP.git&lt;/url&gt;
+      &lt;tag&gt;HikariCP-3.4.5&lt;/tag&gt;
+   &lt;/scm&gt;
+
+   &lt;licenses&gt;
+      &lt;license&gt;
+         &lt;name&gt;The Apache Software License, Version 2.0&lt;/name&gt;
+         &lt;url&gt;http://www.apache.org/licenses/LICENSE-2.0.txt&lt;/url&gt;
+         &lt;distribution&gt;repo&lt;/distribution&gt;
+      &lt;/license&gt;
+   &lt;/licenses&gt;
+
+   &lt;developers&gt;
+      &lt;developer&gt;
+         &lt;name&gt;Brett Wooldridge&lt;/name&gt;
+         &lt;email&gt;brett.wooldridge@gmail.com&lt;/email&gt;
+      &lt;/developer&gt;
+   &lt;/developers&gt;
+
+   &lt;parent&gt;
+      &lt;groupId&gt;org.sonatype.oss&lt;/groupId&gt;
+      &lt;artifactId&gt;oss-parent&lt;/artifactId&gt;
+      &lt;version&gt;9&lt;/version&gt;
+   &lt;/parent&gt;
+
+   &lt;dependencies&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
+         &lt;artifactId&gt;slf4j-api&lt;/artifactId&gt;
+         &lt;version&gt;${slf4j.version}&lt;/version&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.apache.logging.log4j&lt;/groupId&gt;
+         &lt;artifactId&gt;log4j-slf4j-impl&lt;/artifactId&gt;
+         &lt;version&gt;${log4j.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.apache.logging.log4j&lt;/groupId&gt;
+         &lt;artifactId&gt;log4j-api&lt;/artifactId&gt;
+         &lt;version&gt;${log4j.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.apache.logging.log4j&lt;/groupId&gt;
+         &lt;artifactId&gt;log4j-core&lt;/artifactId&gt;
+         &lt;version&gt;${log4j.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.apache.commons&lt;/groupId&gt;
+         &lt;artifactId&gt;commons-csv&lt;/artifactId&gt;
+         &lt;version&gt;${commons.csv.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.mockito&lt;/groupId&gt;
+         &lt;artifactId&gt;mockito-core&lt;/artifactId&gt;
+         &lt;version&gt;${mockito.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+         &lt;exclusions&gt;
+            &lt;exclusion&gt;
+               &lt;groupId&gt;org.hamcrest&lt;/groupId&gt;
+               &lt;artifactId&gt;hamcrest-core&lt;/artifactId&gt;
+            &lt;/exclusion&gt;
+         &lt;/exclusions&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;junit&lt;/groupId&gt;
+         &lt;artifactId&gt;junit&lt;/artifactId&gt;
+         &lt;version&gt;${junit.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.javassist&lt;/groupId&gt;
+         &lt;artifactId&gt;javassist&lt;/artifactId&gt;
+         &lt;version&gt;${javassist.version}&lt;/version&gt;
+         &lt;optional&gt;true&lt;/optional&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;io.micrometer&lt;/groupId&gt;
+         &lt;artifactId&gt;micrometer-core&lt;/artifactId&gt;
+         &lt;version&gt;${micrometer.version}&lt;/version&gt;
+         &lt;optional&gt;true&lt;/optional&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.postgresql&lt;/groupId&gt;
+         &lt;artifactId&gt;postgresql&lt;/artifactId&gt;
+         &lt;version&gt;${postgresql.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.hibernate&lt;/groupId&gt;
+         &lt;artifactId&gt;hibernate-core&lt;/artifactId&gt;
+         &lt;version&gt;${hibernate.version}&lt;/version&gt;
+         &lt;scope&gt;provided&lt;/scope&gt;
+         &lt;optional&gt;true&lt;/optional&gt;
+         &lt;exclusions&gt;
+            &lt;exclusion&gt;
+               &lt;artifactId&gt;jboss-logging&lt;/artifactId&gt;
+               &lt;groupId&gt;org.jboss.logging&lt;/groupId&gt;
+            &lt;/exclusion&gt;
+            &lt;exclusion&gt;
+               &lt;artifactId&gt;jboss-logging-annotations&lt;/artifactId&gt;
+               &lt;groupId&gt;org.jboss.logging&lt;/groupId&gt;
+            &lt;/exclusion&gt;
+         &lt;/exclusions&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;io.dropwizard.metrics&lt;/groupId&gt;
+         &lt;artifactId&gt;metrics-core&lt;/artifactId&gt;
+         &lt;version&gt;${metrics.version}&lt;/version&gt;
+         &lt;scope&gt;provided&lt;/scope&gt;
+         &lt;optional&gt;true&lt;/optional&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;io.dropwizard.metrics&lt;/groupId&gt;
+         &lt;artifactId&gt;metrics-healthchecks&lt;/artifactId&gt;
+         &lt;version&gt;${metrics.version}&lt;/version&gt;
+         &lt;scope&gt;provided&lt;/scope&gt;
+         &lt;optional&gt;true&lt;/optional&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;io.prometheus&lt;/groupId&gt;
+         &lt;artifactId&gt;simpleclient&lt;/artifactId&gt;
+         &lt;version&gt;${simpleclient.version}&lt;/version&gt;
+         &lt;scope&gt;provided&lt;/scope&gt;
+         &lt;optional&gt;true&lt;/optional&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;simple-jndi&lt;/groupId&gt;
+         &lt;artifactId&gt;simple-jndi&lt;/artifactId&gt;
+         &lt;version&gt;${jndi.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+
+      &lt;!-- OSGi test --&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;javax.inject&lt;/groupId&gt;
+         &lt;artifactId&gt;javax.inject&lt;/artifactId&gt;
+         &lt;version&gt;1&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.apache.felix&lt;/groupId&gt;
+         &lt;artifactId&gt;org.apache.felix.framework&lt;/artifactId&gt;
+         &lt;version&gt;${felix.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.ops4j.pax.exam&lt;/groupId&gt;
+         &lt;artifactId&gt;pax-exam-container-native&lt;/artifactId&gt;
+         &lt;version&gt;${pax.exam.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.ops4j.pax.exam&lt;/groupId&gt;
+         &lt;artifactId&gt;pax-exam-junit4&lt;/artifactId&gt;
+         &lt;version&gt;${pax.exam.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.ops4j.pax.exam&lt;/groupId&gt;
+         &lt;artifactId&gt;pax-exam-link-assembly&lt;/artifactId&gt;
+         &lt;version&gt;${pax.exam.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.ops4j.pax.exam&lt;/groupId&gt;
+         &lt;artifactId&gt;pax-exam-link-mvn&lt;/artifactId&gt;
+         &lt;version&gt;${pax.exam.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.ops4j.pax.url&lt;/groupId&gt;
+         &lt;artifactId&gt;pax-url-aether&lt;/artifactId&gt;
+         &lt;version&gt;${pax.url.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;org.ops4j.pax.url&lt;/groupId&gt;
+         &lt;artifactId&gt;pax-url-reference&lt;/artifactId&gt;
+         &lt;version&gt;${pax.url.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+      &lt;dependency&gt;
+         &lt;groupId&gt;com.h2database&lt;/groupId&gt;
+         &lt;artifactId&gt;h2&lt;/artifactId&gt;
+         &lt;version&gt;${h2.version}&lt;/version&gt;
+         &lt;scope&gt;test&lt;/scope&gt;
+      &lt;/dependency&gt;
+   &lt;/dependencies&gt;
+
+   &lt;build&gt;
+      &lt;resources&gt;
+         &lt;resource&gt;
+            &lt;directory&gt;target/classes&lt;/directory&gt;
+         &lt;/resource&gt;
+      &lt;/resources&gt;
+
+      &lt;plugins&gt;
+         &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-enforcer-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.0.0-M3&lt;/version&gt;
+            &lt;executions&gt;
+               &lt;execution&gt;
+                  &lt;id&gt;enforce-maven&lt;/id&gt;
+                  &lt;goals&gt;
+                     &lt;goal&gt;enforce&lt;/goal&gt;
+                  &lt;/goals&gt;
+                  &lt;configuration&gt;
+                     &lt;rules&gt;
+                        &lt;requireMavenVersion&gt;
+                           &lt;version&gt;3.3.9&lt;/version&gt;
+                        &lt;/requireMavenVersion&gt;
+                     &lt;/rules&gt;
+                  &lt;/configuration&gt;
+               &lt;/execution&gt;
+            &lt;/executions&gt;
+         &lt;/plugin&gt;
+
+         &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-toolchains-plugin&lt;/artifactId&gt;
+            &lt;version&gt;1.1&lt;/version&gt;
+            &lt;executions&gt;
+               &lt;execution&gt;
+                  &lt;goals&gt;
+                     &lt;goal&gt;toolchain&lt;/goal&gt;
+                  &lt;/goals&gt;
+               &lt;/execution&gt;
+            &lt;/executions&gt;
+            &lt;configuration&gt;
+               &lt;toolchains&gt;
+                  &lt;paths&gt;
+                     &lt;id&gt;java&lt;/id&gt;
+                  &lt;/paths&gt;
+               &lt;/toolchains&gt;
+            &lt;/configuration&gt;
+         &lt;/plugin&gt;
+
+         &lt;plugin&gt;
+            &lt;artifactId&gt;maven-dependency-plugin&lt;/artifactId&gt;
+            &lt;version&gt;2.8&lt;/version&gt;
+            &lt;executions&gt;
+               &lt;execution&gt;
+                  &lt;phase&gt;generate-sources&lt;/phase&gt;
+                  &lt;goals&gt;
+                     &lt;goal&gt;build-classpath&lt;/goal&gt;
+                  &lt;/goals&gt;
+                  &lt;configuration&gt;
+                     &lt;outputProperty&gt;maven.compile.classpath&lt;/outputProperty&gt;
+                  &lt;/configuration&gt;
+               &lt;/execution&gt;
+            &lt;/executions&gt;
+         &lt;/plugin&gt;
+
+         &lt;plugin&gt;
+            &lt;!-- Generate proxies --&gt;
+            &lt;groupId&gt;org.codehaus.mojo&lt;/groupId&gt;
+            &lt;artifactId&gt;exec-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;1.6.0&lt;/version&gt;
+            &lt;extensions&gt;true&lt;/extensions&gt;
+            &lt;executions&gt;
+               &lt;execution&gt;
+                  &lt;phase&gt;compile&lt;/phase&gt;
+                  &lt;!-- phase&gt;generate-test-sources&lt;/phase --&gt;
+                  &lt;goals&gt;
+                     &lt;goal&gt;exec&lt;/goal&gt;
+                  &lt;/goals&gt;
+               &lt;/execution&gt;
+            &lt;/executions&gt;
+            &lt;configuration&gt;
+               &lt;toolchain&gt;paths&lt;/toolchain&gt;
+               &lt;executable&gt;java&lt;/executable&gt;
+               &lt;arguments&gt;
+                  &lt;argument&gt;-cp&lt;/argument&gt;
+                  &lt;argument&gt;${project.build.outputDirectory}:${maven.compile.classpath}&lt;/argument&gt;
+                  &lt;argument&gt;com.zaxxer.hikari.util.JavassistProxyFactory&lt;/argument&gt;
+               &lt;/arguments&gt;
+            &lt;/configuration&gt;
+         &lt;/plugin&gt;
+
+         &lt;plugin&gt;
+            &lt;!-- The Docker Maven plugin is used to create docker image with the fat jar --&gt;
+            &lt;groupId&gt;io.fabric8&lt;/groupId&gt;
+            &lt;artifactId&gt;docker-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;${docker.maven.plugin.fabric8.version}&lt;/version&gt;
+            &lt;configuration&gt;
+               &lt;logDate&gt;default&lt;/logDate&gt;
+               &lt;autoPull&gt;true&lt;/autoPull&gt;
+               &lt;images&gt;
+                  &lt;!-- Postgres Image is used &#39;as-is&#39; and iked into the service s linimage --&gt;
+                  &lt;image&gt;
+                     &lt;alias&gt;db&lt;/alias&gt;
+                     &lt;name&gt;postgres:11&lt;/name&gt;
+                     &lt;run&gt;
+                        &lt;env&gt;
+                           &lt;POSTGRES_PASSWORD&gt;password&lt;/POSTGRES_PASSWORD&gt;
+                        &lt;/env&gt;
+                        &lt;wait&gt;
+                           &lt;log&gt;database system is ready to accept connections&lt;/log&gt;
+                           &lt;time&gt;20000&lt;/time&gt;
+                        &lt;/wait&gt;
+                        &lt;log&gt;
+                           &lt;prefix&gt;DB&lt;/prefix&gt;
+                           &lt;color&gt;yellow&lt;/color&gt;
+                        &lt;/log&gt;
+                     &lt;/run&gt;
+                  &lt;/image&gt;
+               &lt;/images&gt;
+            &lt;/configuration&gt;
+
+            &lt;!-- Hooking into the lifecycle --&gt;
+            &lt;executions&gt;
+               &lt;execution&gt;
+                  &lt;id&gt;start&lt;/id&gt;
+                  &lt;phase&gt;pre-integration-test&lt;/phase&gt;
+                  &lt;goals&gt;
+                     &lt;goal&gt;build&lt;/goal&gt;
+                     &lt;goal&gt;start&lt;/goal&gt;
+                  &lt;/goals&gt;
+               &lt;/execution&gt;
+               &lt;execution&gt;
+                  &lt;id&gt;stop&lt;/id&gt;
+                  &lt;phase&gt;post-integration-test&lt;/phase&gt;
+                  &lt;goals&gt;
+                     &lt;goal&gt;stop&lt;/goal&gt;
+                  &lt;/goals&gt;
+               &lt;/execution&gt;
+            &lt;/executions&gt;
+         &lt;/plugin&gt;
+
+         &lt;plugin&gt;
+            &lt;groupId&gt;org.jacoco&lt;/groupId&gt;
+            &lt;artifactId&gt;jacoco-maven-plugin&lt;/artifactId&gt;
+            &lt;version&gt;0.8.2&lt;/version&gt;
+            &lt;executions&gt;
+               &lt;!-- Prepares the property pointing to the JaCoCo runtime agent which is passed as VM argument when Maven the Surefire plugin is executed. --&gt;
+               &lt;execution&gt;
+                  &lt;goals&gt;
+                     &lt;goal&gt;prepare-agent&lt;/goal&gt;
+                  &lt;/goals&gt;
+                  &lt;configuration&gt;
+                     &lt;!-- Sets the path to the file which contains the execution data. --&gt;
+                     &lt;destFile&gt;${project.build.directory}/coverage-reports/jacoco.exec&lt;/destFile&gt;
+                     &lt;!-- Sets the name of the property containing the settings for JaCoCo runtime agent. --&gt;
+                     &lt;propertyName&gt;surefireArgLine&lt;/propertyName&gt;
+                     &lt;excludes&gt;
+                        &lt;exclude&gt;**/com/zaxxer/hikari/util/JavassistProxyFactory*&lt;/exclude&gt;
+                        &lt;exclude&gt;**/com/zaxxer/hikari/pool/HikariProxy*&lt;/exclude&gt;
+                        &lt;exclude&gt;**/com/zaxxer/hikari/metrics/**&lt;/exclude&gt;
+                     &lt;/excludes&gt;
+                  &lt;/configuration&gt;
+               &lt;/execution&gt;
+               &lt;!-- Ensures that the code coverage report for unit tests is created after unit tests have been run. --&gt;
+               &lt;execution&gt;
+                  &lt;id&gt;report&lt;/id&gt;
+                  &lt;phase&gt;test&lt;/phase&gt;
+                  &lt;goals&gt;
+                     &lt;goal&gt;report&lt;/goal&gt;
+                  &lt;/goals&gt;
+                  &lt;configuration&gt;
+                     &lt;!-- Sets the path to the file which contains the execution data. --&gt;
+                     &lt;dataFile&gt;${project.build.directory}/coverage-reports/jacoco.exec&lt;/dataFile&gt;
+                     &lt;excludes&gt;
+                        &lt;exclude&gt;**/com/zaxxer/hikari/pool/HikariProxy*&lt;/exclude&gt;
+                        &lt;exclude&gt;**/com/zaxxer/hikari/metrics/**&lt;/exclude&gt;
+                     &lt;/excludes&gt;
+                  &lt;/configuration&gt;
+               &lt;/execution&gt;
+            &lt;/executions&gt;
+         &lt;/plugin&gt;
+
+         &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-failsafe-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.0.0-M3&lt;/version&gt;
+            &lt;executions&gt;
+               &lt;execution&gt;
+                  &lt;goals&gt;
+                     &lt;goal&gt;integration-test&lt;/goal&gt;
+                     &lt;goal&gt;verify&lt;/goal&gt;
+                  &lt;/goals&gt;
+               &lt;/execution&gt;
+            &lt;/executions&gt;
+         &lt;/plugin&gt;
+
+         &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.felix&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-bundle-plugin&lt;/artifactId&gt;
+            &lt;version&gt;${felix.bundle.plugin.version}&lt;/version&gt;
+            &lt;extensions&gt;true&lt;/extensions&gt;
+            &lt;configuration&gt;
+               &lt;classifier&gt;${artifact.classifier}&lt;/classifier&gt;
+               &lt;instructions&gt;
+                  &lt;Automatic-Module-Name&gt;${automatic.module.name}&lt;/Automatic-Module-Name&gt;
+                  &lt;Multi-Release&gt;true&lt;/Multi-Release&gt;
+                  &lt;Bundle-Name&gt;HikariCP&lt;/Bundle-Name&gt;
+                  &lt;Export-Package&gt;
+                     com.zaxxer.hikari,
+                     com.zaxxer.hikari.hibernate,
+                     com.zaxxer.hikari.metrics
+                  &lt;/Export-Package&gt;
+                  &lt;Private-Package&gt;com.zaxxer.hikari.*&lt;/Private-Package&gt;
+                  &lt;Include-Resource&gt;{maven-resources}&lt;/Include-Resource&gt;
+                  &lt;_exportcontents&gt;
+                     com.zaxxer.hikari.pool,
+                     com.zaxxer.hikari.util
+                  &lt;/_exportcontents&gt;
+                  &lt;Import-Package&gt;
+                     javax.management,
+                     javax.naming,
+                     javax.naming.spi,
+                     javax.sql,
+                     javax.sql.rowset,
+                     javax.sql.rowset.serial,
+                     javax.sql.rowset.spi,
+                     com.codahale.metrics;resolution:=optional,
+                     com.codahale.metrics.health;resolution:=optional,
+                     io.micrometer.core.instrument;resolution:=optional,
+                     org.slf4j;version=&quot;[1.6,2)&quot;,
+                     org.hibernate;resolution:=optional,
+                     org.hibernate.cfg;resolution:=optional,
+                     org.hibernate.engine.jdbc.connections.spi;resolution:=optional,
+                     org.hibernate.service;resolution:=optional,
+                     org.hibernate.service.spi;resolution:=optional
+                  &lt;/Import-Package&gt;
+                  &lt;Bundle-SymbolicName&gt;${project.groupId}.${project.artifactId}&lt;/Bundle-SymbolicName&gt;
+                  &lt;DynamicImport-Package&gt;*&lt;/DynamicImport-Package&gt;
+               &lt;/instructions&gt;
+            &lt;/configuration&gt;
+            &lt;executions&gt;
+               &lt;!-- This execution makes sure that the manifest is available when the tests are executed --&gt;
+               &lt;execution&gt;
+                  &lt;goals&gt;
+                     &lt;goal&gt;manifest&lt;/goal&gt;
+                  &lt;/goals&gt;
+               &lt;/execution&gt;
+            &lt;/executions&gt;
+         &lt;/plugin&gt;
+      &lt;/plugins&gt;
+
+      &lt;pluginManagement&gt;
+         &lt;plugins&gt;
+            &lt;plugin&gt;
+               &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+               &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+               &lt;version&gt;3.8.1&lt;/version&gt;
+               &lt;configuration&gt;
+                  &lt;source&gt;1.8&lt;/source&gt;
+                  &lt;target&gt;1.8&lt;/target&gt;
+                  &lt;compilerArgs&gt;-Xlint&lt;/compilerArgs&gt;
+               &lt;/configuration&gt;
+            &lt;/plugin&gt;
+
+            &lt;plugin&gt;
+               &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+               &lt;artifactId&gt;maven-release-plugin&lt;/artifactId&gt;
+               &lt;version&gt;${maven.release.version}&lt;/version&gt;
+               &lt;configuration&gt;
+                  &lt;autoVersionSubmodules&gt;true&lt;/autoVersionSubmodules&gt;
+                  &lt;tagNameFormat&gt;HikariCP-@{project.version}&lt;/tagNameFormat&gt;
+               &lt;/configuration&gt;
+            &lt;/plugin&gt;
+
+            &lt;plugin&gt;
+               &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+               &lt;artifactId&gt;maven-surefire-plugin&lt;/artifactId&gt;
+               &lt;version&gt;2.22.1&lt;/version&gt;
+               &lt;configuration&gt;
+                  &lt;!-- Sets the VM argument line used when unit tests are run. --&gt;
+                  &lt;argLine&gt;${surefireArgLine} ${sureFireOptions11}&lt;/argLine&gt;
+                  &lt;!-- Skips unit tests if the value of skip.unit.tests property is true --&gt;
+                  &lt;skipTests&gt;${skip.unit.tests}&lt;/skipTests&gt;
+                  &lt;reuseForks&gt;${sureFireForks11}&lt;/reuseForks&gt;
+               &lt;/configuration&gt;
+            &lt;/plugin&gt;
+
+            &lt;plugin&gt;
+               &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+               &lt;artifactId&gt;maven-source-plugin&lt;/artifactId&gt;
+               &lt;version&gt;3.0.1&lt;/version&gt;
+               &lt;configuration&gt;
+                  &lt;!-- outputDirectory&gt;/absolute/path/to/the/output/directory&lt;/outputDirectory&gt;
+                     &lt;finalName&gt;filename-of-generated-jar-file&lt;/finalName --&gt;
+                  &lt;attach&gt;true&lt;/attach&gt;
+               &lt;/configuration&gt;
+               &lt;executions&gt;
+                  &lt;execution&gt;
+                     &lt;id&gt;attach-sources&lt;/id&gt;
+                     &lt;goals&gt;
+                        &lt;goal&gt;jar&lt;/goal&gt;
+                     &lt;/goals&gt;
+                  &lt;/execution&gt;
+               &lt;/executions&gt;
+            &lt;/plugin&gt;
+
+            &lt;plugin&gt;
+               &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+               &lt;artifactId&gt;maven-javadoc-plugin&lt;/artifactId&gt;
+               &lt;version&gt;3.0.1&lt;/version&gt;
+               &lt;configuration&gt;
+                  &lt;show&gt;public&lt;/show&gt;
+                  &lt;excludePackageNames&gt;
+                     com.zaxxer.hikari.hibernate:com.zaxxer.hikari.metrics.*:com.zaxxer.hikari.pool:com.zaxxer.hikari.util
+                  &lt;/excludePackageNames&gt;
+                  &lt;attach&gt;true&lt;/attach&gt;
+                  &lt;maxmemory&gt;1024m&lt;/maxmemory&gt;
+               &lt;/configuration&gt;
+               &lt;executions&gt;
+                  &lt;execution&gt;
+                     &lt;id&gt;bundle-sources&lt;/id&gt;
+                     &lt;phase&gt;package&lt;/phase&gt;
+                     &lt;goals&gt;
+                        &lt;goal&gt;jar&lt;/goal&gt;
+                     &lt;/goals&gt;
+                  &lt;/execution&gt;
+               &lt;/executions&gt;
+            &lt;/plugin&gt;
+         &lt;/plugins&gt;
+      &lt;/pluginManagement&gt;
+   &lt;/build&gt;
+
+   &lt;profiles&gt;
+      &lt;profile&gt;
+         &lt;id&gt;Java8&lt;/id&gt;
+         &lt;activation&gt;
+            &lt;jdk&gt;[,11)&lt;/jdk&gt;
+         &lt;/activation&gt;
+         &lt;properties&gt;
+            &lt;automatic.module.name&gt;com.zaxxer.hikari&lt;/automatic.module.name&gt;
+         &lt;/properties&gt;
+      &lt;/profile&gt;
+      &lt;profile&gt;
+         &lt;id&gt;Java11&lt;/id&gt;
+         &lt;activation&gt;
+            &lt;jdk&gt;[11,)&lt;/jdk&gt;
+         &lt;/activation&gt;
+         &lt;properties&gt;
+            &lt;!-- sureFireOptions11&gt;
+               -add-opens java.base/java.net=ALL-UNNAMED
+               -add-opens java.base/java.security=ALL-UNNAMED
+               -add-exports java.base/sun.net.www.protocol.http=ALL-UNNAMED
+               -add-exports java.base/sun.net.www.protocol.https=ALL-UNNAMED
+            &lt;/sureFireOptions11 --&gt;
+            &lt;sureFireForks11&gt;true&lt;/sureFireForks11&gt;
+         &lt;/properties&gt;
+
+         &lt;build&gt;
+            &lt;plugins&gt;
+               &lt;plugin&gt;
+                  &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                  &lt;artifactId&gt;maven-antrun-plugin&lt;/artifactId&gt;
+                  &lt;version&gt;3.0.0&lt;/version&gt;
+                  &lt;executions&gt;
+                     &lt;execution&gt;
+                        &lt;id&gt;compile-java11&lt;/id&gt;
+                        &lt;phase&gt;compile&lt;/phase&gt;
+                        &lt;goals&gt;
+                           &lt;goal&gt;run&lt;/goal&gt;
+                        &lt;/goals&gt;
+                        &lt;configuration&gt;
+                           &lt;target&gt;
+                              &lt;mkdir dir=&quot;${java11.build.outputDirectory}&quot; /&gt;
+                              &lt;copy todir=&quot;${java11.build.outputDirectory}&quot;&gt;
+                                 &lt;fileset dir=&quot;${project.build.outputDirectory}&quot; /&gt;
+                              &lt;/copy&gt;
+                              &lt;property name=&quot;classpath&quot; value=&quot;${org.hdrhistogram:HdrHistogram:jar}: ${org.latencyutils:LatencyUtils:jar}:${org.hibernate.javax.persistence:hibernate-jpa:jar}: ${org.hibernate.common:hibernate-commons-annotations:jar}:${antlr:antlr:jar}: ${org.jboss:jandex:jar}:${com.fasterxml:classmate:jar}:${dom4j:dom4j:jar}&quot; /&gt;
+                              &quot;
+                              &lt;property name=&quot;modulepath&quot; value=&quot;${org.slf4j:slf4j-api:jar}: ${org.javassist:javassist:jar}:${io.micrometer:micrometer-core:jar}: ${org.hibernate:hibernate-core:jar}:${io.dropwizard.metrics:metrics-core:jar}: ${io.dropwizard.metrics:metrics-healthchecks:jar}:${io.prometheus:simpleclient:jar}&quot; /&gt;
+                              &lt;javac srcdir=&quot;${java11.sourceDirectory}&quot; destdir=&quot;${java11.build.outputDirectory}&quot; classpath=&quot;${classpath}&quot; modulepath=&quot;${modulepath}&quot; includeantruntime=&quot;false&quot; /&gt;
+                           &lt;/target&gt;
+                        &lt;/configuration&gt;
+                     &lt;/execution&gt;
+                  &lt;/executions&gt;
+               &lt;/plugin&gt;
+
+               &lt;plugin&gt;
+                  &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                  &lt;artifactId&gt;maven-resources-plugin&lt;/artifactId&gt;
+                  &lt;version&gt;3.1.0&lt;/version&gt;
+                  &lt;executions&gt;
+                     &lt;execution&gt;
+                        &lt;id&gt;copy-module-info&lt;/id&gt;
+                        &lt;phase&gt;prepare-package&lt;/phase&gt;
+                        &lt;goals&gt;
+                           &lt;goal&gt;copy-resources&lt;/goal&gt;
+                        &lt;/goals&gt;
+                        &lt;configuration&gt;
+                           &lt;outputDirectory&gt;${project.build.outputDirectory}/META-INF/versions/11&lt;/outputDirectory&gt;
+                           &lt;resources&gt;
+                              &lt;resource&gt;
+                                 &lt;directory&gt;${java11.build.outputDirectory}&lt;/directory&gt;
+                                 &lt;includes&gt;
+                                    &lt;include&gt;module-info.class&lt;/include&gt;
+                                 &lt;/includes&gt;
+                              &lt;/resource&gt;
+                           &lt;/resources&gt;
+                        &lt;/configuration&gt;
+                     &lt;/execution&gt;
+                  &lt;/executions&gt;
+               &lt;/plugin&gt;
+            &lt;/plugins&gt;
+         &lt;/build&gt;
+      &lt;/profile&gt;
+
+      &lt;profile&gt;
+         &lt;id&gt;release-sign-artifacts&lt;/id&gt;
+         &lt;activation&gt;
+            &lt;property&gt;
+               &lt;name&gt;performRelease&lt;/name&gt;
+               &lt;value&gt;true&lt;/value&gt;
+            &lt;/property&gt;
+         &lt;/activation&gt;
+         &lt;build&gt;
+            &lt;plugins&gt;
+               &lt;plugin&gt;
+                  &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+                  &lt;artifactId&gt;maven-gpg-plugin&lt;/artifactId&gt;
+                  &lt;version&gt;1.6&lt;/version&gt;
+                  &lt;executions&gt;
+                     &lt;execution&gt;
+                        &lt;id&gt;sign-artifacts&lt;/id&gt;
+                        &lt;phase&gt;verify&lt;/phase&gt;
+                        &lt;goals&gt;
+                           &lt;goal&gt;sign&lt;/goal&gt;
+                        &lt;/goals&gt;
+                     &lt;/execution&gt;
+                  &lt;/executions&gt;
+               &lt;/plugin&gt;
+            &lt;/plugins&gt;
+         &lt;/build&gt;
+      &lt;/profile&gt;
+
+      &lt;profile&gt;
+         &lt;id&gt;felix&lt;/id&gt;
+         &lt;activation&gt;
+            &lt;activeByDefault&gt;true&lt;/activeByDefault&gt;
+            &lt;property&gt;
+               &lt;name&gt;pax.exam.framework&lt;/name&gt;
+               &lt;value&gt;felix&lt;/value&gt;
+            &lt;/property&gt;
+         &lt;/activation&gt;
+         &lt;properties&gt;
+            &lt;pax.exam.framework&gt;felix&lt;/pax.exam.framework&gt;
+            &lt;pax.exam.logging&gt;none&lt;/pax.exam.logging&gt;
+         &lt;/properties&gt;
+         &lt;dependencies&gt;
+            &lt;dependency&gt;
+               &lt;groupId&gt;org.apache.felix&lt;/groupId&gt;
+               &lt;artifactId&gt;org.apache.felix.framework&lt;/artifactId&gt;
+               &lt;version&gt;${felix.version}&lt;/version&gt;
+               &lt;scope&gt;test&lt;/scope&gt;
+            &lt;/dependency&gt;
+         &lt;/dependencies&gt;
+      &lt;/profile&gt;
+   &lt;/profiles&gt;
+&lt;/project&gt;
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Nov 17, 2021, 12:43:59 PM</div>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("xml",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "" });
+
+
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            // Deprecated
+            // $(window).load(function () {
+            //     $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            // });
+            $(window).on('load', function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 8192152;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

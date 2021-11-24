@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <title>Source Report for MeterNotFoundException.java</title>
+    <link href="resources/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="resources/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="resources/css/windup.css" rel="stylesheet" media="screen"/>
+    <link rel="stylesheet" type="text/css" href="resources/libraries/snippet/jquery.snippet.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/css/windup-source.css" />
+    <link rel="stylesheet" type="text/css" href="resources/libraries/sausage/sausage.css" />
+    <link rel="shortcut icon" href="resources/img/mta-icon.png" type="image/x-icon"/>
+</head>
+<body role="document" class="source-report">
+
+    <div class="navbar navbar-inverse navbar-fixed-top" id="main-navbar" style="display: none">
+        <div class="wu-navbar-header navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <span class="wu-navbar-header">
+              <strong class="wu-navbar-header">Migration Toolkit for Applications</strong><img align="right" class="wu-navbar-header" src="resources/img/Logo-RedHat-A-Reverse-RGB.png" />
+            </span>        </div>
+
+
+                <div class="navbar-collapse collapse navbar-responsive-collapse project-specific" data-project-id="8192152">
+    <ul class="nav navbar-nav">
+            <li class="">
+                <a href="../index.html"><i class="glyphicon glyphicon-home"></i> All Applications</a>
+            </li>
+
+
+
+                <li class="">
+                    <a href="report_index_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-dashboard"></i>
+                      Dashboard
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="migration_issues.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Issues
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ApplicationDetails_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-th-list"></i>
+                      Application Details
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="techReport_spring_petclinic_rest.html">
+                        <i class="fa fa-rocket"></i>
+                      Technologies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_graph_report.html">
+                        <i class="glyphicon glyphicon-tree-deciduous"></i>
+                      Dependencies Graph
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="dependency_report_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-retweet"></i>
+                      Dependencies
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="Unparsable_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-warning-sign"></i>
+                      Unparsable
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="remotereport_spring_petclinic_rest.html">
+                        <i class="glyphicon service-nav-logo"></i>
+                      Remote Services
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="jpa_spring_petclinic_rest.html">
+                        <i class="glyphicon jpa-nav-logo"></i>
+                      JPA
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="ignoredfiles_spring_petclinic_rest.html">
+                        <i class="glyphicon glyphicon-eye-close"></i>
+                      Ignored Files
+                    </a>
+                </li>
+
+
+                <li class="">
+                    <a href="about_spring_petclinic_rest.html">
+                        <i class="fa fa-question-circle"></i>
+                      About
+                    </a>
+                </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+<li>
+    <a href="#" class="feedback-nav-btn jiraFeedbackTrigger"><i class="glyphicon glyphicon-comment"></i> Send Feedback </a>
+</li>
+
+
+    <script type="text/javascript" src="https://issues.jboss.org/s/f215932e68571747ac58d0f5d554396f-T/en_US-r7luaf/6346/82/1.4.16/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&amp;collectorId=8b9e338b"></script>
+
+    <script type="text/javascript">
+
+    var FEEDBACK_JS_ADDED = false;
+    var FEEDBACK_FORM_TRIGGER = null;
+
+    function displayFeedbackForm() {
+        FEEDBACK_FORM_TRIGGER();
+    }
+
+    window.ATL_JQ_PAGE_PROPS = {
+        "triggerFunction": function(showCollectorDialog) {
+            FEEDBACK_FORM_TRIGGER = showCollectorDialog;
+        }
+    };
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+            jQuery(".jiraFeedbackTrigger").click(function(e) {
+                e.preventDefault();
+                displayFeedbackForm();
+            });
+    });
+    </script>
+    </ul>
+                </div><!-- /.nav-collapse -->
+    </div>
+
+
+    <div class="container-fluid" role="main">
+        <div class="row">
+            <div class="page-header page-header-no-border">
+                <h1>
+                    <div class="main">Source Report
+                    <i class="glyphicon glyphicon-info-sign" data-toggle="tooltip" data-placement=right title="This report displays what Migration Toolkit for Applications by Red Hat found in individual files. Each item is shown below the line it was found on, and next to it, you may find a link to the rule which it was found by."></i></div>
+
+                        <div class="path project-specific" data-project-id="8192152">
+                            spring-petclinic-rest-2.4.2.jar/BOOT-INF/lib/micrometer-core-1.6.3.jar/io/micrometer/core/instrument/search/MeterNotFoundException.java
+                        </div>
+                </h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="container-fluid theme-showcase" role="main">
+
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Information</h3>
+                    </div>
+                    <div class="panel-body" style="overflow: auto;">
+
+                        <!--<div style="height: 120pt; float:left;"></div> Keeps the minimal height. -->
+                        <div class="points" style="text-align: center; color: #00254b; padding-bottom: 1ex;">
+                            <div class="number">50</div>
+                            <div>Story Points</div>
+                        </div>
+
+                        <div class="info" style="margin-left: 95pt;">
+
+
+                                <h4>Technologies</h4>
+                                <div class="technologies" style="overflow: auto"><!-- "auto" to contain all the tags. -->
+                                        <span class="label label-info" title="INFORMATIONAL">Decompiled Java File</span>
+                                </div>
+
+
+
+                            <div style="clear: both;"/><!-- Snaps under the height keeper. Yes, the same effect could be achieved by a table. -->
+                        </div><!-- .info -->
+                    </div>
+                </div>
+
+
+
+                <pre id="source">
+package io.micrometer.core.instrument.search;
+
+import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.DistributionSummary;
+import io.micrometer.core.instrument.FunctionCounter;
+import io.micrometer.core.instrument.FunctionTimer;
+import io.micrometer.core.instrument.Gauge;
+import io.micrometer.core.instrument.LongTaskTimer;
+import io.micrometer.core.instrument.Meter;
+import io.micrometer.core.instrument.Tag;
+import io.micrometer.core.instrument.TimeGauge;
+import io.micrometer.core.instrument.Timer;
+import io.micrometer.core.lang.Nullable;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Objects;
+import java.util.function.Function;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class MeterNotFoundException extends RuntimeException {
+   private static final String OK = &quot;OK:&quot;;
+   private static final String NOT_OK = &quot;FAIL:&quot;;
+
+   private MeterNotFoundException(@Nullable String nameDetail, @Nullable String typeDetail, @Nullable List&lt;String&gt; tagDetail) {
+      super(&quot;Unable to find a meter that matches all the requirements at once. Here&#39;s what was found:&quot; + (nameDetail == null ? &quot;&quot; : &quot;\n   &quot; + nameDetail) + (typeDetail == null ? &quot;&quot; : &quot;\n   &quot; + typeDetail) + (tagDetail == null ? &quot;&quot; : &quot;\n   &quot; + (String)tagDetail.stream().collect(Collectors.joining(&quot;\n   &quot;))));
+   }
+
+   static MeterNotFoundException forSearch(RequiredSearch search, Class&lt;? extends Meter&gt; requiredType) {
+      return (new MeterNotFoundException.FromRequiredSearch(search, requiredType)).build();
+   }
+
+   // $FF: synthetic method
+   MeterNotFoundException(String x0, String x1, List x2, Object x3) {
+      this(x0, x1, x2);
+   }
+
+   private static class FromRequiredSearch {
+      private final RequiredSearch search;
+      private final Class&lt;? extends Meter&gt; requiredMeterType;
+
+      private FromRequiredSearch(RequiredSearch search, Class&lt;? extends Meter&gt; requiredMeterType) {
+         this.search = search;
+         this.requiredMeterType = requiredMeterType;
+      }
+
+      @Nullable
+      private String nameDetail() {
+         if (this.search.nameMatches == null) {
+            return null;
+         } else {
+            Collection&lt;String&gt; matchingName = (Collection)Search.in(this.search.registry).name(this.search.nameMatches).meters().stream().map((m) -&gt; {
+               return m.getId().getName();
+            }).distinct().sorted().collect(Collectors.toList());
+            if (!matchingName.isEmpty()) {
+               return matchingName.size() == 1 ? &quot;OK: A meter with name &#39;&quot; + (String)matchingName.iterator().next() + &quot;&#39; was found.&quot; : &quot;OK: Meters with names [&quot; + (String)matchingName.stream().map((name) -&gt; {
+                  return &quot;&#39;&quot; + name + &quot;&#39;&quot;;
+               }).collect(Collectors.joining(&quot;, &quot;)) + &quot;] were found.&quot;;
+            } else {
+               return this.search.exactNameMatch != null ? &quot;FAIL: No meter with name &#39;&quot; + this.search.exactNameMatch + &quot;&#39; was found.&quot; : &quot;FAIL: No meter that matches the name predicate was found.&quot;;
+            }
+         }
+      }
+
+      @Nullable
+      private List&lt;String&gt; tagDetail() {
+         if (this.search.requiredTagKeys.isEmpty() &amp;&amp; this.search.requiredTags.isEmpty()) {
+            return null;
+         } else {
+            List&lt;String&gt; details = new ArrayList();
+            Iterator var2 = this.search.requiredTagKeys.iterator();
+
+            Stream var10000;
+            Class var10001;
+            Collection matchingRequiredTag;
+            String requiredTagDetail;
+            while(var2.hasNext()) {
+               String requiredKey = (String)var2.next();
+               var10000 = Search.in(this.search.registry).name(this.search.nameMatches).tagKeys(new String[]{requiredKey}).meters().stream();
+               var10001 = this.requiredMeterType;
+               Objects.requireNonNull(this.requiredMeterType);
+               matchingRequiredTag = (Collection)var10000.filter(var10001::isInstance).map((m) -&gt; {
+                  return m.getId().getName();
+               }).distinct().sorted().collect(Collectors.toList());
+               requiredTagDetail = &quot;the required tag &#39;&quot; + requiredKey + &quot;&#39;.&quot;;
+               if (matchingRequiredTag.isEmpty()) {
+                  details.add(&quot;FAIL: No meters have &quot; + requiredTagDetail);
+               } else if (matchingRequiredTag.size() == 1) {
+                  details.add(&quot;OK: A meter with name &#39;&quot; + (String)matchingRequiredTag.iterator().next() + &quot;&#39; has &quot; + requiredTagDetail);
+               } else {
+                  details.add(&quot;OK: Meters with names [&quot; + (String)matchingRequiredTag.stream().map((name) -&gt; {
+                     return &quot;&#39;&quot; + name + &quot;&#39;&quot;;
+                  }).collect(Collectors.joining(&quot;, &quot;)) + &quot;] have &quot; + requiredTagDetail);
+               }
+            }
+
+            var2 = this.search.requiredTags.iterator();
+
+            while(var2.hasNext()) {
+               Tag requiredTag = (Tag)var2.next();
+               var10000 = Search.in(this.search.registry).name(this.search.nameMatches).tag(requiredTag.getKey(), requiredTag.getValue()).meters().stream();
+               var10001 = this.requiredMeterType;
+               Objects.requireNonNull(this.requiredMeterType);
+               matchingRequiredTag = (Collection)var10000.filter(var10001::isInstance).map((m) -&gt; {
+                  return m.getId().getName();
+               }).distinct().sorted().collect(Collectors.toList());
+               requiredTagDetail = &quot;a tag &#39;&quot; + requiredTag.getKey() + &quot;&#39; with value &#39;&quot; + requiredTag.getValue() + &quot;&#39;.&quot;;
+               if (matchingRequiredTag.isEmpty()) {
+                  var10000 = Search.in(this.search.registry).name(this.search.nameMatches).tagKeys(new String[]{requiredTag.getKey()}).meters().stream();
+                  var10001 = this.requiredMeterType;
+                  Objects.requireNonNull(this.requiredMeterType);
+                  Collection&lt;String&gt; nonMatchingValues = (Collection)var10000.filter(var10001::isInstance).map((m) -&gt; {
+                     return m.getId().getTag(requiredTag.getKey());
+                  }).distinct().sorted().collect(Collectors.toList());
+                  if (nonMatchingValues.isEmpty()) {
+                     details.add(&quot;FAIL: No meters have the required tag &#39;&quot; + requiredTag.getKey() + &quot;&#39;.&quot;);
+                  } else if (nonMatchingValues.size() == 1) {
+                     details.add(&quot;FAIL: No meters have &quot; + requiredTagDetail + &quot; The only value found was &#39;&quot; + (String)nonMatchingValues.iterator().next() + &quot;&#39;.&quot;);
+                  } else {
+                     details.add(&quot;FAIL: No meters have &quot; + requiredTagDetail + &quot; Tag values found were [&quot; + (String)nonMatchingValues.stream().map((v) -&gt; {
+                        return &quot;&#39;&quot; + v + &quot;&#39;&quot;;
+                     }).collect(Collectors.joining(&quot;, &quot;)) + &quot;].&quot;);
+                  }
+               } else if (matchingRequiredTag.size() == 1) {
+                  details.add(&quot;OK: A meter with name &#39;&quot; + (String)matchingRequiredTag.iterator().next() + &quot;&#39; has &quot; + requiredTagDetail);
+               } else {
+                  details.add(&quot;OK: Meters with names [&quot; + (String)matchingRequiredTag.stream().map((name) -&gt; {
+                     return &quot;&#39;&quot; + name + &quot;&#39;&quot;;
+                  }).collect(Collectors.joining(&quot;, &quot;)) + &quot;] have &quot; + requiredTagDetail);
+               }
+            }
+
+            return details;
+         }
+      }
+
+      @Nullable
+      private String typeDetail() {
+         if (this.requiredMeterType.equals(Meter.class)) {
+            return null;
+         } else {
+            if (this.search.nameMatches != null) {
+               Collection&lt;Meter&gt; matchesName = Search.in(this.search.registry).name(this.search.nameMatches).meters();
+               if (!matchesName.isEmpty()) {
+                  Collection&lt;String&gt; nonMatchingTypes = (Collection)matchesName.stream().filter((m) -&gt; {
+                     return !this.requiredMeterType.isInstance(m);
+                  }).map((m) -&gt; {
+                     return this.meterTypeName(m.getClass());
+                  }).distinct().sorted().collect(Collectors.toList());
+                  if (nonMatchingTypes.size() == 1) {
+                     return &quot;FAIL: Expected to find a &quot; + this.meterTypeName(this.requiredMeterType) + &quot;. The only type found was a &quot; + (String)nonMatchingTypes.iterator().next() + &quot;.&quot;;
+                  }
+
+                  if (nonMatchingTypes.size() &gt; 1) {
+                     return &quot;FAIL: Expected to find a &quot; + this.meterTypeName(this.requiredMeterType) + &quot;. Types found were [&quot; + (String)nonMatchingTypes.stream().collect(Collectors.joining(&quot;, &quot;)) + &quot;].&quot;;
+                  }
+               }
+            }
+
+            Stream var10000 = Search.in(this.search.registry).meters().stream();
+            Class var10001 = this.requiredMeterType;
+            Objects.requireNonNull(this.requiredMeterType);
+            long count = var10000.filter(var10001::isInstance).count();
+            if (count == 0L) {
+               return &quot;FAIL: No meters with type &quot; + this.meterTypeName(this.requiredMeterType) + &quot; were found.&quot;;
+            } else {
+               return count == 1L ? &quot;OK: A meter with type &quot; + this.meterTypeName(this.requiredMeterType) + &quot; was found.&quot; : &quot;OK: Meters with type &quot; + this.meterTypeName(this.requiredMeterType) + &quot; were found.&quot;;
+            }
+         }
+      }
+
+      private String meterTypeName(Class&lt;?&gt; meterType) {
+         if (Counter.class.isAssignableFrom(meterType)) {
+            return &quot;counter&quot;;
+         } else if (Gauge.class.isAssignableFrom(meterType)) {
+            return &quot;gauge&quot;;
+         } else if (LongTaskTimer.class.isAssignableFrom(meterType)) {
+            return &quot;long task timer&quot;;
+         } else if (Timer.class.isAssignableFrom(meterType)) {
+            return &quot;timer&quot;;
+         } else if (FunctionTimer.class.isAssignableFrom(meterType)) {
+            return &quot;function timer&quot;;
+         } else if (FunctionCounter.class.isAssignableFrom(meterType)) {
+            return &quot;function counter&quot;;
+         } else if (TimeGauge.class.isAssignableFrom(meterType)) {
+            return &quot;time gauge&quot;;
+         } else {
+            return DistributionSummary.class.isAssignableFrom(meterType) ? &quot;distribution summary&quot; : meterType.getSimpleName();
+         }
+      }
+
+      private MeterNotFoundException build() {
+         return new MeterNotFoundException(this.nameDetail(), this.typeDetail(), this.tagDetail());
+      }
+
+      // $FF: synthetic method
+      FromRequiredSearch(RequiredSearch x0, Class x1, Object x2) {
+         this(x0, x1);
+      }
+   }
+}
+</pre>
+            </div> <!-- /container -->
+        </div><!-- /row-->
+    </div><!-- /container main-->
+
+
+<div style="text-align: left; font-size: small; color: gray; font-style: italic;">Page generated: Nov 17, 2021, 12:44:10 PM</div>
+    <script src="resources/js/jquery-3.3.1.min.js"></script>
+    <script src="resources/js/jquery-migrate-1.4.1.min.js"></script>
+    <script src="resources/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="resources/libraries/jquery-ui/jquery.ui.widget.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.min.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-properties.js"></script>
+    <script type="text/javascript" src="resources/libraries/snippet/jquery.snippet.java-manifest.js"></script>
+    <script type="text/javascript" src="resources/libraries/sausage/jquery.sausage.min.js"></script>
+
+    <script type="text/javascript">
+        var script   = document.createElement("script");
+        script.type  = "text/javascript";
+            script.src   = "resources/js/navbar.js";
+        document.body.appendChild(script);
+    </script>
+
+    <script type="text/javascript">
+        $(window).on("hashchange", function () {
+            window.scrollTo(window.scrollX, window.scrollY - 50);
+        });
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 50);
+            }
+        }
+        window.setTimeout(function() {
+            offsetAnchor();
+        }, 1);
+        $(document).ready(function(){
+            $("pre").snippet("java",{style:"ide-eclipse", showNum:true,boxFill:"#ffeeb9", box: "11,4,9,3,8,10,6,5,7,12" });
+
+            $("<div id='11-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(11)');
+            $("<div id='4-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(4)');
+            $("<div id='9-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(9)');
+            $("<div id='3-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(3)');
+            $("<div id='8-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(8)');
+            $("<div id='10-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(10)');
+            $("<div id='6-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(6)');
+            $("<div id='5-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(5)');
+            $("<div id='7-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(7)');
+            $("<div id='12-inlines' class='inline-source-hint-group'/>").appendTo('ol.snippet-num li:nth-child(12)');
+
+
+$("<a name='10031264' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#11-inlines');
+
+$("<a name='10272992' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#4-inlines');
+
+$("<a name='10367200' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#9-inlines');
+
+$("<a name='10469480' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#3-inlines');
+
+$("<a name='10547424' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#8-inlines');
+
+$("<a name='10596576' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#10-inlines');
+
+$("<a name='10608856' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#6-inlines');
+
+$("<a name='10797272' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#5-inlines');
+
+$("<a name='20418712' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#7-inlines');
+
+$("<a name='20992176' class='windup-file-location'></a><div class='inline-source-comment green tag-none'><div class='inline-comment'><div class='inline-comment-heading'><strong class='notification warning'>Replace the Micrometer code with Microprofile Metrics code</strong><a title='View Rule: springboot-metrics-to-quarkus-0200' href='windup_ruleproviders.html#springboot-metrics-to-quarkus-0200'><span class='glyphicon glyphicon-link rule-link floatRight'></span></a></div><div class='inline-comment-body'><p>Replace the Micrometer code with Microprofile Metrics code<\/p><ul><li><a href='https://quarkus.io/guides/microprofile-metrics' target='_blank'>Quarkus metrics</a></li></ul></div></div></div>").appendTo('#12-inlines');
+
+
+            $('code[class]').each(function(){
+                 var codeSyntax = ($(this).attr('class'));
+                 if(codeSyntax) {
+                    $(this).parent().snippet(codeSyntax,{style:'ide-eclipse', menu:false, showNum:false});
+                 }
+            });
+            $(window).sausage({ page: 'li.box' });
+            $(window).resize(function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+
+            // Deprecated
+            // $(window).load(function () {
+            //     $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            // });
+            $(window).on('load', function () {
+                $('div.sausage-set').css('top', parseInt($('#main-navbar').css("height")));
+            });
+        });
+
+        function qs(key) {
+            key = key.replace(/[*+?^$.\[\]{}()|\\\/]/g, "\\$&"); // escape RegEx meta chars
+            var match = location.search.match(new RegExp("[?&]"+key+"=([^&]+)(&|$)"));
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+
+        $(document).ready(function() {
+            var defaultProjectID = 8192152;
+            var selectedProject = qs("project");
+            if (!selectedProject)
+                selectedProject = defaultProjectID;
+
+            $(".project-specific").each(function(index, element) {
+                var currentProject = $(element).data("project-id");
+
+                if (currentProject == selectedProject)
+                    $(element).show();
+                else
+                    $(element).remove();
+            });
+            $("#main-navbar").show();
+        });
+    </script>
+    <script>$(document).ready(function(){$('[data-toggle="tooltip"]').tooltip();});</script>
+</body>
+</html>

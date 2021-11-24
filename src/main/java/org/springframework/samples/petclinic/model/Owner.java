@@ -15,14 +15,15 @@
  */
 package org.springframework.samples.petclinic.model;
 
-import org.springframework.beans.support.MutableSortDefinition;
-import org.springframework.beans.support.PropertyComparator;
+//import org.springframework.beans.support.MutableSortDefinition;
+//import org.springframework.beans.support.PropertyComparator;
 import org.springframework.core.style.ToStringCreator;
 
 import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotEmpty;
 import java.util.*;
+import java.util.stream.Collectors;
 
 
 /**
@@ -90,7 +91,8 @@ public class Owner extends Person {
 
     public List<Pet> getPets() {
         List<Pet> sortedPets = new ArrayList<>(getPetsInternal());
-        PropertyComparator.sort(sortedPets, new MutableSortDefinition("name", true, true));
+        //PropertyComparator.sort(sortedPets, new MutableSortDefinition("name", true, true));
+        //sortedPets.sort(Comparator.comparing(Pet::getFirstName()));   
         return Collections.unmodifiableList(sortedPets);
     }
 

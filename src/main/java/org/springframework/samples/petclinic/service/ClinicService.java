@@ -17,6 +17,8 @@ package org.springframework.samples.petclinic.service;
 
 import java.util.Collection;
 
+import javax.enterprise.context.ApplicationScoped;
+
 import org.springframework.dao.DataAccessException;
 import org.springframework.samples.petclinic.model.Owner;
 import org.springframework.samples.petclinic.model.Pet;
@@ -32,6 +34,7 @@ import org.springframework.samples.petclinic.model.Visit;
  * @author Michael Isvy
  * @author Vitaliy Fedoriv
  */
+@ApplicationScoped
 public interface ClinicService {
 
 	Pet findPetById(int id) throws DataAccessException;

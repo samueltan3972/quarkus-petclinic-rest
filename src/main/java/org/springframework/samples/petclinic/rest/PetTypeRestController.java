@@ -24,9 +24,11 @@ import org.springframework.samples.petclinic.mapper.PetTypeMapper;
 import org.springframework.samples.petclinic.model.PetType;
 import org.springframework.samples.petclinic.service.ClinicService;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.validation.BindingResult;
+//import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.util.UriComponentsBuilder;
+//import org.springframework.web.util.UriComponentsBuilder;
+
+import javax.ws.rs.core.UriBuilder;
 
 import javax.transaction.Transactional;
 import javax.validation.Valid;
@@ -34,7 +36,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 @RestController
-@CrossOrigin(exposedHeaders = "errors, content-type")
+//@CrossOrigin(exposedHeaders = "errors, content-type")
 @RequestMapping("api/pettypes")
 public class PetTypeRestController {
 
@@ -47,7 +49,7 @@ public class PetTypeRestController {
         this.petTypeMapper = petTypeMapper;
     }
 
-    @PreAuthorize("hasAnyRole(@roles.OWNER_ADMIN, @roles.VET_ADMIN)")
+    //@PreAuthorize("hasAnyRole(@roles.OWNER_ADMIN, @roles.VET_ADMIN)")
     @RequestMapping(value = "", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<Collection<PetTypeDto>> getAllPetTypes() {
         Collection<PetType> petTypes = new ArrayList<PetType>();
@@ -58,7 +60,7 @@ public class PetTypeRestController {
         return new ResponseEntity<Collection<PetTypeDto>>(petTypeMapper.toPetTypeDtos(petTypes), HttpStatus.OK);
     }
 
-    @PreAuthorize("hasAnyRole(@roles.OWNER_ADMIN, @roles.VET_ADMIN)")
+    //@PreAuthorize("hasAnyRole(@roles.OWNER_ADMIN, @roles.VET_ADMIN)")
     @RequestMapping(value = "/{petTypeId}", method = RequestMethod.GET, produces = "application/json")
     public ResponseEntity<PetTypeDto> getPetType(@PathVariable("petTypeId") int petTypeId) {
         PetType petType = this.clinicService.findPetTypeById(petTypeId);
@@ -68,31 +70,37 @@ public class PetTypeRestController {
         return new ResponseEntity<PetTypeDto>(petTypeMapper.toPetTypeDto(petType), HttpStatus.OK);
     }
 
-    @PreAuthorize("hasRole(@roles.VET_ADMIN)")
+    //@PreAuthorize("hasRole(@roles.VET_ADMIN)")
     @RequestMapping(value = "", method = RequestMethod.POST, produces = "application/json")
-    public ResponseEntity<PetTypeDto> addPetType(@RequestBody @Valid PetTypeDto petType, BindingResult bindingResult, UriComponentsBuilder ucBuilder) {
-        BindingErrorsResponse errors = new BindingErrorsResponse();
-        HttpHeaders headers = new HttpHeaders();
-        if (bindingResult.hasErrors() || (petType == null)) {
-            errors.addAllErrors(bindingResult);
-            headers.add("errors", errors.toJSON());
-            return new ResponseEntity<PetTypeDto>(headers, HttpStatus.BAD_REQUEST);
+    public ResponseEntity<PetTypeDto> addPetType(@RequestBody @Valid PetTypeDto petType, /*BindingResult bindingResult,*/ UriBuilder ucBuilder) {
+//        BindingErrorsResponse errors = new BindingErrorsResponse();
+    	  HttpHeaders headers = new HttpHeaders();
+//        if (bindingResult.hasErrors() || (petType == null)) {
+//            errors.addAllErrors(bindingResult);
+//            headers.add("errors", errors.toJSON());
+//            return new ResponseEntity<PetTypeDto>(headers, HttpStatus.BAD_REQUEST);
+//        }
+        if (petType == null) {
+            return new ResponseEntity<PetTypeDto>(HttpStatus.BAD_REQUEST);
         }
         final PetType type = petTypeMapper.toPetType(petType);
         this.clinicService.savePetType(type);
-        headers.setLocation(ucBuilder.path("/api/pettypes/{id}").buildAndExpand(petType.getId()).toUri());
+        //headers.setLocation(ucBuilder.path("/api/pettypes/{id}").build(petType.getId()));
         return new ResponseEntity<PetTypeDto>(petTypeMapper.toPetTypeDto(type), headers, HttpStatus.CREATED);
     }
 
-    @PreAuthorize("hasRole(@roles.VET_ADMIN)")
+    //@PreAuthorize("hasRole(@roles.VET_ADMIN)")
     @RequestMapping(value = "/{petTypeId}", method = RequestMethod.PUT, produces = "application/json")
-    public ResponseEntity<PetTypeDto> updatePetType(@PathVariable("petTypeId") int petTypeId, @RequestBody @Valid PetTypeDto petType, BindingResult bindingResult) {
+    public ResponseEntity<PetTypeDto> updatePetType(@PathVariable("petTypeId") int petTypeId, @RequestBody @Valid PetTypeDto petType/*, BindingResult bindingResult*/) {
         BindingErrorsResponse errors = new BindingErrorsResponse();
         HttpHeaders headers = new HttpHeaders();
-        if (bindingResult.hasErrors() || (petType == null)) {
-            errors.addAllErrors(bindingResult);
-            headers.add("errors", errors.toJSON());
-            return new ResponseEntity<PetTypeDto>(headers, HttpStatus.BAD_REQUEST);
+//        if (bindingResult.hasErrors() || (petType == null)) {
+//            errors.addAllErrors(bindingResult);
+//            headers.add("errors", errors.toJSON());
+//            return new ResponseEntity<PetTypeDto>(headers, HttpStatus.BAD_REQUEST);
+//        }
+        if (petType == null) {
+            return new ResponseEntity<PetTypeDto>(HttpStatus.BAD_REQUEST);
         }
         PetType currentPetType = this.clinicService.findPetTypeById(petTypeId);
         if (currentPetType == null) {
@@ -103,7 +111,7 @@ public class PetTypeRestController {
         return new ResponseEntity<PetTypeDto>(petTypeMapper.toPetTypeDto(currentPetType), HttpStatus.NO_CONTENT);
     }
 
-    @PreAuthorize("hasRole(@roles.VET_ADMIN)")
+    //@PreAuthorize("hasRole(@roles.VET_ADMIN)")
     @RequestMapping(value = "/{petTypeId}", method = RequestMethod.DELETE, produces = "application/json")
     @Transactional
     public ResponseEntity<Void> deletePetType(@PathVariable("petTypeId") int petTypeId) {

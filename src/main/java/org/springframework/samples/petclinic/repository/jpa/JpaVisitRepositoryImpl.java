@@ -21,6 +21,7 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import javax.transaction.Transactional;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.dao.DataAccessException;
@@ -48,6 +49,7 @@ public class JpaVisitRepositoryImpl implements VisitRepository {
 
 
     @Override
+    @Transactional
     public void save(Visit visit) {
         if (visit.getId() == null) {
             this.em.persist(visit);
@@ -77,6 +79,7 @@ public class JpaVisitRepositoryImpl implements VisitRepository {
 	}
 
 	@Override
+	@Transactional
 	public void delete(Visit visit) throws DataAccessException {
         this.em.remove(this.em.contains(visit) ? visit : this.em.merge(visit));
 	}

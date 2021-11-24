@@ -24,17 +24,19 @@ import org.springframework.samples.petclinic.mapper.UserMapper;
 import org.springframework.samples.petclinic.model.User;
 import org.springframework.samples.petclinic.service.UserService;
 import org.springframework.security.access.prepost.PreAuthorize;
-import org.springframework.validation.BindingResult;
+//import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.inject.Inject;
 import javax.validation.Valid;
 
 @RestController
-@CrossOrigin(exposedHeaders = "errors, content-type")
+//@CrossOrigin(exposedHeaders = "errors, content-type")
 @RequestMapping("api/users")
 public class UserRestController {
 
     private final UserService userService;
+    @Inject
     private final UserMapper userMapper;
 
     public UserRestController(UserService userService, UserMapper userMapper) {
@@ -43,14 +45,17 @@ public class UserRestController {
     }
 
 
-    @PreAuthorize( "hasRole(@roles.ADMIN)" )
+    //@PreAuthorize( "hasRole(@roles.ADMIN)" )
     @RequestMapping(value = "", method = RequestMethod.POST, produces = "application/json")
-    public ResponseEntity<UserDto> addOwner(@RequestBody @Valid UserDto userDto, BindingResult bindingResult) throws Exception {
-        BindingErrorsResponse errors = new BindingErrorsResponse();
+    public ResponseEntity<UserDto> addOwner(@RequestBody @Valid UserDto userDto/*, BindingResult bindingResult*/) throws Exception {
+        //BindingErrorsResponse errors = new BindingErrorsResponse();
         HttpHeaders headers = new HttpHeaders();
-        if (bindingResult.hasErrors() || (userDto == null)) {
-            errors.addAllErrors(bindingResult);
-            headers.add("errors", errors.toJSON());
+//        if (bindingResult.hasErrors() || (userDto == null)) {
+//            errors.addAllErrors(bindingResult);
+//            headers.add("errors", errors.toJSON());
+//            return new ResponseEntity<UserDto>(userDto, headers, HttpStatus.BAD_REQUEST);
+//        }
+        if (userDto == null) {
             return new ResponseEntity<UserDto>(userDto, headers, HttpStatus.BAD_REQUEST);
         }
         User user = userMapper.toUser(userDto);
